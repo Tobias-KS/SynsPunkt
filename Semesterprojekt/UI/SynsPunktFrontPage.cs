@@ -26,7 +26,17 @@ namespace UI
         public FrontPage()
         {
             InitializeComponent();
+            frontPageUserControl1.BringToFront();
+         
         }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+            ProductsUserControl CSPage = new ProductsUserControl();
+            CSPage.Dock = DockStyle.Fill;
+            MainPanel.Controls.Add(CSPage);
+        }
+
 
         private void CustomerButton_Click(object sender, EventArgs e)
         {
@@ -55,6 +65,23 @@ namespace UI
         private void MinimizeApp_Click(object sender, EventArgs e)
         {
             this.WindowState = FormWindowState.Minimized;
+        }
+
+        private void CustomersButton_Click(object sender, EventArgs e)
+        {
+            customerUserControl1.BringToFront();
+
+        }
+
+
+        private void HomeButton_Click(object sender, EventArgs e)
+        {
+            frontPageUserControl1.BringToFront();
+        }
+
+        private void ProductsButton_Click(object sender, EventArgs e)
+        {
+            productsUserControl1.BringToFront();
         }
     }
 }
