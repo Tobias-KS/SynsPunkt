@@ -55,7 +55,7 @@
             this.ButtonShowAllOrders.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ButtonShowAllOrders.ForeColor = System.Drawing.Color.White;
             this.ButtonShowAllOrders.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.ButtonShowAllOrders.Location = new System.Drawing.Point(120, 11);
+            this.ButtonShowAllOrders.Location = new System.Drawing.Point(127, 11);
             this.ButtonShowAllOrders.Name = "ButtonShowAllOrders";
             this.ButtonShowAllOrders.Size = new System.Drawing.Size(210, 100);
             this.ButtonShowAllOrders.TabIndex = 7;
@@ -189,26 +189,29 @@
             // FromDateOrders
             // 
             this.FromDateOrders.CalendarFont = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.FromDateOrders.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.FromDateOrders.Location = new System.Drawing.Point(469, 163);
+            this.FromDateOrders.Font = new System.Drawing.Font("Century Gothic", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.FromDateOrders.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.FromDateOrders.Location = new System.Drawing.Point(524, 165);
             this.FromDateOrders.Name = "FromDateOrders";
-            this.FromDateOrders.Size = new System.Drawing.Size(200, 27);
+            this.FromDateOrders.Size = new System.Drawing.Size(117, 29);
             this.FromDateOrders.TabIndex = 18;
             // 
             // ToDateOrders
             // 
             this.ToDateOrders.CalendarFont = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ToDateOrders.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ToDateOrders.Location = new System.Drawing.Point(685, 163);
+            this.ToDateOrders.Font = new System.Drawing.Font("Century Gothic", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ToDateOrders.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.ToDateOrders.Location = new System.Drawing.Point(647, 165);
             this.ToDateOrders.Name = "ToDateOrders";
-            this.ToDateOrders.Size = new System.Drawing.Size(200, 27);
+            this.ToDateOrders.Size = new System.Drawing.Size(113, 29);
             this.ToDateOrders.TabIndex = 19;
+            this.ToDateOrders.ValueChanged += new System.EventHandler(this.ToDateOrders_ValueChanged);
             // 
             // FromLabelOrders
             // 
             this.FromLabelOrders.AutoSize = true;
             this.FromLabelOrders.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.FromLabelOrders.Location = new System.Drawing.Point(465, 134);
+            this.FromLabelOrders.Location = new System.Drawing.Point(520, 134);
             this.FromLabelOrders.Name = "FromLabelOrders";
             this.FromLabelOrders.Size = new System.Drawing.Size(52, 21);
             this.FromLabelOrders.TabIndex = 20;
@@ -218,7 +221,7 @@
             // 
             this.ToLabelOrders.AutoSize = true;
             this.ToLabelOrders.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ToLabelOrders.Location = new System.Drawing.Point(681, 134);
+            this.ToLabelOrders.Location = new System.Drawing.Point(643, 134);
             this.ToLabelOrders.Name = "ToLabelOrders";
             this.ToLabelOrders.Size = new System.Drawing.Size(28, 21);
             this.ToLabelOrders.TabIndex = 21;
