@@ -69,7 +69,7 @@ namespace UI
 
         private void CustomersButton_Click(object sender, EventArgs e)
         {
-            customerUserControl1.BringToFront();
+            customerUserControl2.BringToFront();
 
         }
 
@@ -82,6 +82,11 @@ namespace UI
         private void ProductsButton_Click(object sender, EventArgs e)
         {
             productsUserControl1.BringToFront();
+        }
+
+        private void OrdersButton_Click(object sender, EventArgs e)
+        {
+            orderUserControl1.BringToFront();
         }
     }
 }

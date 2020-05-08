@@ -45,9 +45,11 @@
             this.CloseApp = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
             this.fileSystemWatcher1 = new System.IO.FileSystemWatcher();
+            this.customerUserControl1 = new UI.ProductsUserControl();
+            this.customerUserControl2 = new UI.CustomerUserControl();
+            this.orderUserControl1 = new UI.OrderUserControl();
             this.productsUserControl1 = new UI.ProductsUserControl();
             this.frontPageUserControl1 = new UI.FrontPageUserControl();
-            this.customerUserControl1 = new UI.ProductsUserControl();
             this.SidePanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Logo)).BeginInit();
             this.TopPanel.SuspendLayout();
@@ -148,6 +150,7 @@
             this.OrdersButton.Text = "Orders";
             this.OrdersButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.OrdersButton.UseVisualStyleBackColor = false;
+            this.OrdersButton.Click += new System.EventHandler(this.OrdersButton_Click);
             // 
             // ProductsButton
             // 
@@ -256,9 +259,11 @@
             // 
             // panel2
             // 
+            this.panel2.Controls.Add(this.customerUserControl1);
+            this.panel2.Controls.Add(this.customerUserControl2);
+            this.panel2.Controls.Add(this.orderUserControl1);
             this.panel2.Controls.Add(this.productsUserControl1);
             this.panel2.Controls.Add(this.frontPageUserControl1);
-            this.panel2.Controls.Add(this.customerUserControl1);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel2.Location = new System.Drawing.Point(210, 51);
             this.panel2.Name = "panel2";
@@ -269,6 +274,31 @@
             // 
             this.fileSystemWatcher1.EnableRaisingEvents = true;
             this.fileSystemWatcher1.SynchronizingObject = this;
+            // 
+            // customerUserControl1
+            // 
+            this.customerUserControl1.BackColor = System.Drawing.Color.White;
+            this.customerUserControl1.Location = new System.Drawing.Point(0, 0);
+            this.customerUserControl1.Name = "customerUserControl1";
+            this.customerUserControl1.Size = new System.Drawing.Size(1211, 774);
+            this.customerUserControl1.TabIndex = 5;
+            // 
+            // customerUserControl2
+            // 
+            this.customerUserControl2.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.customerUserControl2.BackColor = System.Drawing.Color.White;
+            this.customerUserControl2.Location = new System.Drawing.Point(0, -1);
+            this.customerUserControl2.Name = "customerUserControl2";
+            this.customerUserControl2.Size = new System.Drawing.Size(1211, 774);
+            this.customerUserControl2.TabIndex = 4;
+            // 
+            // orderUserControl1
+            // 
+            this.orderUserControl1.BackColor = System.Drawing.Color.White;
+            this.orderUserControl1.Location = new System.Drawing.Point(0, -1);
+            this.orderUserControl1.Name = "orderUserControl1";
+            this.orderUserControl1.Size = new System.Drawing.Size(1211, 774);
+            this.orderUserControl1.TabIndex = 3;
             // 
             // productsUserControl1
             // 
@@ -286,14 +316,6 @@
             this.frontPageUserControl1.Name = "frontPageUserControl1";
             this.frontPageUserControl1.Size = new System.Drawing.Size(1211, 774);
             this.frontPageUserControl1.TabIndex = 1;
-            // 
-            // customerUserControl1
-            // 
-            this.customerUserControl1.BackColor = System.Drawing.Color.White;
-            this.customerUserControl1.Location = new System.Drawing.Point(0, -1);
-            this.customerUserControl1.Name = "customerUserControl1";
-            this.customerUserControl1.Size = new System.Drawing.Size(1211, 774);
-            this.customerUserControl1.TabIndex = 0;
             // 
             // FrontPage
             // 
@@ -342,6 +364,8 @@
         private ProductsUserControl customerUserControl1;
         private FrontPageUserControl frontPageUserControl1;
         private ProductsUserControl productsUserControl1;
+        private OrderUserControl orderUserControl1;
+        private CustomerUserControl customerUserControl2;
     }
 }
 

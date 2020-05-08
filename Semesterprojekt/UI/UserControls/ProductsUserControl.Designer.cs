@@ -35,6 +35,7 @@
             this.DeleteProductButton = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.label1 = new System.Windows.Forms.Label();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -43,7 +44,7 @@
             this.ProductList.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ProductList.FormattingEnabled = true;
             this.ProductList.ItemHeight = 21;
-            this.ProductList.Location = new System.Drawing.Point(724, 153);
+            this.ProductList.Location = new System.Drawing.Point(726, 153);
             this.ProductList.Name = "ProductList";
             this.ProductList.Size = new System.Drawing.Size(463, 550);
             this.ProductList.TabIndex = 0;
@@ -57,7 +58,7 @@
             this.AddProductButton.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.AddProductButton.ForeColor = System.Drawing.Color.White;
             this.AddProductButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.AddProductButton.Location = new System.Drawing.Point(374, 11);
+            this.AddProductButton.Location = new System.Drawing.Point(376, 11);
             this.AddProductButton.Name = "AddProductButton";
             this.AddProductButton.Size = new System.Drawing.Size(210, 100);
             this.AddProductButton.TabIndex = 1;
@@ -73,7 +74,7 @@
             this.ButtonShowAllProducts.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ButtonShowAllProducts.ForeColor = System.Drawing.Color.White;
             this.ButtonShowAllProducts.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.ButtonShowAllProducts.Location = new System.Drawing.Point(118, 11);
+            this.ButtonShowAllProducts.Location = new System.Drawing.Point(120, 11);
             this.ButtonShowAllProducts.Name = "ButtonShowAllProducts";
             this.ButtonShowAllProducts.Size = new System.Drawing.Size(210, 100);
             this.ButtonShowAllProducts.TabIndex = 2;
@@ -89,7 +90,7 @@
             this.UpdateProduktButton.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.UpdateProduktButton.ForeColor = System.Drawing.Color.White;
             this.UpdateProduktButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.UpdateProduktButton.Location = new System.Drawing.Point(630, 11);
+            this.UpdateProduktButton.Location = new System.Drawing.Point(632, 11);
             this.UpdateProduktButton.Name = "UpdateProduktButton";
             this.UpdateProduktButton.Size = new System.Drawing.Size(210, 100);
             this.UpdateProduktButton.TabIndex = 3;
@@ -105,7 +106,7 @@
             this.DeleteProductButton.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.DeleteProductButton.ForeColor = System.Drawing.Color.White;
             this.DeleteProductButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.DeleteProductButton.Location = new System.Drawing.Point(886, 11);
+            this.DeleteProductButton.Location = new System.Drawing.Point(888, 11);
             this.DeleteProductButton.Name = "DeleteProductButton";
             this.DeleteProductButton.Size = new System.Drawing.Size(210, 97);
             this.DeleteProductButton.TabIndex = 4;
@@ -134,10 +135,20 @@
             this.panel1.Size = new System.Drawing.Size(1211, 10);
             this.panel1.TabIndex = 3;
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(373, 357);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(49, 13);
+            this.label1.TabIndex = 12;
+            this.label1.Text = "Products";
+            // 
             // ProductsUserControl
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackColor = System.Drawing.Color.White;
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.ProductList);
@@ -145,6 +156,7 @@
             this.Size = new System.Drawing.Size(1211, 774);
             this.panel2.ResumeLayout(false);
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -157,5 +169,6 @@
         private System.Windows.Forms.Button UpdateProduktButton;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Label label1;
     }
 }

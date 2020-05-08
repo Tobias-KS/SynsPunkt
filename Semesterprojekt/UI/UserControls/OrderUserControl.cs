@@ -10,19 +10,14 @@ using System.Windows.Forms;
 
 namespace UI
 {
-    public partial class CustomerUserControl : UserControl
+    public partial class OrderUserControl : UserControl
     {
-        public CustomerUserControl()
+        public OrderUserControl()
         {
             InitializeComponent();
         }
 
-        private void CustomerList_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void SortByDropDownBox_SelectedIndexChanged(object sender, EventArgs e)
+        private void AddOrderButton_Click(object sender, EventArgs e)
         {
 
         }
