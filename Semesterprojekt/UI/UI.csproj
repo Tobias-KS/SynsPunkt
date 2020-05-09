@@ -58,6 +58,12 @@
     <Compile Include="AddPopUp.Designer.cs">
       <DependentUpon>AddPopUp.cs</DependentUpon>
     </Compile>
+    <Compile Include="SupportUserControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="SupportUserControl.Designer.cs">
+      <DependentUpon>SupportUserControl.cs</DependentUpon>
+    </Compile>
     <Compile Include="UserControls\OrderUserControl.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -92,6 +98,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="AddPopUp.resx">
       <DependentUpon>AddPopUp.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SupportUserControl.resx">
+      <DependentUpon>SupportUserControl.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UserControls\OrderUserControl.resx">
       <DependentUpon>OrderUserControl.cs</DependentUpon>

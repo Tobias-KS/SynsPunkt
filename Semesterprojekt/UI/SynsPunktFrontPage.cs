@@ -88,5 +88,10 @@ namespace UI
         {
             orderUserControl1.BringToFront();
         }
+
+        private void SupportButton_Click(object sender, EventArgs e)
+        {
+            supportUserControl1.BringToFront();
+        }
     }
 }

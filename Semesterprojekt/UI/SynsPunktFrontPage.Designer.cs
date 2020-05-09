@@ -45,6 +45,7 @@
             this.CloseApp = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
             this.fileSystemWatcher1 = new System.IO.FileSystemWatcher();
+            this.supportUserControl1 = new UI.SupportUserControl();
             this.customerUserControl1 = new UI.ProductsUserControl();
             this.customerUserControl2 = new UI.CustomerUserControl();
             this.orderUserControl1 = new UI.OrderUserControl();
@@ -133,6 +134,7 @@
             this.SupportButton.Text = "Support";
             this.SupportButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.SupportButton.UseVisualStyleBackColor = false;
+            this.SupportButton.Click += new System.EventHandler(this.SupportButton_Click);
             // 
             // OrdersButton
             // 
@@ -143,7 +145,7 @@
             this.OrdersButton.ForeColor = System.Drawing.Color.White;
             this.OrdersButton.Image = ((System.Drawing.Image)(resources.GetObject("OrdersButton.Image")));
             this.OrdersButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.OrdersButton.Location = new System.Drawing.Point(-3, 465);
+            this.OrdersButton.Location = new System.Drawing.Point(0, 465);
             this.OrdersButton.Name = "OrdersButton";
             this.OrdersButton.Size = new System.Drawing.Size(210, 89);
             this.OrdersButton.TabIndex = 5;
@@ -201,7 +203,7 @@
             this.CustomersButton.ForeColor = System.Drawing.Color.White;
             this.CustomersButton.Image = ((System.Drawing.Image)(resources.GetObject("CustomersButton.Image")));
             this.CustomersButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.CustomersButton.Location = new System.Drawing.Point(-3, 275);
+            this.CustomersButton.Location = new System.Drawing.Point(0, 275);
             this.CustomersButton.Name = "CustomersButton";
             this.CustomersButton.Size = new System.Drawing.Size(210, 89);
             this.CustomersButton.TabIndex = 0;
@@ -259,6 +261,7 @@
             // 
             // panel2
             // 
+            this.panel2.Controls.Add(this.supportUserControl1);
             this.panel2.Controls.Add(this.customerUserControl1);
             this.panel2.Controls.Add(this.customerUserControl2);
             this.panel2.Controls.Add(this.orderUserControl1);
@@ -274,6 +277,16 @@
             // 
             this.fileSystemWatcher1.EnableRaisingEvents = true;
             this.fileSystemWatcher1.SynchronizingObject = this;
+            // 
+            // supportUserControl1
+            // 
+            this.supportUserControl1.BackColor = System.Drawing.Color.White;
+            this.supportUserControl1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.supportUserControl1.Location = new System.Drawing.Point(0, -1);
+            this.supportUserControl1.Margin = new System.Windows.Forms.Padding(5);
+            this.supportUserControl1.Name = "supportUserControl1";
+            this.supportUserControl1.Size = new System.Drawing.Size(1211, 774);
+            this.supportUserControl1.TabIndex = 6;
             // 
             // customerUserControl1
             // 
@@ -366,6 +379,7 @@
         private ProductsUserControl productsUserControl1;
         private OrderUserControl orderUserControl1;
         private CustomerUserControl customerUserControl2;
+        private SupportUserControl supportUserControl1;
     }
 }
 
