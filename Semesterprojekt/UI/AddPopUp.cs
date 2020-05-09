@@ -19,8 +19,13 @@ namespace UI
 
         private void CancelButtonPopUp_Click(object sender, EventArgs e)
         {
-            this.Close();
-            this.Dispose();
+            DialogResult dialogResult = MessageBox.Show("Are you sure you want to cancel?", "Confirmation", MessageBoxButtons.YesNo);
+            if (dialogResult == DialogResult.Yes)
+            {
+                this.Close();
+                this.Dispose();
+            }
+
         }
     }
 }

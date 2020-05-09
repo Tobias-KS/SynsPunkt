@@ -69,18 +69,20 @@
             this.PanelCustomerSupport.Controls.Add(this.CustomerSupportPageLinkLabel);
             this.PanelCustomerSupport.Location = new System.Drawing.Point(0, 248);
             this.PanelCustomerSupport.Name = "PanelCustomerSupport";
-            this.PanelCustomerSupport.Size = new System.Drawing.Size(200, 54);
+            this.PanelCustomerSupport.Size = new System.Drawing.Size(470, 54);
             this.PanelCustomerSupport.TabIndex = 6;
             // 
             // CustomerSupportPageLinkLabel
             // 
+            this.CustomerSupportPageLinkLabel.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
             this.CustomerSupportPageLinkLabel.AutoSize = true;
-            this.CustomerSupportPageLinkLabel.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CustomerSupportPageLinkLabel.Font = new System.Drawing.Font("Century Gothic", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.CustomerSupportPageLinkLabel.LinkBehavior = System.Windows.Forms.LinkBehavior.NeverUnderline;
             this.CustomerSupportPageLinkLabel.LinkColor = System.Drawing.Color.White;
-            this.CustomerSupportPageLinkLabel.Location = new System.Drawing.Point(24, 14);
+            this.CustomerSupportPageLinkLabel.Location = new System.Drawing.Point(87, 7);
             this.CustomerSupportPageLinkLabel.Name = "CustomerSupportPageLinkLabel";
-            this.CustomerSupportPageLinkLabel.Size = new System.Drawing.Size(170, 25);
+            this.CustomerSupportPageLinkLabel.Size = new System.Drawing.Size(257, 38);
             this.CustomerSupportPageLinkLabel.TabIndex = 7;
             this.CustomerSupportPageLinkLabel.TabStop = true;
             this.CustomerSupportPageLinkLabel.Text = "Customer page";
@@ -89,10 +91,10 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(24, 176);
+            this.label1.Font = new System.Drawing.Font("Century Gothic", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(3, 170);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(446, 25);
+            this.label1.Size = new System.Drawing.Size(678, 38);
             this.label1.TabIndex = 7;
             this.label1.Text = "What would you like to know more about? ";
             // 
@@ -102,18 +104,18 @@
             this.PanelProduckSupport.Controls.Add(this.linkLabel1);
             this.PanelProduckSupport.Location = new System.Drawing.Point(0, 343);
             this.PanelProduckSupport.Name = "PanelProduckSupport";
-            this.PanelProduckSupport.Size = new System.Drawing.Size(200, 54);
+            this.PanelProduckSupport.Size = new System.Drawing.Size(470, 54);
             this.PanelProduckSupport.TabIndex = 8;
             // 
             // linkLabel1
             // 
             this.linkLabel1.AutoSize = true;
-            this.linkLabel1.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.linkLabel1.Font = new System.Drawing.Font("Century Gothic", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.linkLabel1.LinkBehavior = System.Windows.Forms.LinkBehavior.NeverUnderline;
             this.linkLabel1.LinkColor = System.Drawing.Color.White;
-            this.linkLabel1.Location = new System.Drawing.Point(24, 14);
+            this.linkLabel1.Location = new System.Drawing.Point(87, 5);
             this.linkLabel1.Name = "linkLabel1";
-            this.linkLabel1.Size = new System.Drawing.Size(151, 25);
+            this.linkLabel1.Size = new System.Drawing.Size(227, 38);
             this.linkLabel1.TabIndex = 7;
             this.linkLabel1.TabStop = true;
             this.linkLabel1.Text = "Product page";
@@ -122,45 +124,45 @@
             // 
             this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(118)))), ((int)(((byte)(211)))));
             this.panel3.Controls.Add(this.linkLabel2);
-            this.panel3.Location = new System.Drawing.Point(91, 431);
+            this.panel3.Location = new System.Drawing.Point(0, 438);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(200, 54);
+            this.panel3.Size = new System.Drawing.Size(470, 54);
             this.panel3.TabIndex = 9;
             // 
             // linkLabel2
             // 
             this.linkLabel2.AutoSize = true;
-            this.linkLabel2.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.linkLabel2.Font = new System.Drawing.Font("Century Gothic", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.linkLabel2.LinkBehavior = System.Windows.Forms.LinkBehavior.NeverUnderline;
             this.linkLabel2.LinkColor = System.Drawing.Color.White;
-            this.linkLabel2.Location = new System.Drawing.Point(24, 14);
+            this.linkLabel2.Location = new System.Drawing.Point(87, 6);
             this.linkLabel2.Name = "linkLabel2";
-            this.linkLabel2.Size = new System.Drawing.Size(170, 25);
+            this.linkLabel2.Size = new System.Drawing.Size(197, 38);
             this.linkLabel2.TabIndex = 7;
             this.linkLabel2.TabStop = true;
-            this.linkLabel2.Text = "Customer page";
+            this.linkLabel2.Text = "Order page";
             // 
             // panel4
             // 
             this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(118)))), ((int)(((byte)(211)))));
             this.panel4.Controls.Add(this.linkLabel3);
-            this.panel4.Location = new System.Drawing.Point(91, 528);
+            this.panel4.Location = new System.Drawing.Point(0, 533);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(200, 54);
+            this.panel4.Size = new System.Drawing.Size(470, 54);
             this.panel4.TabIndex = 8;
             // 
             // linkLabel3
             // 
             this.linkLabel3.AutoSize = true;
-            this.linkLabel3.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.linkLabel3.Font = new System.Drawing.Font("Century Gothic", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.linkLabel3.LinkBehavior = System.Windows.Forms.LinkBehavior.NeverUnderline;
             this.linkLabel3.LinkColor = System.Drawing.Color.White;
-            this.linkLabel3.Location = new System.Drawing.Point(24, 14);
+            this.linkLabel3.Location = new System.Drawing.Point(87, 6);
             this.linkLabel3.Name = "linkLabel3";
-            this.linkLabel3.Size = new System.Drawing.Size(170, 25);
+            this.linkLabel3.Size = new System.Drawing.Size(264, 38);
             this.linkLabel3.TabIndex = 7;
             this.linkLabel3.TabStop = true;
-            this.linkLabel3.Text = "Customer page";
+            this.linkLabel3.Text = "Employee page";
             // 
             // SupportUserControl
             // 

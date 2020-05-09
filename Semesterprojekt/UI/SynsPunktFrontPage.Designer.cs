@@ -20,6 +20,10 @@
             base.Dispose(disposing);
         }
 
+      
+
+
+
         #region Windows Form Designer generated code
 
         /// <summary>
@@ -28,6 +32,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrontPage));
             this.SidePanel = new System.Windows.Forms.Panel();
             this.HomeButton = new System.Windows.Forms.Button();
@@ -45,6 +50,7 @@
             this.CloseApp = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
             this.fileSystemWatcher1 = new System.IO.FileSystemWatcher();
+            this.TimerToFrontPage = new System.Windows.Forms.Timer(this.components);
             this.supportUserControl1 = new UI.SupportUserControl();
             this.customerUserControl1 = new UI.ProductsUserControl();
             this.customerUserControl2 = new UI.CustomerUserControl();
@@ -278,6 +284,10 @@
             this.fileSystemWatcher1.EnableRaisingEvents = true;
             this.fileSystemWatcher1.SynchronizingObject = this;
             // 
+            // TimerToFrontPage
+            // 
+            this.TimerToFrontPage.Tick += new System.EventHandler(this.TimerToFrontPage_Tick);
+            // 
             // supportUserControl1
             // 
             this.supportUserControl1.BackColor = System.Drawing.Color.White;
@@ -380,6 +390,7 @@
         private OrderUserControl orderUserControl1;
         private CustomerUserControl customerUserControl2;
         private SupportUserControl supportUserControl1;
+        private System.Windows.Forms.Timer TimerToFrontPage;
     }
 }
 

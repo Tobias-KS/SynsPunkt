@@ -27,7 +27,7 @@ namespace UI
         {
             InitializeComponent();
             frontPageUserControl1.BringToFront();
-         
+          
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -35,6 +35,8 @@ namespace UI
             ProductsUserControl CSPage = new ProductsUserControl();
             CSPage.Dock = DockStyle.Fill;
             MainPanel.Controls.Add(CSPage);
+
+           
         }
 
 
@@ -93,5 +95,10 @@ namespace UI
         {
             supportUserControl1.BringToFront();
         }
+
+        private void TimerToFrontPage_Tick(object sender, EventArgs e)
+        {
+        }
+
     }
 }
