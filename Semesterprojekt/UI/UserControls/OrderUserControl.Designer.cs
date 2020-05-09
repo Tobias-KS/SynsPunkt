@@ -34,11 +34,11 @@
             this.AddOrderButton = new System.Windows.Forms.Button();
             this.UpdateOrderButton = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.SortButtonCustomers = new System.Windows.Forms.Button();
-            this.ThenByDropDownBox = new System.Windows.Forms.ComboBox();
-            this.ThenByLabelCustomers = new System.Windows.Forms.Label();
-            this.SortyByLabelCustomers = new System.Windows.Forms.Label();
-            this.SortByDropDownBox = new System.Windows.Forms.ComboBox();
+            this.SortButtonOrders = new System.Windows.Forms.Button();
+            this.ThenByDropDownBoxOrders = new System.Windows.Forms.ComboBox();
+            this.ThenByLabelOrders = new System.Windows.Forms.Label();
+            this.SortyByLabelOrders = new System.Windows.Forms.Label();
+            this.SortByDropDownBoxOrders = new System.Windows.Forms.ComboBox();
             this.OrderList = new System.Windows.Forms.ListBox();
             this.FromDateOrders = new System.Windows.Forms.DateTimePicker();
             this.ToDateOrders = new System.Windows.Forms.DateTimePicker();
@@ -120,61 +120,61 @@
             this.panel1.Size = new System.Drawing.Size(1211, 10);
             this.panel1.TabIndex = 9;
             // 
-            // SortButtonCustomers
+            // SortButtonOrders
             // 
-            this.SortButtonCustomers.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(118)))), ((int)(((byte)(211)))));
-            this.SortButtonCustomers.FlatAppearance.BorderSize = 0;
-            this.SortButtonCustomers.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.SortButtonCustomers.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.SortButtonCustomers.ForeColor = System.Drawing.Color.White;
-            this.SortButtonCustomers.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.SortButtonCustomers.Location = new System.Drawing.Point(1081, 163);
-            this.SortButtonCustomers.Name = "SortButtonCustomers";
-            this.SortButtonCustomers.Size = new System.Drawing.Size(101, 33);
-            this.SortButtonCustomers.TabIndex = 13;
-            this.SortButtonCustomers.Text = "Sort";
-            this.SortButtonCustomers.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.SortButtonCustomers.UseVisualStyleBackColor = false;
+            this.SortButtonOrders.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(118)))), ((int)(((byte)(211)))));
+            this.SortButtonOrders.FlatAppearance.BorderSize = 0;
+            this.SortButtonOrders.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.SortButtonOrders.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.SortButtonOrders.ForeColor = System.Drawing.Color.White;
+            this.SortButtonOrders.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.SortButtonOrders.Location = new System.Drawing.Point(1081, 163);
+            this.SortButtonOrders.Name = "SortButtonOrders";
+            this.SortButtonOrders.Size = new System.Drawing.Size(101, 33);
+            this.SortButtonOrders.TabIndex = 13;
+            this.SortButtonOrders.Text = "Sort";
+            this.SortButtonOrders.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.SortButtonOrders.UseVisualStyleBackColor = false;
             // 
-            // ThenByDropDownBox
+            // ThenByDropDownBoxOrders
             // 
-            this.ThenByDropDownBox.BackColor = System.Drawing.Color.White;
-            this.ThenByDropDownBox.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ThenByDropDownBox.FormattingEnabled = true;
-            this.ThenByDropDownBox.Location = new System.Drawing.Point(234, 165);
-            this.ThenByDropDownBox.Name = "ThenByDropDownBox";
-            this.ThenByDropDownBox.Size = new System.Drawing.Size(206, 29);
-            this.ThenByDropDownBox.TabIndex = 16;
+            this.ThenByDropDownBoxOrders.BackColor = System.Drawing.Color.White;
+            this.ThenByDropDownBoxOrders.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ThenByDropDownBoxOrders.FormattingEnabled = true;
+            this.ThenByDropDownBoxOrders.Location = new System.Drawing.Point(234, 165);
+            this.ThenByDropDownBoxOrders.Name = "ThenByDropDownBoxOrders";
+            this.ThenByDropDownBoxOrders.Size = new System.Drawing.Size(206, 29);
+            this.ThenByDropDownBoxOrders.TabIndex = 16;
             // 
-            // ThenByLabelCustomers
+            // ThenByLabelOrders
             // 
-            this.ThenByLabelCustomers.AutoSize = true;
-            this.ThenByLabelCustomers.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ThenByLabelCustomers.Location = new System.Drawing.Point(230, 134);
-            this.ThenByLabelCustomers.Name = "ThenByLabelCustomers";
-            this.ThenByLabelCustomers.Size = new System.Drawing.Size(140, 21);
-            this.ThenByLabelCustomers.TabIndex = 15;
-            this.ThenByLabelCustomers.Text = "And then sort by";
+            this.ThenByLabelOrders.AutoSize = true;
+            this.ThenByLabelOrders.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ThenByLabelOrders.Location = new System.Drawing.Point(230, 134);
+            this.ThenByLabelOrders.Name = "ThenByLabelOrders";
+            this.ThenByLabelOrders.Size = new System.Drawing.Size(140, 21);
+            this.ThenByLabelOrders.TabIndex = 15;
+            this.ThenByLabelOrders.Text = "And then sort by";
             // 
-            // SortyByLabelCustomers
+            // SortyByLabelOrders
             // 
-            this.SortyByLabelCustomers.AutoSize = true;
-            this.SortyByLabelCustomers.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.SortyByLabelCustomers.Location = new System.Drawing.Point(18, 134);
-            this.SortyByLabelCustomers.Name = "SortyByLabelCustomers";
-            this.SortyByLabelCustomers.Size = new System.Drawing.Size(63, 21);
-            this.SortyByLabelCustomers.TabIndex = 14;
-            this.SortyByLabelCustomers.Text = "Sort by";
+            this.SortyByLabelOrders.AutoSize = true;
+            this.SortyByLabelOrders.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.SortyByLabelOrders.Location = new System.Drawing.Point(18, 134);
+            this.SortyByLabelOrders.Name = "SortyByLabelOrders";
+            this.SortyByLabelOrders.Size = new System.Drawing.Size(63, 21);
+            this.SortyByLabelOrders.TabIndex = 14;
+            this.SortyByLabelOrders.Text = "Sort by";
             // 
-            // SortByDropDownBox
+            // SortByDropDownBoxOrders
             // 
-            this.SortByDropDownBox.BackColor = System.Drawing.Color.White;
-            this.SortByDropDownBox.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.SortByDropDownBox.FormattingEnabled = true;
-            this.SortByDropDownBox.Location = new System.Drawing.Point(22, 165);
-            this.SortByDropDownBox.Name = "SortByDropDownBox";
-            this.SortByDropDownBox.Size = new System.Drawing.Size(206, 29);
-            this.SortByDropDownBox.TabIndex = 12;
+            this.SortByDropDownBoxOrders.BackColor = System.Drawing.Color.White;
+            this.SortByDropDownBoxOrders.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.SortByDropDownBoxOrders.FormattingEnabled = true;
+            this.SortByDropDownBoxOrders.Location = new System.Drawing.Point(22, 165);
+            this.SortByDropDownBoxOrders.Name = "SortByDropDownBoxOrders";
+            this.SortByDropDownBoxOrders.Size = new System.Drawing.Size(206, 29);
+            this.SortByDropDownBoxOrders.TabIndex = 12;
             // 
             // OrderList
             // 
@@ -253,11 +253,11 @@
             this.Controls.Add(this.ToDateOrders);
             this.Controls.Add(this.FromDateOrders);
             this.Controls.Add(this.PrintButtonOrders);
-            this.Controls.Add(this.SortButtonCustomers);
-            this.Controls.Add(this.ThenByDropDownBox);
-            this.Controls.Add(this.ThenByLabelCustomers);
-            this.Controls.Add(this.SortyByLabelCustomers);
-            this.Controls.Add(this.SortByDropDownBox);
+            this.Controls.Add(this.SortButtonOrders);
+            this.Controls.Add(this.ThenByDropDownBoxOrders);
+            this.Controls.Add(this.ThenByLabelOrders);
+            this.Controls.Add(this.SortyByLabelOrders);
+            this.Controls.Add(this.SortByDropDownBoxOrders);
             this.Controls.Add(this.OrderList);
             this.Controls.Add(this.ButtonShowAllOrders);
             this.Controls.Add(this.DeleteOrderButton);
@@ -278,11 +278,11 @@
         private System.Windows.Forms.Button AddOrderButton;
         private System.Windows.Forms.Button UpdateOrderButton;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Button SortButtonCustomers;
-        private System.Windows.Forms.ComboBox ThenByDropDownBox;
-        private System.Windows.Forms.Label ThenByLabelCustomers;
-        private System.Windows.Forms.Label SortyByLabelCustomers;
-        private System.Windows.Forms.ComboBox SortByDropDownBox;
+        private System.Windows.Forms.Button SortButtonOrders;
+        private System.Windows.Forms.ComboBox ThenByDropDownBoxOrders;
+        private System.Windows.Forms.Label ThenByLabelOrders;
+        private System.Windows.Forms.Label SortyByLabelOrders;
+        private System.Windows.Forms.ComboBox SortByDropDownBoxOrders;
         private System.Windows.Forms.ListBox OrderList;
         private System.Windows.Forms.Button PrintButtonOrders;
         private System.Windows.Forms.DateTimePicker FromDateOrders;

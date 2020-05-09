@@ -28,27 +28,26 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.ProductList = new System.Windows.Forms.ListBox();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ProductsUserControl));
             this.AddProductButton = new System.Windows.Forms.Button();
             this.ButtonShowAllProducts = new System.Windows.Forms.Button();
             this.UpdateProduktButton = new System.Windows.Forms.Button();
             this.DeleteProductButton = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.label1 = new System.Windows.Forms.Label();
+            this.ToLabelProducts = new System.Windows.Forms.Label();
+            this.FromLabelProducts = new System.Windows.Forms.Label();
+            this.ToDateProducts = new System.Windows.Forms.DateTimePicker();
+            this.FromDateProducts = new System.Windows.Forms.DateTimePicker();
+            this.PrintButtonProducts = new System.Windows.Forms.Button();
+            this.SortButtonProducts = new System.Windows.Forms.Button();
+            this.ThenByDropDownBoxProducts = new System.Windows.Forms.ComboBox();
+            this.ThenByLabelProducts = new System.Windows.Forms.Label();
+            this.SortyByLabelProducts = new System.Windows.Forms.Label();
+            this.SortByDropDownBoxProducts = new System.Windows.Forms.ComboBox();
+            this.ProductList = new System.Windows.Forms.ListBox();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // ProductList
-            // 
-            this.ProductList.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ProductList.FormattingEnabled = true;
-            this.ProductList.ItemHeight = 21;
-            this.ProductList.Location = new System.Drawing.Point(726, 153);
-            this.ProductList.Name = "ProductList";
-            this.ProductList.Size = new System.Drawing.Size(463, 550);
-            this.ProductList.TabIndex = 0;
-            this.ProductList.SelectedIndexChanged += new System.EventHandler(this.CustomerList_SelectedIndexChanged);
             // 
             // AddProductButton
             // 
@@ -74,7 +73,7 @@
             this.ButtonShowAllProducts.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ButtonShowAllProducts.ForeColor = System.Drawing.Color.White;
             this.ButtonShowAllProducts.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.ButtonShowAllProducts.Location = new System.Drawing.Point(120, 11);
+            this.ButtonShowAllProducts.Location = new System.Drawing.Point(127, 11);
             this.ButtonShowAllProducts.Name = "ButtonShowAllProducts";
             this.ButtonShowAllProducts.Size = new System.Drawing.Size(210, 100);
             this.ButtonShowAllProducts.TabIndex = 2;
@@ -135,23 +134,146 @@
             this.panel1.Size = new System.Drawing.Size(1211, 10);
             this.panel1.TabIndex = 3;
             // 
-            // label1
+            // ToLabelProducts
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(373, 357);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(49, 13);
-            this.label1.TabIndex = 12;
-            this.label1.Text = "Products";
+            this.ToLabelProducts.AutoSize = true;
+            this.ToLabelProducts.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ToLabelProducts.Location = new System.Drawing.Point(643, 134);
+            this.ToLabelProducts.Name = "ToLabelProducts";
+            this.ToLabelProducts.Size = new System.Drawing.Size(28, 21);
+            this.ToLabelProducts.TabIndex = 32;
+            this.ToLabelProducts.Text = "To";
+            // 
+            // FromLabelProducts
+            // 
+            this.FromLabelProducts.AutoSize = true;
+            this.FromLabelProducts.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.FromLabelProducts.Location = new System.Drawing.Point(520, 134);
+            this.FromLabelProducts.Name = "FromLabelProducts";
+            this.FromLabelProducts.Size = new System.Drawing.Size(52, 21);
+            this.FromLabelProducts.TabIndex = 31;
+            this.FromLabelProducts.Text = "From ";
+            // 
+            // ToDateProducts
+            // 
+            this.ToDateProducts.CalendarFont = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ToDateProducts.Font = new System.Drawing.Font("Century Gothic", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ToDateProducts.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.ToDateProducts.Location = new System.Drawing.Point(647, 165);
+            this.ToDateProducts.Name = "ToDateProducts";
+            this.ToDateProducts.Size = new System.Drawing.Size(113, 29);
+            this.ToDateProducts.TabIndex = 30;
+            // 
+            // FromDateProducts
+            // 
+            this.FromDateProducts.CalendarFont = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.FromDateProducts.Font = new System.Drawing.Font("Century Gothic", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.FromDateProducts.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.FromDateProducts.Location = new System.Drawing.Point(524, 165);
+            this.FromDateProducts.Name = "FromDateProducts";
+            this.FromDateProducts.Size = new System.Drawing.Size(117, 29);
+            this.FromDateProducts.TabIndex = 29;
+            // 
+            // PrintButtonProducts
+            // 
+            this.PrintButtonProducts.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(118)))), ((int)(((byte)(211)))));
+            this.PrintButtonProducts.FlatAppearance.BorderSize = 0;
+            this.PrintButtonProducts.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.PrintButtonProducts.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.PrintButtonProducts.ForeColor = System.Drawing.Color.White;
+            this.PrintButtonProducts.Image = ((System.Drawing.Image)(resources.GetObject("PrintButtonProducts.Image")));
+            this.PrintButtonProducts.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.PrintButtonProducts.Location = new System.Drawing.Point(1095, 719);
+            this.PrintButtonProducts.Name = "PrintButtonProducts";
+            this.PrintButtonProducts.Size = new System.Drawing.Size(87, 45);
+            this.PrintButtonProducts.TabIndex = 28;
+            this.PrintButtonProducts.Text = "Print";
+            this.PrintButtonProducts.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.PrintButtonProducts.UseVisualStyleBackColor = false;
+            // 
+            // SortButtonProducts
+            // 
+            this.SortButtonProducts.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(118)))), ((int)(((byte)(211)))));
+            this.SortButtonProducts.FlatAppearance.BorderSize = 0;
+            this.SortButtonProducts.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.SortButtonProducts.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.SortButtonProducts.ForeColor = System.Drawing.Color.White;
+            this.SortButtonProducts.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.SortButtonProducts.Location = new System.Drawing.Point(1081, 163);
+            this.SortButtonProducts.Name = "SortButtonProducts";
+            this.SortButtonProducts.Size = new System.Drawing.Size(101, 33);
+            this.SortButtonProducts.TabIndex = 24;
+            this.SortButtonProducts.Text = "Sort";
+            this.SortButtonProducts.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.SortButtonProducts.UseVisualStyleBackColor = false;
+            // 
+            // ThenByDropDownBoxProducts
+            // 
+            this.ThenByDropDownBoxProducts.BackColor = System.Drawing.Color.White;
+            this.ThenByDropDownBoxProducts.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ThenByDropDownBoxProducts.FormattingEnabled = true;
+            this.ThenByDropDownBoxProducts.Location = new System.Drawing.Point(234, 165);
+            this.ThenByDropDownBoxProducts.Name = "ThenByDropDownBoxProducts";
+            this.ThenByDropDownBoxProducts.Size = new System.Drawing.Size(206, 29);
+            this.ThenByDropDownBoxProducts.TabIndex = 27;
+            // 
+            // ThenByLabelProducts
+            // 
+            this.ThenByLabelProducts.AutoSize = true;
+            this.ThenByLabelProducts.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ThenByLabelProducts.Location = new System.Drawing.Point(230, 134);
+            this.ThenByLabelProducts.Name = "ThenByLabelProducts";
+            this.ThenByLabelProducts.Size = new System.Drawing.Size(140, 21);
+            this.ThenByLabelProducts.TabIndex = 26;
+            this.ThenByLabelProducts.Text = "And then sort by";
+            // 
+            // SortyByLabelProducts
+            // 
+            this.SortyByLabelProducts.AutoSize = true;
+            this.SortyByLabelProducts.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.SortyByLabelProducts.Location = new System.Drawing.Point(18, 134);
+            this.SortyByLabelProducts.Name = "SortyByLabelProducts";
+            this.SortyByLabelProducts.Size = new System.Drawing.Size(63, 21);
+            this.SortyByLabelProducts.TabIndex = 25;
+            this.SortyByLabelProducts.Text = "Sort by";
+            // 
+            // SortByDropDownBoxProducts
+            // 
+            this.SortByDropDownBoxProducts.BackColor = System.Drawing.Color.White;
+            this.SortByDropDownBoxProducts.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.SortByDropDownBoxProducts.FormattingEnabled = true;
+            this.SortByDropDownBoxProducts.Location = new System.Drawing.Point(22, 165);
+            this.SortByDropDownBoxProducts.Name = "SortByDropDownBoxProducts";
+            this.SortByDropDownBoxProducts.Size = new System.Drawing.Size(206, 29);
+            this.SortByDropDownBoxProducts.TabIndex = 23;
+            // 
+            // ProductList
+            // 
+            this.ProductList.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ProductList.FormattingEnabled = true;
+            this.ProductList.ItemHeight = 21;
+            this.ProductList.Location = new System.Drawing.Point(22, 202);
+            this.ProductList.Name = "ProductList";
+            this.ProductList.Size = new System.Drawing.Size(1160, 508);
+            this.ProductList.TabIndex = 22;
             // 
             // ProductsUserControl
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackColor = System.Drawing.Color.White;
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.ToLabelProducts);
+            this.Controls.Add(this.FromLabelProducts);
+            this.Controls.Add(this.ToDateProducts);
+            this.Controls.Add(this.FromDateProducts);
+            this.Controls.Add(this.PrintButtonProducts);
+            this.Controls.Add(this.SortButtonProducts);
+            this.Controls.Add(this.ThenByDropDownBoxProducts);
+            this.Controls.Add(this.ThenByLabelProducts);
+            this.Controls.Add(this.SortyByLabelProducts);
+            this.Controls.Add(this.SortByDropDownBoxProducts);
+            this.Controls.Add(this.ProductList);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.panel2);
-            this.Controls.Add(this.ProductList);
             this.Name = "ProductsUserControl";
             this.Size = new System.Drawing.Size(1211, 774);
             this.panel2.ResumeLayout(false);
@@ -161,14 +283,22 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.ListBox ProductList;
         private System.Windows.Forms.Button AddProductButton;
         private System.Windows.Forms.Button ButtonShowAllProducts;
         private System.Windows.Forms.Button DeleteProductButton;
         private System.Windows.Forms.Button UpdateProduktButton;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label ToLabelProducts;
+        private System.Windows.Forms.Label FromLabelProducts;
+        private System.Windows.Forms.DateTimePicker ToDateProducts;
+        private System.Windows.Forms.DateTimePicker FromDateProducts;
+        private System.Windows.Forms.Button PrintButtonProducts;
+        private System.Windows.Forms.Button SortButtonProducts;
+        private System.Windows.Forms.ComboBox ThenByDropDownBoxProducts;
+        private System.Windows.Forms.Label ThenByLabelProducts;
+        private System.Windows.Forms.Label SortyByLabelProducts;
+        private System.Windows.Forms.ComboBox SortByDropDownBoxProducts;
+        private System.Windows.Forms.ListBox ProductList;
     }
 }

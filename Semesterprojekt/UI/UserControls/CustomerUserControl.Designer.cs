@@ -35,10 +35,10 @@
             this.DeleteCustomerButton = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.SortByDropDownBox = new System.Windows.Forms.ComboBox();
+            this.SortByDropDownBoxCustomer = new System.Windows.Forms.ComboBox();
             this.SortyByLabelCustomers = new System.Windows.Forms.Label();
             this.ThenByLabelCustomers = new System.Windows.Forms.Label();
-            this.ThenByDropDownBox = new System.Windows.Forms.ComboBox();
+            this.ThenByDropDownBoxCustomer = new System.Windows.Forms.ComboBox();
             this.SortButtonCustomers = new System.Windows.Forms.Button();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
@@ -69,6 +69,7 @@
             this.AddCustomerButton.Text = "Add";
             this.AddCustomerButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.AddCustomerButton.UseVisualStyleBackColor = false;
+            this.AddCustomerButton.Click += new System.EventHandler(this.AddCustomerButton_Click);
             // 
             // ButtonShowAllCustomers
             // 
@@ -78,7 +79,7 @@
             this.ButtonShowAllCustomers.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ButtonShowAllCustomers.ForeColor = System.Drawing.Color.White;
             this.ButtonShowAllCustomers.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.ButtonShowAllCustomers.Location = new System.Drawing.Point(120, 11);
+            this.ButtonShowAllCustomers.Location = new System.Drawing.Point(127, 11);
             this.ButtonShowAllCustomers.Name = "ButtonShowAllCustomers";
             this.ButtonShowAllCustomers.Size = new System.Drawing.Size(210, 100);
             this.ButtonShowAllCustomers.TabIndex = 2;
@@ -139,18 +140,18 @@
             this.panel1.Size = new System.Drawing.Size(1211, 10);
             this.panel1.TabIndex = 3;
             // 
-            // SortByDropDownBox
+            // SortByDropDownBoxCustomer
             // 
-            this.SortByDropDownBox.BackColor = System.Drawing.Color.White;
-            this.SortByDropDownBox.Cursor = System.Windows.Forms.Cursors.Arrow;
-            this.SortByDropDownBox.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.SortByDropDownBox.ForeColor = System.Drawing.Color.Black;
-            this.SortByDropDownBox.FormattingEnabled = true;
-            this.SortByDropDownBox.Location = new System.Drawing.Point(22, 165);
-            this.SortByDropDownBox.Name = "SortByDropDownBox";
-            this.SortByDropDownBox.Size = new System.Drawing.Size(206, 29);
-            this.SortByDropDownBox.TabIndex = 4;
-            this.SortByDropDownBox.SelectedIndexChanged += new System.EventHandler(this.SortByDropDownBox_SelectedIndexChanged);
+            this.SortByDropDownBoxCustomer.BackColor = System.Drawing.Color.White;
+            this.SortByDropDownBoxCustomer.Cursor = System.Windows.Forms.Cursors.Arrow;
+            this.SortByDropDownBoxCustomer.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.SortByDropDownBoxCustomer.ForeColor = System.Drawing.Color.Black;
+            this.SortByDropDownBoxCustomer.FormattingEnabled = true;
+            this.SortByDropDownBoxCustomer.Location = new System.Drawing.Point(22, 165);
+            this.SortByDropDownBoxCustomer.Name = "SortByDropDownBoxCustomer";
+            this.SortByDropDownBoxCustomer.Size = new System.Drawing.Size(206, 29);
+            this.SortByDropDownBoxCustomer.TabIndex = 4;
+            this.SortByDropDownBoxCustomer.SelectedIndexChanged += new System.EventHandler(this.SortByDropDownBox_SelectedIndexChanged);
             // 
             // SortyByLabelCustomers
             // 
@@ -172,15 +173,15 @@
             this.ThenByLabelCustomers.TabIndex = 6;
             this.ThenByLabelCustomers.Text = "And then sort by";
             // 
-            // ThenByDropDownBox
+            // ThenByDropDownBoxCustomer
             // 
-            this.ThenByDropDownBox.BackColor = System.Drawing.Color.White;
-            this.ThenByDropDownBox.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ThenByDropDownBox.FormattingEnabled = true;
-            this.ThenByDropDownBox.Location = new System.Drawing.Point(234, 165);
-            this.ThenByDropDownBox.Name = "ThenByDropDownBox";
-            this.ThenByDropDownBox.Size = new System.Drawing.Size(206, 29);
-            this.ThenByDropDownBox.TabIndex = 7;
+            this.ThenByDropDownBoxCustomer.BackColor = System.Drawing.Color.White;
+            this.ThenByDropDownBoxCustomer.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ThenByDropDownBoxCustomer.FormattingEnabled = true;
+            this.ThenByDropDownBoxCustomer.Location = new System.Drawing.Point(234, 165);
+            this.ThenByDropDownBoxCustomer.Name = "ThenByDropDownBoxCustomer";
+            this.ThenByDropDownBoxCustomer.Size = new System.Drawing.Size(206, 29);
+            this.ThenByDropDownBoxCustomer.TabIndex = 7;
             // 
             // SortButtonCustomers
             // 
@@ -204,10 +205,10 @@
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.BackColor = System.Drawing.Color.White;
             this.Controls.Add(this.SortButtonCustomers);
-            this.Controls.Add(this.ThenByDropDownBox);
+            this.Controls.Add(this.ThenByDropDownBoxCustomer);
             this.Controls.Add(this.ThenByLabelCustomers);
             this.Controls.Add(this.SortyByLabelCustomers);
-            this.Controls.Add(this.SortByDropDownBox);
+            this.Controls.Add(this.SortByDropDownBoxCustomer);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.CustomerList);
@@ -228,10 +229,10 @@
         private System.Windows.Forms.Button UpdateCustomerButton;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.ComboBox SortByDropDownBox;
+        private System.Windows.Forms.ComboBox SortByDropDownBoxCustomer;
         private System.Windows.Forms.Label SortyByLabelCustomers;
         private System.Windows.Forms.Label ThenByLabelCustomers;
-        private System.Windows.Forms.ComboBox ThenByDropDownBox;
+        private System.Windows.Forms.ComboBox ThenByDropDownBoxCustomer;
         private System.Windows.Forms.Button SortButtonCustomers;
     }
 }
