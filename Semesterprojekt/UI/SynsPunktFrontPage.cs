@@ -4,6 +4,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -13,7 +14,12 @@ namespace UI
     public partial class FrontPage : Form
     {
 
+        //Skifter Farve på knappen efter tryk
+        private static void ColorShiftButtons()
+        {
+            
 
+        }
         public const int WM_NCLBUTTONDOWN = 0xA1;
         public const int HT_CAPTION = 0x2;
 
@@ -40,11 +46,6 @@ namespace UI
         }
 
 
-        private void CustomerButton_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void TopPanel_Paint(object sender, PaintEventArgs e)
         {
 
@@ -69,10 +70,9 @@ namespace UI
             this.WindowState = FormWindowState.Minimized;
         }
 
-        private void CustomersButton_Click(object sender, EventArgs e)
+        public void CustomersButton_Click(object sender, EventArgs e)
         {
             customerUserControl2.BringToFront();
-
         }
 
         private void HomeButton_Click(object sender, EventArgs e)
