@@ -12,13 +12,23 @@ namespace SQLTest
         {
 
             List<Customer> customers = Reader.SelectAllCustomers();
-            Customer customer = Reader.SelectCustomer();
+            
 
-            foreach (var cust in customers)
+            foreach (var customer in customers)
             {
-                Console.Write(cust);
+                Console.WriteLine(customer.Forename);
+                Console.WriteLine(customer.Lastname);
+                Console.WriteLine(customer.Adress);
+                Console.WriteLine(customer.PhoneNumber);
+                Console.WriteLine(customer.Email);
+                Console.WriteLine(customer.StrengthLeft);
+                Console.WriteLine(customer.StrengthRight);
+                Console.WriteLine(customer.Notes);
+                Console.WriteLine(customer.SignupDate);
+                Console.WriteLine(" ");
+
             }
-            Console.WriteLine(customer);
+           
             Console.ReadKey();
         }
     }
