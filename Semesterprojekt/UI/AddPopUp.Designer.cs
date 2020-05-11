@@ -26,7 +26,7 @@
         /// Required method for Designer support - do not modify
         /// the contents of this method with the code editor.
         /// </summary>
-        private void InitializeComponent()
+        public void InitializeComponent()
         {
             this.ButtonPanelPopUp = new System.Windows.Forms.Panel();
             this.CancelButtonPopUp = new System.Windows.Forms.Button();
@@ -125,7 +125,7 @@
             // 
             this.addCustomerPopUpMainPanelUserControl1.BackColor = System.Drawing.Color.White;
             this.addCustomerPopUpMainPanelUserControl1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.addCustomerPopUpMainPanelUserControl1.Location = new System.Drawing.Point(-3, 0);
+            this.addCustomerPopUpMainPanelUserControl1.Location = new System.Drawing.Point(0, 0);
             this.addCustomerPopUpMainPanelUserControl1.Margin = new System.Windows.Forms.Padding(5);
             this.addCustomerPopUpMainPanelUserControl1.Name = "addCustomerPopUpMainPanelUserControl1";
             this.addCustomerPopUpMainPanelUserControl1.Size = new System.Drawing.Size(805, 363);

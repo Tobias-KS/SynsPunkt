@@ -52,6 +52,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="UserControls\AddOrderPopUpMainPanelUserControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\AddOrderPopUpMainPanelUserControl.Designer.cs">
+      <DependentUpon>AddOrderPopUpMainPanelUserControl.cs</DependentUpon>
+    </Compile>
     <Compile Include="UserControls\AddCustomerPopUpMainPanelUserControl.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -102,6 +108,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="UserControls\AddOrderPopUpMainPanelUserControl.resx">
+      <DependentUpon>AddOrderPopUpMainPanelUserControl.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UserControls\AddCustomerPopUpMainPanelUserControl.resx">
       <DependentUpon>AddCustomerPopUpMainPanelUserControl.cs</DependentUpon>
     </EmbeddedResource>
