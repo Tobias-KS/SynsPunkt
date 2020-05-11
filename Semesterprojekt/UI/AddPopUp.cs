@@ -9,25 +9,19 @@ using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using Guna.UI2.Native;
+
 
 namespace UI
 {
     public partial class AddPopUp : Form
     {
-        public bool isCustomer { get; set; }
-        public AddPopUp()
+        public bool IsCustomer { get; set; }
+
+        public AddPopUp(bool isCustomer)
         {
             InitializeComponent();
-            if (isCustomer)
-            {
-                addCustomerPopUpMainPanelUserControl1.BringToFront();
-            }
-            else
-            {
-                
-                // addOrderPopUpMainPanelUserControl1.BringToFront();
-            }
+            this.IsCustomer = isCustomer;
+            CustomerOrOrder();
 
         }
         //Metode til at man kan flytte PopUp rundt
@@ -55,6 +49,18 @@ namespace UI
             {
                 ReleaseCapture();
                 SendMessage(Handle, WM_NCLBUTTONDOWN, HT_CAPTION, 0);
+            }
+        }
+
+        public void CustomerOrOrder()
+        {
+            if (IsCustomer == true)
+            {
+                addCustomerPopUpMainPanelUserControl1.BringToFront();
+            }
+            else
+            {
+                addOrderPopUpMainPanelUserControl1.BringToFront();
             }
         }
 

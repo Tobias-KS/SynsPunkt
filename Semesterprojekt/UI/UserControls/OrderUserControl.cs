@@ -20,8 +20,7 @@ namespace UI
 
         private void AddOrderButton_Click(object sender, EventArgs e)
         {
-            var OrderAddPopUp = new AddPopUp();
-            OrderAddPopUp.isCustomer = false;
+            var OrderAddPopUp = new AddPopUp(false);
             OrderAddPopUp.Show();
         }
 

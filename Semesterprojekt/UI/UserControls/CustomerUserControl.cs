@@ -29,8 +29,7 @@ namespace UI
 
         private void AddCustomerButton_Click(object sender, EventArgs e)
         {
-            var CustomerAddPopUp = new AddPopUp();
-            CustomerAddPopUp.isCustomer = true;
+            var CustomerAddPopUp = new AddPopUp(true);
             CustomerAddPopUp.Show();
         }
     }
