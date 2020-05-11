@@ -14,12 +14,6 @@ namespace UI
     public partial class FrontPage : Form
     {
 
-        //Skifter Farve på knappen efter tryk
-        private static void ColorShiftButtons()
-        {
-            
-
-        }
         public const int WM_NCLBUTTONDOWN = 0xA1;
         public const int HT_CAPTION = 0x2;
 
@@ -73,31 +67,55 @@ namespace UI
         public void CustomersButton_Click(object sender, EventArgs e)
         {
             customerUserControl2.BringToFront();
+            ChangeColors(CustomersButton);
+
         }
 
         private void HomeButton_Click(object sender, EventArgs e)
         {
             frontPageUserControl1.BringToFront();
+            ChangeColors(HomeButton);
         }
 
         private void ProductsButton_Click(object sender, EventArgs e)
         {
             productsUserControl1.BringToFront();
+            ChangeColors(ProductsButton);
         }
 
         private void OrdersButton_Click(object sender, EventArgs e)
         {
             orderUserControl1.BringToFront();
+            ChangeColors(OrdersButton);
         }
 
         private void SupportButton_Click(object sender, EventArgs e)
         {
             supportUserControl1.BringToFront();
+            ChangeColors(SupportButton);
+        }
+
+        private void EmployeesButton_Click(object sender, EventArgs e)
+        {
+            supportUserControl1.BringToFront();
+            ChangeColors(EmployeesButton);
         }
 
         private void TimerToFrontPage_Tick(object sender, EventArgs e)
         {
         }
 
+        private void ChangeColors(Button activeButton)
+        {
+            HomeButton.BackColor = Color.Blue;
+            CustomersButton.BackColor = Color.Blue;
+            OrdersButton.BackColor = Color.Blue;
+            SupportButton.BackColor = Color.Blue;
+            ProductsButton.BackColor = Color.Blue;
+            EmployeesButton.BackColor = Color.Blue;
+            activeButton.BackColor = Color.Aqua;
+        }
+
+        
     }
 }
