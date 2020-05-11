@@ -35,10 +35,7 @@ namespace UI
             ProductsUserControl CSPage = new ProductsUserControl();
             CSPage.Dock = DockStyle.Fill;
             MainPanel.Controls.Add(CSPage);
-
-           
         }
-
 
         private void TopPanel_Paint(object sender, PaintEventArgs e)
         {
@@ -70,7 +67,6 @@ namespace UI
             ChangeColors(CustomersButton);
 
         }
-
         private void HomeButton_Click(object sender, EventArgs e)
         {
             frontPageUserControl1.BringToFront();
@@ -107,15 +103,14 @@ namespace UI
 
         private void ChangeColors(Button activeButton)
         {
-            HomeButton.BackColor = Color.Blue;
-            CustomersButton.BackColor = Color.Blue;
-            OrdersButton.BackColor = Color.Blue;
-            SupportButton.BackColor = Color.Blue;
-            ProductsButton.BackColor = Color.Blue;
-            EmployeesButton.BackColor = Color.Blue;
-            activeButton.BackColor = Color.Aqua;
+            HomeButton.BackColor = Color.FromArgb(25, 118, 211);
+            CustomersButton.BackColor = Color.FromArgb(25, 118, 211);
+            OrdersButton.BackColor = Color.FromArgb(25, 118, 211);
+            SupportButton.BackColor = Color.FromArgb(25, 118, 211);
+            ProductsButton.BackColor = Color.FromArgb(25, 118, 211);
+            EmployeesButton.BackColor = Color.FromArgb(25, 118, 211);
+            activeButton.BackColor = Color.FromArgb(0, 191, 255);
         }
 
-        
     }
 }
