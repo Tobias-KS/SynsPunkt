@@ -1,0 +1,12 @@
+﻿Kunder/Varer/Ordrer
+-oprette
+-slette
+-ændre
+-se
+	- Se 1
+	- se alle
+	- se x filter
+
+GetConnectionString
+
+
