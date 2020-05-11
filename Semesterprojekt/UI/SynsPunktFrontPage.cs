@@ -4,6 +4,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -12,7 +13,6 @@ namespace UI
 {
     public partial class FrontPage : Form
     {
-
 
         public const int WM_NCLBUTTONDOWN = 0xA1;
         public const int HT_CAPTION = 0x2;
@@ -27,7 +27,7 @@ namespace UI
         {
             InitializeComponent();
             frontPageUserControl1.BringToFront();
-         
+          
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -35,13 +35,10 @@ namespace UI
             ProductsUserControl CSPage = new ProductsUserControl();
             CSPage.Dock = DockStyle.Fill;
             MainPanel.Controls.Add(CSPage);
+
+           
         }
 
-
-        private void CustomerButton_Click(object sender, EventArgs e)
-        {
-
-        }
 
         private void TopPanel_Paint(object sender, PaintEventArgs e)
         {
@@ -67,31 +64,58 @@ namespace UI
             this.WindowState = FormWindowState.Minimized;
         }
 
-        private void CustomersButton_Click(object sender, EventArgs e)
+        public void CustomersButton_Click(object sender, EventArgs e)
         {
             customerUserControl2.BringToFront();
+            ChangeColors(CustomersButton);
 
         }
-
 
         private void HomeButton_Click(object sender, EventArgs e)
         {
             frontPageUserControl1.BringToFront();
+            ChangeColors(HomeButton);
         }
 
         private void ProductsButton_Click(object sender, EventArgs e)
         {
             productsUserControl1.BringToFront();
+            ChangeColors(ProductsButton);
         }
 
         private void OrdersButton_Click(object sender, EventArgs e)
         {
             orderUserControl1.BringToFront();
+            ChangeColors(OrdersButton);
         }
 
         private void SupportButton_Click(object sender, EventArgs e)
         {
             supportUserControl1.BringToFront();
+            ChangeColors(SupportButton);
         }
+
+        private void EmployeesButton_Click(object sender, EventArgs e)
+        {
+            supportUserControl1.BringToFront();
+            ChangeColors(EmployeesButton);
+        }
+
+        private void TimerToFrontPage_Tick(object sender, EventArgs e)
+        {
+        }
+
+        private void ChangeColors(Button activeButton)
+        {
+            HomeButton.BackColor = Color.Blue;
+            CustomersButton.BackColor = Color.Blue;
+            OrdersButton.BackColor = Color.Blue;
+            SupportButton.BackColor = Color.Blue;
+            ProductsButton.BackColor = Color.Blue;
+            EmployeesButton.BackColor = Color.Blue;
+            activeButton.BackColor = Color.Aqua;
+        }
+
+        
     }
 }

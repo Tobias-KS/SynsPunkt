@@ -52,16 +52,28 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="UserControls\AddOrderPopUpMainPanelUserControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\AddOrderPopUpMainPanelUserControl.Designer.cs">
+      <DependentUpon>AddOrderPopUpMainPanelUserControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\AddCustomerPopUpMainPanelUserControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\AddCustomerPopUpMainPanelUserControl.Designer.cs">
+      <DependentUpon>AddCustomerPopUpMainPanelUserControl.cs</DependentUpon>
+    </Compile>
     <Compile Include="AddPopUp.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="AddPopUp.Designer.cs">
       <DependentUpon>AddPopUp.cs</DependentUpon>
     </Compile>
-    <Compile Include="SupportUserControl.cs">
+    <Compile Include="UserControls\SupportUserControl.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="SupportUserControl.Designer.cs">
+    <Compile Include="UserControls\SupportUserControl.Designer.cs">
       <DependentUpon>SupportUserControl.cs</DependentUpon>
     </Compile>
     <Compile Include="UserControls\OrderUserControl.cs">
@@ -96,10 +108,16 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="UserControls\AddOrderPopUpMainPanelUserControl.resx">
+      <DependentUpon>AddOrderPopUpMainPanelUserControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\AddCustomerPopUpMainPanelUserControl.resx">
+      <DependentUpon>AddCustomerPopUpMainPanelUserControl.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="AddPopUp.resx">
       <DependentUpon>AddPopUp.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="SupportUserControl.resx">
+    <EmbeddedResource Include="UserControls\SupportUserControl.resx">
       <DependentUpon>SupportUserControl.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UserControls\OrderUserControl.resx">

@@ -20,7 +20,8 @@ namespace UI
 
         private void AddOrderButton_Click(object sender, EventArgs e)
         {
-
+            var OrderAddPopUp = new AddPopUp(false);
+            OrderAddPopUp.Show();
         }
 
         private void ToDateOrders_ValueChanged(object sender, EventArgs e)

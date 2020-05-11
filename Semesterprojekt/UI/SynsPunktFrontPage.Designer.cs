@@ -20,6 +20,10 @@
             base.Dispose(disposing);
         }
 
+      
+
+
+
         #region Windows Form Designer generated code
 
         /// <summary>
@@ -28,6 +32,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrontPage));
             this.SidePanel = new System.Windows.Forms.Panel();
             this.HomeButton = new System.Windows.Forms.Button();
@@ -44,13 +49,14 @@
             this.MinimizeApp = new System.Windows.Forms.Button();
             this.CloseApp = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.fileSystemWatcher1 = new System.IO.FileSystemWatcher();
             this.supportUserControl1 = new UI.SupportUserControl();
             this.customerUserControl1 = new UI.ProductsUserControl();
             this.customerUserControl2 = new UI.CustomerUserControl();
             this.orderUserControl1 = new UI.OrderUserControl();
             this.productsUserControl1 = new UI.ProductsUserControl();
             this.frontPageUserControl1 = new UI.FrontPageUserControl();
+            this.fileSystemWatcher1 = new System.IO.FileSystemWatcher();
+            this.TimerToFrontPage = new System.Windows.Forms.Timer(this.components);
             this.SidePanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Logo)).BeginInit();
             this.TopPanel.SuspendLayout();
@@ -117,6 +123,7 @@
             this.EmployeesButton.Text = "Employees";
             this.EmployeesButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.EmployeesButton.UseVisualStyleBackColor = false;
+            this.EmployeesButton.Click += new System.EventHandler(this.EmployeesButton_Click);
             // 
             // SupportButton
             // 
@@ -273,11 +280,6 @@
             this.panel2.Size = new System.Drawing.Size(1211, 774);
             this.panel2.TabIndex = 2;
             // 
-            // fileSystemWatcher1
-            // 
-            this.fileSystemWatcher1.EnableRaisingEvents = true;
-            this.fileSystemWatcher1.SynchronizingObject = this;
-            // 
             // supportUserControl1
             // 
             this.supportUserControl1.BackColor = System.Drawing.Color.White;
@@ -330,6 +332,15 @@
             this.frontPageUserControl1.Size = new System.Drawing.Size(1211, 774);
             this.frontPageUserControl1.TabIndex = 1;
             // 
+            // fileSystemWatcher1
+            // 
+            this.fileSystemWatcher1.EnableRaisingEvents = true;
+            this.fileSystemWatcher1.SynchronizingObject = this;
+            // 
+            // TimerToFrontPage
+            // 
+            this.TimerToFrontPage.Tick += new System.EventHandler(this.TimerToFrontPage_Tick);
+            // 
             // FrontPage
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
@@ -380,6 +391,7 @@
         private OrderUserControl orderUserControl1;
         private CustomerUserControl customerUserControl2;
         private SupportUserControl supportUserControl1;
+        private System.Windows.Forms.Timer TimerToFrontPage;
     }
 }
 
