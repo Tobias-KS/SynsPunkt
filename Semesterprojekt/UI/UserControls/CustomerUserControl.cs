@@ -37,7 +37,6 @@ namespace UI
         private void ButtonShowAllCustomers_Click(object sender, EventArgs e)
         {
 
-            CustomerList.DataSource = Reader.SelectAllCustomers();
 
         }
     }

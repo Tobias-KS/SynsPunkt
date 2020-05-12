@@ -41,6 +41,7 @@
     <Reference Include="System.Core" />
     <Reference Include="System.Design" />
     <Reference Include="System.Management" />
+    <Reference Include="System.Messaging" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -57,6 +58,12 @@
     </Compile>
     <Compile Include="EmployeesUserControl.Designer.cs">
       <DependentUpon>EmployeesUserControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MailUserControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="MailUserControl.Designer.cs">
+      <DependentUpon>MailUserControl.cs</DependentUpon>
     </Compile>
     <Compile Include="UserControls\AddOrderPopUpMainPanelUserControl.cs">
       <SubType>UserControl</SubType>
@@ -116,6 +123,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="EmployeesUserControl.resx">
       <DependentUpon>EmployeesUserControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MailUserControl.resx">
+      <DependentUpon>MailUserControl.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UserControls\AddOrderPopUpMainPanelUserControl.resx">
       <DependentUpon>AddOrderPopUpMainPanelUserControl.cs</DependentUpon>
@@ -178,6 +188,9 @@
       <Project>{74a8b65c-7afd-4452-9547-ecf5c035e09e}</Project>
       <Name>Persistence</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Resources\icons8_secured_letter_30px.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -112,5 +112,12 @@ namespace UI
             activeButton.BackColor = Color.FromArgb(0, 191, 255);
         }
 
+        private void ButtonMailFrontPage_Click(object sender, EventArgs e)
+        {
+
+            mailUserControl1.BringToFront();
+            ChangeColors(ButtonMailFrontPage);
+
+        }
     }
 }

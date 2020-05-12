@@ -35,6 +35,7 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrontPage));
             this.SidePanel = new System.Windows.Forms.Panel();
+            this.ButtonMailFrontPage = new System.Windows.Forms.Button();
             this.HomeButton = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.EmployeesButton = new System.Windows.Forms.Button();
@@ -58,6 +59,7 @@
             this.orderUserControl1 = new UI.OrderUserControl();
             this.productsUserControl1 = new UI.ProductsUserControl();
             this.frontPageUserControl1 = new UI.FrontPageUserControl();
+            this.mailUserControl1 = new UI.MailUserControl();
             this.SidePanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Logo)).BeginInit();
             this.TopPanel.SuspendLayout();
@@ -68,6 +70,7 @@
             // SidePanel
             // 
             this.SidePanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(101)))), ((int)(((byte)(193)))));
+            this.SidePanel.Controls.Add(this.ButtonMailFrontPage);
             this.SidePanel.Controls.Add(this.HomeButton);
             this.SidePanel.Controls.Add(this.panel1);
             this.SidePanel.Controls.Add(this.EmployeesButton);
@@ -83,6 +86,24 @@
             this.SidePanel.Size = new System.Drawing.Size(210, 825);
             this.SidePanel.TabIndex = 0;
             // 
+            // ButtonMailFrontPage
+            // 
+            this.ButtonMailFrontPage.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(118)))), ((int)(((byte)(211)))));
+            this.ButtonMailFrontPage.FlatAppearance.BorderSize = 0;
+            this.ButtonMailFrontPage.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.ButtonMailFrontPage.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ButtonMailFrontPage.ForeColor = System.Drawing.Color.White;
+            this.ButtonMailFrontPage.Image = ((System.Drawing.Image)(resources.GetObject("ButtonMailFrontPage.Image")));
+            this.ButtonMailFrontPage.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.ButtonMailFrontPage.Location = new System.Drawing.Point(0, 632);
+            this.ButtonMailFrontPage.Name = "ButtonMailFrontPage";
+            this.ButtonMailFrontPage.Size = new System.Drawing.Size(210, 89);
+            this.ButtonMailFrontPage.TabIndex = 9;
+            this.ButtonMailFrontPage.Text = "Mail";
+            this.ButtonMailFrontPage.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.ButtonMailFrontPage.UseVisualStyleBackColor = false;
+            this.ButtonMailFrontPage.Click += new System.EventHandler(this.ButtonMailFrontPage_Click);
+            // 
             // HomeButton
             // 
             this.HomeButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(118)))), ((int)(((byte)(211)))));
@@ -92,7 +113,7 @@
             this.HomeButton.ForeColor = System.Drawing.Color.White;
             this.HomeButton.Image = ((System.Drawing.Image)(resources.GetObject("HomeButton.Image")));
             this.HomeButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.HomeButton.Location = new System.Drawing.Point(0, 180);
+            this.HomeButton.Location = new System.Drawing.Point(0, 157);
             this.HomeButton.Name = "HomeButton";
             this.HomeButton.Size = new System.Drawing.Size(210, 89);
             this.HomeButton.TabIndex = 8;
@@ -117,7 +138,7 @@
             this.EmployeesButton.ForeColor = System.Drawing.Color.White;
             this.EmployeesButton.Image = ((System.Drawing.Image)(resources.GetObject("EmployeesButton.Image")));
             this.EmployeesButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.EmployeesButton.Location = new System.Drawing.Point(0, 560);
+            this.EmployeesButton.Location = new System.Drawing.Point(0, 537);
             this.EmployeesButton.Name = "EmployeesButton";
             this.EmployeesButton.Size = new System.Drawing.Size(210, 89);
             this.EmployeesButton.TabIndex = 7;
@@ -153,7 +174,7 @@
             this.OrdersButton.ForeColor = System.Drawing.Color.White;
             this.OrdersButton.Image = ((System.Drawing.Image)(resources.GetObject("OrdersButton.Image")));
             this.OrdersButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.OrdersButton.Location = new System.Drawing.Point(0, 465);
+            this.OrdersButton.Location = new System.Drawing.Point(0, 442);
             this.OrdersButton.Name = "OrdersButton";
             this.OrdersButton.Size = new System.Drawing.Size(210, 89);
             this.OrdersButton.TabIndex = 5;
@@ -171,7 +192,7 @@
             this.ProductsButton.ForeColor = System.Drawing.Color.White;
             this.ProductsButton.Image = ((System.Drawing.Image)(resources.GetObject("ProductsButton.Image")));
             this.ProductsButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.ProductsButton.Location = new System.Drawing.Point(0, 370);
+            this.ProductsButton.Location = new System.Drawing.Point(0, 347);
             this.ProductsButton.Name = "ProductsButton";
             this.ProductsButton.Size = new System.Drawing.Size(210, 89);
             this.ProductsButton.TabIndex = 4;
@@ -211,7 +232,7 @@
             this.CustomersButton.ForeColor = System.Drawing.Color.White;
             this.CustomersButton.Image = ((System.Drawing.Image)(resources.GetObject("CustomersButton.Image")));
             this.CustomersButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.CustomersButton.Location = new System.Drawing.Point(0, 275);
+            this.CustomersButton.Location = new System.Drawing.Point(0, 252);
             this.CustomersButton.Name = "CustomersButton";
             this.CustomersButton.Size = new System.Drawing.Size(210, 89);
             this.CustomersButton.TabIndex = 0;
@@ -269,6 +290,7 @@
             // 
             // panel2
             // 
+            this.panel2.Controls.Add(this.mailUserControl1);
             this.panel2.Controls.Add(this.employeesUserControl1);
             this.panel2.Controls.Add(this.supportUserControl1);
             this.panel2.Controls.Add(this.customerUserControl1);
@@ -353,6 +375,16 @@
             this.frontPageUserControl1.Size = new System.Drawing.Size(1211, 774);
             this.frontPageUserControl1.TabIndex = 1;
             // 
+            // mailUserControl1
+            // 
+            this.mailUserControl1.BackColor = System.Drawing.Color.White;
+            this.mailUserControl1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.mailUserControl1.Location = new System.Drawing.Point(0, 0);
+            this.mailUserControl1.Margin = new System.Windows.Forms.Padding(5);
+            this.mailUserControl1.Name = "mailUserControl1";
+            this.mailUserControl1.Size = new System.Drawing.Size(1211, 774);
+            this.mailUserControl1.TabIndex = 8;
+            // 
             // FrontPage
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
@@ -405,6 +437,8 @@
         private SupportUserControl supportUserControl1;
         private System.Windows.Forms.Timer TimerToFrontPage;
         private EmployeesUserControl employeesUserControl1;
+        private System.Windows.Forms.Button ButtonMailFrontPage;
+        private MailUserControl mailUserControl1;
     }
 }
 

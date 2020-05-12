@@ -67,7 +67,7 @@
             // 
             this.PanelCustomerSupport.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(118)))), ((int)(((byte)(211)))));
             this.PanelCustomerSupport.Controls.Add(this.CustomerSupportPageLinkLabel);
-            this.PanelCustomerSupport.Location = new System.Drawing.Point(0, 248);
+            this.PanelCustomerSupport.Location = new System.Drawing.Point(0, 223);
             this.PanelCustomerSupport.Name = "PanelCustomerSupport";
             this.PanelCustomerSupport.Size = new System.Drawing.Size(470, 54);
             this.PanelCustomerSupport.TabIndex = 6;
@@ -92,7 +92,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Century Gothic", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(3, 170);
+            this.label1.Location = new System.Drawing.Point(3, 145);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(678, 38);
             this.label1.TabIndex = 7;
@@ -102,7 +102,7 @@
             // 
             this.PanelProduckSupport.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(118)))), ((int)(((byte)(211)))));
             this.PanelProduckSupport.Controls.Add(this.linkLabel1);
-            this.PanelProduckSupport.Location = new System.Drawing.Point(0, 343);
+            this.PanelProduckSupport.Location = new System.Drawing.Point(0, 318);
             this.PanelProduckSupport.Name = "PanelProduckSupport";
             this.PanelProduckSupport.Size = new System.Drawing.Size(470, 54);
             this.PanelProduckSupport.TabIndex = 8;
@@ -125,7 +125,7 @@
             // 
             this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(118)))), ((int)(((byte)(211)))));
             this.panel3.Controls.Add(this.linkLabel2);
-            this.panel3.Location = new System.Drawing.Point(0, 438);
+            this.panel3.Location = new System.Drawing.Point(0, 413);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(470, 54);
             this.panel3.TabIndex = 9;
@@ -148,7 +148,7 @@
             // 
             this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(118)))), ((int)(((byte)(211)))));
             this.panel4.Controls.Add(this.linkLabel3);
-            this.panel4.Location = new System.Drawing.Point(0, 533);
+            this.panel4.Location = new System.Drawing.Point(0, 508);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(470, 54);
             this.panel4.TabIndex = 8;

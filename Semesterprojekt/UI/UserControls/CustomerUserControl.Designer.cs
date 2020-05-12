@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.CustomerList = new System.Windows.Forms.ListBox();
             this.AddCustomerButton = new System.Windows.Forms.Button();
             this.ButtonShowAllCustomers = new System.Windows.Forms.Button();
             this.UpdateCustomerButton = new System.Windows.Forms.Button();
@@ -40,19 +39,12 @@
             this.ThenByLabelCustomers = new System.Windows.Forms.Label();
             this.ThenByDropDownBoxCustomer = new System.Windows.Forms.ComboBox();
             this.SortButtonCustomers = new System.Windows.Forms.Button();
+            this.dataGridViewCustomerUserControl = new System.Windows.Forms.DataGridView();
+            this.dataGridView2 = new System.Windows.Forms.DataGridView();
             this.panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewCustomerUserControl)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
             this.SuspendLayout();
-            // 
-            // CustomerList
-            // 
-            this.CustomerList.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.CustomerList.FormattingEnabled = true;
-            this.CustomerList.ItemHeight = 21;
-            this.CustomerList.Location = new System.Drawing.Point(22, 202);
-            this.CustomerList.Name = "CustomerList";
-            this.CustomerList.Size = new System.Drawing.Size(1160, 508);
-            this.CustomerList.TabIndex = 0;
-            this.CustomerList.SelectedIndexChanged += new System.EventHandler(this.CustomerList_SelectedIndexChanged);
             // 
             // AddCustomerButton
             // 
@@ -200,11 +192,31 @@
             this.SortButtonCustomers.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.SortButtonCustomers.UseVisualStyleBackColor = false;
             // 
+            // dataGridViewCustomerUserControl
+            // 
+            this.dataGridViewCustomerUserControl.BackgroundColor = System.Drawing.Color.WhiteSmoke;
+            this.dataGridViewCustomerUserControl.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dataGridViewCustomerUserControl.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
+            this.dataGridViewCustomerUserControl.Location = new System.Drawing.Point(22, 202);
+            this.dataGridViewCustomerUserControl.Name = "dataGridViewCustomerUserControl";
+            this.dataGridViewCustomerUserControl.Size = new System.Drawing.Size(1150, 529);
+            this.dataGridViewCustomerUserControl.TabIndex = 8;
+            // 
+            // dataGridView2
+            // 
+            this.dataGridView2.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.RaisedVertical;
+            this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView2.Location = new System.Drawing.Point(74, 364);
+            this.dataGridView2.Name = "dataGridView2";
+            this.dataGridView2.Size = new System.Drawing.Size(0, 0);
+            this.dataGridView2.TabIndex = 9;
+            // 
             // CustomerUserControl
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.BackColor = System.Drawing.Color.White;
+            this.Controls.Add(this.dataGridViewCustomerUserControl);
             this.Controls.Add(this.SortButtonCustomers);
             this.Controls.Add(this.ThenByDropDownBoxCustomer);
             this.Controls.Add(this.ThenByLabelCustomers);
@@ -212,18 +224,18 @@
             this.Controls.Add(this.SortByDropDownBoxCustomer);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.panel2);
-            this.Controls.Add(this.CustomerList);
+            this.Controls.Add(this.dataGridView2);
             this.Name = "CustomerUserControl";
             this.Size = new System.Drawing.Size(1211, 774);
             this.panel2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewCustomerUserControl)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-
-        private System.Windows.Forms.ListBox CustomerList;
         private System.Windows.Forms.Button AddCustomerButton;
         private System.Windows.Forms.Button ButtonShowAllCustomers;
         private System.Windows.Forms.Button DeleteCustomerButton;
@@ -235,5 +247,7 @@
         private System.Windows.Forms.Label ThenByLabelCustomers;
         private System.Windows.Forms.ComboBox ThenByDropDownBoxCustomer;
         private System.Windows.Forms.Button SortButtonCustomers;
+        private System.Windows.Forms.DataGridView dataGridViewCustomerUserControl;
+        private System.Windows.Forms.DataGridView dataGridView2;
     }
 }
