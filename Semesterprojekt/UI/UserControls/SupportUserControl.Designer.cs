@@ -119,6 +119,7 @@
             this.linkLabel1.TabIndex = 7;
             this.linkLabel1.TabStop = true;
             this.linkLabel1.Text = "Product page";
+            this.linkLabel1.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel1_LinkClicked);
             // 
             // panel3
             // 
@@ -141,6 +142,7 @@
             this.linkLabel2.TabIndex = 7;
             this.linkLabel2.TabStop = true;
             this.linkLabel2.Text = "Order page";
+            this.linkLabel2.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel2_LinkClicked);
             // 
             // panel4
             // 
@@ -163,6 +165,7 @@
             this.linkLabel3.TabIndex = 7;
             this.linkLabel3.TabStop = true;
             this.linkLabel3.Text = "Employee page";
+            this.linkLabel3.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel3_LinkClicked);
             // 
             // SupportUserControl
             // 
@@ -180,7 +183,6 @@
             this.Margin = new System.Windows.Forms.Padding(5);
             this.Name = "SupportUserControl";
             this.Size = new System.Drawing.Size(1211, 774);
-            this.Load += new System.EventHandler(this.SupportUserControl_Load);
             this.PanelCustomerSupport.ResumeLayout(false);
             this.PanelCustomerSupport.PerformLayout();
             this.PanelProduckSupport.ResumeLayout(false);
