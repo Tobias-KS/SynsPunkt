@@ -69,15 +69,5 @@ namespace UI.Properties {
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Byte[].
-        /// </summary>
-        public static byte[] SynsPunktSupport_pdf {
-            get {
-                object obj = ResourceManager.GetObject("SynsPunktSupport_pdf", resourceCulture);
-                return ((byte[])(obj));
-            }
-        }
     }
 }
