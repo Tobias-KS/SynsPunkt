@@ -10,6 +10,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using Persistence.CRUD;
 using Persistence.Models;
+using BusinessLogic;
 
 namespace UI
 {
@@ -28,7 +29,7 @@ namespace UI
 
         private void SortByDropDownBox_SelectedIndexChanged(object sender, EventArgs e)
         {
-
+            //Sort Method
         }
 
         private void AddCustomerButton_Click(object sender, EventArgs e)
@@ -46,6 +47,9 @@ namespace UI
         private void SortButtonCustomers_Click(object sender, EventArgs e)
         {
 
+
+            Filter.FilterCustomers();
+
         }
 
         private void dataGridViewCustomerUserControl_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -56,11 +60,7 @@ namespace UI
         private void CustomerUserControl_Load(object sender, EventArgs e)
         {
 
-            var result = Reader.GetCustomersDataTable().Rows
-                .Cast<DataRow>()
-                .Where(c => c.Field<string>("Forename") == "Homer");
-
-            dataGridViewCustomerUserControl.DataSource = result.CopyToDataTable<DataRow>();
+            dataGridViewCustomerUserControl.DataSource = Reader.GetCustomersDataTable();
 
         }
 

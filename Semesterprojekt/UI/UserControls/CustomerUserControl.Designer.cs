@@ -1,4 +1,6 @@
-﻿namespace UI
+﻿using System.Drawing;
+
+namespace UI
 {
     partial class CustomerUserControl
     {
@@ -29,6 +31,8 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.AddCustomerButton = new System.Windows.Forms.Button();
             this.ButtonShowAllCustomers = new System.Windows.Forms.Button();
             this.UpdateCustomerButton = new System.Windows.Forms.Button();
@@ -148,6 +152,8 @@
             this.SortByDropDownBoxCustomer.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.SortByDropDownBoxCustomer.ForeColor = System.Drawing.Color.Black;
             this.SortByDropDownBoxCustomer.FormattingEnabled = true;
+            this.SortByDropDownBoxCustomer.Items.AddRange(new object[] {
+            "CustomerID"});
             this.SortByDropDownBoxCustomer.Location = new System.Drawing.Point(22, 165);
             this.SortByDropDownBoxCustomer.Name = "SortByDropDownBoxCustomer";
             this.SortByDropDownBoxCustomer.Size = new System.Drawing.Size(206, 29);
@@ -203,12 +209,35 @@
             // 
             // dataGridViewCustomerUserControl
             // 
+            this.dataGridViewCustomerUserControl.AllowUserToAddRows = false;
+            this.dataGridViewCustomerUserControl.AllowUserToDeleteRows = false;
+            this.dataGridViewCustomerUserControl.AllowUserToResizeColumns = false;
+            this.dataGridViewCustomerUserControl.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
+            this.dataGridViewCustomerUserControl.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.dataGridViewCustomerUserControl.BackgroundColor = System.Drawing.Color.WhiteSmoke;
             this.dataGridViewCustomerUserControl.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dataGridViewCustomerUserControl.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 3.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridViewCustomerUserControl.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dataGridViewCustomerUserControl.ColumnHeadersHeight = 30;
             this.dataGridViewCustomerUserControl.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 3.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridViewCustomerUserControl.DefaultCellStyle = dataGridViewCellStyle2;
             this.dataGridViewCustomerUserControl.Location = new System.Drawing.Point(22, 202);
             this.dataGridViewCustomerUserControl.Name = "dataGridViewCustomerUserControl";
+            this.dataGridViewCustomerUserControl.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToDisplayedHeaders;
             this.dataGridViewCustomerUserControl.Size = new System.Drawing.Size(1150, 529);
             this.dataGridViewCustomerUserControl.TabIndex = 8;
             this.dataGridViewCustomerUserControl.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewCustomerUserControl_CellContentClick);

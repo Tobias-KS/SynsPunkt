@@ -33,6 +33,11 @@ namespace Persistence.CRUD
 
             return customersDataTable;
         }
+
+
+
+
+        /*
         public static List<Customer> SelectAllCustomers()
         {
             var conn = new SqlConnection(SQLConnecter.Connect());
@@ -104,5 +109,7 @@ namespace Persistence.CRUD
 
         }
         //com.Parameters.Add(new SqlParameter("@ProductID", SqlDbType.Int)).Value = customer.customerID;
+
+    */
     }
 }
