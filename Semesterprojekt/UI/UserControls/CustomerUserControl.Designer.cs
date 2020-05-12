@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.AddCustomerButton = new System.Windows.Forms.Button();
             this.ButtonShowAllCustomers = new System.Windows.Forms.Button();
             this.UpdateCustomerButton = new System.Windows.Forms.Button();
@@ -40,10 +41,17 @@
             this.ThenByDropDownBoxCustomer = new System.Windows.Forms.ComboBox();
             this.SortButtonCustomers = new System.Windows.Forms.Button();
             this.dataGridViewCustomerUserControl = new System.Windows.Forms.DataGridView();
+            this.customersBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.odensedbDataSet = new UI.odensedbDataSet();
             this.dataGridView2 = new System.Windows.Forms.DataGridView();
+            this.customersBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.customersTableAdapter = new UI.odensedbDataSetTableAdapters.CustomersTableAdapter();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewCustomerUserControl)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.customersBindingSource1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.odensedbDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.customersBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // AddCustomerButton
@@ -191,16 +199,29 @@
             this.SortButtonCustomers.Text = "Sort";
             this.SortButtonCustomers.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.SortButtonCustomers.UseVisualStyleBackColor = false;
+            this.SortButtonCustomers.Click += new System.EventHandler(this.SortButtonCustomers_Click);
             // 
             // dataGridViewCustomerUserControl
             // 
             this.dataGridViewCustomerUserControl.BackgroundColor = System.Drawing.Color.WhiteSmoke;
             this.dataGridViewCustomerUserControl.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dataGridViewCustomerUserControl.ColumnHeadersHeight = 30;
             this.dataGridViewCustomerUserControl.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             this.dataGridViewCustomerUserControl.Location = new System.Drawing.Point(22, 202);
             this.dataGridViewCustomerUserControl.Name = "dataGridViewCustomerUserControl";
             this.dataGridViewCustomerUserControl.Size = new System.Drawing.Size(1150, 529);
             this.dataGridViewCustomerUserControl.TabIndex = 8;
+            this.dataGridViewCustomerUserControl.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewCustomerUserControl_CellContentClick);
+            // 
+            // customersBindingSource1
+            // 
+            this.customersBindingSource1.DataMember = "Customers";
+            this.customersBindingSource1.DataSource = this.odensedbDataSet;
+            // 
+            // odensedbDataSet
+            // 
+            this.odensedbDataSet.DataSetName = "odensedbDataSet";
+            this.odensedbDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // dataGridView2
             // 
@@ -210,6 +231,15 @@
             this.dataGridView2.Name = "dataGridView2";
             this.dataGridView2.Size = new System.Drawing.Size(0, 0);
             this.dataGridView2.TabIndex = 9;
+            // 
+            // customersBindingSource
+            // 
+            this.customersBindingSource.DataMember = "Customers";
+            this.customersBindingSource.DataSource = this.odensedbDataSet;
+            // 
+            // customersTableAdapter
+            // 
+            this.customersTableAdapter.ClearBeforeFill = true;
             // 
             // CustomerUserControl
             // 
@@ -227,9 +257,13 @@
             this.Controls.Add(this.dataGridView2);
             this.Name = "CustomerUserControl";
             this.Size = new System.Drawing.Size(1211, 774);
+            this.Load += new System.EventHandler(this.CustomerUserControl_Load);
             this.panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewCustomerUserControl)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.customersBindingSource1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.odensedbDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.customersBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -247,7 +281,11 @@
         private System.Windows.Forms.Label ThenByLabelCustomers;
         private System.Windows.Forms.ComboBox ThenByDropDownBoxCustomer;
         private System.Windows.Forms.Button SortButtonCustomers;
-        private System.Windows.Forms.DataGridView dataGridViewCustomerUserControl;
         private System.Windows.Forms.DataGridView dataGridView2;
+        private System.Windows.Forms.BindingSource customersBindingSource;
+        private odensedbDataSet odensedbDataSet;
+        private odensedbDataSetTableAdapters.CustomersTableAdapter customersTableAdapter;
+        private System.Windows.Forms.DataGridView dataGridViewCustomerUserControl;
+        private System.Windows.Forms.BindingSource customersBindingSource1;
     }
 }

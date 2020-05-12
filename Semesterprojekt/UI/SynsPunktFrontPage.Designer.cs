@@ -52,6 +52,7 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.fileSystemWatcher1 = new System.IO.FileSystemWatcher();
             this.TimerToFrontPage = new System.Windows.Forms.Timer(this.components);
+            this.mailUserControl1 = new UI.MailUserControl();
             this.employeesUserControl1 = new UI.EmployeesUserControl();
             this.supportUserControl1 = new UI.SupportUserControl();
             this.customerUserControl1 = new UI.ProductsUserControl();
@@ -59,7 +60,6 @@
             this.orderUserControl1 = new UI.OrderUserControl();
             this.productsUserControl1 = new UI.ProductsUserControl();
             this.frontPageUserControl1 = new UI.FrontPageUserControl();
-            this.mailUserControl1 = new UI.MailUserControl();
             this.SidePanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Logo)).BeginInit();
             this.TopPanel.SuspendLayout();
@@ -313,6 +313,16 @@
             // 
             this.TimerToFrontPage.Tick += new System.EventHandler(this.TimerToFrontPage_Tick);
             // 
+            // mailUserControl1
+            // 
+            this.mailUserControl1.BackColor = System.Drawing.Color.White;
+            this.mailUserControl1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.mailUserControl1.Location = new System.Drawing.Point(0, 0);
+            this.mailUserControl1.Margin = new System.Windows.Forms.Padding(5);
+            this.mailUserControl1.Name = "mailUserControl1";
+            this.mailUserControl1.Size = new System.Drawing.Size(1211, 774);
+            this.mailUserControl1.TabIndex = 8;
+            // 
             // employeesUserControl1
             // 
             this.employeesUserControl1.BackColor = System.Drawing.Color.White;
@@ -374,16 +384,6 @@
             this.frontPageUserControl1.Name = "frontPageUserControl1";
             this.frontPageUserControl1.Size = new System.Drawing.Size(1211, 774);
             this.frontPageUserControl1.TabIndex = 1;
-            // 
-            // mailUserControl1
-            // 
-            this.mailUserControl1.BackColor = System.Drawing.Color.White;
-            this.mailUserControl1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.mailUserControl1.Location = new System.Drawing.Point(0, 0);
-            this.mailUserControl1.Margin = new System.Windows.Forms.Padding(5);
-            this.mailUserControl1.Name = "mailUserControl1";
-            this.mailUserControl1.Size = new System.Drawing.Size(1211, 774);
-            this.mailUserControl1.TabIndex = 8;
             // 
             // FrontPage
             // 

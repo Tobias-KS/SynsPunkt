@@ -10,6 +10,29 @@ namespace Persistence.CRUD
 {
     public class Reader
     {
+        public static DataTable GetCustomersDataTable()
+        {
+            var customersDataTable = new DataTable();
+
+            using (SqlConnection conn = new SqlConnection(SQLConnecter.Connect()))
+            {
+                using (SqlCommand com = new SqlCommand())
+                {
+                    com.Connection = conn;
+                    com.CommandText = "SelectAllCustomers";
+                    com.CommandType = CommandType.StoredProcedure;
+
+                    conn.Open();
+
+                    SqlDataReader reader = com.ExecuteReader();
+
+                    customersDataTable.Load(reader);
+                }
+            }
+
+
+            return customersDataTable;
+        }
         public static List<Customer> SelectAllCustomers()
         {
             var conn = new SqlConnection(SQLConnecter.Connect());
