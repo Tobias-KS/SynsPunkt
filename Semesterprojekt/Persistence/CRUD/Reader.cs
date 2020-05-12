@@ -10,7 +10,7 @@ namespace Persistence.CRUD
 {
     public class Reader
     {
-        public static DataTable GetCustomersDataTable()
+        public static DataTable GetCustomersDataTable() 
         {
             var customersDataTable = new DataTable();
 
@@ -33,8 +33,6 @@ namespace Persistence.CRUD
 
             return customersDataTable;
         }
-
-
 
 
         /*
