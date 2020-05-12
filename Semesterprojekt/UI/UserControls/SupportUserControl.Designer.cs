@@ -39,10 +39,13 @@
             this.linkLabel2 = new System.Windows.Forms.LinkLabel();
             this.panel4 = new System.Windows.Forms.Panel();
             this.linkLabel3 = new System.Windows.Forms.LinkLabel();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.LinkLabelMail = new System.Windows.Forms.LinkLabel();
             this.PanelCustomerSupport.SuspendLayout();
             this.PanelProduckSupport.SuspendLayout();
             this.panel3.SuspendLayout();
             this.panel4.SuspendLayout();
+            this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
@@ -50,14 +53,14 @@
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(101)))), ((int)(((byte)(193)))));
             this.panel1.Location = new System.Drawing.Point(0, 121);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1211, 10);
+            this.panel1.Size = new System.Drawing.Size(1700, 10);
             this.panel1.TabIndex = 4;
             // 
             // SupportPageLabeHeadline
             // 
             this.SupportPageLabeHeadline.AutoSize = true;
             this.SupportPageLabeHeadline.Font = new System.Drawing.Font("Century Gothic", 48F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.SupportPageLabeHeadline.Location = new System.Drawing.Point(351, 21);
+            this.SupportPageLabeHeadline.Location = new System.Drawing.Point(621, 21);
             this.SupportPageLabeHeadline.Name = "SupportPageLabeHeadline";
             this.SupportPageLabeHeadline.Size = new System.Drawing.Size(453, 77);
             this.SupportPageLabeHeadline.TabIndex = 5;
@@ -67,7 +70,7 @@
             // 
             this.PanelCustomerSupport.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(118)))), ((int)(((byte)(211)))));
             this.PanelCustomerSupport.Controls.Add(this.CustomerSupportPageLinkLabel);
-            this.PanelCustomerSupport.Location = new System.Drawing.Point(0, 223);
+            this.PanelCustomerSupport.Location = new System.Drawing.Point(0, 242);
             this.PanelCustomerSupport.Name = "PanelCustomerSupport";
             this.PanelCustomerSupport.Size = new System.Drawing.Size(470, 54);
             this.PanelCustomerSupport.TabIndex = 6;
@@ -92,7 +95,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Century Gothic", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(3, 145);
+            this.label1.Location = new System.Drawing.Point(3, 164);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(678, 38);
             this.label1.TabIndex = 7;
@@ -102,7 +105,7 @@
             // 
             this.PanelProduckSupport.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(118)))), ((int)(((byte)(211)))));
             this.PanelProduckSupport.Controls.Add(this.linkLabel1);
-            this.PanelProduckSupport.Location = new System.Drawing.Point(0, 318);
+            this.PanelProduckSupport.Location = new System.Drawing.Point(0, 337);
             this.PanelProduckSupport.Name = "PanelProduckSupport";
             this.PanelProduckSupport.Size = new System.Drawing.Size(470, 54);
             this.PanelProduckSupport.TabIndex = 8;
@@ -125,7 +128,7 @@
             // 
             this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(118)))), ((int)(((byte)(211)))));
             this.panel3.Controls.Add(this.linkLabel2);
-            this.panel3.Location = new System.Drawing.Point(0, 413);
+            this.panel3.Location = new System.Drawing.Point(0, 432);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(470, 54);
             this.panel3.TabIndex = 9;
@@ -148,7 +151,7 @@
             // 
             this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(118)))), ((int)(((byte)(211)))));
             this.panel4.Controls.Add(this.linkLabel3);
-            this.panel4.Location = new System.Drawing.Point(0, 508);
+            this.panel4.Location = new System.Drawing.Point(0, 527);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(470, 54);
             this.panel4.TabIndex = 8;
@@ -167,11 +170,35 @@
             this.linkLabel3.Text = "Employee page";
             this.linkLabel3.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel3_LinkClicked);
             // 
+            // panel2
+            // 
+            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(118)))), ((int)(((byte)(211)))));
+            this.panel2.Controls.Add(this.LinkLabelMail);
+            this.panel2.Location = new System.Drawing.Point(0, 623);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(470, 54);
+            this.panel2.TabIndex = 9;
+            // 
+            // LinkLabelMail
+            // 
+            this.LinkLabelMail.AutoSize = true;
+            this.LinkLabelMail.Font = new System.Drawing.Font("Century Gothic", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LinkLabelMail.LinkBehavior = System.Windows.Forms.LinkBehavior.NeverUnderline;
+            this.LinkLabelMail.LinkColor = System.Drawing.Color.White;
+            this.LinkLabelMail.Location = new System.Drawing.Point(87, 5);
+            this.LinkLabelMail.Name = "LinkLabelMail";
+            this.LinkLabelMail.Size = new System.Drawing.Size(175, 38);
+            this.LinkLabelMail.TabIndex = 7;
+            this.LinkLabelMail.TabStop = true;
+            this.LinkLabelMail.Text = "Mail page";
+            this.LinkLabelMail.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.LinkLabelMail_LinkClicked);
+            // 
             // SupportUserControl
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 21F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
+            this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel4);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.PanelProduckSupport);
@@ -182,7 +209,7 @@
             this.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Margin = new System.Windows.Forms.Padding(5);
             this.Name = "SupportUserControl";
-            this.Size = new System.Drawing.Size(1211, 774);
+            this.Size = new System.Drawing.Size(1700, 966);
             this.PanelCustomerSupport.ResumeLayout(false);
             this.PanelCustomerSupport.PerformLayout();
             this.PanelProduckSupport.ResumeLayout(false);
@@ -191,6 +218,8 @@
             this.panel3.PerformLayout();
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
+            this.panel2.ResumeLayout(false);
+            this.panel2.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -209,5 +238,7 @@
         private System.Windows.Forms.LinkLabel linkLabel2;
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.LinkLabel linkLabel3;
+        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.LinkLabel LinkLabelMail;
     }
 }

@@ -39,5 +39,10 @@ namespace UI
         {
             PDFOpener.SupportPdf();
         }
+
+        private void LinkLabelMail_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            PDFOpener.SupportPdf();
+        }
     }
 }

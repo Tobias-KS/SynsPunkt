@@ -52,14 +52,14 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.fileSystemWatcher1 = new System.IO.FileSystemWatcher();
             this.TimerToFrontPage = new System.Windows.Forms.Timer(this.components);
-            this.mailUserControl1 = new UI.MailUserControl();
-            this.employeesUserControl1 = new UI.EmployeesUserControl();
-            this.supportUserControl1 = new UI.SupportUserControl();
-            this.customerUserControl1 = new UI.ProductsUserControl();
             this.customerUserControl2 = new UI.CustomerUserControl();
             this.orderUserControl1 = new UI.OrderUserControl();
             this.productsUserControl1 = new UI.ProductsUserControl();
             this.frontPageUserControl1 = new UI.FrontPageUserControl();
+            this.mailUserControl1 = new UI.MailUserControl();
+            this.employeesUserControl1 = new UI.EmployeesUserControl();
+            this.supportUserControl1 = new UI.SupportUserControl();
+            this.customerUserControl1 = new UI.ProductsUserControl();
             this.SidePanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Logo)).BeginInit();
             this.TopPanel.SuspendLayout();
@@ -83,7 +83,7 @@
             this.SidePanel.Dock = System.Windows.Forms.DockStyle.Left;
             this.SidePanel.Location = new System.Drawing.Point(0, 0);
             this.SidePanel.Name = "SidePanel";
-            this.SidePanel.Size = new System.Drawing.Size(210, 825);
+            this.SidePanel.Size = new System.Drawing.Size(210, 1017);
             this.SidePanel.TabIndex = 0;
             // 
             // ButtonMailFrontPage
@@ -95,7 +95,7 @@
             this.ButtonMailFrontPage.ForeColor = System.Drawing.Color.White;
             this.ButtonMailFrontPage.Image = ((System.Drawing.Image)(resources.GetObject("ButtonMailFrontPage.Image")));
             this.ButtonMailFrontPage.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.ButtonMailFrontPage.Location = new System.Drawing.Point(0, 632);
+            this.ButtonMailFrontPage.Location = new System.Drawing.Point(0, 652);
             this.ButtonMailFrontPage.Name = "ButtonMailFrontPage";
             this.ButtonMailFrontPage.Size = new System.Drawing.Size(210, 89);
             this.ButtonMailFrontPage.TabIndex = 9;
@@ -113,7 +113,7 @@
             this.HomeButton.ForeColor = System.Drawing.Color.White;
             this.HomeButton.Image = ((System.Drawing.Image)(resources.GetObject("HomeButton.Image")));
             this.HomeButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.HomeButton.Location = new System.Drawing.Point(0, 157);
+            this.HomeButton.Location = new System.Drawing.Point(0, 177);
             this.HomeButton.Name = "HomeButton";
             this.HomeButton.Size = new System.Drawing.Size(210, 89);
             this.HomeButton.TabIndex = 8;
@@ -138,7 +138,7 @@
             this.EmployeesButton.ForeColor = System.Drawing.Color.White;
             this.EmployeesButton.Image = ((System.Drawing.Image)(resources.GetObject("EmployeesButton.Image")));
             this.EmployeesButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.EmployeesButton.Location = new System.Drawing.Point(0, 537);
+            this.EmployeesButton.Location = new System.Drawing.Point(0, 557);
             this.EmployeesButton.Name = "EmployeesButton";
             this.EmployeesButton.Size = new System.Drawing.Size(210, 89);
             this.EmployeesButton.TabIndex = 7;
@@ -156,7 +156,7 @@
             this.SupportButton.ForeColor = System.Drawing.Color.White;
             this.SupportButton.Image = ((System.Drawing.Image)(resources.GetObject("SupportButton.Image")));
             this.SupportButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.SupportButton.Location = new System.Drawing.Point(0, 733);
+            this.SupportButton.Location = new System.Drawing.Point(0, 925);
             this.SupportButton.Name = "SupportButton";
             this.SupportButton.Size = new System.Drawing.Size(210, 89);
             this.SupportButton.TabIndex = 6;
@@ -174,7 +174,7 @@
             this.OrdersButton.ForeColor = System.Drawing.Color.White;
             this.OrdersButton.Image = ((System.Drawing.Image)(resources.GetObject("OrdersButton.Image")));
             this.OrdersButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.OrdersButton.Location = new System.Drawing.Point(0, 442);
+            this.OrdersButton.Location = new System.Drawing.Point(0, 462);
             this.OrdersButton.Name = "OrdersButton";
             this.OrdersButton.Size = new System.Drawing.Size(210, 89);
             this.OrdersButton.TabIndex = 5;
@@ -192,7 +192,7 @@
             this.ProductsButton.ForeColor = System.Drawing.Color.White;
             this.ProductsButton.Image = ((System.Drawing.Image)(resources.GetObject("ProductsButton.Image")));
             this.ProductsButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.ProductsButton.Location = new System.Drawing.Point(0, 347);
+            this.ProductsButton.Location = new System.Drawing.Point(0, 367);
             this.ProductsButton.Name = "ProductsButton";
             this.ProductsButton.Size = new System.Drawing.Size(210, 89);
             this.ProductsButton.TabIndex = 4;
@@ -232,7 +232,7 @@
             this.CustomersButton.ForeColor = System.Drawing.Color.White;
             this.CustomersButton.Image = ((System.Drawing.Image)(resources.GetObject("CustomersButton.Image")));
             this.CustomersButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.CustomersButton.Location = new System.Drawing.Point(0, 252);
+            this.CustomersButton.Location = new System.Drawing.Point(0, 272);
             this.CustomersButton.Name = "CustomersButton";
             this.CustomersButton.Size = new System.Drawing.Size(210, 89);
             this.CustomersButton.TabIndex = 0;
@@ -250,7 +250,7 @@
             this.TopPanel.Dock = System.Windows.Forms.DockStyle.Top;
             this.TopPanel.Location = new System.Drawing.Point(210, 0);
             this.TopPanel.Name = "TopPanel";
-            this.TopPanel.Size = new System.Drawing.Size(1211, 51);
+            this.TopPanel.Size = new System.Drawing.Size(1700, 51);
             this.TopPanel.TabIndex = 1;
             this.TopPanel.Paint += new System.Windows.Forms.PaintEventHandler(this.TopPanel_Paint);
             this.TopPanel.MouseDown += new System.Windows.Forms.MouseEventHandler(this.TopPanel_MouseDown);
@@ -268,7 +268,7 @@
             this.MinimizeApp.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.MinimizeApp.ForeColor = System.Drawing.Color.White;
             this.MinimizeApp.Image = ((System.Drawing.Image)(resources.GetObject("MinimizeApp.Image")));
-            this.MinimizeApp.Location = new System.Drawing.Point(1101, 3);
+            this.MinimizeApp.Location = new System.Drawing.Point(1621, 3);
             this.MinimizeApp.Name = "MinimizeApp";
             this.MinimizeApp.Size = new System.Drawing.Size(36, 45);
             this.MinimizeApp.TabIndex = 3;
@@ -281,7 +281,7 @@
             this.CloseApp.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.CloseApp.ForeColor = System.Drawing.Color.White;
             this.CloseApp.Image = ((System.Drawing.Image)(resources.GetObject("CloseApp.Image")));
-            this.CloseApp.Location = new System.Drawing.Point(1160, 12);
+            this.CloseApp.Location = new System.Drawing.Point(1663, 12);
             this.CloseApp.Name = "CloseApp";
             this.CloseApp.Size = new System.Drawing.Size(25, 26);
             this.CloseApp.TabIndex = 2;
@@ -290,18 +290,18 @@
             // 
             // panel2
             // 
-            this.panel2.Controls.Add(this.mailUserControl1);
-            this.panel2.Controls.Add(this.employeesUserControl1);
-            this.panel2.Controls.Add(this.supportUserControl1);
-            this.panel2.Controls.Add(this.customerUserControl1);
             this.panel2.Controls.Add(this.customerUserControl2);
             this.panel2.Controls.Add(this.orderUserControl1);
             this.panel2.Controls.Add(this.productsUserControl1);
             this.panel2.Controls.Add(this.frontPageUserControl1);
+            this.panel2.Controls.Add(this.mailUserControl1);
+            this.panel2.Controls.Add(this.employeesUserControl1);
+            this.panel2.Controls.Add(this.supportUserControl1);
+            this.panel2.Controls.Add(this.customerUserControl1);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel2.Location = new System.Drawing.Point(210, 51);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1211, 774);
+            this.panel2.Size = new System.Drawing.Size(1700, 966);
             this.panel2.TabIndex = 2;
             // 
             // fileSystemWatcher1
@@ -313,14 +313,48 @@
             // 
             this.TimerToFrontPage.Tick += new System.EventHandler(this.TimerToFrontPage_Tick);
             // 
+            // customerUserControl2
+            // 
+            this.customerUserControl2.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.customerUserControl2.BackColor = System.Drawing.Color.White;
+            this.customerUserControl2.Location = new System.Drawing.Point(0, -1);
+            this.customerUserControl2.Name = "customerUserControl2";
+            this.customerUserControl2.Size = new System.Drawing.Size(1700, 966);
+            this.customerUserControl2.TabIndex = 4;
+            // 
+            // orderUserControl1
+            // 
+            this.orderUserControl1.BackColor = System.Drawing.Color.White;
+            this.orderUserControl1.Location = new System.Drawing.Point(0, -1);
+            this.orderUserControl1.Name = "orderUserControl1";
+            this.orderUserControl1.Size = new System.Drawing.Size(1700, 966);
+            this.orderUserControl1.TabIndex = 3;
+            // 
+            // productsUserControl1
+            // 
+            this.productsUserControl1.BackColor = System.Drawing.Color.White;
+            this.productsUserControl1.Location = new System.Drawing.Point(0, -1);
+            this.productsUserControl1.Name = "productsUserControl1";
+            this.productsUserControl1.Size = new System.Drawing.Size(1700, 966);
+            this.productsUserControl1.TabIndex = 2;
+            // 
+            // frontPageUserControl1
+            // 
+            this.frontPageUserControl1.BackColor = System.Drawing.Color.White;
+            this.frontPageUserControl1.Location = new System.Drawing.Point(0, -1);
+            this.frontPageUserControl1.Margin = new System.Windows.Forms.Padding(5);
+            this.frontPageUserControl1.Name = "frontPageUserControl1";
+            this.frontPageUserControl1.Size = new System.Drawing.Size(1700, 966);
+            this.frontPageUserControl1.TabIndex = 1;
+            // 
             // mailUserControl1
             // 
             this.mailUserControl1.BackColor = System.Drawing.Color.White;
             this.mailUserControl1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.mailUserControl1.Location = new System.Drawing.Point(0, 0);
+            this.mailUserControl1.Location = new System.Drawing.Point(0, -1);
             this.mailUserControl1.Margin = new System.Windows.Forms.Padding(5);
             this.mailUserControl1.Name = "mailUserControl1";
-            this.mailUserControl1.Size = new System.Drawing.Size(1211, 774);
+            this.mailUserControl1.Size = new System.Drawing.Size(1700, 966);
             this.mailUserControl1.TabIndex = 8;
             // 
             // employeesUserControl1
@@ -330,7 +364,7 @@
             this.employeesUserControl1.Location = new System.Drawing.Point(0, -1);
             this.employeesUserControl1.Margin = new System.Windows.Forms.Padding(5);
             this.employeesUserControl1.Name = "employeesUserControl1";
-            this.employeesUserControl1.Size = new System.Drawing.Size(1211, 774);
+            this.employeesUserControl1.Size = new System.Drawing.Size(1700, 966);
             this.employeesUserControl1.TabIndex = 7;
             // 
             // supportUserControl1
@@ -340,57 +374,23 @@
             this.supportUserControl1.Location = new System.Drawing.Point(0, -1);
             this.supportUserControl1.Margin = new System.Windows.Forms.Padding(5);
             this.supportUserControl1.Name = "supportUserControl1";
-            this.supportUserControl1.Size = new System.Drawing.Size(1211, 774);
+            this.supportUserControl1.Size = new System.Drawing.Size(1700, 966);
             this.supportUserControl1.TabIndex = 6;
             // 
             // customerUserControl1
             // 
             this.customerUserControl1.BackColor = System.Drawing.Color.White;
-            this.customerUserControl1.Location = new System.Drawing.Point(0, 0);
+            this.customerUserControl1.Location = new System.Drawing.Point(0, -1);
             this.customerUserControl1.Name = "customerUserControl1";
-            this.customerUserControl1.Size = new System.Drawing.Size(1211, 774);
+            this.customerUserControl1.Size = new System.Drawing.Size(1700, 966);
             this.customerUserControl1.TabIndex = 5;
-            // 
-            // customerUserControl2
-            // 
-            this.customerUserControl2.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.customerUserControl2.BackColor = System.Drawing.Color.White;
-            this.customerUserControl2.Location = new System.Drawing.Point(0, -1);
-            this.customerUserControl2.Name = "customerUserControl2";
-            this.customerUserControl2.Size = new System.Drawing.Size(1211, 774);
-            this.customerUserControl2.TabIndex = 4;
-            // 
-            // orderUserControl1
-            // 
-            this.orderUserControl1.BackColor = System.Drawing.Color.White;
-            this.orderUserControl1.Location = new System.Drawing.Point(0, -1);
-            this.orderUserControl1.Name = "orderUserControl1";
-            this.orderUserControl1.Size = new System.Drawing.Size(1211, 774);
-            this.orderUserControl1.TabIndex = 3;
-            // 
-            // productsUserControl1
-            // 
-            this.productsUserControl1.BackColor = System.Drawing.Color.White;
-            this.productsUserControl1.Location = new System.Drawing.Point(0, -1);
-            this.productsUserControl1.Name = "productsUserControl1";
-            this.productsUserControl1.Size = new System.Drawing.Size(1211, 774);
-            this.productsUserControl1.TabIndex = 2;
-            // 
-            // frontPageUserControl1
-            // 
-            this.frontPageUserControl1.BackColor = System.Drawing.Color.White;
-            this.frontPageUserControl1.Location = new System.Drawing.Point(0, 0);
-            this.frontPageUserControl1.Margin = new System.Windows.Forms.Padding(5);
-            this.frontPageUserControl1.Name = "frontPageUserControl1";
-            this.frontPageUserControl1.Size = new System.Drawing.Size(1211, 774);
-            this.frontPageUserControl1.TabIndex = 1;
             // 
             // FrontPage
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.AutoScroll = true;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1421, 825);
+            this.ClientSize = new System.Drawing.Size(1910, 1017);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.TopPanel);
             this.Controls.Add(this.SidePanel);
