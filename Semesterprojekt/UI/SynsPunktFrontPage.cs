@@ -99,6 +99,8 @@ namespace UI
 
         private void TimerToFrontPage_Tick(object sender, EventArgs e)
         {
+
+
         }
 
         private void ChangeColors(Button activeButton)
@@ -109,6 +111,7 @@ namespace UI
             SupportButton.BackColor = Color.FromArgb(25, 118, 211);
             ProductsButton.BackColor = Color.FromArgb(25, 118, 211);
             EmployeesButton.BackColor = Color.FromArgb(25, 118, 211);
+            ButtonMailFrontPage.BackColor = Color.FromArgb(25, 118, 211);
             activeButton.BackColor = Color.FromArgb(0, 191, 255);
         }
 
@@ -119,5 +122,6 @@ namespace UI
             ChangeColors(ButtonMailFrontPage);
 
         }
+
     }
 }

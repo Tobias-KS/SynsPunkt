@@ -34,7 +34,6 @@
             this.AddOrderButton = new System.Windows.Forms.Button();
             this.UpdateOrderButton = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.SortButtonOrders = new System.Windows.Forms.Button();
             this.ThenByDropDownBoxOrders = new System.Windows.Forms.ComboBox();
             this.ThenByLabelOrders = new System.Windows.Forms.Label();
             this.SortyByLabelOrders = new System.Windows.Forms.Label();
@@ -55,7 +54,7 @@
             this.ButtonShowAllOrders.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ButtonShowAllOrders.ForeColor = System.Drawing.Color.White;
             this.ButtonShowAllOrders.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.ButtonShowAllOrders.Location = new System.Drawing.Point(127, 11);
+            this.ButtonShowAllOrders.Location = new System.Drawing.Point(330, 15);
             this.ButtonShowAllOrders.Name = "ButtonShowAllOrders";
             this.ButtonShowAllOrders.Size = new System.Drawing.Size(210, 100);
             this.ButtonShowAllOrders.TabIndex = 7;
@@ -71,7 +70,7 @@
             this.DeleteOrderButton.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.DeleteOrderButton.ForeColor = System.Drawing.Color.White;
             this.DeleteOrderButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.DeleteOrderButton.Location = new System.Drawing.Point(888, 11);
+            this.DeleteOrderButton.Location = new System.Drawing.Point(1091, 15);
             this.DeleteOrderButton.Name = "DeleteOrderButton";
             this.DeleteOrderButton.Size = new System.Drawing.Size(210, 97);
             this.DeleteOrderButton.TabIndex = 10;
@@ -87,7 +86,7 @@
             this.AddOrderButton.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.AddOrderButton.ForeColor = System.Drawing.Color.White;
             this.AddOrderButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.AddOrderButton.Location = new System.Drawing.Point(376, 11);
+            this.AddOrderButton.Location = new System.Drawing.Point(579, 15);
             this.AddOrderButton.Name = "AddOrderButton";
             this.AddOrderButton.Size = new System.Drawing.Size(210, 100);
             this.AddOrderButton.TabIndex = 6;
@@ -104,7 +103,7 @@
             this.UpdateOrderButton.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.UpdateOrderButton.ForeColor = System.Drawing.Color.White;
             this.UpdateOrderButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.UpdateOrderButton.Location = new System.Drawing.Point(632, 11);
+            this.UpdateOrderButton.Location = new System.Drawing.Point(835, 15);
             this.UpdateOrderButton.Name = "UpdateOrderButton";
             this.UpdateOrderButton.Size = new System.Drawing.Size(210, 100);
             this.UpdateOrderButton.TabIndex = 8;
@@ -117,24 +116,8 @@
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(101)))), ((int)(((byte)(193)))));
             this.panel1.Location = new System.Drawing.Point(0, 121);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1211, 10);
+            this.panel1.Size = new System.Drawing.Size(1700, 10);
             this.panel1.TabIndex = 9;
-            // 
-            // SortButtonOrders
-            // 
-            this.SortButtonOrders.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(118)))), ((int)(((byte)(211)))));
-            this.SortButtonOrders.FlatAppearance.BorderSize = 0;
-            this.SortButtonOrders.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.SortButtonOrders.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.SortButtonOrders.ForeColor = System.Drawing.Color.White;
-            this.SortButtonOrders.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.SortButtonOrders.Location = new System.Drawing.Point(1081, 163);
-            this.SortButtonOrders.Name = "SortButtonOrders";
-            this.SortButtonOrders.Size = new System.Drawing.Size(101, 33);
-            this.SortButtonOrders.TabIndex = 13;
-            this.SortButtonOrders.Text = "Sort";
-            this.SortButtonOrders.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.SortButtonOrders.UseVisualStyleBackColor = false;
             // 
             // ThenByDropDownBoxOrders
             // 
@@ -183,7 +166,7 @@
             this.OrderList.ItemHeight = 21;
             this.OrderList.Location = new System.Drawing.Point(22, 202);
             this.OrderList.Name = "OrderList";
-            this.OrderList.Size = new System.Drawing.Size(1160, 508);
+            this.OrderList.Size = new System.Drawing.Size(1635, 655);
             this.OrderList.TabIndex = 11;
             // 
             // FromDateOrders
@@ -236,7 +219,7 @@
             this.PrintButtonOrders.ForeColor = System.Drawing.Color.White;
             this.PrintButtonOrders.Image = ((System.Drawing.Image)(resources.GetObject("PrintButtonOrders.Image")));
             this.PrintButtonOrders.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.PrintButtonOrders.Location = new System.Drawing.Point(1095, 719);
+            this.PrintButtonOrders.Location = new System.Drawing.Point(1570, 876);
             this.PrintButtonOrders.Name = "PrintButtonOrders";
             this.PrintButtonOrders.Size = new System.Drawing.Size(87, 45);
             this.PrintButtonOrders.TabIndex = 17;
@@ -253,7 +236,6 @@
             this.Controls.Add(this.ToDateOrders);
             this.Controls.Add(this.FromDateOrders);
             this.Controls.Add(this.PrintButtonOrders);
-            this.Controls.Add(this.SortButtonOrders);
             this.Controls.Add(this.ThenByDropDownBoxOrders);
             this.Controls.Add(this.ThenByLabelOrders);
             this.Controls.Add(this.SortyByLabelOrders);
@@ -265,7 +247,7 @@
             this.Controls.Add(this.UpdateOrderButton);
             this.Controls.Add(this.panel1);
             this.Name = "OrderUserControl";
-            this.Size = new System.Drawing.Size(1211, 774);
+            this.Size = new System.Drawing.Size(1700, 966);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -278,7 +260,6 @@
         private System.Windows.Forms.Button AddOrderButton;
         private System.Windows.Forms.Button UpdateOrderButton;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Button SortButtonOrders;
         private System.Windows.Forms.ComboBox ThenByDropDownBoxOrders;
         private System.Windows.Forms.Label ThenByLabelOrders;
         private System.Windows.Forms.Label SortyByLabelOrders;

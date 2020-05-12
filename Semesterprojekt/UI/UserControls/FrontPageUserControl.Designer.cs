@@ -35,11 +35,11 @@
             // 
             this.SynsPunktFrontText.AutoSize = true;
             this.SynsPunktFrontText.BackColor = System.Drawing.Color.White;
-            this.SynsPunktFrontText.Font = new System.Drawing.Font("Century Gothic", 72F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.SynsPunktFrontText.Font = new System.Drawing.Font("Century Gothic", 200.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.SynsPunktFrontText.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(101)))), ((int)(((byte)(193)))));
-            this.SynsPunktFrontText.Location = new System.Drawing.Point(357, 314);
+            this.SynsPunktFrontText.Location = new System.Drawing.Point(159, 285);
             this.SynsPunktFrontText.Name = "SynsPunktFrontText";
-            this.SynsPunktFrontText.Size = new System.Drawing.Size(508, 112);
+            this.SynsPunktFrontText.Size = new System.Drawing.Size(1411, 324);
             this.SynsPunktFrontText.TabIndex = 0;
             this.SynsPunktFrontText.Text = "SynsPunkt";
             this.SynsPunktFrontText.Click += new System.EventHandler(this.SynsPunktFrontText_Click);
@@ -50,7 +50,7 @@
             this.BackColor = System.Drawing.Color.White;
             this.Controls.Add(this.SynsPunktFrontText);
             this.Name = "FrontPageUserControl";
-            this.Size = new System.Drawing.Size(1211, 774);
+            this.Size = new System.Drawing.Size(1700, 966);
             this.ResumeLayout(false);
             this.PerformLayout();
 

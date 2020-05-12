@@ -40,7 +40,6 @@
             this.ToDateProducts = new System.Windows.Forms.DateTimePicker();
             this.FromDateProducts = new System.Windows.Forms.DateTimePicker();
             this.PrintButtonProducts = new System.Windows.Forms.Button();
-            this.SortButtonProducts = new System.Windows.Forms.Button();
             this.ThenByDropDownBoxProducts = new System.Windows.Forms.ComboBox();
             this.ThenByLabelProducts = new System.Windows.Forms.Label();
             this.SortyByLabelProducts = new System.Windows.Forms.Label();
@@ -123,7 +122,7 @@
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel2.Location = new System.Drawing.Point(0, 0);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1211, 118);
+            this.panel2.Size = new System.Drawing.Size(1700, 118);
             this.panel2.TabIndex = 2;
             // 
             // panel1
@@ -131,7 +130,7 @@
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(101)))), ((int)(((byte)(193)))));
             this.panel1.Location = new System.Drawing.Point(0, 121);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1211, 10);
+            this.panel1.Size = new System.Drawing.Size(1700, 10);
             this.panel1.TabIndex = 3;
             // 
             // ToLabelProducts
@@ -183,29 +182,13 @@
             this.PrintButtonProducts.ForeColor = System.Drawing.Color.White;
             this.PrintButtonProducts.Image = ((System.Drawing.Image)(resources.GetObject("PrintButtonProducts.Image")));
             this.PrintButtonProducts.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.PrintButtonProducts.Location = new System.Drawing.Point(1095, 719);
+            this.PrintButtonProducts.Location = new System.Drawing.Point(1578, 887);
             this.PrintButtonProducts.Name = "PrintButtonProducts";
             this.PrintButtonProducts.Size = new System.Drawing.Size(87, 45);
             this.PrintButtonProducts.TabIndex = 28;
             this.PrintButtonProducts.Text = "Print";
             this.PrintButtonProducts.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.PrintButtonProducts.UseVisualStyleBackColor = false;
-            // 
-            // SortButtonProducts
-            // 
-            this.SortButtonProducts.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(118)))), ((int)(((byte)(211)))));
-            this.SortButtonProducts.FlatAppearance.BorderSize = 0;
-            this.SortButtonProducts.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.SortButtonProducts.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.SortButtonProducts.ForeColor = System.Drawing.Color.White;
-            this.SortButtonProducts.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.SortButtonProducts.Location = new System.Drawing.Point(1081, 163);
-            this.SortButtonProducts.Name = "SortButtonProducts";
-            this.SortButtonProducts.Size = new System.Drawing.Size(101, 33);
-            this.SortButtonProducts.TabIndex = 24;
-            this.SortButtonProducts.Text = "Sort";
-            this.SortButtonProducts.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.SortButtonProducts.UseVisualStyleBackColor = false;
             // 
             // ThenByDropDownBoxProducts
             // 
@@ -254,7 +237,7 @@
             this.ProductList.ItemHeight = 21;
             this.ProductList.Location = new System.Drawing.Point(22, 202);
             this.ProductList.Name = "ProductList";
-            this.ProductList.Size = new System.Drawing.Size(1160, 508);
+            this.ProductList.Size = new System.Drawing.Size(1643, 676);
             this.ProductList.TabIndex = 22;
             // 
             // ProductsUserControl
@@ -266,7 +249,6 @@
             this.Controls.Add(this.ToDateProducts);
             this.Controls.Add(this.FromDateProducts);
             this.Controls.Add(this.PrintButtonProducts);
-            this.Controls.Add(this.SortButtonProducts);
             this.Controls.Add(this.ThenByDropDownBoxProducts);
             this.Controls.Add(this.ThenByLabelProducts);
             this.Controls.Add(this.SortyByLabelProducts);
@@ -275,7 +257,7 @@
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.panel2);
             this.Name = "ProductsUserControl";
-            this.Size = new System.Drawing.Size(1211, 774);
+            this.Size = new System.Drawing.Size(1700, 966);
             this.panel2.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -294,7 +276,6 @@
         private System.Windows.Forms.DateTimePicker ToDateProducts;
         private System.Windows.Forms.DateTimePicker FromDateProducts;
         private System.Windows.Forms.Button PrintButtonProducts;
-        private System.Windows.Forms.Button SortButtonProducts;
         private System.Windows.Forms.ComboBox ThenByDropDownBoxProducts;
         private System.Windows.Forms.Label ThenByLabelProducts;
         private System.Windows.Forms.Label SortyByLabelProducts;
