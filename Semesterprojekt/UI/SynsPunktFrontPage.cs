@@ -93,7 +93,7 @@ namespace UI
 
         private void EmployeesButton_Click(object sender, EventArgs e)
         {
-            supportUserControl1.BringToFront();
+            employeesUserControl1.BringToFront();
             ChangeColors(EmployeesButton);
         }
 

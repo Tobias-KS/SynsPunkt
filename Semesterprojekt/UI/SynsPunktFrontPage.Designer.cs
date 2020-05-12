@@ -49,14 +49,15 @@
             this.MinimizeApp = new System.Windows.Forms.Button();
             this.CloseApp = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.fileSystemWatcher1 = new System.IO.FileSystemWatcher();
+            this.TimerToFrontPage = new System.Windows.Forms.Timer(this.components);
+            this.employeesUserControl1 = new UI.EmployeesUserControl();
             this.supportUserControl1 = new UI.SupportUserControl();
             this.customerUserControl1 = new UI.ProductsUserControl();
             this.customerUserControl2 = new UI.CustomerUserControl();
             this.orderUserControl1 = new UI.OrderUserControl();
             this.productsUserControl1 = new UI.ProductsUserControl();
             this.frontPageUserControl1 = new UI.FrontPageUserControl();
-            this.fileSystemWatcher1 = new System.IO.FileSystemWatcher();
-            this.TimerToFrontPage = new System.Windows.Forms.Timer(this.components);
             this.SidePanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Logo)).BeginInit();
             this.TopPanel.SuspendLayout();
@@ -268,6 +269,7 @@
             // 
             // panel2
             // 
+            this.panel2.Controls.Add(this.employeesUserControl1);
             this.panel2.Controls.Add(this.supportUserControl1);
             this.panel2.Controls.Add(this.customerUserControl1);
             this.panel2.Controls.Add(this.customerUserControl2);
@@ -279,6 +281,25 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(1211, 774);
             this.panel2.TabIndex = 2;
+            // 
+            // fileSystemWatcher1
+            // 
+            this.fileSystemWatcher1.EnableRaisingEvents = true;
+            this.fileSystemWatcher1.SynchronizingObject = this;
+            // 
+            // TimerToFrontPage
+            // 
+            this.TimerToFrontPage.Tick += new System.EventHandler(this.TimerToFrontPage_Tick);
+            // 
+            // employeesUserControl1
+            // 
+            this.employeesUserControl1.BackColor = System.Drawing.Color.White;
+            this.employeesUserControl1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.employeesUserControl1.Location = new System.Drawing.Point(0, -1);
+            this.employeesUserControl1.Margin = new System.Windows.Forms.Padding(5);
+            this.employeesUserControl1.Name = "employeesUserControl1";
+            this.employeesUserControl1.Size = new System.Drawing.Size(1211, 774);
+            this.employeesUserControl1.TabIndex = 7;
             // 
             // supportUserControl1
             // 
@@ -332,15 +353,6 @@
             this.frontPageUserControl1.Size = new System.Drawing.Size(1211, 774);
             this.frontPageUserControl1.TabIndex = 1;
             // 
-            // fileSystemWatcher1
-            // 
-            this.fileSystemWatcher1.EnableRaisingEvents = true;
-            this.fileSystemWatcher1.SynchronizingObject = this;
-            // 
-            // TimerToFrontPage
-            // 
-            this.TimerToFrontPage.Tick += new System.EventHandler(this.TimerToFrontPage_Tick);
-            // 
             // FrontPage
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
@@ -392,6 +404,7 @@
         private CustomerUserControl customerUserControl2;
         private SupportUserControl supportUserControl1;
         private System.Windows.Forms.Timer TimerToFrontPage;
+        private EmployeesUserControl employeesUserControl1;
     }
 }
 

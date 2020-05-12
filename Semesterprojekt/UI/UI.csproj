@@ -52,6 +52,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="EmployeesUserControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="EmployeesUserControl.Designer.cs">
+      <DependentUpon>EmployeesUserControl.cs</DependentUpon>
+    </Compile>
     <Compile Include="UserControls\AddOrderPopUpMainPanelUserControl.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -108,6 +114,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="EmployeesUserControl.resx">
+      <DependentUpon>EmployeesUserControl.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UserControls\AddOrderPopUpMainPanelUserControl.resx">
       <DependentUpon>AddOrderPopUpMainPanelUserControl.cs</DependentUpon>
     </EmbeddedResource>
@@ -167,6 +176,10 @@
     <ProjectReference Include="..\BusinessLogic\BusinessLogic.csproj">
       <Project>{cf892008-3317-4e4a-9e18-b16151747d00}</Project>
       <Name>BusinessLogic</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Persistence\Persistence.csproj">
+      <Project>{74a8b65c-7afd-4452-9547-ecf5c035e09e}</Project>
+      <Name>Persistence</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
