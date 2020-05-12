@@ -86,6 +86,7 @@
             this.ButtonShowAllCustomers.Text = "Show all";
             this.ButtonShowAllCustomers.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.ButtonShowAllCustomers.UseVisualStyleBackColor = false;
+            this.ButtonShowAllCustomers.Click += new System.EventHandler(this.ButtonShowAllCustomers_Click);
             // 
             // UpdateCustomerButton
             // 

@@ -13,7 +13,7 @@ namespace Persistence
         public static string Connect()
         {
 
-            string conn = "Server=den1.mssql7.gear.host;Database=odensedb;User ID=odensedb;Password=Ku9vy7Kax1--";
+            string conn = "Server=den1.mssql8.gear.host;Database=odensedb;User ID=odensedb;Password=Lv6b!!0E3563";
 
             return conn;
 

@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Persistence.CRUD;
 
 namespace UI
 {
@@ -31,6 +32,13 @@ namespace UI
         {
             var CustomerAddPopUp = new AddPopUp(true);
             CustomerAddPopUp.Show();
+        }
+
+        private void ButtonShowAllCustomers_Click(object sender, EventArgs e)
+        {
+
+            CustomerList.DataSource = Reader.SelectAllCustomers();
+
         }
     }
 }
