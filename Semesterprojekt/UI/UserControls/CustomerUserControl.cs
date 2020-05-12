@@ -64,6 +64,10 @@ namespace UI
 
         }
 
-        
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+            
+            dataGridViewCustomerUserControl.DataSource = Filter.SearchBar(Reader.GetCustomersDataTable(), textBox1.Text);
+        }
     }
 }

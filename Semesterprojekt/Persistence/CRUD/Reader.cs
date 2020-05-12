@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Text;
 using System.Data.SqlClient;
 using System.Data;
+using System.Linq;
 using System.Threading;
 using Persistence.Models;
 
@@ -24,9 +25,12 @@ namespace Persistence.CRUD
 
                     conn.Open();
 
+                   
                     SqlDataReader reader = com.ExecuteReader();
 
                     customersDataTable.Load(reader);
+
+                    
                 }
             }
 

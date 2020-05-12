@@ -13,22 +13,42 @@ namespace BusinessLogic
     {
         public static DataTable FilterCustomers()
         {
-            var result = Reader.GetCustomersDataTable().Rows.Cast<DataRow>().Where(c => c.Field<string>("Forename") == "Homer");
+            var result = Reader.GetCustomersDataTable().Rows.Cast<DataRow>()
+                .Where(c => c.Field<string>("Forename") == "Homer");
 
             return result.CopyToDataTable<DataRow>();
 
-            var filtered = tb.AsEnumerable()
-                               .Where(r => r.Field<String>("FIRSTNAME").Contains(searchstring)
-                                           || r.Field<String>("LASTNAME").Contains(searchstring))
-                           || r.Field<String>("NAME").Contains(searchstring)
-                           || r.Field<String>("COMPANY").Contains(searchstring)
-                           || r.Field<String>("CREATOR").Contains(searchstring));
         }
 
 
-        public static 
+        public static DataTable SearchBar(DataTable inputTable, string inputText)
+        {
+           
+            if (inputText.Equals(""))
+            {
+                return inputTable;
+            }
 
+            var searchedList = inputTable.Rows
+                .Cast<DataRow>()
+                .Where(row => row.ItemArray.Any(
+                    c => c.ToString().IndexOf(inputText, StringComparison.OrdinalIgnoreCase) >= 0))
+                .ToList();
 
-        
+            if (searchedList.Count != 0)
+            {
+                return searchedList.CopyToDataTable();
+            }
+            else
+            {
+                var tempDataTable = inputTable.Clone();
+                tempDataTable.Clear();
+                return tempDataTable;
+            }
+        }
+
     }
+
 }
+
+
