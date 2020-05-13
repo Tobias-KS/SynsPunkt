@@ -11,7 +11,7 @@ namespace SQLTest
         static void Main(string[] args)
         {
 
-            List<Customer> customers = Reader.SelectAllCustomers();
+       /*     List<Customer> customers = Reader.SelectAllCustomers();
             
 
             foreach (var customer in customers)
@@ -30,6 +30,7 @@ namespace SQLTest
             }
            
             Console.ReadKey();
+            */
         }
     }
 }

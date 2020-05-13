@@ -56,16 +56,16 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="EmployeesUserControl.cs">
+    <Compile Include="UserControls\EmployeesUserControl.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="EmployeesUserControl.Designer.cs">
+    <Compile Include="UserControls\EmployeesUserControl.Designer.cs">
       <DependentUpon>EmployeesUserControl.cs</DependentUpon>
     </Compile>
-    <Compile Include="MailUserControl.cs">
+    <Compile Include="UserControls\MailUserControl.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="MailUserControl.Designer.cs">
+    <Compile Include="UserControls\MailUserControl.Designer.cs">
       <DependentUpon>MailUserControl.cs</DependentUpon>
     </Compile>
     <Compile Include="odensedbDataSet.Designer.cs">
@@ -129,10 +129,10 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="EmployeesUserControl.resx">
+    <EmbeddedResource Include="UserControls\EmployeesUserControl.resx">
       <DependentUpon>EmployeesUserControl.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="MailUserControl.resx">
+    <EmbeddedResource Include="UserControls\MailUserControl.resx">
       <DependentUpon>MailUserControl.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UserControls\AddOrderPopUpMainPanelUserControl.resx">
