@@ -11,6 +11,8 @@ namespace BusinessLogic
 {
     public class Filter
     {
+
+        //Test
         public static DataTable FilterCustomers()
         {
             var result = Reader.GetCustomersDataTable().Rows.Cast<DataRow>()

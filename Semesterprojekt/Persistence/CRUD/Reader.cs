@@ -25,15 +25,11 @@ namespace Persistence.CRUD
 
                     conn.Open();
 
-                   
                     SqlDataReader reader = com.ExecuteReader();
 
                     customersDataTable.Load(reader);
-
-                    
                 }
             }
-
 
             return customersDataTable;
         }
