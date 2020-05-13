@@ -36,10 +36,6 @@ namespace UI
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.AddCustomerButton = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.SortByDropDownBoxCustomer = new System.Windows.Forms.ComboBox();
-            this.SortyByLabelCustomers = new System.Windows.Forms.Label();
-            this.ThenByLabelCustomers = new System.Windows.Forms.Label();
-            this.ThenByDropDownBoxCustomer = new System.Windows.Forms.ComboBox();
             this.dataGridViewCustomerUserControl = new System.Windows.Forms.DataGridView();
             this.customersBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.odensedbDataSet = new UI.odensedbDataSet();
@@ -82,51 +78,6 @@ namespace UI
             this.panel2.Size = new System.Drawing.Size(1700, 30);
             this.panel2.TabIndex = 2;
             // 
-            // SortByDropDownBoxCustomer
-            // 
-            this.SortByDropDownBoxCustomer.BackColor = System.Drawing.Color.White;
-            this.SortByDropDownBoxCustomer.Cursor = System.Windows.Forms.Cursors.Arrow;
-            this.SortByDropDownBoxCustomer.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.SortByDropDownBoxCustomer.ForeColor = System.Drawing.Color.Black;
-            this.SortByDropDownBoxCustomer.FormattingEnabled = true;
-            this.SortByDropDownBoxCustomer.Items.AddRange(new object[] {
-            "CustomerID"});
-            this.SortByDropDownBoxCustomer.Location = new System.Drawing.Point(1107, 72);
-            this.SortByDropDownBoxCustomer.Name = "SortByDropDownBoxCustomer";
-            this.SortByDropDownBoxCustomer.Size = new System.Drawing.Size(206, 29);
-            this.SortByDropDownBoxCustomer.TabIndex = 4;
-            this.SortByDropDownBoxCustomer.SelectedIndexChanged += new System.EventHandler(this.SortByDropDownBox_SelectedIndexChanged);
-            // 
-            // SortyByLabelCustomers
-            // 
-            this.SortyByLabelCustomers.AutoSize = true;
-            this.SortyByLabelCustomers.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.SortyByLabelCustomers.Location = new System.Drawing.Point(1103, 49);
-            this.SortyByLabelCustomers.Name = "SortyByLabelCustomers";
-            this.SortyByLabelCustomers.Size = new System.Drawing.Size(63, 21);
-            this.SortyByLabelCustomers.TabIndex = 5;
-            this.SortyByLabelCustomers.Text = "Sort by";
-            // 
-            // ThenByLabelCustomers
-            // 
-            this.ThenByLabelCustomers.AutoSize = true;
-            this.ThenByLabelCustomers.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ThenByLabelCustomers.Location = new System.Drawing.Point(1319, 49);
-            this.ThenByLabelCustomers.Name = "ThenByLabelCustomers";
-            this.ThenByLabelCustomers.Size = new System.Drawing.Size(140, 21);
-            this.ThenByLabelCustomers.TabIndex = 6;
-            this.ThenByLabelCustomers.Text = "And then sort by";
-            // 
-            // ThenByDropDownBoxCustomer
-            // 
-            this.ThenByDropDownBoxCustomer.BackColor = System.Drawing.Color.White;
-            this.ThenByDropDownBoxCustomer.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ThenByDropDownBoxCustomer.FormattingEnabled = true;
-            this.ThenByDropDownBoxCustomer.Location = new System.Drawing.Point(1323, 73);
-            this.ThenByDropDownBoxCustomer.Name = "ThenByDropDownBoxCustomer";
-            this.ThenByDropDownBoxCustomer.Size = new System.Drawing.Size(206, 29);
-            this.ThenByDropDownBoxCustomer.TabIndex = 7;
-            // 
             // dataGridViewCustomerUserControl
             // 
             this.dataGridViewCustomerUserControl.AllowUserToAddRows = false;
@@ -138,7 +89,7 @@ namespace UI
             this.dataGridViewCustomerUserControl.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.RaisedVertical;
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 5.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Century Gothic", 14F, System.Drawing.FontStyle.Bold);
             dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
             dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
             dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
@@ -160,7 +111,7 @@ namespace UI
             this.dataGridViewCustomerUserControl.ReadOnly = true;
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle3.BackColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
             dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
             dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
@@ -247,10 +198,6 @@ namespace UI
             this.Controls.Add(this.AddCustomerButton);
             this.Controls.Add(this.dataGridViewCustomerUserControl);
             this.Controls.Add(this.ResetfiltersButtonCustomers);
-            this.Controls.Add(this.ThenByDropDownBoxCustomer);
-            this.Controls.Add(this.ThenByLabelCustomers);
-            this.Controls.Add(this.SortyByLabelCustomers);
-            this.Controls.Add(this.SortByDropDownBoxCustomer);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.dataGridView2);
             this.Name = "CustomerUserControl";
@@ -269,10 +216,6 @@ namespace UI
         #endregion
         private System.Windows.Forms.Button AddCustomerButton;
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.ComboBox SortByDropDownBoxCustomer;
-        private System.Windows.Forms.Label SortyByLabelCustomers;
-        private System.Windows.Forms.Label ThenByLabelCustomers;
-        private System.Windows.Forms.ComboBox ThenByDropDownBoxCustomer;
         private System.Windows.Forms.DataGridView dataGridView2;
         private System.Windows.Forms.BindingSource customersBindingSource;
         private odensedbDataSet odensedbDataSet;
