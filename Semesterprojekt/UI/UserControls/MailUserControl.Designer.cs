@@ -35,6 +35,7 @@
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.label3 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
+            this.panel1 = new System.Windows.Forms.Panel();
             this.SuspendLayout();
             // 
             // richTextBox2
@@ -70,12 +71,22 @@
             this.ListOfCustomersThatHaveAcceptedNewsLetters.FormattingEnabled = true;
             this.ListOfCustomersThatHaveAcceptedNewsLetters.ItemHeight = 21;
             this.ListOfCustomersThatHaveAcceptedNewsLetters.Items.AddRange(new object[] {
-            "Mail@Mail.com ",
-            "Mail2@Mail.com ",
-            "Mail3@Mail.com ",
-            "Mail4@Mail.com ",
-            "Mail5@Mail.com ",
-            "Mail6@Mail.com ",
+            "augue@Pellentesqueut.com",
+            "risus.In.mi@volutpat.co.uk",
+            "mattis.Cras.eget@Nulla.co.uk",
+            "eros@orcilacus.ca",
+            "faucibus@In.org",
+            "Vivamus@gravidamolestie.co.uk",
+            "enim@posuerecubilia.org",
+            "mus.Proin@nequeNullam.org",
+            "et.risus.Quisque@amet.edu",
+            "id@consectetueradipiscingelit.co.uk",
+            "elit.erat.vitae@mi.net",
+            "ac@purusaccumsan.com",
+            "nec.ligula@Curabiturvellectus.net",
+            "eget@velitAliquamnisl.com",
+            "Vivamus.nisi@Donec.co.uk",
+            "non.lobortis@ultricesaauctor.co.u",
             ""});
             this.ListOfCustomersThatHaveAcceptedNewsLetters.Location = new System.Drawing.Point(26, 152);
             this.ListOfCustomersThatHaveAcceptedNewsLetters.Name = "ListOfCustomersThatHaveAcceptedNewsLetters";
@@ -108,18 +119,27 @@
             // 
             this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(118)))), ((int)(((byte)(211)))));
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Location = new System.Drawing.Point(1532, 861);
+            this.button1.Location = new System.Drawing.Point(827, 861);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(104, 34);
             this.button1.TabIndex = 7;
             this.button1.Text = "Send";
             this.button1.UseVisualStyleBackColor = false;
             // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(118)))), ((int)(((byte)(211)))));
+            this.panel1.Location = new System.Drawing.Point(775, 0);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(23, 966);
+            this.panel1.TabIndex = 77;
+            // 
             // MailUserControl
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 21F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
+            this.Controls.Add(this.panel1);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.comboBox1);
@@ -144,5 +164,6 @@
         private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Panel panel1;
     }
 }
