@@ -29,6 +29,10 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ProductsUserControl));
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.AddProductButton = new System.Windows.Forms.Button();
             this.ButtonShowAllProducts = new System.Windows.Forms.Button();
             this.UpdateProduktButton = new System.Windows.Forms.Button();
@@ -44,8 +48,9 @@
             this.ThenByLabelProducts = new System.Windows.Forms.Label();
             this.SortyByLabelProducts = new System.Windows.Forms.Label();
             this.SortByDropDownBoxProducts = new System.Windows.Forms.ComboBox();
-            this.ProductList = new System.Windows.Forms.ListBox();
+            this.dataGridViewProductUserControl = new System.Windows.Forms.DataGridView();
             this.panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewProductUserControl)).BeginInit();
             this.SuspendLayout();
             // 
             // AddProductButton
@@ -189,6 +194,7 @@
             this.PrintButtonProducts.Text = "Print";
             this.PrintButtonProducts.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.PrintButtonProducts.UseVisualStyleBackColor = false;
+            this.PrintButtonProducts.Click += new System.EventHandler(this.PrintButtonProducts_Click);
             // 
             // ThenByDropDownBoxProducts
             // 
@@ -230,20 +236,58 @@
             this.SortByDropDownBoxProducts.Size = new System.Drawing.Size(206, 29);
             this.SortByDropDownBoxProducts.TabIndex = 23;
             // 
-            // ProductList
+            // dataGridViewProductUserControl
             // 
-            this.ProductList.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ProductList.FormattingEnabled = true;
-            this.ProductList.ItemHeight = 21;
-            this.ProductList.Location = new System.Drawing.Point(22, 202);
-            this.ProductList.Name = "ProductList";
-            this.ProductList.Size = new System.Drawing.Size(1643, 676);
-            this.ProductList.TabIndex = 22;
+            this.dataGridViewProductUserControl.AllowUserToAddRows = false;
+            this.dataGridViewProductUserControl.AllowUserToDeleteRows = false;
+            this.dataGridViewProductUserControl.AllowUserToResizeColumns = false;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.dataGridViewProductUserControl.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            this.dataGridViewProductUserControl.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
+            this.dataGridViewProductUserControl.BackgroundColor = System.Drawing.Color.White;
+            this.dataGridViewProductUserControl.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dataGridViewProductUserControl.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.RaisedVertical;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Century Gothic", 15F, System.Drawing.FontStyle.Bold);
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridViewProductUserControl.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            this.dataGridViewProductUserControl.ColumnHeadersHeight = 40;
+            this.dataGridViewProductUserControl.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridViewProductUserControl.DefaultCellStyle = dataGridViewCellStyle3;
+            this.dataGridViewProductUserControl.GridColor = System.Drawing.Color.Black;
+            this.dataGridViewProductUserControl.Location = new System.Drawing.Point(22, 200);
+            this.dataGridViewProductUserControl.Name = "dataGridViewProductUserControl";
+            this.dataGridViewProductUserControl.ReadOnly = true;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridViewProductUserControl.RowHeadersDefaultCellStyle = dataGridViewCellStyle4;
+            this.dataGridViewProductUserControl.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToDisplayedHeaders;
+            this.dataGridViewProductUserControl.RowTemplate.DividerHeight = 3;
+            this.dataGridViewProductUserControl.RowTemplate.Height = 40;
+            this.dataGridViewProductUserControl.Size = new System.Drawing.Size(1643, 681);
+            this.dataGridViewProductUserControl.TabIndex = 33;
             // 
             // ProductsUserControl
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackColor = System.Drawing.Color.White;
+            this.Controls.Add(this.dataGridViewProductUserControl);
             this.Controls.Add(this.ToLabelProducts);
             this.Controls.Add(this.FromLabelProducts);
             this.Controls.Add(this.ToDateProducts);
@@ -253,12 +297,12 @@
             this.Controls.Add(this.ThenByLabelProducts);
             this.Controls.Add(this.SortyByLabelProducts);
             this.Controls.Add(this.SortByDropDownBoxProducts);
-            this.Controls.Add(this.ProductList);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.panel2);
             this.Name = "ProductsUserControl";
             this.Size = new System.Drawing.Size(1700, 966);
             this.panel2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewProductUserControl)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -280,6 +324,6 @@
         private System.Windows.Forms.Label ThenByLabelProducts;
         private System.Windows.Forms.Label SortyByLabelProducts;
         private System.Windows.Forms.ComboBox SortByDropDownBoxProducts;
-        private System.Windows.Forms.ListBox ProductList;
+        private System.Windows.Forms.DataGridView dataGridViewProductUserControl;
     }
 }

@@ -3,10 +3,12 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Drawing;
 using System.Data;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using BusinessLogic;
 
 namespace UI
 {
@@ -19,6 +21,12 @@ namespace UI
 
         private void CustomerList_SelectedIndexChanged(object sender, EventArgs e)
         {
+
+        }
+
+        private void PrintButtonProducts_Click(object sender, EventArgs e)
+        {
+
 
         }
     }

@@ -19,4 +19,8 @@
     </None>
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="BusinessLogicResources\TxtFiles\" />
+  </ItemGroup>
+
 </Project>

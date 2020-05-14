@@ -11,6 +11,12 @@ namespace SQLTest
         static void Main(string[] args)
         {
 
+
+
+
+
+
+
        /*     List<Customer> customers = Reader.SelectAllCustomers();
             
 

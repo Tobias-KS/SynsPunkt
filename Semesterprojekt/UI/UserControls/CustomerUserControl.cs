@@ -52,11 +52,6 @@ namespace UI
 
         }
 
-        private void dataGridViewCustomerUserControl_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
-
         private void CustomerUserControl_Load(object sender, EventArgs e)
         {
 
@@ -68,6 +63,12 @@ namespace UI
         {
             
             dataGridViewCustomerUserControl.DataSource = Filter.SearchBar(Reader.GetCustomersDataTable(), textBox1.Text);
+        }
+
+        private void PrintCustomersButton_Click(object sender, EventArgs e)
+        {
+            DataTable data = (DataTable)(dataGridViewCustomerUserControl.DataSource);
+            TxtPrinter.TxtPrintMethod("Test", data);
         }
     }
 }

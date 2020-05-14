@@ -21,6 +21,5 @@ namespace BusinessLogic
             OpenPdfFil(pdf_path);
         }
 
-       
     }
 }

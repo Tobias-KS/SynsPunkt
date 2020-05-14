@@ -46,6 +46,7 @@ namespace UI
             this.ResetfiltersButtonCustomers = new System.Windows.Forms.Button();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.labelSearch = new System.Windows.Forms.Label();
+            this.PrintCustomersButton = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewCustomerUserControl)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.customersBindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.odensedbDataSet)).BeginInit();
@@ -92,7 +93,7 @@ namespace UI
             this.dataGridViewCustomerUserControl.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.RaisedVertical;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle2.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Century Gothic", 14F, System.Drawing.FontStyle.Bold);
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Century Gothic", 15F, System.Drawing.FontStyle.Bold);
             dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
             dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
@@ -125,8 +126,6 @@ namespace UI
             this.dataGridViewCustomerUserControl.RowTemplate.Height = 40;
             this.dataGridViewCustomerUserControl.Size = new System.Drawing.Size(1650, 837);
             this.dataGridViewCustomerUserControl.TabIndex = 8;
-            this.dataGridViewCustomerUserControl.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewCustomerUserControl_CellContentClick);
-            this.dataGridViewCustomerUserControl.ColumnHeadersDefaultCellStyle.Font = new Font("Century Gothic", 15.0F, FontStyle.Bold);
             // 
             // customersBindingSource1
             // 
@@ -178,7 +177,7 @@ namespace UI
             this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.textBox1.Location = new System.Drawing.Point(171, 72);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(144, 26);
+            this.textBox1.Size = new System.Drawing.Size(144, 20);
             this.textBox1.TabIndex = 10;
             this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
@@ -192,11 +191,29 @@ namespace UI
             this.labelSearch.TabIndex = 11;
             this.labelSearch.Text = "Search";
             // 
+            // PrintCustomersButton
+            // 
+            this.PrintCustomersButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(118)))), ((int)(((byte)(211)))));
+            this.PrintCustomersButton.FlatAppearance.BorderSize = 0;
+            this.PrintCustomersButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.PrintCustomersButton.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.PrintCustomersButton.ForeColor = System.Drawing.Color.White;
+            this.PrintCustomersButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.PrintCustomersButton.Location = new System.Drawing.Point(905, 59);
+            this.PrintCustomersButton.Name = "PrintCustomersButton";
+            this.PrintCustomersButton.Size = new System.Drawing.Size(137, 33);
+            this.PrintCustomersButton.TabIndex = 12;
+            this.PrintCustomersButton.Text = "Print Customers ";
+            this.PrintCustomersButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.PrintCustomersButton.UseVisualStyleBackColor = false;
+            this.PrintCustomersButton.Click += new System.EventHandler(this.PrintCustomersButton_Click);
+            // 
             // CustomerUserControl
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.BackColor = System.Drawing.Color.White;
+            this.Controls.Add(this.PrintCustomersButton);
             this.Controls.Add(this.labelSearch);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.AddCustomerButton);
@@ -229,5 +246,6 @@ namespace UI
         private System.Windows.Forms.Button ResetfiltersButtonCustomers;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Label labelSearch;
+        private System.Windows.Forms.Button PrintCustomersButton;
     }
 }
