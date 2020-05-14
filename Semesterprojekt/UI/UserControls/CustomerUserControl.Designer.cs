@@ -47,6 +47,7 @@ namespace UI
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.labelSearch = new System.Windows.Forms.Label();
             this.PrintCustomersButton = new System.Windows.Forms.Button();
+            this.NameOnFile = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewCustomerUserControl)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.customersBindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.odensedbDataSet)).BeginInit();
@@ -126,6 +127,7 @@ namespace UI
             this.dataGridViewCustomerUserControl.RowTemplate.Height = 40;
             this.dataGridViewCustomerUserControl.Size = new System.Drawing.Size(1650, 837);
             this.dataGridViewCustomerUserControl.TabIndex = 8;
+            this.dataGridViewCustomerUserControl.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewCustomerUserControl_CellContentClick);
             // 
             // customersBindingSource1
             // 
@@ -199,7 +201,7 @@ namespace UI
             this.PrintCustomersButton.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.PrintCustomersButton.ForeColor = System.Drawing.Color.White;
             this.PrintCustomersButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.PrintCustomersButton.Location = new System.Drawing.Point(905, 59);
+            this.PrintCustomersButton.Location = new System.Drawing.Point(1392, 73);
             this.PrintCustomersButton.Name = "PrintCustomersButton";
             this.PrintCustomersButton.Size = new System.Drawing.Size(137, 33);
             this.PrintCustomersButton.TabIndex = 12;
@@ -208,11 +210,20 @@ namespace UI
             this.PrintCustomersButton.UseVisualStyleBackColor = false;
             this.PrintCustomersButton.Click += new System.EventHandler(this.PrintCustomersButton_Click);
             // 
+            // NameOnFile
+            // 
+            this.NameOnFile.Location = new System.Drawing.Point(1253, 78);
+            this.NameOnFile.Name = "NameOnFile";
+            this.NameOnFile.Size = new System.Drawing.Size(133, 20);
+            this.NameOnFile.TabIndex = 13;
+            this.NameOnFile.TextChanged += new System.EventHandler(this.NameOnFile_TextChanged);
+            // 
             // CustomerUserControl
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.BackColor = System.Drawing.Color.White;
+            this.Controls.Add(this.NameOnFile);
             this.Controls.Add(this.PrintCustomersButton);
             this.Controls.Add(this.labelSearch);
             this.Controls.Add(this.textBox1);
@@ -247,5 +258,6 @@ namespace UI
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Label labelSearch;
         private System.Windows.Forms.Button PrintCustomersButton;
+        private System.Windows.Forms.TextBox NameOnFile;
     }
 }

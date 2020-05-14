@@ -26,7 +26,20 @@ namespace UI
 
         private void PrintButtonProducts_Click(object sender, EventArgs e)
         {
+            if (String.IsNullOrEmpty(NameOfFileProductsUserContolPrint.Text))
+            {
+                MessageBox.Show("Enter a filename before you print");
 
+            }
+            else
+            {
+                //Print metode her
+
+            }
+
+        }
+        private void NameOfFileProductsUserContolPrint_TextChanged(object sender, EventArgs e)
+        {
 
         }
     }

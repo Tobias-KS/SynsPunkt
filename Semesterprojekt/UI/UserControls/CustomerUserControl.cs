@@ -12,6 +12,7 @@ using System.Windows.Forms;
 using Persistence.CRUD;
 using Persistence.Models;
 using BusinessLogic;
+using SortOrder = System.Windows.Forms.SortOrder;
 
 namespace UI
 {
@@ -62,11 +63,29 @@ namespace UI
 
         private void PrintCustomersButton_Click(object sender, EventArgs e)
         {
-            TxtPrinter.WriteToTxt("Filnavn", (DataTable)dataGridViewCustomerUserControl.DataSource);
 
+            if (String.IsNullOrEmpty(NameOnFile.Text))
+            {
+                MessageBox.Show("Enter a filename before you print");
 
-            MessageBox.Show("Data exported");
+            }
+            else
+            {
+                string fileName = NameOnFile.Text;
+                TxtPrinter.WriteToTxt($"{fileName}", (DataTable)dataGridViewCustomerUserControl.DataSource);
+                MessageBox.Show("Data exported");
 
+            }
+
+        }
+
+        private void NameOnFile_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void dataGridViewCustomerUserControl_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
 
         }
     }

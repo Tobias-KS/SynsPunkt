@@ -49,6 +49,8 @@
             this.SortyByLabelProducts = new System.Windows.Forms.Label();
             this.SortByDropDownBoxProducts = new System.Windows.Forms.ComboBox();
             this.dataGridViewProductUserControl = new System.Windows.Forms.DataGridView();
+            this.NameOfFileProductsUserContolPrint = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewProductUserControl)).BeginInit();
             this.SuspendLayout();
@@ -187,7 +189,7 @@
             this.PrintButtonProducts.ForeColor = System.Drawing.Color.White;
             this.PrintButtonProducts.Image = ((System.Drawing.Image)(resources.GetObject("PrintButtonProducts.Image")));
             this.PrintButtonProducts.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.PrintButtonProducts.Location = new System.Drawing.Point(1578, 887);
+            this.PrintButtonProducts.Location = new System.Drawing.Point(1582, 902);
             this.PrintButtonProducts.Name = "PrintButtonProducts";
             this.PrintButtonProducts.Size = new System.Drawing.Size(87, 45);
             this.PrintButtonProducts.TabIndex = 28;
@@ -283,10 +285,31 @@
             this.dataGridViewProductUserControl.Size = new System.Drawing.Size(1643, 681);
             this.dataGridViewProductUserControl.TabIndex = 33;
             // 
+            // NameOfFileProductsUserContolPrint
+            // 
+            this.NameOfFileProductsUserContolPrint.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.NameOfFileProductsUserContolPrint.Location = new System.Drawing.Point(1448, 912);
+            this.NameOfFileProductsUserContolPrint.Name = "NameOfFileProductsUserContolPrint";
+            this.NameOfFileProductsUserContolPrint.Size = new System.Drawing.Size(128, 27);
+            this.NameOfFileProductsUserContolPrint.TabIndex = 34;
+            this.NameOfFileProductsUserContolPrint.TextChanged += new System.EventHandler(this.NameOfFileProductsUserContolPrint_TextChanged);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(1444, 888);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(80, 21);
+            this.label1.TabIndex = 35;
+            this.label1.Text = "Filename";
+            // 
             // ProductsUserControl
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackColor = System.Drawing.Color.White;
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.NameOfFileProductsUserContolPrint);
             this.Controls.Add(this.dataGridViewProductUserControl);
             this.Controls.Add(this.ToLabelProducts);
             this.Controls.Add(this.FromLabelProducts);
@@ -325,5 +348,7 @@
         private System.Windows.Forms.Label SortyByLabelProducts;
         private System.Windows.Forms.ComboBox SortByDropDownBoxProducts;
         private System.Windows.Forms.DataGridView dataGridViewProductUserControl;
+        private System.Windows.Forms.TextBox NameOfFileProductsUserContolPrint;
+        private System.Windows.Forms.Label label1;
     }
 }
