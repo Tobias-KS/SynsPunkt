@@ -6,20 +6,23 @@ namespace BusinessLogic
 {
     public class TxtPrinter
     {
-        public static void TxtPrintMethod(string m)
+        public static void WriteToTxt(string fileName, DataTable dataTable)
         {
-
-            string txt_path = AppDomain.CurrentDomain.BaseDirectory + $"//BusinessLogicResources//TxtFiles//{m}.txt";
-
-
-            using (StreamWriter w = new StreamWriter(txt_path))
+            using (StreamWriter sw = File.CreateText(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + $"/{fileName}.txt"))
             {
-              
+                foreach (DataRow row in dataTable.Rows)
+                {
+                    object[] array = row.ItemArray;
+
+                    for (int i = 0; i < array.Length - 1; i++)
+                    {
+                        sw.Write(array[i] + " | ");
+                    }
+                    sw.WriteLine(array[array.Length - 1].ToString());
+                }
             }
-
-
+            
         }
-
     }
 }
     

@@ -62,18 +62,9 @@ namespace UI
 
         private void PrintCustomersButton_Click(object sender, EventArgs e)
         {
-         
-            TextWriter writer = new StreamWriter(AppDomain.CurrentDomain.BaseDirectory + @"BusinessLogicResources\TxtFiles\Test.txt");
-            for (int i = 0; i < dataGridViewCustomerUserControl.Rows.Count - 1; i++)
-            {
-                for (int j = 0; j < dataGridViewCustomerUserControl.Columns.Count; j++)
-                {
-                    writer.Write("\t"+dataGridViewCustomerUserControl.Rows[i].Cells[j].Value.ToString()+"\t"+ "|");
-                }
-                writer.WriteLine("");
-                writer.WriteLine("---------------------------------------------------------");
-            }
-            writer.Close();
+            TxtPrinter.WriteToTxt("Filnavn", (DataTable)dataGridViewCustomerUserControl.DataSource);
+
+
             MessageBox.Show("Data exported");
 
 
