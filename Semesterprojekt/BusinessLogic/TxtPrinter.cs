@@ -21,7 +21,6 @@ namespace BusinessLogic
                     sw.WriteLine(array[array.Length - 1].ToString());
                 }
             }
-            
         }
     }
 }

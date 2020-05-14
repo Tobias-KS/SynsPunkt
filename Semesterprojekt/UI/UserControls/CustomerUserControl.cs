@@ -53,7 +53,6 @@ namespace UI
 
             dataGridViewCustomerUserControl.DataSource = Reader.GetCustomersDataTable();
 
-            
         }
 
         private void textBox1_TextChanged(object sender, EventArgs e)
@@ -64,26 +63,7 @@ namespace UI
 
         private void PrintCustomersButton_Click(object sender, EventArgs e)
         {
-            DataTable dt = new DataTable();
-
-
-            foreach (DataGridViewColumn col in dataGridViewCustomerUserControl.Columns)
-            {
-                dt.Columns.Add(col.Name);
-            }
-
-            foreach (DataGridViewRow row in dataGridViewCustomerUserControl.Rows)
-            {
-                DataRow dRow = dt.NewRow();
-
-                foreach (DataGridViewCell cell in row.Cells)
-                {
-                    dRow[cell.ColumnIndex] = cell.Value;
-                }
-                dt.Rows.Add(dRow);
-            }
-
-            TxtPrinter.WriteToTxt("Filnavn", dt);
+          
 
             if (String.IsNullOrEmpty(NameOnFile.Text))
             {
@@ -92,8 +72,25 @@ namespace UI
             }
             else
             {
+                DataTable dt = new DataTable();
+                foreach (DataGridViewColumn col in dataGridViewCustomerUserControl.Columns)
+                {
+                    dt.Columns.Add(col.Name);
+                }
+
+                foreach (DataGridViewRow row in dataGridViewCustomerUserControl.Rows)
+                {
+                    DataRow dRow = dt.NewRow();
+
+                    foreach (DataGridViewCell cell in row.Cells)
+                    {
+                        dRow[cell.ColumnIndex] = cell.Value;
+                    }
+                    dt.Rows.Add(dRow);
+                }
+
                 string fileName = NameOnFile.Text;
-                TxtPrinter.WriteToTxt($"{fileName}", (DataTable)dataGridViewCustomerUserControl.DataSource);
+                TxtPrinter.WriteToTxt($"{fileName}", dt);
                 MessageBox.Show("Data exported");
 
             }
@@ -110,6 +107,5 @@ namespace UI
 
         }
 
-    
     }
 }
