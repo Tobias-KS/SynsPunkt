@@ -44,10 +44,14 @@ namespace UI
             this.customersBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.customersTableAdapter = new UI.odensedbDataSetTableAdapters.CustomersTableAdapter();
             this.ResetfiltersButtonCustomers = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.SeachTextBoxCustomerUserControl = new System.Windows.Forms.TextBox();
             this.labelSearch = new System.Windows.Forms.Label();
             this.PrintCustomersButton = new System.Windows.Forms.Button();
             this.NameOnFile = new System.Windows.Forms.TextBox();
+            this.ToLabelCustomer = new System.Windows.Forms.Label();
+            this.FromLabelCustomer = new System.Windows.Forms.Label();
+            this.ToDateCustomer = new System.Windows.Forms.DateTimePicker();
+            this.FromDateCustomer = new System.Windows.Forms.DateTimePicker();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewCustomerUserControl)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.customersBindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.odensedbDataSet)).BeginInit();
@@ -172,16 +176,17 @@ namespace UI
             this.ResetfiltersButtonCustomers.Text = "Reset filters";
             this.ResetfiltersButtonCustomers.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.ResetfiltersButtonCustomers.UseVisualStyleBackColor = false;
-            this.ResetfiltersButtonCustomers.Click += new System.EventHandler(this.SortButtonCustomers_Click);
+            this.ResetfiltersButtonCustomers.Click += new System.EventHandler(this.ResetfiltersButtonCustomers_Click);
             // 
-            // textBox1
+            // SeachTextBoxCustomerUserControl
             // 
-            this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox1.Location = new System.Drawing.Point(171, 72);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(144, 20);
-            this.textBox1.TabIndex = 10;
-            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
+            this.SeachTextBoxCustomerUserControl.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.SeachTextBoxCustomerUserControl.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.SeachTextBoxCustomerUserControl.Location = new System.Drawing.Point(171, 72);
+            this.SeachTextBoxCustomerUserControl.Name = "SeachTextBoxCustomerUserControl";
+            this.SeachTextBoxCustomerUserControl.Size = new System.Drawing.Size(144, 27);
+            this.SeachTextBoxCustomerUserControl.TabIndex = 10;
+            this.SeachTextBoxCustomerUserControl.TextChanged += new System.EventHandler(this.SeachTextBoxCustomerUserControl_TextChanged);
             // 
             // labelSearch
             // 
@@ -212,20 +217,66 @@ namespace UI
             // 
             // NameOnFile
             // 
+            this.NameOnFile.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.NameOnFile.Location = new System.Drawing.Point(1253, 78);
             this.NameOnFile.Name = "NameOnFile";
-            this.NameOnFile.Size = new System.Drawing.Size(133, 20);
+            this.NameOnFile.Size = new System.Drawing.Size(133, 27);
             this.NameOnFile.TabIndex = 13;
+            // 
+            // ToLabelCustomer
+            // 
+            this.ToLabelCustomer.AutoSize = true;
+            this.ToLabelCustomer.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ToLabelCustomer.Location = new System.Drawing.Point(574, 49);
+            this.ToLabelCustomer.Name = "ToLabelCustomer";
+            this.ToLabelCustomer.Size = new System.Drawing.Size(28, 21);
+            this.ToLabelCustomer.TabIndex = 36;
+            this.ToLabelCustomer.Text = "To";
+            // 
+            // FromLabelCustomer
+            // 
+            this.FromLabelCustomer.AutoSize = true;
+            this.FromLabelCustomer.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.FromLabelCustomer.Location = new System.Drawing.Point(451, 49);
+            this.FromLabelCustomer.Name = "FromLabelCustomer";
+            this.FromLabelCustomer.Size = new System.Drawing.Size(52, 21);
+            this.FromLabelCustomer.TabIndex = 35;
+            this.FromLabelCustomer.Text = "From ";
+            // 
+            // ToDateCustomer
+            // 
+            this.ToDateCustomer.CalendarFont = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ToDateCustomer.Font = new System.Drawing.Font("Century Gothic", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ToDateCustomer.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.ToDateCustomer.Location = new System.Drawing.Point(578, 80);
+            this.ToDateCustomer.Name = "ToDateCustomer";
+            this.ToDateCustomer.Size = new System.Drawing.Size(113, 29);
+            this.ToDateCustomer.TabIndex = 34;
+            // 
+            // FromDateCustomer
+            // 
+            this.FromDateCustomer.CalendarFont = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.FromDateCustomer.Font = new System.Drawing.Font("Century Gothic", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.FromDateCustomer.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.FromDateCustomer.Location = new System.Drawing.Point(455, 80);
+            this.FromDateCustomer.Name = "FromDateCustomer";
+            this.FromDateCustomer.Size = new System.Drawing.Size(117, 29);
+            this.FromDateCustomer.TabIndex = 33;
+            this.FromDateCustomer.ValueChanged += new System.EventHandler(this.FromDateCustomer_ValueChanged);
             // 
             // CustomerUserControl
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.BackColor = System.Drawing.Color.White;
+            this.Controls.Add(this.ToLabelCustomer);
+            this.Controls.Add(this.FromLabelCustomer);
+            this.Controls.Add(this.ToDateCustomer);
+            this.Controls.Add(this.FromDateCustomer);
             this.Controls.Add(this.NameOnFile);
             this.Controls.Add(this.PrintCustomersButton);
             this.Controls.Add(this.labelSearch);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.SeachTextBoxCustomerUserControl);
             this.Controls.Add(this.AddCustomerButton);
             this.Controls.Add(this.dataGridViewCustomerUserControl);
             this.Controls.Add(this.ResetfiltersButtonCustomers);
@@ -254,9 +305,13 @@ namespace UI
         private System.Windows.Forms.DataGridView dataGridViewCustomerUserControl;
         private System.Windows.Forms.BindingSource customersBindingSource1;
         private System.Windows.Forms.Button ResetfiltersButtonCustomers;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox SeachTextBoxCustomerUserControl;
         private System.Windows.Forms.Label labelSearch;
         private System.Windows.Forms.Button PrintCustomersButton;
         private System.Windows.Forms.TextBox NameOnFile;
+        private System.Windows.Forms.Label ToLabelCustomer;
+        private System.Windows.Forms.Label FromLabelCustomer;
+        private System.Windows.Forms.DateTimePicker ToDateCustomer;
+        private System.Windows.Forms.DateTimePicker FromDateCustomer;
     }
 }

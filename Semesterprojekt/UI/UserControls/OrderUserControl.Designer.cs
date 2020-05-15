@@ -44,6 +44,7 @@
             this.FromLabelOrders = new System.Windows.Forms.Label();
             this.ToLabelOrders = new System.Windows.Forms.Label();
             this.PrintButtonOrders = new System.Windows.Forms.Button();
+            this.SearchButtonOrderUserControl = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // ButtonShowAllOrders
@@ -227,10 +228,19 @@
             this.PrintButtonOrders.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.PrintButtonOrders.UseVisualStyleBackColor = false;
             // 
+            // SearchButtonOrderUserControl
+            // 
+            this.SearchButtonOrderUserControl.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.SearchButtonOrderUserControl.Location = new System.Drawing.Point(1522, 167);
+            this.SearchButtonOrderUserControl.Name = "SearchButtonOrderUserControl";
+            this.SearchButtonOrderUserControl.Size = new System.Drawing.Size(135, 27);
+            this.SearchButtonOrderUserControl.TabIndex = 22;
+            // 
             // OrderUserControl
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackColor = System.Drawing.Color.White;
+            this.Controls.Add(this.SearchButtonOrderUserControl);
             this.Controls.Add(this.ToLabelOrders);
             this.Controls.Add(this.FromLabelOrders);
             this.Controls.Add(this.ToDateOrders);
@@ -270,5 +280,6 @@
         private System.Windows.Forms.DateTimePicker ToDateOrders;
         private System.Windows.Forms.Label FromLabelOrders;
         private System.Windows.Forms.Label ToLabelOrders;
+        private System.Windows.Forms.TextBox SearchButtonOrderUserControl;
     }
 }
