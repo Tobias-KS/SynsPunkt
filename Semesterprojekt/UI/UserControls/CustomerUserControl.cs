@@ -106,11 +106,8 @@ namespace UI
                 string fileName = NameOnFile.Text;
                 TxtPrinter.WriteToTxt($"{fileName}", dt);
                 MessageBox.Show("Data exported");
-
             }
-
         }
-
 
         private void dataGridViewCustomerUserControl_CellClick(object sender, DataGridViewCellEventArgs e)
         {
@@ -123,7 +120,10 @@ namespace UI
             }
             else if (e.ColumnIndex == dataGridViewCustomerUserControl.Columns["Edit"].Index)
             {
-                MessageBox.Show("Edit");
+                string test = "";
+               var EditPopUp = new PopUpDataGridViewChanges(false, test);
+               EditPopUp.Show();
+
             }
             else if (e.ColumnIndex == dataGridViewCustomerUserControl.Columns["Delete"].Index)
             {

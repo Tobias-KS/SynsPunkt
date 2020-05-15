@@ -13,6 +13,7 @@ namespace SQLTest
         {
 
 
+
        /*     List<Customer> customers = Reader.SelectAllCustomers();
             
 

@@ -57,17 +57,17 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="UserControls\NotesPopUpUserControl.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="UserControls\NotesPopUpUserControl.Designer.cs">
-      <DependentUpon>NotesPopUpUserControl.cs</DependentUpon>
-    </Compile>
-    <Compile Include="PopUpDataGridViewChanges.cs">
+    <Compile Include="PopUps\PopUpDataGridViewChanges.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="PopUpDataGridViewChanges.Designer.cs">
+    <Compile Include="PopUps\PopUpDataGridViewChanges.Designer.cs">
       <DependentUpon>PopUpDataGridViewChanges.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\EditPopUpCustomerControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\EditPopUpCustomerControl.Designer.cs">
+      <DependentUpon>EditPopUpCustomerControl.cs</DependentUpon>
     </Compile>
     <Compile Include="UserControls\EmployeesUserControl.cs">
       <SubType>UserControl</SubType>
@@ -98,10 +98,10 @@
     <Compile Include="UserControls\AddCustomerPopUpMainPanelUserControl.Designer.cs">
       <DependentUpon>AddCustomerPopUpMainPanelUserControl.cs</DependentUpon>
     </Compile>
-    <Compile Include="AddPopUp.cs">
+    <Compile Include="PopUps\AddPopUp.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="AddPopUp.Designer.cs">
+    <Compile Include="PopUps\AddPopUp.Designer.cs">
       <DependentUpon>AddPopUp.cs</DependentUpon>
     </Compile>
     <Compile Include="UserControls\SupportUserControl.cs">
@@ -142,11 +142,11 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="UserControls\NotesPopUpUserControl.resx">
-      <DependentUpon>NotesPopUpUserControl.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="PopUpDataGridViewChanges.resx">
+    <EmbeddedResource Include="PopUps\PopUpDataGridViewChanges.resx">
       <DependentUpon>PopUpDataGridViewChanges.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\EditPopUpCustomerControl.resx">
+      <DependentUpon>EditPopUpCustomerControl.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UserControls\EmployeesUserControl.resx">
       <DependentUpon>EmployeesUserControl.cs</DependentUpon>
@@ -160,7 +160,7 @@
     <EmbeddedResource Include="UserControls\AddCustomerPopUpMainPanelUserControl.resx">
       <DependentUpon>AddCustomerPopUpMainPanelUserControl.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="AddPopUp.resx">
+    <EmbeddedResource Include="PopUps\AddPopUp.resx">
       <DependentUpon>AddPopUp.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UserControls\SupportUserControl.resx">
@@ -231,5 +231,6 @@
   <ItemGroup>
     <Content Include="Resources\icons8_secured_letter_30px.png" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

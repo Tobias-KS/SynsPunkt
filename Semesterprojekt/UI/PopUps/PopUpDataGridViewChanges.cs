@@ -20,9 +20,22 @@ namespace UI
         {
 
             InitializeComponent();
-
+            
             this.NotesOrEdit = notesOrEdit;
             this.Notes = notes;
+            
+            if (NotesOrEdit == true)
+            {
+                richtextboxPopUpNotes.BringToFront();
+                richtextboxPopUpNotes.Text = notes;
+            }
+            else
+            {
+
+                editPopUpCustomerControl1.BringToFront();
+                
+            }
+
 
         }
 
@@ -48,18 +61,6 @@ namespace UI
         private void MainPanelPopUpDataGridViewChanges_Paint(object sender, PaintEventArgs e)
         {
 
-        }
-
-        public void NotesOrEditToFront()
-        {
-            if (NotesOrEdit == true)
-            {
-                notesPopUpUserControl1.BringToFront();
-            }
-            else
-            {
-               // addOrderPopUpMainPanelUserControl1.BringToFront();
-            }
         }
 
     }
