@@ -93,6 +93,7 @@
             this.TopPanelPopUp.Name = "TopPanelPopUp";
             this.TopPanelPopUp.Size = new System.Drawing.Size(845, 20);
             this.TopPanelPopUp.TabIndex = 2;
+            this.TopPanelPopUp.Paint += new System.Windows.Forms.PaintEventHandler(this.TopPanelPopUp_Paint);
             this.TopPanelPopUp.MouseDown += new System.Windows.Forms.MouseEventHandler(this.TopPanelPopUp_MouseDown);
             // 
             // LeftPanelPopUp
@@ -103,6 +104,7 @@
             this.LeftPanelPopUp.Name = "LeftPanelPopUp";
             this.LeftPanelPopUp.Size = new System.Drawing.Size(20, 363);
             this.LeftPanelPopUp.TabIndex = 3;
+            this.LeftPanelPopUp.Paint += new System.Windows.Forms.PaintEventHandler(this.LeftPanelPopUp_Paint);
             // 
             // RightPanelPopUp
             // 
@@ -112,6 +114,7 @@
             this.RightPanelPopUp.Name = "RightPanelPopUp";
             this.RightPanelPopUp.Size = new System.Drawing.Size(20, 363);
             this.RightPanelPopUp.TabIndex = 4;
+            this.RightPanelPopUp.Paint += new System.Windows.Forms.PaintEventHandler(this.RightPanelPopUp_Paint);
             // 
             // panel1
             // 
@@ -132,6 +135,7 @@
             this.addOrderPopUpMainPanelUserControl1.Name = "addOrderPopUpMainPanelUserControl1";
             this.addOrderPopUpMainPanelUserControl1.Size = new System.Drawing.Size(805, 363);
             this.addOrderPopUpMainPanelUserControl1.TabIndex = 1;
+            this.addOrderPopUpMainPanelUserControl1.Load += new System.EventHandler(this.addOrderPopUpMainPanelUserControl1_Load);
             // 
             // addCustomerPopUpMainPanelUserControl1
             // 
