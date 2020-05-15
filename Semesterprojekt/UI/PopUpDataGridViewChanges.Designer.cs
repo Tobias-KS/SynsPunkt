@@ -30,13 +30,13 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(PopUpDataGridViewChanges));
             this.panel1 = new System.Windows.Forms.Panel();
-            this.CloseButtonPopUpDataGridViewChanges = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
             this.MainPanelPopUpDataGridViewChanges = new System.Windows.Forms.Panel();
             this.MiddelPanelPopUpDataGridViewChangesSaveButton = new System.Windows.Forms.Button();
             this.MiddelPanelPopUpDataGridViewChangesCancelButton = new System.Windows.Forms.Button();
+            this.CloseButtonPopUpDataGridViewChanges = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panel4.SuspendLayout();
             this.SuspendLayout();
@@ -50,17 +50,6 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(829, 40);
             this.panel1.TabIndex = 0;
-            // 
-            // CloseButtonPopUpDataGridViewChanges
-            // 
-            this.CloseButtonPopUpDataGridViewChanges.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.CloseButtonPopUpDataGridViewChanges.Image = ((System.Drawing.Image)(resources.GetObject("CloseButtonPopUpDataGridViewChanges.Image")));
-            this.CloseButtonPopUpDataGridViewChanges.Location = new System.Drawing.Point(788, 2);
-            this.CloseButtonPopUpDataGridViewChanges.Name = "CloseButtonPopUpDataGridViewChanges";
-            this.CloseButtonPopUpDataGridViewChanges.Size = new System.Drawing.Size(37, 35);
-            this.CloseButtonPopUpDataGridViewChanges.TabIndex = 0;
-            this.CloseButtonPopUpDataGridViewChanges.UseVisualStyleBackColor = true;
-            this.CloseButtonPopUpDataGridViewChanges.Click += new System.EventHandler(this.CloseButtonPopUpDataGridViewChanges_Click);
             // 
             // panel2
             // 
@@ -98,6 +87,7 @@
             this.MainPanelPopUpDataGridViewChanges.Name = "MainPanelPopUpDataGridViewChanges";
             this.MainPanelPopUpDataGridViewChanges.Size = new System.Drawing.Size(749, 337);
             this.MainPanelPopUpDataGridViewChanges.TabIndex = 4;
+            this.MainPanelPopUpDataGridViewChanges.Paint += new System.Windows.Forms.PaintEventHandler(this.MainPanelPopUpDataGridViewChanges_Paint);
             // 
             // MiddelPanelPopUpDataGridViewChangesSaveButton
             // 
@@ -122,6 +112,17 @@
             this.MiddelPanelPopUpDataGridViewChangesCancelButton.Text = "Cancel";
             this.MiddelPanelPopUpDataGridViewChangesCancelButton.UseVisualStyleBackColor = false;
             this.MiddelPanelPopUpDataGridViewChangesCancelButton.Click += new System.EventHandler(this.MiddelPanelPopUpDataGridViewChangesCancelButton_Click);
+            // 
+            // CloseButtonPopUpDataGridViewChanges
+            // 
+            this.CloseButtonPopUpDataGridViewChanges.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.CloseButtonPopUpDataGridViewChanges.Image = ((System.Drawing.Image)(resources.GetObject("CloseButtonPopUpDataGridViewChanges.Image")));
+            this.CloseButtonPopUpDataGridViewChanges.Location = new System.Drawing.Point(788, 2);
+            this.CloseButtonPopUpDataGridViewChanges.Name = "CloseButtonPopUpDataGridViewChanges";
+            this.CloseButtonPopUpDataGridViewChanges.Size = new System.Drawing.Size(37, 35);
+            this.CloseButtonPopUpDataGridViewChanges.TabIndex = 0;
+            this.CloseButtonPopUpDataGridViewChanges.UseVisualStyleBackColor = true;
+            this.CloseButtonPopUpDataGridViewChanges.Click += new System.EventHandler(this.CloseButtonPopUpDataGridViewChanges_Click);
             // 
             // PopUpDataGridViewChanges
             // 

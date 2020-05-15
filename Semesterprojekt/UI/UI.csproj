@@ -57,6 +57,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="NotesPopUpUserControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="NotesPopUpUserControl.Designer.cs">
+      <DependentUpon>NotesPopUpUserControl.cs</DependentUpon>
+    </Compile>
     <Compile Include="PopUpDataGridViewChanges.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -136,6 +142,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="NotesPopUpUserControl.resx">
+      <DependentUpon>NotesPopUpUserControl.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="PopUpDataGridViewChanges.resx">
       <DependentUpon>PopUpDataGridViewChanges.cs</DependentUpon>
     </EmbeddedResource>
