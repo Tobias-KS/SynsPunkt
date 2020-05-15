@@ -13,11 +13,6 @@ namespace SQLTest
         {
 
 
-            TxtPrinter.WriteToTxt();
-
-
-
-
        /*     List<Customer> customers = Reader.SelectAllCustomers();
             
 
