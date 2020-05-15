@@ -50,6 +50,8 @@ namespace Persistence.CRUD
             return FormatCustomersDataTable();
         }
 
+      
+
         /*
         public static List<Customer> SelectAllCustomers()
         {

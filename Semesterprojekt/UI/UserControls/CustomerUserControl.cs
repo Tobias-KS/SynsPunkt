@@ -116,9 +116,8 @@ namespace UI
         {
             if (e.ColumnIndex == dataGridViewCustomerUserControl.Columns["Notes"].Index)
             {
-                var data = Reader.GetCustomersDataTable();
-                
-                MessageBox.Show("Notes");
+                string clickedCellNotes = Reader.LoadCustomersDataTable().Rows[e.RowIndex].Field<string>("Notes");
+                MessageBox.Show(clickedCellNotes);
             }
             else if (e.ColumnIndex == dataGridViewCustomerUserControl.Columns["Edit"].Index)
             {
