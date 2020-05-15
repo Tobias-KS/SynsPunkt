@@ -28,6 +28,12 @@ namespace Persistence.CRUD
                     SqlDataReader reader = com.ExecuteReader();
 
                     customersDataTable.Load(reader);
+                    customersDataTable.Columns.Remove("Notes");
+                    //customersDataTable.Columns.Remove("Email");
+                    customersDataTable.Columns["CustomerID"].ColumnName = "ID";
+                    customersDataTable.Columns["StrengthRight"].ColumnName = "SR";
+                    customersDataTable.Columns["StrengthLeft"].ColumnName = "SL";
+
                 }
             }
 
