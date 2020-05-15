@@ -37,8 +37,10 @@
             this.MiddelPanelPopUpDataGridViewChangesSaveButton = new System.Windows.Forms.Button();
             this.MiddelPanelPopUpDataGridViewChangesCancelButton = new System.Windows.Forms.Button();
             this.CloseButtonPopUpDataGridViewChanges = new System.Windows.Forms.Button();
+            this.notesPopUpUserControl1 = new UI.NotesPopUpUserControl();
             this.panel1.SuspendLayout();
             this.panel4.SuspendLayout();
+            this.MainPanelPopUpDataGridViewChanges.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
@@ -82,6 +84,7 @@
             // 
             // MainPanelPopUpDataGridViewChanges
             // 
+            this.MainPanelPopUpDataGridViewChanges.Controls.Add(this.notesPopUpUserControl1);
             this.MainPanelPopUpDataGridViewChanges.Dock = System.Windows.Forms.DockStyle.Fill;
             this.MainPanelPopUpDataGridViewChanges.Location = new System.Drawing.Point(40, 40);
             this.MainPanelPopUpDataGridViewChanges.Name = "MainPanelPopUpDataGridViewChanges";
@@ -124,6 +127,16 @@
             this.CloseButtonPopUpDataGridViewChanges.UseVisualStyleBackColor = true;
             this.CloseButtonPopUpDataGridViewChanges.Click += new System.EventHandler(this.CloseButtonPopUpDataGridViewChanges_Click);
             // 
+            // notesPopUpUserControl1
+            // 
+            this.notesPopUpUserControl1.BackColor = System.Drawing.Color.White;
+            this.notesPopUpUserControl1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.notesPopUpUserControl1.Location = new System.Drawing.Point(0, 0);
+            this.notesPopUpUserControl1.Margin = new System.Windows.Forms.Padding(5);
+            this.notesPopUpUserControl1.Name = "notesPopUpUserControl1";
+            this.notesPopUpUserControl1.Size = new System.Drawing.Size(749, 337);
+            this.notesPopUpUserControl1.TabIndex = 0;
+            // 
             // PopUpDataGridViewChanges
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 21F);
@@ -143,6 +156,7 @@
             this.Text = "PopUpDataGridViewChanges";
             this.panel1.ResumeLayout(false);
             this.panel4.ResumeLayout(false);
+            this.MainPanelPopUpDataGridViewChanges.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -157,5 +171,6 @@
         private System.Windows.Forms.Panel MainPanelPopUpDataGridViewChanges;
         private System.Windows.Forms.Button MiddelPanelPopUpDataGridViewChangesCancelButton;
         private System.Windows.Forms.Button MiddelPanelPopUpDataGridViewChangesSaveButton;
+        private NotesPopUpUserControl notesPopUpUserControl1;
     }
 }

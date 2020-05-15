@@ -37,7 +37,7 @@ namespace UI
         private void AddCustomerButton_Click(object sender, EventArgs e)
         {
             var CustomerAddPopUp = new AddPopUp(true);
-            CustomerAddPopUp.Show();
+            CustomerAddPopUp.Show(); 
         }
 
         private void ButtonShowAllCustomers_Click(object sender, EventArgs e)
@@ -117,7 +117,9 @@ namespace UI
             if (e.ColumnIndex == dataGridViewCustomerUserControl.Columns["Notes"].Index)
             {
                 string clickedCellNotes = Reader.LoadCustomersDataTable().Rows[e.RowIndex].Field<string>("Notes");
-                MessageBox.Show(clickedCellNotes);
+                var NotesPopUp = new PopUpDataGridViewChanges(true, clickedCellNotes);
+                NotesPopUp.Show(); 
+               
             }
             else if (e.ColumnIndex == dataGridViewCustomerUserControl.Columns["Edit"].Index)
             {

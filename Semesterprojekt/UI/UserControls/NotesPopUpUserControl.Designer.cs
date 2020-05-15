@@ -33,9 +33,9 @@
             // 
             // TextBoxNotesPopUpUserControlMainPanel
             // 
-            this.TextBoxNotesPopUpUserControlMainPanel.Location = new System.Drawing.Point(112, 53);
+            this.TextBoxNotesPopUpUserControlMainPanel.Location = new System.Drawing.Point(12, 3);
             this.TextBoxNotesPopUpUserControlMainPanel.Name = "TextBoxNotesPopUpUserControlMainPanel";
-            this.TextBoxNotesPopUpUserControlMainPanel.Size = new System.Drawing.Size(509, 193);
+            this.TextBoxNotesPopUpUserControlMainPanel.Size = new System.Drawing.Size(723, 323);
             this.TextBoxNotesPopUpUserControlMainPanel.TabIndex = 0;
             // 
             // NotesPopUpUserControl
@@ -45,7 +45,7 @@
             this.BackColor = System.Drawing.Color.White;
             this.Controls.Add(this.TextBoxNotesPopUpUserControlMainPanel);
             this.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.Margin = new System.Windows.Forms.Padding(5);
             this.Name = "NotesPopUpUserControl";
             this.Size = new System.Drawing.Size(749, 337);
             this.ResumeLayout(false);

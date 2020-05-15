@@ -57,10 +57,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="NotesPopUpUserControl.cs">
+    <Compile Include="UserControls\NotesPopUpUserControl.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="NotesPopUpUserControl.Designer.cs">
+    <Compile Include="UserControls\NotesPopUpUserControl.Designer.cs">
       <DependentUpon>NotesPopUpUserControl.cs</DependentUpon>
     </Compile>
     <Compile Include="PopUpDataGridViewChanges.cs">
@@ -142,7 +142,7 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="NotesPopUpUserControl.resx">
+    <EmbeddedResource Include="UserControls\NotesPopUpUserControl.resx">
       <DependentUpon>NotesPopUpUserControl.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="PopUpDataGridViewChanges.resx">

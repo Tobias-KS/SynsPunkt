@@ -15,6 +15,7 @@ namespace UI
         public NotesPopUpUserControl()
         {
             InitializeComponent();
+          
         }
     }
 }

@@ -7,18 +7,22 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Guna.UI2.Native;
 
 namespace UI
 {
     public partial class PopUpDataGridViewChanges : Form
     {
         public bool NotesOrEdit { get; set; }
+        public String Notes { get; set; }
 
-        public PopUpDataGridViewChanges()
+        public PopUpDataGridViewChanges(bool notesOrEdit, string notes)
         {
-            InitializeComponent();
-            this.NotesOrEdit = NotesOrEdit;
 
+            InitializeComponent();
+
+            this.NotesOrEdit = notesOrEdit;
+            this.Notes = notes;
 
         }
 
@@ -50,7 +54,7 @@ namespace UI
         {
             if (NotesOrEdit == true)
             {
-              //  addCustomerPopUpMainPanelUserControl1.BringToFront();
+                notesPopUpUserControl1.BringToFront();
             }
             else
             {
