@@ -13,6 +13,7 @@ using System.Xml.Serialization;
 using Persistence.CRUD;
 using Persistence.Models;
 using BusinessLogic;
+using SortOrder = System.Windows.Forms.SortOrder;
 
 namespace UI
 {
@@ -61,6 +62,7 @@ namespace UI
         private void CustomerUserControl_Load(object sender, EventArgs e)
         {
             dataGridViewCustomerUserControl.DataSource = Reader.GetCustomersDataTable();
+
             AddButtonColumn("Notes");
             AddButtonColumn("Edit");
             AddButtonColumn("Delete");
@@ -75,29 +77,42 @@ namespace UI
 
         private void PrintCustomersButton_Click(object sender, EventArgs e)
         {
-            DataTable dt = new DataTable();
+          
 
-
-            foreach (DataGridViewColumn col in dataGridViewCustomerUserControl.Columns)
+            if (String.IsNullOrEmpty(NameOnFile.Text))
             {
-                dt.Columns.Add(col.Name);
+                MessageBox.Show("Enter a filename before you print");
+
             }
-
-            foreach (DataGridViewRow row in dataGridViewCustomerUserControl.Rows)
+            else
             {
-                DataRow dRow = dt.NewRow();
-
-                foreach (DataGridViewCell cell in row.Cells)
+                DataTable dt = new DataTable();
+                foreach (DataGridViewColumn col in dataGridViewCustomerUserControl.Columns)
                 {
-                    dRow[cell.ColumnIndex] = cell.Value;
+                    dt.Columns.Add(col.Name);
                 }
-                dt.Rows.Add(dRow);
+
+                foreach (DataGridViewRow row in dataGridViewCustomerUserControl.Rows)
+                {
+                    DataRow dRow = dt.NewRow();
+
+                    foreach (DataGridViewCell cell in row.Cells)
+                    {
+                        dRow[cell.ColumnIndex] = cell.Value;
+                    }
+                    dt.Rows.Add(dRow);
+                }
+
+                string fileName = NameOnFile.Text;
+                TxtPrinter.WriteToTxt($"{fileName}", dt);
+                MessageBox.Show("Data exported");
+
             }
 
-            TxtPrinter.WriteToTxt("Filnavn", dt);
-
-            MessageBox.Show("Data exported");
         }
+
+        private void NameOnFile_TextChanged(object sender, EventArgs e)
+        {
 
         private void dataGridViewCustomerUserControl_CellClick(object sender, DataGridViewCellEventArgs e)
         {
