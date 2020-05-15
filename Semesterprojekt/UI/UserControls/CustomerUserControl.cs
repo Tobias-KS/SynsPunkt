@@ -9,6 +9,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Xml.Serialization;
 using Persistence.CRUD;
 using Persistence.Models;
 using BusinessLogic;
@@ -23,6 +24,7 @@ namespace UI
             InitializeComponent();
 
         }
+
         private void CustomerList_SelectedIndexChanged(object sender, EventArgs e)
         {
 
@@ -48,10 +50,22 @@ namespace UI
             Filter.FilterCustomers();
         }
 
+        private void AddButtonColumn(string buttomName)
+        {
+            DataGridViewButtonColumn tempButton = new DataGridViewButtonColumn();
+            tempButton.HeaderText = $"{buttomName}";
+            tempButton.Name = $"{buttomName}";
+            tempButton.Text = $"{buttomName}";
+            tempButton.UseColumnTextForButtonValue = true;
+            dataGridViewCustomerUserControl.Columns.Add(tempButton);
+        }
         private void CustomerUserControl_Load(object sender, EventArgs e)
         {
-
             dataGridViewCustomerUserControl.DataSource = Reader.GetCustomersDataTable();
+
+            AddButtonColumn("Notes");
+            AddButtonColumn("Edit");
+            AddButtonColumn("Delete");
 
         }
 
@@ -100,12 +114,21 @@ namespace UI
         private void NameOnFile_TextChanged(object sender, EventArgs e)
         {
 
-        }
-
-        private void dataGridViewCustomerUserControl_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        private void dataGridViewCustomerUserControl_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-
+            if (e.ColumnIndex == dataGridViewCustomerUserControl.Columns["Notes"].Index)
+            {
+                var data = Reader.GetCustomersDataTable();
+                MessageBox.Show("Notes");
+            }
+            else if (e.ColumnIndex == dataGridViewCustomerUserControl.Columns["Edit"].Index)
+            {
+                MessageBox.Show("Edit");
+            }
+            else if (e.ColumnIndex == dataGridViewCustomerUserControl.Columns["Delete"].Index)
+            {
+                MessageBox.Show("Delete");
+            }
         }
-
     }
 }
