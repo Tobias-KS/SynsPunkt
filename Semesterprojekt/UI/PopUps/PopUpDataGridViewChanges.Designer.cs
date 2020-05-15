@@ -30,14 +30,15 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(PopUpDataGridViewChanges));
             this.panel1 = new System.Windows.Forms.Panel();
+            this.CloseButtonPopUpDataGridViewChanges = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
-            this.MainPanelPopUpDataGridViewChanges = new System.Windows.Forms.Panel();
-            this.MiddelPanelPopUpDataGridViewChangesSaveButton = new System.Windows.Forms.Button();
             this.MiddelPanelPopUpDataGridViewChangesCancelButton = new System.Windows.Forms.Button();
-            this.CloseButtonPopUpDataGridViewChanges = new System.Windows.Forms.Button();
-            this.notesPopUpUserControl1 = new UI.NotesPopUpUserControl();
+            this.MiddelPanelPopUpDataGridViewChangesSaveButton = new System.Windows.Forms.Button();
+            this.MainPanelPopUpDataGridViewChanges = new System.Windows.Forms.Panel();
+            this.richtextboxPopUpNotes = new System.Windows.Forms.RichTextBox();
+            this.editPopUpCustomerControl1 = new UI.UserControls.EditPopUpCustomerControl();
             this.panel1.SuspendLayout();
             this.panel4.SuspendLayout();
             this.MainPanelPopUpDataGridViewChanges.SuspendLayout();
@@ -52,6 +53,17 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(829, 40);
             this.panel1.TabIndex = 0;
+            // 
+            // CloseButtonPopUpDataGridViewChanges
+            // 
+            this.CloseButtonPopUpDataGridViewChanges.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.CloseButtonPopUpDataGridViewChanges.Image = ((System.Drawing.Image)(resources.GetObject("CloseButtonPopUpDataGridViewChanges.Image")));
+            this.CloseButtonPopUpDataGridViewChanges.Location = new System.Drawing.Point(788, 2);
+            this.CloseButtonPopUpDataGridViewChanges.Name = "CloseButtonPopUpDataGridViewChanges";
+            this.CloseButtonPopUpDataGridViewChanges.Size = new System.Drawing.Size(37, 35);
+            this.CloseButtonPopUpDataGridViewChanges.TabIndex = 0;
+            this.CloseButtonPopUpDataGridViewChanges.UseVisualStyleBackColor = true;
+            this.CloseButtonPopUpDataGridViewChanges.Click += new System.EventHandler(this.CloseButtonPopUpDataGridViewChanges_Click);
             // 
             // panel2
             // 
@@ -82,15 +94,17 @@
             this.panel4.Size = new System.Drawing.Size(749, 67);
             this.panel4.TabIndex = 3;
             // 
-            // MainPanelPopUpDataGridViewChanges
+            // MiddelPanelPopUpDataGridViewChangesCancelButton
             // 
-            this.MainPanelPopUpDataGridViewChanges.Controls.Add(this.notesPopUpUserControl1);
-            this.MainPanelPopUpDataGridViewChanges.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.MainPanelPopUpDataGridViewChanges.Location = new System.Drawing.Point(40, 40);
-            this.MainPanelPopUpDataGridViewChanges.Name = "MainPanelPopUpDataGridViewChanges";
-            this.MainPanelPopUpDataGridViewChanges.Size = new System.Drawing.Size(749, 337);
-            this.MainPanelPopUpDataGridViewChanges.TabIndex = 4;
-            this.MainPanelPopUpDataGridViewChanges.Paint += new System.Windows.Forms.PaintEventHandler(this.MainPanelPopUpDataGridViewChanges_Paint);
+            this.MiddelPanelPopUpDataGridViewChangesCancelButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(118)))), ((int)(((byte)(211)))));
+            this.MiddelPanelPopUpDataGridViewChangesCancelButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.MiddelPanelPopUpDataGridViewChangesCancelButton.Location = new System.Drawing.Point(418, 6);
+            this.MiddelPanelPopUpDataGridViewChangesCancelButton.Name = "MiddelPanelPopUpDataGridViewChangesCancelButton";
+            this.MiddelPanelPopUpDataGridViewChangesCancelButton.Size = new System.Drawing.Size(122, 49);
+            this.MiddelPanelPopUpDataGridViewChangesCancelButton.TabIndex = 1;
+            this.MiddelPanelPopUpDataGridViewChangesCancelButton.Text = "Cancel";
+            this.MiddelPanelPopUpDataGridViewChangesCancelButton.UseVisualStyleBackColor = false;
+            this.MiddelPanelPopUpDataGridViewChangesCancelButton.Click += new System.EventHandler(this.MiddelPanelPopUpDataGridViewChangesCancelButton_Click);
             // 
             // MiddelPanelPopUpDataGridViewChangesSaveButton
             // 
@@ -104,38 +118,35 @@
             this.MiddelPanelPopUpDataGridViewChangesSaveButton.UseVisualStyleBackColor = false;
             this.MiddelPanelPopUpDataGridViewChangesSaveButton.Click += new System.EventHandler(this.MiddelPanelPopUpDataGridViewChangesSaveButton_Click);
             // 
-            // MiddelPanelPopUpDataGridViewChangesCancelButton
+            // MainPanelPopUpDataGridViewChanges
             // 
-            this.MiddelPanelPopUpDataGridViewChangesCancelButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(118)))), ((int)(((byte)(211)))));
-            this.MiddelPanelPopUpDataGridViewChangesCancelButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.MiddelPanelPopUpDataGridViewChangesCancelButton.Location = new System.Drawing.Point(418, 6);
-            this.MiddelPanelPopUpDataGridViewChangesCancelButton.Name = "MiddelPanelPopUpDataGridViewChangesCancelButton";
-            this.MiddelPanelPopUpDataGridViewChangesCancelButton.Size = new System.Drawing.Size(122, 49);
-            this.MiddelPanelPopUpDataGridViewChangesCancelButton.TabIndex = 1;
-            this.MiddelPanelPopUpDataGridViewChangesCancelButton.Text = "Cancel";
-            this.MiddelPanelPopUpDataGridViewChangesCancelButton.UseVisualStyleBackColor = false;
-            this.MiddelPanelPopUpDataGridViewChangesCancelButton.Click += new System.EventHandler(this.MiddelPanelPopUpDataGridViewChangesCancelButton_Click);
+            this.MainPanelPopUpDataGridViewChanges.Controls.Add(this.editPopUpCustomerControl1);
+            this.MainPanelPopUpDataGridViewChanges.Controls.Add(this.richtextboxPopUpNotes);
+            this.MainPanelPopUpDataGridViewChanges.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.MainPanelPopUpDataGridViewChanges.Location = new System.Drawing.Point(40, 40);
+            this.MainPanelPopUpDataGridViewChanges.Name = "MainPanelPopUpDataGridViewChanges";
+            this.MainPanelPopUpDataGridViewChanges.Size = new System.Drawing.Size(749, 337);
+            this.MainPanelPopUpDataGridViewChanges.TabIndex = 4;
+            this.MainPanelPopUpDataGridViewChanges.Paint += new System.Windows.Forms.PaintEventHandler(this.MainPanelPopUpDataGridViewChanges_Paint);
             // 
-            // CloseButtonPopUpDataGridViewChanges
+            // richtextboxPopUpNotes
             // 
-            this.CloseButtonPopUpDataGridViewChanges.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.CloseButtonPopUpDataGridViewChanges.Image = ((System.Drawing.Image)(resources.GetObject("CloseButtonPopUpDataGridViewChanges.Image")));
-            this.CloseButtonPopUpDataGridViewChanges.Location = new System.Drawing.Point(788, 2);
-            this.CloseButtonPopUpDataGridViewChanges.Name = "CloseButtonPopUpDataGridViewChanges";
-            this.CloseButtonPopUpDataGridViewChanges.Size = new System.Drawing.Size(37, 35);
-            this.CloseButtonPopUpDataGridViewChanges.TabIndex = 0;
-            this.CloseButtonPopUpDataGridViewChanges.UseVisualStyleBackColor = true;
-            this.CloseButtonPopUpDataGridViewChanges.Click += new System.EventHandler(this.CloseButtonPopUpDataGridViewChanges_Click);
+            this.richtextboxPopUpNotes.Font = new System.Drawing.Font("Century Gothic", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.richtextboxPopUpNotes.Location = new System.Drawing.Point(0, 0);
+            this.richtextboxPopUpNotes.Name = "richtextboxPopUpNotes";
+            this.richtextboxPopUpNotes.Size = new System.Drawing.Size(749, 337);
+            this.richtextboxPopUpNotes.TabIndex = 0;
+            this.richtextboxPopUpNotes.Text = "";
             // 
-            // notesPopUpUserControl1
+            // editPopUpCustomerControl1
             // 
-            this.notesPopUpUserControl1.BackColor = System.Drawing.Color.White;
-            this.notesPopUpUserControl1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.notesPopUpUserControl1.Location = new System.Drawing.Point(0, 0);
-            this.notesPopUpUserControl1.Margin = new System.Windows.Forms.Padding(5);
-            this.notesPopUpUserControl1.Name = "notesPopUpUserControl1";
-            this.notesPopUpUserControl1.Size = new System.Drawing.Size(749, 337);
-            this.notesPopUpUserControl1.TabIndex = 0;
+            this.editPopUpCustomerControl1.BackColor = System.Drawing.Color.White;
+            this.editPopUpCustomerControl1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.editPopUpCustomerControl1.Location = new System.Drawing.Point(0, 0);
+            this.editPopUpCustomerControl1.Margin = new System.Windows.Forms.Padding(5);
+            this.editPopUpCustomerControl1.Name = "editPopUpCustomerControl1";
+            this.editPopUpCustomerControl1.Size = new System.Drawing.Size(749, 337);
+            this.editPopUpCustomerControl1.TabIndex = 1;
             // 
             // PopUpDataGridViewChanges
             // 
@@ -171,6 +182,7 @@
         private System.Windows.Forms.Panel MainPanelPopUpDataGridViewChanges;
         private System.Windows.Forms.Button MiddelPanelPopUpDataGridViewChangesCancelButton;
         private System.Windows.Forms.Button MiddelPanelPopUpDataGridViewChangesSaveButton;
-        private NotesPopUpUserControl notesPopUpUserControl1;
+        private System.Windows.Forms.RichTextBox richtextboxPopUpNotes;
+        private UserControls.EditPopUpCustomerControl editPopUpCustomerControl1;
     }
 }

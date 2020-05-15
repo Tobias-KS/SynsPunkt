@@ -8,14 +8,17 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace UI
+namespace UI.UserControls
 {
-    public partial class NotesPopUpUserControl : UserControl
+    public partial class EditPopUpCustomerControl : UserControl
     {
-        public NotesPopUpUserControl()
+        public EditPopUpCustomerControl()
         {
             InitializeComponent();
-          
+
+
+
+
         }
     }
 }
