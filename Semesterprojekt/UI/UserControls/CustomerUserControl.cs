@@ -25,15 +25,6 @@ namespace UI
 
         }
 
-        private void CustomerList_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-        private void SortByDropDownBox_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            //Sort Method
-        }
-
         private void AddCustomerButton_Click(object sender, EventArgs e)
         {
             var CustomerAddPopUp = new AddPopUp(true);
@@ -44,12 +35,12 @@ namespace UI
         {
 
         }
-
+        /*
         private void SortButtonCustomers_Click(object sender, EventArgs e)
         {
             Filter.FilterCustomers();
         }
-
+        */
         private void AddButtonColumn(string buttomName)
         {
             DataGridViewButtonColumn tempButton = new DataGridViewButtonColumn();
@@ -61,24 +52,20 @@ namespace UI
         }
         private void CustomerUserControl_Load(object sender, EventArgs e)
         {
-            dataGridViewCustomerUserControl.DataSource = Reader.GetCustomersDataTable();
-
+            setUpDefaultDataTableCustomers();
             AddButtonColumn("Notes");
             AddButtonColumn("Edit");
             AddButtonColumn("Delete");
-
         }
 
-        private void textBox1_TextChanged(object sender, EventArgs e)
+        private void setUpDefaultDataTableCustomers ()
         {
-            
-            dataGridViewCustomerUserControl.DataSource = Filter.SearchBar(Reader.GetCustomersDataTable(), textBox1.Text);
+            dataGridViewCustomerUserControl.DataSource = Reader.GetCustomersDataTable();
+
         }
 
         private void PrintCustomersButton_Click(object sender, EventArgs e)
         {
-          
-
             if (String.IsNullOrEmpty(NameOnFile.Text))
             {
                 MessageBox.Show("Enter a filename before you print");
@@ -129,6 +116,24 @@ namespace UI
             {
                 MessageBox.Show("Delete");
             }
+        }
+
+        private void ResetfiltersButtonCustomers_Click(object sender, EventArgs e)
+        {
+            
+            setUpDefaultDataTableCustomers();
+            SeachTextBoxCustomerUserControl.Text = "";
+
+        }
+
+        private void SeachTextBoxCustomerUserControl_TextChanged(object sender, EventArgs e)
+        {
+            dataGridViewCustomerUserControl.DataSource = Filter.SearchBar(Reader.GetCustomersDataTable(), SeachTextBoxCustomerUserControl.Text);
+        }
+
+        private void FromDateCustomer_ValueChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }
