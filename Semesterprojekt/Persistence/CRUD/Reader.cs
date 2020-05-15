@@ -11,7 +11,7 @@ namespace Persistence.CRUD
 {
     public class Reader
     {
-        public static DataTable GetCustomersDataTable() 
+        public static DataTable LoadCustomersDataTable() 
         {
             var customersDataTable = new DataTable();
 
@@ -28,18 +28,27 @@ namespace Persistence.CRUD
                     SqlDataReader reader = com.ExecuteReader();
 
                     customersDataTable.Load(reader);
-                    customersDataTable.Columns.Remove("Notes");
-                    //customersDataTable.Columns.Remove("Email");
-                    customersDataTable.Columns["CustomerID"].ColumnName = "ID";
-                    customersDataTable.Columns["StrengthRight"].ColumnName = "SR";
-                    customersDataTable.Columns["StrengthLeft"].ColumnName = "SL";
-
                 }
             }
 
             return customersDataTable;
         }
 
+        public static DataTable FormatCustomersDataTable()
+        {
+            DataTable customersDataTable = LoadCustomersDataTable();
+            customersDataTable.Columns.Remove("Notes");
+            customersDataTable.Columns["CustomerID"].ColumnName = "ID";
+            customersDataTable.Columns["StrengthRight"].ColumnName = "SR";
+            customersDataTable.Columns["StrengthLeft"].ColumnName = "SL";
+
+            return customersDataTable;
+        }
+
+        public static DataTable GetCustomersDataTable()
+        {
+            return FormatCustomersDataTable();
+        }
 
         /*
         public static List<Customer> SelectAllCustomers()

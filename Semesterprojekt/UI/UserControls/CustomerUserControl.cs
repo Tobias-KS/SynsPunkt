@@ -111,8 +111,6 @@ namespace UI
 
         }
 
-        private void NameOnFile_TextChanged(object sender, EventArgs e)
-        {
 
         private void dataGridViewCustomerUserControl_CellClick(object sender, DataGridViewCellEventArgs e)
         {

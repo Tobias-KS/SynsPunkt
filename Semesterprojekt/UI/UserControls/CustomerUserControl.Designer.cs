@@ -216,7 +216,6 @@ namespace UI
             this.NameOnFile.Name = "NameOnFile";
             this.NameOnFile.Size = new System.Drawing.Size(133, 20);
             this.NameOnFile.TabIndex = 13;
-            this.NameOnFile.TextChanged += new System.EventHandler(this.NameOnFile_TextChanged);
             // 
             // CustomerUserControl
             // 
