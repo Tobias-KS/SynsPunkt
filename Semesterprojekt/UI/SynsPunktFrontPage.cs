@@ -37,10 +37,7 @@ namespace UI
             MainPanel.Controls.Add(CSPage);
         }
 
-        private void TopPanel_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
+      
 
         private void TopPanel_MouseDown(object sender, MouseEventArgs e)
         {
@@ -97,11 +94,6 @@ namespace UI
             ChangeColors(EmployeesButton);
         }
 
-        private void TimerToFrontPage_Tick(object sender, EventArgs e)
-        {
-
-
-        }
 
         private void ChangeColors(Button activeButton)
         {

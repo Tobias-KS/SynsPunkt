@@ -131,9 +131,5 @@ namespace UI
             dataGridViewCustomerUserControl.DataSource = Filter.SearchBar(Reader.GetCustomersDataTable(), SeachTextBoxCustomerUserControl.Text);
         }
 
-        private void FromDateCustomer_ValueChanged(object sender, EventArgs e)
-        {
-
-        }
     }
 }

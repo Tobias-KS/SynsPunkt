@@ -262,7 +262,6 @@ namespace UI
             this.FromDateCustomer.Name = "FromDateCustomer";
             this.FromDateCustomer.Size = new System.Drawing.Size(117, 29);
             this.FromDateCustomer.TabIndex = 33;
-            this.FromDateCustomer.ValueChanged += new System.EventHandler(this.FromDateCustomer_ValueChanged);
             // 
             // CustomerUserControl
             // 

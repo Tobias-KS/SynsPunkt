@@ -52,15 +52,7 @@ namespace UI
                 this.Dispose();
             }
         }
-        private void MiddelPanelPopUpDataGridViewChangesSaveButton_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void MainPanelPopUpDataGridViewChanges_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
+      
 
     }
 }

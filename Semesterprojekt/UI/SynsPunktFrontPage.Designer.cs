@@ -252,7 +252,6 @@
             this.TopPanel.Name = "TopPanel";
             this.TopPanel.Size = new System.Drawing.Size(1700, 51);
             this.TopPanel.TabIndex = 1;
-            this.TopPanel.Paint += new System.Windows.Forms.PaintEventHandler(this.TopPanel_Paint);
             this.TopPanel.MouseDown += new System.Windows.Forms.MouseEventHandler(this.TopPanel_MouseDown);
             // 
             // MainPanel
@@ -308,10 +307,6 @@
             // 
             this.fileSystemWatcher1.EnableRaisingEvents = true;
             this.fileSystemWatcher1.SynchronizingObject = this;
-            // 
-            // TimerToFrontPage
-            // 
-            this.TimerToFrontPage.Tick += new System.EventHandler(this.TimerToFrontPage_Tick);
             // 
             // customerUserControl2
             // 
