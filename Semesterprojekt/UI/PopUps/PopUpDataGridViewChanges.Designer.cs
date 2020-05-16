@@ -116,7 +116,6 @@
             this.MiddelPanelPopUpDataGridViewChangesSaveButton.TabIndex = 0;
             this.MiddelPanelPopUpDataGridViewChangesSaveButton.Text = "Save";
             this.MiddelPanelPopUpDataGridViewChangesSaveButton.UseVisualStyleBackColor = false;
-            this.MiddelPanelPopUpDataGridViewChangesSaveButton.Click += new System.EventHandler(this.MiddelPanelPopUpDataGridViewChangesSaveButton_Click);
             // 
             // MainPanelPopUpDataGridViewChanges
             // 
@@ -127,7 +126,6 @@
             this.MainPanelPopUpDataGridViewChanges.Name = "MainPanelPopUpDataGridViewChanges";
             this.MainPanelPopUpDataGridViewChanges.Size = new System.Drawing.Size(749, 337);
             this.MainPanelPopUpDataGridViewChanges.TabIndex = 4;
-            this.MainPanelPopUpDataGridViewChanges.Paint += new System.Windows.Forms.PaintEventHandler(this.MainPanelPopUpDataGridViewChanges_Paint);
             // 
             // editPopUpCustomerControl1
             // 

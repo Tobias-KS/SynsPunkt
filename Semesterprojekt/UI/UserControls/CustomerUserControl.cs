@@ -100,7 +100,7 @@ namespace UI
         {
             if (e.ColumnIndex == dataGridViewCustomerUserControl.Columns["Notes"].Index)
             {
-                string clickedCellNotes = Reader.LoadCustomersDataTable().Rows[e.RowIndex].Field<string>("Notes");
+                string clickedCellNotes = Reader.GetCustomersDataTable().Rows[e.RowIndex].Field<string>("Notes");
                 var NotesPopUp = new PopUpDataGridViewChanges(true, clickedCellNotes);
                 NotesPopUp.Show(); 
                

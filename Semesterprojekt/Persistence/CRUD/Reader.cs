@@ -11,7 +11,7 @@ namespace Persistence.CRUD
 {
     public class Reader
     {
-        public static DataTable LoadCustomersDataTable() 
+        private static DataTable LoadCustomersDataTable() 
         {
             var customersDataTable = new DataTable();
 
@@ -34,7 +34,7 @@ namespace Persistence.CRUD
             return customersDataTable;
         }
 
-        public static DataTable FormatCustomersDataTable()
+        private static DataTable FormatCustomersDataTable()
         {
             DataTable customersDataTable = LoadCustomersDataTable();
             customersDataTable.Columns.Remove("Notes");
