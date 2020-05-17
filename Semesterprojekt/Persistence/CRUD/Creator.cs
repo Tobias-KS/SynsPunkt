@@ -9,6 +9,7 @@ namespace Persistence.CRUD
 
     public class Creator
     {
+        
         public static string CreateCustomer(string Forename, string Lastname, string adress, int PhoneNumber, string Email, int StrengthRight, int StrengthLeft, string notes, DateTime SignupDate)
         {
             SqlConnection conn = new SqlConnection(SQLConnecter.Connect());
@@ -16,14 +17,14 @@ namespace Persistence.CRUD
             using (SqlCommand com = new SqlCommand())
             {
                 com.Connection = conn;
-                com.CommandText = "CreateCustomer";
+                com.CommandText = "AddCustomer";
                 com.Parameters.Add("@Forename", SqlDbType.VarChar).Value = Forename;
                 com.Parameters.Add("@Lastname", SqlDbType.VarChar).Value = Lastname;
                 com.Parameters.Add("@adress", SqlDbType.VarChar).Value = adress;
                 com.Parameters.Add("@PhoneNumber", SqlDbType.Int).Value = PhoneNumber;
                 com.Parameters.Add("@Email", SqlDbType.VarChar).Value = Email;
                 com.Parameters.Add("@StrengthRight", SqlDbType.Int).Value = StrengthRight;
-                com.Parameters.Add("@notes", SqlDbType.Int).Value = StrengthRight;
+                com.Parameters.Add("@StrengthLeft", SqlDbType.Int).Value = StrengthLeft;
                 com.Parameters.Add("@notes", SqlDbType.VarChar).Value = notes;
                 com.Parameters.Add("@SignupDate", SqlDbType.Date).Value = SignupDate;
                 com.CommandType = CommandType.StoredProcedure;
