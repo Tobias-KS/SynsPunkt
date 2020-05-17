@@ -114,7 +114,17 @@ namespace UI
             }
             else if (e.ColumnIndex == dataGridViewCustomerUserControl.Columns["Delete"].Index)
             {
-                MessageBox.Show("Delete");
+                DialogResult dialogResult = MessageBox.Show("Delete customer?","Customer deletion", MessageBoxButtons.YesNo);
+
+                if (dialogResult == DialogResult.Yes)
+                {
+                    int clickedCellID = Reader.GetCustomersDataTable().Rows[e.RowIndex].Field<int>("ID");
+                    Deleter.DeleteCustomer(clickedCellID);
+                    MessageBox.Show("User deleted!");
+                    setUpDefaultDataTableCustomers();
+                    
+                }
+
             }
         }
 
