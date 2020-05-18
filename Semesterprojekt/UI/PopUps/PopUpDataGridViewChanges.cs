@@ -112,8 +112,6 @@ namespace UI
                     email: email, strengthRight: leftStrength, strengthLeft: rightStrength, notes: notes,
                     signupDate: signupDate);
 
-
-                CustomerUserControl.dataGridViewCustomerUserControl.DataSource = Reader.GetCustomersDataTable();
                 this.Close();
 
             }
