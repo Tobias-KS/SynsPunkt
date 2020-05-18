@@ -17,17 +17,14 @@ namespace UI
     public partial class AddPopUp : Form
     {
         public bool IsCustomer { get; set; }
-        public bool Finished { get; set; }
+
         public AddPopUp(bool isCustomer)
         {
-            
             InitializeComponent();
             this.IsCustomer = isCustomer;
             CustomerOrOrder();
 
-        
-
-    }
+        }
         //Metode til at man kan flytte PopUp rundt
         public const int WM_NCLBUTTONDOWN = 0xA1;
         public const int HT_CAPTION = 0x2;
@@ -68,8 +65,6 @@ namespace UI
             }
         }
 
-        
-
         private void TopPanelPopUp_Paint(object sender, PaintEventArgs e)
         {
 
@@ -96,9 +91,7 @@ namespace UI
             {
                 addCustomerPopUpMainPanelUserControl1.CreateCustomerFromPopUp();
                 MessageBox.Show("Customer created");
-                this.Finished = true;
                 this.Close();
-                
             }
             catch (Exception exception)
             {

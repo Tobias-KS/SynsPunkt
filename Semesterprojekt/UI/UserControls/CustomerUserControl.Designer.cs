@@ -37,7 +37,7 @@ namespace UI
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.AddCustomerButton = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.dataGridViewCustomerUserControl = new System.Windows.Forms.DataGridView();
+            CustomerUserControl.dataGridViewCustomerUserControl = new System.Windows.Forms.DataGridView();
             this.customersBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.odensedbDataSet = new UI.odensedbDataSet();
             this.dataGridView2 = new System.Windows.Forms.DataGridView();
@@ -52,7 +52,7 @@ namespace UI
             this.FromLabelCustomer = new System.Windows.Forms.Label();
             this.ToDateCustomer = new System.Windows.Forms.DateTimePicker();
             this.FromDateCustomer = new System.Windows.Forms.DateTimePicker();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewCustomerUserControl)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(CustomerUserControl.dataGridViewCustomerUserControl)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.customersBindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.odensedbDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
@@ -87,15 +87,15 @@ namespace UI
             // 
             // dataGridViewCustomerUserControl
             // 
-            this.dataGridViewCustomerUserControl.AllowUserToAddRows = false;
-            this.dataGridViewCustomerUserControl.AllowUserToDeleteRows = false;
-            this.dataGridViewCustomerUserControl.AllowUserToResizeColumns = false;
+            CustomerUserControl.dataGridViewCustomerUserControl.AllowUserToAddRows = false;
+            CustomerUserControl.dataGridViewCustomerUserControl.AllowUserToDeleteRows = false;
+            CustomerUserControl.dataGridViewCustomerUserControl.AllowUserToResizeColumns = false;
             dataGridViewCellStyle1.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.dataGridViewCustomerUserControl.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
-            this.dataGridViewCustomerUserControl.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
-            this.dataGridViewCustomerUserControl.BackgroundColor = System.Drawing.Color.White;
-            this.dataGridViewCustomerUserControl.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.dataGridViewCustomerUserControl.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.RaisedVertical;
+            CustomerUserControl.dataGridViewCustomerUserControl.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            CustomerUserControl.dataGridViewCustomerUserControl.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
+            CustomerUserControl.dataGridViewCustomerUserControl.BackgroundColor = System.Drawing.Color.White;
+            CustomerUserControl.dataGridViewCustomerUserControl.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            CustomerUserControl.dataGridViewCustomerUserControl.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.RaisedVertical;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle2.BackColor = System.Drawing.Color.White;
             dataGridViewCellStyle2.Font = new System.Drawing.Font("Century Gothic", 15F, System.Drawing.FontStyle.Bold);
@@ -103,9 +103,9 @@ namespace UI
             dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridViewCustomerUserControl.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
-            this.dataGridViewCustomerUserControl.ColumnHeadersHeight = 40;
-            this.dataGridViewCustomerUserControl.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
+            CustomerUserControl.dataGridViewCustomerUserControl.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            CustomerUserControl.dataGridViewCustomerUserControl.ColumnHeadersHeight = 40;
+            CustomerUserControl.dataGridViewCustomerUserControl.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
             dataGridViewCellStyle3.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -113,11 +113,11 @@ namespace UI
             dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
             dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridViewCustomerUserControl.DefaultCellStyle = dataGridViewCellStyle3;
-            this.dataGridViewCustomerUserControl.GridColor = System.Drawing.Color.Black;
-            this.dataGridViewCustomerUserControl.Location = new System.Drawing.Point(22, 112);
-            this.dataGridViewCustomerUserControl.Name = "dataGridViewCustomerUserControl";
-            this.dataGridViewCustomerUserControl.ReadOnly = true;
+            CustomerUserControl.dataGridViewCustomerUserControl.DefaultCellStyle = dataGridViewCellStyle3;
+            CustomerUserControl.dataGridViewCustomerUserControl.GridColor = System.Drawing.Color.Black;
+            CustomerUserControl.dataGridViewCustomerUserControl.Location = new System.Drawing.Point(22, 112);
+            CustomerUserControl.dataGridViewCustomerUserControl.Name = "dataGridViewCustomerUserControl";
+            CustomerUserControl.dataGridViewCustomerUserControl.ReadOnly = true;
             dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle4.BackColor = System.Drawing.Color.Black;
             dataGridViewCellStyle4.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -125,13 +125,13 @@ namespace UI
             dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
             dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridViewCustomerUserControl.RowHeadersDefaultCellStyle = dataGridViewCellStyle4;
-            this.dataGridViewCustomerUserControl.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToDisplayedHeaders;
-            this.dataGridViewCustomerUserControl.RowTemplate.DividerHeight = 3;
-            this.dataGridViewCustomerUserControl.RowTemplate.Height = 40;
-            this.dataGridViewCustomerUserControl.Size = new System.Drawing.Size(1650, 837);
-            this.dataGridViewCustomerUserControl.TabIndex = 8;
-            this.dataGridViewCustomerUserControl.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewCustomerUserControl_CellClick);
+            CustomerUserControl.dataGridViewCustomerUserControl.RowHeadersDefaultCellStyle = dataGridViewCellStyle4;
+            CustomerUserControl.dataGridViewCustomerUserControl.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToDisplayedHeaders;
+            CustomerUserControl.dataGridViewCustomerUserControl.RowTemplate.DividerHeight = 3;
+            CustomerUserControl.dataGridViewCustomerUserControl.RowTemplate.Height = 40;
+            CustomerUserControl.dataGridViewCustomerUserControl.Size = new System.Drawing.Size(1650, 837);
+            CustomerUserControl.dataGridViewCustomerUserControl.TabIndex = 8;
+            CustomerUserControl.dataGridViewCustomerUserControl.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewCustomerUserControl_CellClick);
             // 
             // customersBindingSource1
             // 
@@ -277,14 +277,14 @@ namespace UI
             this.Controls.Add(this.labelSearch);
             this.Controls.Add(this.SeachTextBoxCustomerUserControl);
             this.Controls.Add(this.AddCustomerButton);
-            this.Controls.Add(this.dataGridViewCustomerUserControl);
+            this.Controls.Add(CustomerUserControl.dataGridViewCustomerUserControl);
             this.Controls.Add(this.ResetfiltersButtonCustomers);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.dataGridView2);
             this.Name = "CustomerUserControl";
             this.Size = new System.Drawing.Size(1700, 966);
             this.Load += new System.EventHandler(this.CustomerUserControl_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewCustomerUserControl)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(CustomerUserControl.dataGridViewCustomerUserControl)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.customersBindingSource1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.odensedbDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
