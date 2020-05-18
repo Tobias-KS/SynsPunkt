@@ -2,12 +2,6 @@
 using System.Windows.Forms;
 using static Persistence.CRUD.Creator;
 
-
-
-
-
-
-
 namespace UI
 {
     public partial class AddCustomerPopUpMainPanelUserControl : UserControl
@@ -27,6 +21,8 @@ namespace UI
             CreateCustomer(TextboxToForeNameCustomerAddPopUp.Text, TextboxToSurnameCustomerAddPopUp.Text,
             TextBoxAddressCustomerAddPopUp.Text, PhoneNumber, TextBoxEmailCustomerAddPopUp.Text,
             StrenghtRight, StrenghtLeft, DateTime.Now, RichTextBoxNotesCustomerAddPopUp.Text);
+
+            //Reload datagridview..
         }
 
 

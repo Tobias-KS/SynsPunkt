@@ -37,8 +37,8 @@
             this.MiddelPanelPopUpDataGridViewChangesCancelButton = new System.Windows.Forms.Button();
             this.MiddelPanelPopUpDataGridViewChangesSaveButton = new System.Windows.Forms.Button();
             this.MainPanelPopUpDataGridViewChanges = new System.Windows.Forms.Panel();
-            this.editPopUpCustomerControl1 = new UI.UserControls.EditPopUpCustomerControl();
             this.richtextboxPopUpNotes = new System.Windows.Forms.RichTextBox();
+            this.editPopUpCustomerControl1 = new UI.UserControls.EditPopUpCustomerControl();
             this.panel1.SuspendLayout();
             this.panel4.SuspendLayout();
             this.MainPanelPopUpDataGridViewChanges.SuspendLayout();
@@ -116,6 +116,7 @@
             this.MiddelPanelPopUpDataGridViewChangesSaveButton.TabIndex = 0;
             this.MiddelPanelPopUpDataGridViewChangesSaveButton.Text = "Save";
             this.MiddelPanelPopUpDataGridViewChangesSaveButton.UseVisualStyleBackColor = false;
+            this.MiddelPanelPopUpDataGridViewChangesSaveButton.Click += new System.EventHandler(this.MiddelPanelPopUpDataGridViewChangesSaveButton_Click);
             // 
             // MainPanelPopUpDataGridViewChanges
             // 
@@ -127,6 +128,15 @@
             this.MainPanelPopUpDataGridViewChanges.Size = new System.Drawing.Size(749, 337);
             this.MainPanelPopUpDataGridViewChanges.TabIndex = 4;
             // 
+            // richtextboxPopUpNotes
+            // 
+            this.richtextboxPopUpNotes.Font = new System.Drawing.Font("Century Gothic", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.richtextboxPopUpNotes.Location = new System.Drawing.Point(0, 0);
+            this.richtextboxPopUpNotes.Name = "richtextboxPopUpNotes";
+            this.richtextboxPopUpNotes.Size = new System.Drawing.Size(749, 337);
+            this.richtextboxPopUpNotes.TabIndex = 0;
+            this.richtextboxPopUpNotes.Text = "";
+            // 
             // editPopUpCustomerControl1
             // 
             this.editPopUpCustomerControl1.BackColor = System.Drawing.Color.White;
@@ -136,15 +146,6 @@
             this.editPopUpCustomerControl1.Name = "editPopUpCustomerControl1";
             this.editPopUpCustomerControl1.Size = new System.Drawing.Size(749, 337);
             this.editPopUpCustomerControl1.TabIndex = 1;
-            // 
-            // richtextboxPopUpNotes
-            // 
-            this.richtextboxPopUpNotes.Font = new System.Drawing.Font("Century Gothic", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.richtextboxPopUpNotes.Location = new System.Drawing.Point(0, 0);
-            this.richtextboxPopUpNotes.Name = "richtextboxPopUpNotes";
-            this.richtextboxPopUpNotes.Size = new System.Drawing.Size(749, 337);
-            this.richtextboxPopUpNotes.TabIndex = 0;
-            this.richtextboxPopUpNotes.Text = "";
             // 
             // PopUpDataGridViewChanges
             // 

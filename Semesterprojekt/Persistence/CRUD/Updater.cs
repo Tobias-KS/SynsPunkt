@@ -11,7 +11,7 @@ namespace Persistence.CRUD
 {
     public class Updater
     {
-        public static string AlterCustomer(string Forename, string Lastname, string adress, int PhoneNumber, string Email, float StrengthRight, float StrengthLeft, string notes, DateTime SignupDate, int CustomerID)
+        public static string AlterCustomer(string forename, string lastname, string adress, int phoneNumber, string email, float strengthRight, float strengthLeft, string notes, DateTime signupDate, int CustomerID)
         {
             
             SqlConnection conn = new SqlConnection(SQLConnecter.Connect());
@@ -21,15 +21,15 @@ namespace Persistence.CRUD
                 com.Connection = conn;
                 com.CommandText = "AlterCustomer";
                 com.Parameters.Add("@CustomerID", SqlDbType.Int).Value = CustomerID;
-                com.Parameters.Add("@Forename", SqlDbType.VarChar).Value = Forename;
-                com.Parameters.Add("@Lastname", SqlDbType.VarChar).Value = Lastname;
+                com.Parameters.Add("@Forename", SqlDbType.VarChar).Value = forename;
+                com.Parameters.Add("@Lastname", SqlDbType.VarChar).Value = lastname;
                 com.Parameters.Add("@adress", SqlDbType.VarChar).Value = adress;
-                com.Parameters.Add("@PhoneNumber", SqlDbType.Int).Value = PhoneNumber;
-                com.Parameters.Add("@Email", SqlDbType.VarChar).Value = Email;
-                com.Parameters.Add("@StrengthRight", SqlDbType.Float).Value = StrengthRight;
-                com.Parameters.Add("@StrengthLeft", SqlDbType.Float).Value = StrengthLeft;
+                com.Parameters.Add("@PhoneNumber", SqlDbType.Int).Value = phoneNumber;
+                com.Parameters.Add("@Email", SqlDbType.VarChar).Value = email;
+                com.Parameters.Add("@StrengthRight", SqlDbType.Float).Value = strengthRight;
+                com.Parameters.Add("@StrengthLeft", SqlDbType.Float).Value = strengthLeft;
                 com.Parameters.Add("@notes", SqlDbType.VarChar).Value = notes;
-                com.Parameters.Add("@SignupDate", SqlDbType.Date).Value = SignupDate;
+                com.Parameters.Add("@SignupDate", SqlDbType.Date).Value = signupDate;
                 com.CommandType = CommandType.StoredProcedure;
 
                 conn.Open();

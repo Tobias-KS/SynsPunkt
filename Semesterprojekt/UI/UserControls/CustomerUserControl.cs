@@ -51,7 +51,7 @@ namespace UI
 
         private void PrintCustomersButton_Click(object sender, EventArgs e)
         {
-            if (String.IsNullOrEmpty(NameOnFile.Text))
+            if (string.IsNullOrEmpty(NameOnFile.Text))
             {
                 MessageBox.Show("Enter a filename before you print");
 
@@ -83,34 +83,36 @@ namespace UI
 
         private void dataGridViewCustomerUserControl_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            if (e.ColumnIndex == dataGridViewCustomerUserControl.Columns["Notes"].Index)
+            if (e.ColumnIndex == dataGridViewCustomerUserControl.Columns["Notes"].Index && e.RowIndex >= 0)
             {
-                string clickedCellNotes = Reader.LoadCustomersDataTable().Rows[e.RowIndex].Field<string>("Notes");
+                string clickedCellNotes = Reader.LoadCustomersDataTable().Rows[e.RowIndex].Field<string>("Notes") ;
                 var NotesPopUp = new PopUpDataGridViewChanges(true, clickedCellNotes);
                 NotesPopUp.Show();
 
             }
 
-            else if (e.ColumnIndex == dataGridViewCustomerUserControl.Columns["Edit"].Index)
+            else if (e.ColumnIndex == dataGridViewCustomerUserControl.Columns["Edit"].Index && e.RowIndex >= 0)
             {
 
                 var Customerstable = Reader.LoadCustomersDataTable();
-                string forename = Customerstable.Rows[e.RowIndex].Field<string>("Forename");
+                int customerID = Customerstable.Rows[e.RowIndex].Field<int>("CustomerID");
+                string forename = Customerstable.Rows[e.RowIndex].Field<string>("Forename") ;
                 string surname = Customerstable.Rows[e.RowIndex].Field<string>("Lastname");
                 string address = Customerstable.Rows[e.RowIndex].Field<string>("Adress");
-                string phonenumber = Customerstable.Rows[e.RowIndex].Field<string>("PhoneNumber");
+                int phonenumber = Customerstable.Rows[e.RowIndex].Field<int>("PhoneNumber");
                 string email = Customerstable.Rows[e.RowIndex].Field<string>("Email");
-                string strenghtRight = Customerstable.Rows[e.RowIndex].Field<string>("StrenghtRight");
-                string strenghtLeft = Customerstable.Rows[e.RowIndex].Field<string>("StrenghtLeft");
+                float strenghtRight = Customerstable.Rows[e.RowIndex].Field<float>("StrengthRight");
+                float strenghtLeft = Customerstable.Rows[e.RowIndex].Field<float>("StrengthLeft");
                 string notes = Customerstable.Rows[e.RowIndex].Field<string>("Notes");
-                string signupDate = Customerstable.Rows[e.RowIndex].Field<string>("SignupDate");
+                DateTime signupDate = Customerstable.Rows[e.RowIndex].Field<DateTime>("SignupDate");
 
                 //string email, string strenghtleft, string strenghtright, string notes
-                var EditPopUp = new PopUpDataGridViewChanges(false, forename,surname,address,phonenumber,email,strenghtLeft,strenghtRight,notes,signupDate);
+                var EditPopUp = new PopUpDataGridViewChanges(false,customerID, forename,surname,address,phonenumber,email,strenghtLeft,strenghtRight,notes,signupDate);
                 EditPopUp.Show();
 
+
             }
-            else if (e.ColumnIndex == dataGridViewCustomerUserControl.Columns["Delete"].Index)
+            else if (e.ColumnIndex == dataGridViewCustomerUserControl.Columns["Delete"].Index && e.RowIndex >= 0)
             {
                 DialogResult dialogResult = MessageBox.Show("Delete customer?", "Customer deletion", MessageBoxButtons.YesNo);
 

@@ -113,7 +113,7 @@
             // 
             this.CheckBoxNewsletterCustomerEditPopUp.AutoSize = true;
             this.CheckBoxNewsletterCustomerEditPopUp.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.CheckBoxNewsletterCustomerEditPopUp.Location = new System.Drawing.Point(207, 222);
+            this.CheckBoxNewsletterCustomerEditPopUp.Location = new System.Drawing.Point(241, 251);
             this.CheckBoxNewsletterCustomerEditPopUp.Name = "CheckBoxNewsletterCustomerEditPopUp";
             this.CheckBoxNewsletterCustomerEditPopUp.Size = new System.Drawing.Size(115, 23);
             this.CheckBoxNewsletterCustomerEditPopUp.TabIndex = 35;
@@ -124,7 +124,7 @@
             // 
             this.LabelEmailCustomerEditPopUp.AutoSize = true;
             this.LabelEmailCustomerEditPopUp.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LabelEmailCustomerEditPopUp.Location = new System.Drawing.Point(15, 196);
+            this.LabelEmailCustomerEditPopUp.Location = new System.Drawing.Point(203, 113);
             this.LabelEmailCustomerEditPopUp.Name = "LabelEmailCustomerEditPopUp";
             this.LabelEmailCustomerEditPopUp.Size = new System.Drawing.Size(59, 19);
             this.LabelEmailCustomerEditPopUp.TabIndex = 34;
@@ -134,7 +134,7 @@
             // 
             this.LabelPhoneNumerCustomerEditPopUp.AutoSize = true;
             this.LabelPhoneNumerCustomerEditPopUp.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LabelPhoneNumerCustomerEditPopUp.Location = new System.Drawing.Point(203, 113);
+            this.LabelPhoneNumerCustomerEditPopUp.Location = new System.Drawing.Point(14, 206);
             this.LabelPhoneNumerCustomerEditPopUp.Name = "LabelPhoneNumerCustomerEditPopUp";
             this.LabelPhoneNumerCustomerEditPopUp.Size = new System.Drawing.Size(68, 19);
             this.LabelPhoneNumerCustomerEditPopUp.TabIndex = 33;
@@ -182,7 +182,7 @@
             // 
             // TextBoxPhoneCustomerEditPopUp
             // 
-            this.TextBoxPhoneCustomerEditPopUp.Location = new System.Drawing.Point(207, 139);
+            this.TextBoxPhoneCustomerEditPopUp.Location = new System.Drawing.Point(18, 230);
             this.TextBoxPhoneCustomerEditPopUp.Margin = new System.Windows.Forms.Padding(5);
             this.TextBoxPhoneCustomerEditPopUp.Name = "TextBoxPhoneCustomerEditPopUp";
             this.TextBoxPhoneCustomerEditPopUp.Size = new System.Drawing.Size(164, 27);
@@ -190,7 +190,7 @@
             // 
             // TextBoxEmailCustomerEditPopUp
             // 
-            this.TextBoxEmailCustomerEditPopUp.Location = new System.Drawing.Point(19, 222);
+            this.TextBoxEmailCustomerEditPopUp.Location = new System.Drawing.Point(207, 139);
             this.TextBoxEmailCustomerEditPopUp.Margin = new System.Windows.Forms.Padding(5);
             this.TextBoxEmailCustomerEditPopUp.Name = "TextBoxEmailCustomerEditPopUp";
             this.TextBoxEmailCustomerEditPopUp.Size = new System.Drawing.Size(164, 27);
@@ -203,6 +203,7 @@
             this.TextBoxAddressCustomerEditPopUp.Name = "TextBoxAddressCustomerEditPopUp";
             this.TextBoxAddressCustomerEditPopUp.Size = new System.Drawing.Size(164, 27);
             this.TextBoxAddressCustomerEditPopUp.TabIndex = 26;
+            this.TextBoxAddressCustomerEditPopUp.TextChanged += new System.EventHandler(this.TextBoxAddressCustomerEditPopUp_TextChanged);
             // 
             // TextboxToSurnameCustomerEditPopUp
             // 
@@ -258,8 +259,8 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label LabelRightCustomerEditPopUp;
         private System.Windows.Forms.Label LabelLeftCustomerEditPopUp;
-        private System.Windows.Forms.TextBox TextBoxRightStrenghtlabelCustomerEditPopUp;
-        private System.Windows.Forms.TextBox TextBoxLeftStrenghtlabelCustomerEditPopUp;
+        public System.Windows.Forms.TextBox TextBoxRightStrenghtlabelCustomerEditPopUp;
+        public System.Windows.Forms.TextBox TextBoxLeftStrenghtlabelCustomerEditPopUp;
         private System.Windows.Forms.Label LabelGlassStrenghtCustomerEditPopUp;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.CheckBox CheckBoxNewsletterCustomerEditPopUp;
@@ -268,11 +269,11 @@
         private System.Windows.Forms.Label LabelAddressCustomerEditPopUp;
         private System.Windows.Forms.Label LabelSurnamePopUpCustomerEdit;
         private System.Windows.Forms.Label LabelNamePopUpCustomerEdit;
-        private System.Windows.Forms.RichTextBox RichTextBoxNotesCustomerEditPopUp;
-        private System.Windows.Forms.TextBox TextBoxPhoneCustomerEditPopUp;
-        private System.Windows.Forms.TextBox TextBoxEmailCustomerEditPopUp;
-        private System.Windows.Forms.TextBox TextBoxAddressCustomerEditPopUp;
-        private System.Windows.Forms.TextBox TextboxToSurnameCustomerEditPopUp;
-        private System.Windows.Forms.TextBox TextboxToNameCustomerEditPopUp;
+        public System.Windows.Forms.RichTextBox RichTextBoxNotesCustomerEditPopUp;
+        public System.Windows.Forms.TextBox TextBoxPhoneCustomerEditPopUp;
+        public System.Windows.Forms.TextBox TextBoxEmailCustomerEditPopUp;
+        public System.Windows.Forms.TextBox TextBoxAddressCustomerEditPopUp;
+        public System.Windows.Forms.TextBox TextboxToSurnameCustomerEditPopUp;
+        public System.Windows.Forms.TextBox TextboxToNameCustomerEditPopUp;
     }
 }
