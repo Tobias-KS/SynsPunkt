@@ -35,12 +35,7 @@ namespace UI
         {
 
         }
-        /*
-        private void SortButtonCustomers_Click(object sender, EventArgs e)
-        {
-            Filter.FilterCustomers();
-        }
-        */
+        
         private void AddButtonColumn(string buttomName)
         {
             DataGridViewButtonColumn tempButton = new DataGridViewButtonColumn();
