@@ -113,6 +113,7 @@ namespace UI
                     signupDate: signupDate);
 
 
+                CustomerUserControl.dataGridViewCustomerUserControl.DataSource = Reader.GetCustomersDataTable();
                 this.Close();
 
             }
