@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            this.TextboxToNameCustomerAddPopUp = new System.Windows.Forms.TextBox();
+            this.TextboxToForeNameCustomerAddPopUp = new System.Windows.Forms.TextBox();
             this.TextboxToSurnameCustomerAddPopUp = new System.Windows.Forms.TextBox();
             this.TextBoxAddressCustomerAddPopUp = new System.Windows.Forms.TextBox();
             this.TextBoxEmailCustomerAddPopUp = new System.Windows.Forms.TextBox();
@@ -53,13 +53,13 @@
             this.ToolTipText = new System.Windows.Forms.ToolTip(this.components);
             this.SuspendLayout();
             // 
-            // TextboxToNameCustomerAddPopUp
+            // TextboxToForeNameCustomerAddPopUp
             // 
-            this.TextboxToNameCustomerAddPopUp.Location = new System.Drawing.Point(66, 66);
-            this.TextboxToNameCustomerAddPopUp.Margin = new System.Windows.Forms.Padding(5);
-            this.TextboxToNameCustomerAddPopUp.Name = "TextboxToNameCustomerAddPopUp";
-            this.TextboxToNameCustomerAddPopUp.Size = new System.Drawing.Size(164, 27);
-            this.TextboxToNameCustomerAddPopUp.TabIndex = 0;
+            this.TextboxToForeNameCustomerAddPopUp.Location = new System.Drawing.Point(66, 66);
+            this.TextboxToForeNameCustomerAddPopUp.Margin = new System.Windows.Forms.Padding(5);
+            this.TextboxToForeNameCustomerAddPopUp.Name = "TextboxToForeNameCustomerAddPopUp";
+            this.TextboxToForeNameCustomerAddPopUp.Size = new System.Drawing.Size(164, 27);
+            this.TextboxToForeNameCustomerAddPopUp.TabIndex = 0;
             // 
             // TextboxToSurnameCustomerAddPopUp
             // 
@@ -270,7 +270,7 @@
             this.Controls.Add(this.TextBoxEmailCustomerAddPopUp);
             this.Controls.Add(this.TextBoxAddressCustomerAddPopUp);
             this.Controls.Add(this.TextboxToSurnameCustomerAddPopUp);
-            this.Controls.Add(this.TextboxToNameCustomerAddPopUp);
+            this.Controls.Add(this.TextboxToForeNameCustomerAddPopUp);
             this.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Margin = new System.Windows.Forms.Padding(5);
             this.Name = "AddCustomerPopUpMainPanelUserControl";
@@ -283,7 +283,7 @@
 
         #endregion
 
-        private System.Windows.Forms.TextBox TextboxToNameCustomerAddPopUp;
+        private System.Windows.Forms.TextBox TextboxToForeNameCustomerAddPopUp;
         private System.Windows.Forms.TextBox TextboxToSurnameCustomerAddPopUp;
         private System.Windows.Forms.TextBox TextBoxAddressCustomerAddPopUp;
         private System.Windows.Forms.TextBox TextBoxEmailCustomerAddPopUp;

@@ -30,12 +30,10 @@ namespace UI
             }
             else
             {
-
-                editPopUpCustomerControl1.BringToFront();
                 
+                editPopUpCustomerControl1.BringToFront();
+
             }
-
-
         }
 
         private void CloseButtonPopUpDataGridViewChanges_Click(object sender, EventArgs e)

@@ -84,6 +84,7 @@
             this.SaveButtonPopUp.Text = "Save";
             this.SaveButtonPopUp.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.SaveButtonPopUp.UseVisualStyleBackColor = false;
+            this.SaveButtonPopUp.Click += new System.EventHandler(this.SaveButtonPopUp_Click);
             // 
             // TopPanelPopUp
             // 
@@ -118,8 +119,8 @@
             // 
             // panel1
             // 
-            this.panel1.Controls.Add(this.addOrderPopUpMainPanelUserControl1);
             this.panel1.Controls.Add(this.addCustomerPopUpMainPanelUserControl1);
+            this.panel1.Controls.Add(this.addOrderPopUpMainPanelUserControl1);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Location = new System.Drawing.Point(20, 20);
             this.panel1.Name = "panel1";

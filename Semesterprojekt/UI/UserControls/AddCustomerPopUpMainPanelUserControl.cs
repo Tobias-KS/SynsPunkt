@@ -1,12 +1,12 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Drawing;
-using System.Data;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
+using static Persistence.CRUD.Creator;
+
+
+
+
+
+
 
 namespace UI
 {
@@ -15,17 +15,39 @@ namespace UI
         public AddCustomerPopUpMainPanelUserControl()
         {
             InitializeComponent();
+
         }
 
+        public void CreateCustomerFromPopUp()
+        {
+            int PhoneNumber = Convert.ToInt32(TextBoxPhoneCustomerAddPopUp.Text);
+            float StrenghtRight = (float)Convert.ToDouble(TextBoxRightStrenghtlabelCustomerAddPopUp.Text);
+            float StrenghtLeft = (float)Convert.ToDouble(TextBoxLeftStrenghtlabelCustomerAddPopUp.Text);
+
+            CreateCustomer(TextboxToForeNameCustomerAddPopUp.Text, TextboxToSurnameCustomerAddPopUp.Text,
+            TextBoxAddressCustomerAddPopUp.Text, PhoneNumber, TextBoxEmailCustomerAddPopUp.Text,
+            StrenghtRight, StrenghtLeft, DateTime.Now, RichTextBoxNotesCustomerAddPopUp.Text);
+        }
+
+
+        public void CheckForEmtyTextBox()
+        {
+
+        }
         private void AddCustomerPopUpMainPanelUserControl_Load(object sender, EventArgs e)
         {
+
 
         }
 
         private void ToolTipText_Popup(object sender, PopupEventArgs e)
         {
 
+
         }
+
+
+
 
     }
 }

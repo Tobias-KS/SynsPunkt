@@ -11,7 +11,7 @@ namespace Persistence.CRUD
 {
     public class Updater
     {
-        public static string AlterCustomer(string Forename, string Lastname, string adress, int PhoneNumber, string Email, int StrengthRight, int StrengthLeft, string notes, DateTime SignupDate, int CustomerID)
+        public static string AlterCustomer(string Forename, string Lastname, string adress, int PhoneNumber, string Email, float StrengthRight, float StrengthLeft, string notes, DateTime SignupDate, int CustomerID)
         {
             
             SqlConnection conn = new SqlConnection(SQLConnecter.Connect());
@@ -26,8 +26,8 @@ namespace Persistence.CRUD
                 com.Parameters.Add("@adress", SqlDbType.VarChar).Value = adress;
                 com.Parameters.Add("@PhoneNumber", SqlDbType.Int).Value = PhoneNumber;
                 com.Parameters.Add("@Email", SqlDbType.VarChar).Value = Email;
-                com.Parameters.Add("@StrengthRight", SqlDbType.Int).Value = StrengthRight;
-                com.Parameters.Add("@StrengthLeft", SqlDbType.Int).Value = StrengthLeft;
+                com.Parameters.Add("@StrengthRight", SqlDbType.Float).Value = StrengthRight;
+                com.Parameters.Add("@StrengthLeft", SqlDbType.Float).Value = StrengthLeft;
                 com.Parameters.Add("@notes", SqlDbType.VarChar).Value = notes;
                 com.Parameters.Add("@SignupDate", SqlDbType.Date).Value = SignupDate;
                 com.CommandType = CommandType.StoredProcedure;

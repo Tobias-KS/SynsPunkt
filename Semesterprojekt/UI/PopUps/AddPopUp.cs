@@ -83,5 +83,21 @@ namespace UI
         {
 
         }
+
+        private void SaveButtonPopUp_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                addCustomerPopUpMainPanelUserControl1.CreateCustomerFromPopUp();
+                MessageBox.Show("Customer created");
+                this.Close();
+            }
+            catch (Exception exception)
+            {
+                MessageBox.Show("Tænkt dig lige om...");
+
+            }
+            
+        }
     }
 }
