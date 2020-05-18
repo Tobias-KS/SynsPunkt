@@ -3,22 +3,43 @@ using Persistence.CRUD;
 using System;
 using System.Data;
 using System.Windows.Forms;
+using Persistence.Models;
 using UI.UserControls;
 
 namespace UI
 {
     public partial class CustomerUserControl : UserControl
     {
+        public AddPopUp customerAddPopUp { get; set; }
+
+
         public CustomerUserControl()
         {
             InitializeComponent();
-
         }
 
         private void AddCustomerButton_Click(object sender, EventArgs e)
         {
-            var CustomerAddPopUp = new AddPopUp(true);
-            CustomerAddPopUp.Show();
+            customerAddPopUp = new AddPopUp(true);
+            customerAddPopUp.FormClosed += new FormClosedEventHandler(Add_Form_Closed);
+            customerAddPopUp.Show();
+
+        }
+
+        void Add_Form_Closed(object sender, FormClosedEventArgs e)
+        {
+            AddPopUp addClosed = (AddPopUp)sender;
+            SetUpDefaultDataTableCustomers();
+        }
+        void Notes_Form_Closed(object sender, FormClosedEventArgs e)
+        {
+            PopUpDataGridViewChanges notesClosed = (PopUpDataGridViewChanges)sender;
+            SetUpDefaultDataTableCustomers();
+        }
+        void Edit_Form_Closed(object sender, FormClosedEventArgs e)
+        {
+            PopUpDataGridViewChanges editChanges = (PopUpDataGridViewChanges)sender;
+            SetUpDefaultDataTableCustomers();
         }
 
         private void ButtonShowAllCustomers_Click(object sender, EventArgs e)
@@ -37,13 +58,13 @@ namespace UI
         }
         private void CustomerUserControl_Load(object sender, EventArgs e)
         {
-            setUpDefaultDataTableCustomers();
+            SetUpDefaultDataTableCustomers();
             AddButtonColumn("Notes");
             AddButtonColumn("Edit");
             AddButtonColumn("Delete");
         }
 
-        private void setUpDefaultDataTableCustomers()
+        public void SetUpDefaultDataTableCustomers()
         {
             dataGridViewCustomerUserControl.DataSource = Reader.GetCustomersDataTable();
 
@@ -87,6 +108,7 @@ namespace UI
             {
                 string clickedCellNotes = Reader.LoadCustomersDataTable().Rows[e.RowIndex].Field<string>("Notes") ;
                 var NotesPopUp = new PopUpDataGridViewChanges(true, clickedCellNotes);
+                NotesPopUp.FormClosed += new FormClosedEventHandler(Notes_Form_Closed);
                 NotesPopUp.Show();
 
             }
@@ -107,7 +129,9 @@ namespace UI
                 DateTime signupDate = Customerstable.Rows[e.RowIndex].Field<DateTime>("SignupDate");
 
                 //string email, string strenghtleft, string strenghtright, string notes
+                
                 var EditPopUp = new PopUpDataGridViewChanges(false,customerID, forename,surname,address,phonenumber,email,strenghtLeft,strenghtRight,notes,signupDate);
+                EditPopUp.FormClosed += new FormClosedEventHandler(Edit_Form_Closed);
                 EditPopUp.Show();
 
 
@@ -121,7 +145,7 @@ namespace UI
                     int clickedCellID = Reader.LoadCustomersDataTable().Rows[e.RowIndex].Field<int>("CustomerID");
                     Deleter.DeleteCustomer(clickedCellID);
                     MessageBox.Show("User deleted!");
-                    setUpDefaultDataTableCustomers();
+                    SetUpDefaultDataTableCustomers();
 
                 }
 
@@ -131,7 +155,7 @@ namespace UI
         private void ResetfiltersButtonCustomers_Click(object sender, EventArgs e)
         {
 
-            setUpDefaultDataTableCustomers();
+            SetUpDefaultDataTableCustomers();
             SeachTextBoxCustomerUserControl.Text = "";
 
         }

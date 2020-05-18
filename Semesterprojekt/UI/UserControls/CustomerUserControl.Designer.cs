@@ -301,7 +301,7 @@ namespace UI
         private System.Windows.Forms.BindingSource customersBindingSource;
         private odensedbDataSet odensedbDataSet;
         private odensedbDataSetTableAdapters.CustomersTableAdapter customersTableAdapter;
-        private System.Windows.Forms.DataGridView dataGridViewCustomerUserControl;
+        public System.Windows.Forms.DataGridView dataGridViewCustomerUserControl;
         private System.Windows.Forms.BindingSource customersBindingSource1;
         private System.Windows.Forms.Button ResetfiltersButtonCustomers;
         private System.Windows.Forms.TextBox SeachTextBoxCustomerUserControl;

@@ -115,5 +115,9 @@ namespace UI
 
         }
 
+        private void customerUserControl2_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

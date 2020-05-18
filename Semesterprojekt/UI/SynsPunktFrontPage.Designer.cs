@@ -50,8 +50,6 @@
             this.MinimizeApp = new System.Windows.Forms.Button();
             this.CloseApp = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.fileSystemWatcher1 = new System.IO.FileSystemWatcher();
-            this.TimerToFrontPage = new System.Windows.Forms.Timer(this.components);
             this.customerUserControl2 = new UI.CustomerUserControl();
             this.orderUserControl1 = new UI.OrderUserControl();
             this.productsUserControl1 = new UI.ProductsUserControl();
@@ -60,6 +58,8 @@
             this.employeesUserControl1 = new UI.EmployeesUserControl();
             this.supportUserControl1 = new UI.SupportUserControl();
             this.customerUserControl1 = new UI.ProductsUserControl();
+            this.fileSystemWatcher1 = new System.IO.FileSystemWatcher();
+            this.TimerToFrontPage = new System.Windows.Forms.Timer(this.components);
             this.SidePanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Logo)).BeginInit();
             this.TopPanel.SuspendLayout();
@@ -303,11 +303,6 @@
             this.panel2.Size = new System.Drawing.Size(1700, 966);
             this.panel2.TabIndex = 2;
             // 
-            // fileSystemWatcher1
-            // 
-            this.fileSystemWatcher1.EnableRaisingEvents = true;
-            this.fileSystemWatcher1.SynchronizingObject = this;
-            // 
             // customerUserControl2
             // 
             this.customerUserControl2.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
@@ -316,6 +311,7 @@
             this.customerUserControl2.Name = "customerUserControl2";
             this.customerUserControl2.Size = new System.Drawing.Size(1700, 966);
             this.customerUserControl2.TabIndex = 4;
+            this.customerUserControl2.Load += new System.EventHandler(this.customerUserControl2_Load);
             // 
             // orderUserControl1
             // 
@@ -380,6 +376,11 @@
             this.customerUserControl1.Size = new System.Drawing.Size(1700, 966);
             this.customerUserControl1.TabIndex = 5;
             // 
+            // fileSystemWatcher1
+            // 
+            this.fileSystemWatcher1.EnableRaisingEvents = true;
+            this.fileSystemWatcher1.SynchronizingObject = this;
+            // 
             // FrontPage
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
@@ -428,7 +429,7 @@
         private FrontPageUserControl frontPageUserControl1;
         private ProductsUserControl productsUserControl1;
         private OrderUserControl orderUserControl1;
-        private CustomerUserControl customerUserControl2;
+        public CustomerUserControl customerUserControl2;
         private SupportUserControl supportUserControl1;
         private System.Windows.Forms.Timer TimerToFrontPage;
         private EmployeesUserControl employeesUserControl1;
