@@ -18,11 +18,13 @@ namespace UI.UserControls
         //string forename, string surname, string address, string phonenumber,
         //string email, string strenghtleft, string strenghtright, string notes
 
-        public EditPopUpCustomerControl()
+        public EditPopUpCustomerControl(string forename, string surname, string address, string phonenumber,
+            string email, string strenghtleft, string strenghtright, string notes, string signupdate)
         {
 
             InitializeComponent();
 
+            TextBoxEmailCustomerEditPopUp.Text = email;
 
         }
     }

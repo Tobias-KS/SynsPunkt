@@ -1,19 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Drawing;
-using System.Data;
-using System.Data.SqlClient;
-using System.IO;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
-using System.Xml.Serialization;
+﻿using BusinessLogic;
 using Persistence.CRUD;
-using Persistence.Models;
-using BusinessLogic;
-using SortOrder = System.Windows.Forms.SortOrder;
+using System;
+using System.Data;
+using System.Windows.Forms;
+using UI.UserControls;
 
 namespace UI
 {
@@ -28,14 +18,14 @@ namespace UI
         private void AddCustomerButton_Click(object sender, EventArgs e)
         {
             var CustomerAddPopUp = new AddPopUp(true);
-            CustomerAddPopUp.Show(); 
+            CustomerAddPopUp.Show();
         }
 
         private void ButtonShowAllCustomers_Click(object sender, EventArgs e)
         {
 
         }
-        
+
         private void AddButtonColumn(string buttomName)
         {
             DataGridViewButtonColumn tempButton = new DataGridViewButtonColumn();
@@ -53,7 +43,7 @@ namespace UI
             AddButtonColumn("Delete");
         }
 
-        private void setUpDefaultDataTableCustomers ()
+        private void setUpDefaultDataTableCustomers()
         {
             dataGridViewCustomerUserControl.DataSource = Reader.GetCustomersDataTable();
 
@@ -97,27 +87,40 @@ namespace UI
             {
                 string clickedCellNotes = Reader.LoadCustomersDataTable().Rows[e.RowIndex].Field<string>("Notes");
                 var NotesPopUp = new PopUpDataGridViewChanges(true, clickedCellNotes);
-                NotesPopUp.Show(); 
-               
+                NotesPopUp.Show();
+
             }
+
             else if (e.ColumnIndex == dataGridViewCustomerUserControl.Columns["Edit"].Index)
             {
-                string test = "";
-               var EditPopUp = new PopUpDataGridViewChanges(false, test);
-               EditPopUp.Show();
+
+                var Customerstable = Reader.LoadCustomersDataTable();
+                string forename = Customerstable.Rows[e.RowIndex].Field<string>("Forename");
+                string surname = Customerstable.Rows[e.RowIndex].Field<string>("Lastname");
+                string address = Customerstable.Rows[e.RowIndex].Field<string>("Adress");
+                string phonenumber = Customerstable.Rows[e.RowIndex].Field<string>("PhoneNumber");
+                string email = Customerstable.Rows[e.RowIndex].Field<string>("Email");
+                string strenghtRight = Customerstable.Rows[e.RowIndex].Field<string>("StrenghtRight");
+                string strenghtLeft = Customerstable.Rows[e.RowIndex].Field<string>("StrenghtLeft");
+                string notes = Customerstable.Rows[e.RowIndex].Field<string>("Notes");
+                string signupDate = Customerstable.Rows[e.RowIndex].Field<string>("SignupDate");
+
+                //string email, string strenghtleft, string strenghtright, string notes
+                var EditPopUp = new PopUpDataGridViewChanges(false, forename,surname,address,phonenumber,email,strenghtLeft,strenghtRight,notes,signupDate);
+                EditPopUp.Show();
 
             }
             else if (e.ColumnIndex == dataGridViewCustomerUserControl.Columns["Delete"].Index)
             {
-                DialogResult dialogResult = MessageBox.Show("Delete customer?","Customer deletion", MessageBoxButtons.YesNo);
+                DialogResult dialogResult = MessageBox.Show("Delete customer?", "Customer deletion", MessageBoxButtons.YesNo);
 
                 if (dialogResult == DialogResult.Yes)
                 {
-                    int clickedCellID = Reader.GetCustomersDataTable().Rows[e.RowIndex].Field<int>("ID");
+                    int clickedCellID = Reader.LoadCustomersDataTable().Rows[e.RowIndex].Field<int>("CustomerID");
                     Deleter.DeleteCustomer(clickedCellID);
                     MessageBox.Show("User deleted!");
                     setUpDefaultDataTableCustomers();
-                    
+
                 }
 
             }
@@ -125,7 +128,7 @@ namespace UI
 
         private void ResetfiltersButtonCustomers_Click(object sender, EventArgs e)
         {
-            
+
             setUpDefaultDataTableCustomers();
             SeachTextBoxCustomerUserControl.Text = "";
 

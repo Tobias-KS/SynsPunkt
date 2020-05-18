@@ -13,9 +13,10 @@ namespace UI
     public partial class PopUpDataGridViewChanges : Form
     {
         public bool NotesOrEdit { get; set; }
-        public String Notes { get; set; }
+        public string Notes { get; set; }
 
-        public PopUpDataGridViewChanges(bool notesOrEdit, string notes)
+        public PopUpDataGridViewChanges(bool notesOrEdit, string forename, string surname, string address, string phonenumber,
+        string email, string strenghtleft, string strenghtright, string notes, string signupdate)
         {
 
             InitializeComponent();
@@ -31,6 +32,27 @@ namespace UI
             else
             {
                 
+                editPopUpCustomerControl1.BringToFront();
+
+            }
+        }
+
+        public PopUpDataGridViewChanges(bool notesOrEdit, string notes)
+        {
+
+            InitializeComponent();
+
+            this.NotesOrEdit = notesOrEdit;
+            this.Notes = notes;
+
+            if (NotesOrEdit == true)
+            {
+                richtextboxPopUpNotes.BringToFront();
+                richtextboxPopUpNotes.Text = notes;
+            }
+            else
+            {
+
                 editPopUpCustomerControl1.BringToFront();
 
             }

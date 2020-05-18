@@ -117,9 +117,9 @@
             this.LabelNamePopUpCustomerAdd.Location = new System.Drawing.Point(61, 40);
             this.LabelNamePopUpCustomerAdd.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.LabelNamePopUpCustomerAdd.Name = "LabelNamePopUpCustomerAdd";
-            this.LabelNamePopUpCustomerAdd.Size = new System.Drawing.Size(58, 19);
+            this.LabelNamePopUpCustomerAdd.Size = new System.Drawing.Size(69, 19);
             this.LabelNamePopUpCustomerAdd.TabIndex = 8;
-            this.LabelNamePopUpCustomerAdd.Text = "Name";
+            this.LabelNamePopUpCustomerAdd.Text = "Name *";
             // 
             // LabelSurnamePopUpCustomerAdd
             // 
@@ -127,9 +127,9 @@
             this.LabelSurnamePopUpCustomerAdd.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LabelSurnamePopUpCustomerAdd.Location = new System.Drawing.Point(250, 40);
             this.LabelSurnamePopUpCustomerAdd.Name = "LabelSurnamePopUpCustomerAdd";
-            this.LabelSurnamePopUpCustomerAdd.Size = new System.Drawing.Size(79, 19);
+            this.LabelSurnamePopUpCustomerAdd.Size = new System.Drawing.Size(90, 19);
             this.LabelSurnamePopUpCustomerAdd.TabIndex = 9;
-            this.LabelSurnamePopUpCustomerAdd.Text = "Surname";
+            this.LabelSurnamePopUpCustomerAdd.Text = "Surname *";
             // 
             // LabelAddressCustomerAddPopUp
             // 
@@ -137,9 +137,9 @@
             this.LabelAddressCustomerAddPopUp.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LabelAddressCustomerAddPopUp.Location = new System.Drawing.Point(63, 122);
             this.LabelAddressCustomerAddPopUp.Name = "LabelAddressCustomerAddPopUp";
-            this.LabelAddressCustomerAddPopUp.Size = new System.Drawing.Size(70, 19);
+            this.LabelAddressCustomerAddPopUp.Size = new System.Drawing.Size(81, 19);
             this.LabelAddressCustomerAddPopUp.TabIndex = 10;
-            this.LabelAddressCustomerAddPopUp.Text = "Address";
+            this.LabelAddressCustomerAddPopUp.Text = "Address *";
             // 
             // LabelPhoneNumerCustomerAddPopUp
             // 
@@ -147,9 +147,9 @@
             this.LabelPhoneNumerCustomerAddPopUp.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LabelPhoneNumerCustomerAddPopUp.Location = new System.Drawing.Point(250, 122);
             this.LabelPhoneNumerCustomerAddPopUp.Name = "LabelPhoneNumerCustomerAddPopUp";
-            this.LabelPhoneNumerCustomerAddPopUp.Size = new System.Drawing.Size(68, 19);
+            this.LabelPhoneNumerCustomerAddPopUp.Size = new System.Drawing.Size(79, 19);
             this.LabelPhoneNumerCustomerAddPopUp.TabIndex = 11;
-            this.LabelPhoneNumerCustomerAddPopUp.Text = "Phone#";
+            this.LabelPhoneNumerCustomerAddPopUp.Text = "Phone# *";
             // 
             // LabelEmailCustomerAddPopUp
             // 
@@ -157,9 +157,9 @@
             this.LabelEmailCustomerAddPopUp.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LabelEmailCustomerAddPopUp.Location = new System.Drawing.Point(62, 205);
             this.LabelEmailCustomerAddPopUp.Name = "LabelEmailCustomerAddPopUp";
-            this.LabelEmailCustomerAddPopUp.Size = new System.Drawing.Size(59, 19);
+            this.LabelEmailCustomerAddPopUp.Size = new System.Drawing.Size(70, 19);
             this.LabelEmailCustomerAddPopUp.TabIndex = 13;
-            this.LabelEmailCustomerAddPopUp.Text = "E-mail";
+            this.LabelEmailCustomerAddPopUp.Text = "E-mail *";
             // 
             // CheckBoxNewsletterCustomerAddPopUp
             // 
@@ -217,18 +217,18 @@
             this.LabelLeftCustomerAddPopUp.AutoSize = true;
             this.LabelLeftCustomerAddPopUp.Location = new System.Drawing.Point(532, 42);
             this.LabelLeftCustomerAddPopUp.Name = "LabelLeftCustomerAddPopUp";
-            this.LabelLeftCustomerAddPopUp.Size = new System.Drawing.Size(39, 21);
+            this.LabelLeftCustomerAddPopUp.Size = new System.Drawing.Size(49, 21);
             this.LabelLeftCustomerAddPopUp.TabIndex = 21;
-            this.LabelLeftCustomerAddPopUp.Text = "Left";
+            this.LabelLeftCustomerAddPopUp.Text = "Left *";
             // 
             // LabelRightCustomerAddPopUp
             // 
             this.LabelRightCustomerAddPopUp.AutoSize = true;
             this.LabelRightCustomerAddPopUp.Location = new System.Drawing.Point(646, 42);
             this.LabelRightCustomerAddPopUp.Name = "LabelRightCustomerAddPopUp";
-            this.LabelRightCustomerAddPopUp.Size = new System.Drawing.Size(51, 21);
+            this.LabelRightCustomerAddPopUp.Size = new System.Drawing.Size(65, 21);
             this.LabelRightCustomerAddPopUp.TabIndex = 22;
-            this.LabelRightCustomerAddPopUp.Text = "Right";
+            this.LabelRightCustomerAddPopUp.Text = "Right * ";
             // 
             // label1
             // 

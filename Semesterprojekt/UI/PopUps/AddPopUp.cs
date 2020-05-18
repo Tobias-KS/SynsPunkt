@@ -94,7 +94,7 @@ namespace UI
             }
             catch (Exception exception)
             {
-                MessageBox.Show("Tænkt dig lige om...");
+                MessageBox.Show("All fields with * are requied");
 
             }
             
