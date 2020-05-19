@@ -16,6 +16,7 @@ namespace UI
         public CustomerUserControl()
         {
             InitializeComponent();
+            
         }
 
         private void AddCustomerButton_Click(object sender, EventArgs e)
@@ -58,7 +59,7 @@ namespace UI
         }
         private void CustomerUserControl_Load(object sender, EventArgs e)
         {
-            SetUpDefaultDataTableCustomers();
+            SetUpDefaultDataTableCustomers(); 
             AddButtonColumn("Notes");
             AddButtonColumn("Edit");
             AddButtonColumn("Delete");
@@ -67,9 +68,29 @@ namespace UI
         public void SetUpDefaultDataTableCustomers()
         {
             dataGridViewCustomerUserControl.DataSource = Reader.GetCustomersDataTable();
-
         }
 
+        public DataTable SetupCurrentAsDataTable()
+        {
+            DataTable dt = new DataTable();
+            foreach (DataGridViewColumn col in dataGridViewCustomerUserControl.Columns)
+            {
+                dt.Columns.Add(col.Name);
+            }
+
+            foreach (DataGridViewRow row in dataGridViewCustomerUserControl.Rows)
+            {
+                DataRow dRow = dt.NewRow();
+
+                foreach (DataGridViewCell cell in row.Cells)
+                {
+                    dRow[cell.ColumnIndex] = cell.Value;
+                }
+                dt.Rows.Add(dRow);
+            }
+
+            return dt;
+        }
         private void PrintCustomersButton_Click(object sender, EventArgs e)
         {
             if (string.IsNullOrEmpty(NameOnFile.Text))
@@ -79,25 +100,8 @@ namespace UI
             }
             else
             {
-                DataTable dt = new DataTable();
-                foreach (DataGridViewColumn col in dataGridViewCustomerUserControl.Columns)
-                {
-                    dt.Columns.Add(col.Name);
-                }
-
-                foreach (DataGridViewRow row in dataGridViewCustomerUserControl.Rows)
-                {
-                    DataRow dRow = dt.NewRow();
-
-                    foreach (DataGridViewCell cell in row.Cells)
-                    {
-                        dRow[cell.ColumnIndex] = cell.Value;
-                    }
-                    dt.Rows.Add(dRow);
-                }
-
                 string fileName = NameOnFile.Text;
-                TxtPrinter.WriteToTxt($"{fileName}", dt);
+                TxtPrinter.WriteToTxt($"{fileName}", SetupCurrentAsDataTable());
                 MessageBox.Show("Data exported");
             }
         }
@@ -110,13 +114,13 @@ namespace UI
                 var NotesPopUp = new PopUpDataGridViewChanges(true, clickedCellNotes);
                 NotesPopUp.FormClosed += new FormClosedEventHandler(Notes_Form_Closed);
                 NotesPopUp.Show();
-
             }
 
             else if (e.ColumnIndex == dataGridViewCustomerUserControl.Columns["Edit"].Index && e.RowIndex >= 0)
             {
-
+                
                 var Customerstable = Reader.LoadCustomersDataTable();
+
                 int customerID = Customerstable.Rows[e.RowIndex].Field<int>("CustomerID");
                 string forename = Customerstable.Rows[e.RowIndex].Field<string>("Forename") ;
                 string surname = Customerstable.Rows[e.RowIndex].Field<string>("Lastname");
@@ -134,7 +138,6 @@ namespace UI
                 EditPopUp.FormClosed += new FormClosedEventHandler(Edit_Form_Closed);
                 EditPopUp.Show();
 
-
             }
             else if (e.ColumnIndex == dataGridViewCustomerUserControl.Columns["Delete"].Index && e.RowIndex >= 0)
             {
@@ -142,19 +145,18 @@ namespace UI
 
                 if (dialogResult == DialogResult.Yes)
                 {
+                    SetUpDefaultDataTableCustomers();
                     int clickedCellID = Reader.LoadCustomersDataTable().Rows[e.RowIndex].Field<int>("CustomerID");
                     Deleter.DeleteCustomer(clickedCellID);
                     MessageBox.Show("User deleted!");
                     SetUpDefaultDataTableCustomers();
 
                 }
-
             }
         }
 
         private void ResetfiltersButtonCustomers_Click(object sender, EventArgs e)
         {
-
             SetUpDefaultDataTableCustomers();
             SeachTextBoxCustomerUserControl.Text = "";
 
@@ -165,5 +167,14 @@ namespace UI
             dataGridViewCustomerUserControl.DataSource = Filter.SearchBar(Reader.GetCustomersDataTable(), SeachTextBoxCustomerUserControl.Text);
         }
 
+        private void dataGridViewCustomerUserControl_ColumnHeaderMouseClick(object sender, DataGridViewCellMouseEventArgs e)
+        {
+           
+        }
+
+        private void FromDateCustomer_ValueChanged(object sender, EventArgs e)
+        {
+            dataGridViewCustomerUserControl.DataSource = Filter.FilterCustomers(FromDateCustomer.Text, ToDateCustomer.Text);
+        }
     }
 }

@@ -12,15 +12,15 @@ namespace BusinessLogic
     public class Filter
     {
 
-        //Test
-        public static DataTable FilterCustomers()
+        public static DataTable FilterCustomers(string fromSignupDate, string toSignupDate)
         {
             var result = Reader.GetCustomersDataTable().Rows.Cast<DataRow>()
-                .Where(c => c.Field<string>("Forename") == "Homer");
+                .Where(dataRow => 
+                dataRow.Field<DateTime>("SignupDate") >= Convert.ToDateTime(fromSignupDate) && dataRow.Field<DateTime>("SignupDate") <= Convert.ToDateTime(toSignupDate));
 
             return result.CopyToDataTable<DataRow>();
-
         }
+
 
 
         public static DataTable SearchBar(DataTable inputTable, string inputText)
