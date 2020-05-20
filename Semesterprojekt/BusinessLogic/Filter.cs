@@ -6,12 +6,10 @@ using System.Text;
 using Persistence.CRUD;
 using Persistence.Models;
 
-
 namespace BusinessLogic
 {
     public class Filter
     {
-
         public static DataTable FilterCustomers(string fromSignupDate, string toSignupDate)
         {
             var result = Reader.GetCustomersDataTable().Rows.Cast<DataRow>()
@@ -20,8 +18,6 @@ namespace BusinessLogic
 
             return result.CopyToDataTable<DataRow>();
         }
-
-
 
         public static DataTable SearchBar(DataTable inputTable, string inputText)
         {

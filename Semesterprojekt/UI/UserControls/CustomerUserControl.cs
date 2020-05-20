@@ -2,6 +2,7 @@
 using Persistence.CRUD;
 using System;
 using System.Data;
+using System.Diagnostics;
 using System.Windows.Forms;
 using Persistence.Models;
 using UI.UserControls;
@@ -12,11 +13,9 @@ namespace UI
     {
         public AddPopUp customerAddPopUp { get; set; }
 
-
         public CustomerUserControl()
         {
             InitializeComponent();
-            
         }
 
         private void AddCustomerButton_Click(object sender, EventArgs e)
@@ -24,7 +23,6 @@ namespace UI
             customerAddPopUp = new AddPopUp(true);
             customerAddPopUp.FormClosed += new FormClosedEventHandler(Add_Form_Closed);
             customerAddPopUp.Show();
-
         }
 
         void Add_Form_Closed(object sender, FormClosedEventArgs e)
@@ -132,7 +130,6 @@ namespace UI
                 string notes = Customerstable.Rows[e.RowIndex].Field<string>("Notes");
                 DateTime signupDate = Customerstable.Rows[e.RowIndex].Field<DateTime>("SignupDate");
 
-                //string email, string strenghtleft, string strenghtright, string notes
                 
                 var EditPopUp = new PopUpDataGridViewChanges(false,customerID, forename,surname,address,phonenumber,email,strenghtLeft,strenghtRight,notes,signupDate);
                 EditPopUp.FormClosed += new FormClosedEventHandler(Edit_Form_Closed);
@@ -175,6 +172,17 @@ namespace UI
         private void FromDateCustomer_ValueChanged(object sender, EventArgs e)
         {
             dataGridViewCustomerUserControl.DataSource = Filter.FilterCustomers(FromDateCustomer.Text, ToDateCustomer.Text);
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Dav");
+        }
+
+        private void listView1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+          
+            
         }
     }
 }
