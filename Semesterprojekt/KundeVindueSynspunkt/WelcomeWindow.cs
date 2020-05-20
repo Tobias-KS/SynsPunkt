@@ -15,7 +15,7 @@ namespace KundeVindueSynspunkt
         public Customergreet()
         {
             InitializeComponent();
-            newCustomerPage1.Hide();
+            NewCustomerPage.Hide();
             this.FormBorderStyle = 0;
 
         }
@@ -63,8 +63,8 @@ namespace KundeVindueSynspunkt
 
         private void aNewCustomerButton_Click(object sender, EventArgs e)
         {
-            newCustomerPage1.Show();
-            newCustomerPage1.BringToFront();
+            NewCustomerPage.Show();
+            NewCustomerPage.BringToFront();
             TimeWelcomeToSynspunkt.BringToFront();
             /*
             aNewCustomerButton.Hide();

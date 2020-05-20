@@ -40,7 +40,7 @@
             this.BottunMaximize = new System.Windows.Forms.Button();
             this.ButtonCloseWindow = new System.Windows.Forms.Button();
             this.LogoWelcomepage = new System.Windows.Forms.PictureBox();
-            this.newCustomerPage1 = new KundeVindueSynspunkt.NewCustomerPage();
+            this.NewCustomerPage = new KundeVindueSynspunkt.NewCustomerPage();
             ((System.ComponentModel.ISupportInitialize)(this.LogoWelcomepage)).BeginInit();
             this.SuspendLayout();
             // 
@@ -156,13 +156,13 @@
             // 
             // newCustomerPage1
             // 
-            this.newCustomerPage1.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.newCustomerPage1.BackColor = System.Drawing.SystemColors.Highlight;
-            this.newCustomerPage1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.newCustomerPage1.Location = new System.Drawing.Point(-1, -1);
-            this.newCustomerPage1.Name = "newCustomerPage1";
-            this.newCustomerPage1.Size = new System.Drawing.Size(1602, 795);
-            this.newCustomerPage1.TabIndex = 22;
+            this.NewCustomerPage.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.NewCustomerPage.BackColor = System.Drawing.SystemColors.Highlight;
+            this.NewCustomerPage.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.NewCustomerPage.Location = new System.Drawing.Point(-1, -1);
+            this.NewCustomerPage.Name = "newCustomerPage1";
+            this.NewCustomerPage.Size = new System.Drawing.Size(1602, 795);
+            this.NewCustomerPage.TabIndex = 22;
             // 
             // Customergreet
             // 
@@ -170,7 +170,7 @@
             this.BackColor = System.Drawing.SystemColors.Highlight;
             this.ClientSize = new System.Drawing.Size(1598, 789);
             this.ControlBox = false;
-            this.Controls.Add(this.newCustomerPage1);
+            this.Controls.Add(this.NewCustomerPage);
             this.Controls.Add(this.Label1WelcomeToSynspunkt);
             this.Controls.Add(this.ButtonMinimize);
             this.Controls.Add(this.BottunMaximize);
@@ -203,7 +203,7 @@
         private System.Windows.Forms.Button BottunMaximize;
         private System.Windows.Forms.Button ButtonMinimize;
         private System.Windows.Forms.Timer Timer1;
-        private NewCustomerPage newCustomerPage1;
+        private NewCustomerPage NewCustomerPage;
     }
 }
 
