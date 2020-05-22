@@ -54,7 +54,6 @@
             this.ComboBoxEmplyeesSelectStore.Size = new System.Drawing.Size(201, 29);
             this.ComboBoxEmplyeesSelectStore.TabIndex = 0;
             this.ComboBoxEmplyeesSelectStore.Text = "STORE";
-            this.ComboBoxEmplyeesSelectStore.SelectedIndexChanged += new System.EventHandler(this.ComboBoxEmplyeesSelectStore_SelectedIndexChanged);
             // 
             // label1
             // 
@@ -74,7 +73,6 @@
             this.StoreInformationListBox.Name = "StoreInformationListBox";
             this.StoreInformationListBox.Size = new System.Drawing.Size(558, 655);
             this.StoreInformationListBox.TabIndex = 2;
-            this.StoreInformationListBox.SelectedIndexChanged += new System.EventHandler(this.StoreInformationListBox_SelectedIndexChanged);
             // 
             // ButtonShowSelectedItems
             // 
@@ -86,7 +84,6 @@
             this.ButtonShowSelectedItems.TabIndex = 3;
             this.ButtonShowSelectedItems.Text = "Show selected store";
             this.ButtonShowSelectedItems.UseVisualStyleBackColor = false;
-            this.ButtonShowSelectedItems.Click += new System.EventHandler(this.ButtonShowSelectedItems_Click);
             // 
             // label2
             // 

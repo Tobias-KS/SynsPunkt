@@ -133,7 +133,6 @@ namespace UI
             this.dataGridViewCustomerUserControl.Size = new System.Drawing.Size(1650, 837);
             this.dataGridViewCustomerUserControl.TabIndex = 8;
             this.dataGridViewCustomerUserControl.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewCustomerUserControl_CellClick);
-            this.dataGridViewCustomerUserControl.ColumnHeaderMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dataGridViewCustomerUserControl_ColumnHeaderMouseClick);
             // 
             // customersBindingSource1
             // 

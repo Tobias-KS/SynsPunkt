@@ -109,15 +109,9 @@ namespace UI
 
         private void ButtonMailFrontPage_Click(object sender, EventArgs e)
         {
-
             mailUserControl1.BringToFront();
             ChangeColors(ButtonMailFrontPage);
-
         }
 
-        private void customerUserControl2_Load(object sender, EventArgs e)
-        {
-
-        }
     }
 }

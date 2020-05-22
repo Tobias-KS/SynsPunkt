@@ -65,26 +65,6 @@ namespace UI
             }
         }
 
-        private void TopPanelPopUp_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void addOrderPopUpMainPanelUserControl1_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void LeftPanelPopUp_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void RightPanelPopUp_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
         public void SaveButtonPopUp_Click(object sender, EventArgs e)
         {
             try

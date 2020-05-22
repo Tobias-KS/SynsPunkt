@@ -19,11 +19,6 @@ namespace UI
             InitializeComponent();
         }
 
-        private void CustomerList_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-
         private void PrintButtonProducts_Click(object sender, EventArgs e)
         {
             if (String.IsNullOrEmpty(NameOfFileProductsUserContolPrint.Text))
@@ -36,12 +31,7 @@ namespace UI
                 //Print metode her
 
             }
-
         }
-        private void NameOfFileProductsUserContolPrint_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
+        
     }
 }
