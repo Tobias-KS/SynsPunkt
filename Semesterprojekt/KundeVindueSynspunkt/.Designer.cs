@@ -160,7 +160,7 @@
             this.NewCustomerPage.BackColor = System.Drawing.SystemColors.Highlight;
             this.NewCustomerPage.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.NewCustomerPage.Location = new System.Drawing.Point(-1, -1);
-            this.NewCustomerPage.Name = "newCustomerPage1";
+            this.NewCustomerPage.Name = "newCustomerPage";
             this.NewCustomerPage.Size = new System.Drawing.Size(1602, 795);
             this.NewCustomerPage.TabIndex = 22;
             // 
