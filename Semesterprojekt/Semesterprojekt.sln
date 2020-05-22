@@ -11,7 +11,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BusinessLogic", "BusinessLo
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SQLTest", "SQLTest\SQLTest.csproj", "{A10F0735-C226-4AAF-8420-49CE0DFEA4B4}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KundeVindueSynspunkt", "KundeVindueSynspunkt\KundeVindueSynspunkt.csproj", "{3FF2A3AF-BDBF-427A-9B7D-53F9402D7D70}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KundeVindueSynspunkt2", "KundeVindueSynspunkt2\KundeVindueSynspunkt2.csproj", "{98F1D54F-4B48-4A6B-BA30-0055050584BA}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -35,10 +35,10 @@ Global
 		{A10F0735-C226-4AAF-8420-49CE0DFEA4B4}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A10F0735-C226-4AAF-8420-49CE0DFEA4B4}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A10F0735-C226-4AAF-8420-49CE0DFEA4B4}.Release|Any CPU.Build.0 = Release|Any CPU
-		{3FF2A3AF-BDBF-427A-9B7D-53F9402D7D70}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{3FF2A3AF-BDBF-427A-9B7D-53F9402D7D70}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{3FF2A3AF-BDBF-427A-9B7D-53F9402D7D70}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{3FF2A3AF-BDBF-427A-9B7D-53F9402D7D70}.Release|Any CPU.Build.0 = Release|Any CPU
+		{98F1D54F-4B48-4A6B-BA30-0055050584BA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{98F1D54F-4B48-4A6B-BA30-0055050584BA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{98F1D54F-4B48-4A6B-BA30-0055050584BA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{98F1D54F-4B48-4A6B-BA30-0055050584BA}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
