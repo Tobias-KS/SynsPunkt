@@ -123,6 +123,9 @@
   <metadata name="odensedbDataSet.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>17, 17</value>
   </metadata>
+  <metadata name="odensedbDataSet.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 17</value>
+  </metadata>
   <metadata name="customersBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>165, 17</value>
   </metadata>
@@ -132,12 +135,12 @@
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="PrintCustomersButton.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
-        iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAYAAACNiR0NAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAADsSURBVDhP7ZQxCsJAEEVzAAWLYBnQQsTS3EILPYCNhZVeQbD0CLHzAl7CWrTzCDbewCa+2Uwg
-        CRmMUaz88MJO9s/PELLxiorjOICwIoG22cIUwR62LxBPpG22xAShlqbE8w9MxM0mXOBTnaEhgUNXfkfD
-        dPS6OkIH7q6SVyWXZF1LN1jDw1VfCCzqd4Ez/QhMiSex5mQHwgJOBnMwA/vJOicxt0EelmWgA1oT9tLN
-        FeyUK4xhBMU/zMY1INbiEW/at9StvNhwRw+maixjAuKpfpahBV0D2Xsr8ABlk2URT6VAH8qmKsPXNpXn
-        PQFnSOj5xNDG8wAAAABJRU5ErkJggg==
+        iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAYAAACNiR0NAAAABGdBTUEAALGPC/xhBQAAAOxJREFUOE/t
+        lDEKwkAQRXMABYtgGdBCxNLcQgs9gI2FlV5BsPQIsfMCXsJatPMINt7AJr7ZTCAJGYxRrPzwwk72z88Q
+        svGKiuM4gLAigbbZwhTBHrYvEE+kbbbEBKGWpsTzD0zEzSZc4FOdoSGBQ1d+R8N09Lo6QgfurpJXJZdk
+        XUs3WMPDVV8ILOp3gTP9CEyJJ7HmZAfCAk4GczAD+8k6JzG3QR6WZaADWhP20s0V7JQrjGEExT/MxjUg
+        1uIRb9q31K282HBHD6ZqLGMC4ql+lqEFXQPZeyvwAGWTZRFPpUAfyqYqw9c2lec9AWdI6PnE0MbzAAAA
+        AElFTkSuQmCC
 </value>
   </data>
 </root>

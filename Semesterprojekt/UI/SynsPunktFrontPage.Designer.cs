@@ -46,6 +46,7 @@
             this.CompanyName = new System.Windows.Forms.Label();
             this.CustomersButton = new System.Windows.Forms.Button();
             this.TopPanel = new System.Windows.Forms.Panel();
+            this.TimeToFrontPage = new System.Windows.Forms.Label();
             this.MainPanel = new System.Windows.Forms.Panel();
             this.MinimizeApp = new System.Windows.Forms.Button();
             this.CloseApp = new System.Windows.Forms.Button();
@@ -70,6 +71,7 @@
             // SidePanel
             // 
             this.SidePanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(101)))), ((int)(((byte)(193)))));
+            this.SidePanel.Controls.Add(this.TimeToFrontPage);
             this.SidePanel.Controls.Add(this.ButtonMailFrontPage);
             this.SidePanel.Controls.Add(this.HomeButton);
             this.SidePanel.Controls.Add(this.panel1);
@@ -254,6 +256,17 @@
             this.TopPanel.TabIndex = 1;
             this.TopPanel.MouseDown += new System.Windows.Forms.MouseEventHandler(this.TopPanel_MouseDown);
             // 
+            // TimeToFrontPage
+            // 
+            this.TimeToFrontPage.AutoSize = true;
+            this.TimeToFrontPage.Font = new System.Drawing.Font("Century Gothic", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TimeToFrontPage.ForeColor = System.Drawing.Color.White;
+            this.TimeToFrontPage.Location = new System.Drawing.Point(5, 51);
+            this.TimeToFrontPage.Name = "TimeToFrontPage";
+            this.TimeToFrontPage.Size = new System.Drawing.Size(81, 21);
+            this.TimeToFrontPage.TabIndex = 10;
+            this.TimeToFrontPage.Text = "DatoHer";
+            // 
             // MainPanel
             // 
             this.MainPanel.Location = new System.Drawing.Point(0, 44);
@@ -307,6 +320,7 @@
             // 
             this.customerUserControl2.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.customerUserControl2.BackColor = System.Drawing.Color.White;
+            this.customerUserControl2.customerAddPopUp = null;
             this.customerUserControl2.Location = new System.Drawing.Point(0, -1);
             this.customerUserControl2.Name = "customerUserControl2";
             this.customerUserControl2.Size = new System.Drawing.Size(1700, 966);
@@ -380,6 +394,10 @@
             this.fileSystemWatcher1.EnableRaisingEvents = true;
             this.fileSystemWatcher1.SynchronizingObject = this;
             // 
+            // TimerToFrontPage
+            // 
+            this.TimerToFrontPage.Tick += new System.EventHandler(this.TimerToFrontPage_Tick);
+            // 
             // FrontPage
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
@@ -430,10 +448,11 @@
         private OrderUserControl orderUserControl1;
         public CustomerUserControl customerUserControl2;
         private SupportUserControl supportUserControl1;
-        private System.Windows.Forms.Timer TimerToFrontPage;
         private EmployeesUserControl employeesUserControl1;
         private System.Windows.Forms.Button ButtonMailFrontPage;
         private MailUserControl mailUserControl1;
+        private System.Windows.Forms.Label TimeToFrontPage;
+        private System.Windows.Forms.Timer TimerToFrontPage;
     }
 }
 

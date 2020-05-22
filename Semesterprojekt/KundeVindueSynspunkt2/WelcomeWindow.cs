@@ -46,7 +46,6 @@ namespace KundeVindueSynspunkt2
 
         private void Customergreet_Load(object sender, EventArgs e)
         {
-
             Timer1.Start();
         }
 
@@ -58,7 +57,7 @@ namespace KundeVindueSynspunkt2
 
         private void ButtonCloseWindow_Click(object sender, EventArgs e)
         {
-            this.Close();
+            this.Close(); 
         }
 
         private void aNewCustomerButton_Click(object sender, EventArgs e)
@@ -73,9 +72,7 @@ namespace KundeVindueSynspunkt2
             LogoWelcomepage.Hide();
             StorenameWelcomepage.Hide();
            */
-
         }
-
 
         private void aSearchProductsButton_Click_1(object sender, EventArgs e)
         {

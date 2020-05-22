@@ -13,7 +13,6 @@ namespace UI
 {
     public partial class FrontPage : Form
     {
-
         public const int WM_NCLBUTTONDOWN = 0xA1;
         public const int HT_CAPTION = 0x2;
 
@@ -26,8 +25,8 @@ namespace UI
         public FrontPage()
         {
             InitializeComponent();
+            TimerToFrontPage.Start();
             frontPageUserControl1.BringToFront();
-          
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -36,8 +35,6 @@ namespace UI
             CSPage.Dock = DockStyle.Fill;
             MainPanel.Controls.Add(CSPage);
         }
-
-      
 
         private void TopPanel_MouseDown(object sender, MouseEventArgs e)
         {
@@ -94,7 +91,6 @@ namespace UI
             ChangeColors(EmployeesButton);
         }
 
-
         private void ChangeColors(Button activeButton)
         {
             HomeButton.BackColor = Color.FromArgb(25, 118, 211);
@@ -112,6 +108,10 @@ namespace UI
             mailUserControl1.BringToFront();
             ChangeColors(ButtonMailFrontPage);
         }
-
+        private void TimerToFrontPage_Tick(object sender, EventArgs e)
+        {
+            DateTime datetime = DateTime.Now;
+            TimeToFrontPage.Text = datetime.ToString();
+        }
     }
 }

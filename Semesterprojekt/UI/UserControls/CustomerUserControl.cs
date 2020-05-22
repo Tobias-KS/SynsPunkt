@@ -99,6 +99,8 @@ namespace UI
             }
         }
 
+
+
         private void dataGridViewCustomerUserControl_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             if (e.ColumnIndex == dataGridViewCustomerUserControl.Columns["Notes"].Index && e.RowIndex >= 0)
@@ -142,11 +144,9 @@ namespace UI
                     Deleter.DeleteCustomer(clickedCellID);
                     MessageBox.Show("User deleted!");
                     SetUpDefaultDataTableCustomers();
-
                 }
             }
         }
-
         private void ResetfiltersButtonCustomers_Click(object sender, EventArgs e)
         {
             SetUpDefaultDataTableCustomers();
@@ -163,5 +163,14 @@ namespace UI
             dataGridViewCustomerUserControl.DataSource = Filter.FilterCustomers(FromDateCustomer.Text, ToDateCustomer.Text);
         }
 
+        private void ButtonShowNotesCustomer_Click(object sender, EventArgs e)
+        {
+            var cell = this.dataGridViewCustomerUserControl.SelectedCells[0];
+
+            string clickedCellNotes = Reader.LoadCustomersDataTable().Rows[cell.RowIndex].Field<string>("Notes");
+            var NotesPopUp = new PopUpDataGridViewChanges(true, clickedCellNotes);
+            NotesPopUp.FormClosed += new FormClosedEventHandler(Notes_Form_Closed);
+            NotesPopUp.Show();
+        }
     }
 }
