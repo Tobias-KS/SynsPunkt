@@ -8,7 +8,7 @@ namespace Persistence.CRUD.CRUDorder
 {
     public class DeleterOrder
     {
-        public static string DeleteOrder(int OrderID)
+        public static void DeleteOrder(int OrderID)
         {
             SqlConnection conn = new SqlConnection(SQLConnecter.Connect());
 
@@ -22,7 +22,6 @@ namespace Persistence.CRUD.CRUDorder
                 conn.Open();
                 com.ExecuteScalar();
                 conn.Close();
-                return "Order Deleted";
             }
         }
      }
