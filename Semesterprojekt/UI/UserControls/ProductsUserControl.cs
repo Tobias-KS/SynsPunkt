@@ -20,7 +20,6 @@ namespace UI
             InitializeComponent();
             SetUpDefaultDataTableProducts();
         }
-
         public void SetUpDefaultDataTableProducts()
         {
             dataGridViewProductUserControl.DataSource = Reader.LoadProductTable();
@@ -39,7 +38,6 @@ namespace UI
                 MessageBox.Show("Data exported");
             }
         }
-
         public DataTable SetupCurrentAsDataTable()
         {
             DataTable dt = new DataTable();

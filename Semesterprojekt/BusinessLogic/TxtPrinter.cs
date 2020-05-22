@@ -9,7 +9,7 @@ namespace BusinessLogic
         public static void WriteToTxt(string fileName, DataTable dataTable)
         {
             using (StreamWriter sw =
-                File.CreateText(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) +
+                File.CreateText(Environment.GetFolderPath(Environment.SpecialFolder.Desktop) +
                                 $"/{fileName}.txt"))
             {
                 foreach (DataRow row in dataTable.Rows)
@@ -18,12 +18,15 @@ namespace BusinessLogic
 
                     for (int i = 0; i < array.Length - 1; i++)
                     {
-                        sw.Write(array[i] + " | ");
+                        sw.Write(array[i] + " -- ");
+
                     }
 
                     sw.WriteLine(array[array.Length - 1].ToString());
                 }
             }
+
+
         }
     }
 }

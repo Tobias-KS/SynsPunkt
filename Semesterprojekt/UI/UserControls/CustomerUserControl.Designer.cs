@@ -36,6 +36,7 @@ namespace UI
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CustomerUserControl));
             this.AddCustomerButton = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
             this.dataGridViewCustomerUserControl = new System.Windows.Forms.DataGridView();
@@ -53,6 +54,7 @@ namespace UI
             this.FromLabelCustomer = new System.Windows.Forms.Label();
             this.ToDateCustomer = new System.Windows.Forms.DateTimePicker();
             this.FromDateCustomer = new System.Windows.Forms.DateTimePicker();
+            this.label1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewCustomerUserControl)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.customersBindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.odensedbDataSet)).BeginInit();
@@ -116,7 +118,7 @@ namespace UI
             dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dataGridViewCustomerUserControl.DefaultCellStyle = dataGridViewCellStyle3;
             this.dataGridViewCustomerUserControl.GridColor = System.Drawing.Color.Black;
-            this.dataGridViewCustomerUserControl.Location = new System.Drawing.Point(22, 112);
+            this.dataGridViewCustomerUserControl.Location = new System.Drawing.Point(22, 115);
             this.dataGridViewCustomerUserControl.Name = "dataGridViewCustomerUserControl";
             this.dataGridViewCustomerUserControl.ReadOnly = true;
             dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
@@ -130,7 +132,7 @@ namespace UI
             this.dataGridViewCustomerUserControl.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToDisplayedHeaders;
             this.dataGridViewCustomerUserControl.RowTemplate.DividerHeight = 3;
             this.dataGridViewCustomerUserControl.RowTemplate.Height = 40;
-            this.dataGridViewCustomerUserControl.Size = new System.Drawing.Size(1650, 837);
+            this.dataGridViewCustomerUserControl.Size = new System.Drawing.Size(1661, 773);
             this.dataGridViewCustomerUserControl.TabIndex = 8;
             this.dataGridViewCustomerUserControl.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewCustomerUserControl_CellClick);
             // 
@@ -170,7 +172,7 @@ namespace UI
             this.ResetfiltersButtonCustomers.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ResetfiltersButtonCustomers.ForeColor = System.Drawing.Color.White;
             this.ResetfiltersButtonCustomers.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.ResetfiltersButtonCustomers.Location = new System.Drawing.Point(1535, 73);
+            this.ResetfiltersButtonCustomers.Location = new System.Drawing.Point(321, 68);
             this.ResetfiltersButtonCustomers.Name = "ResetfiltersButtonCustomers";
             this.ResetfiltersButtonCustomers.Size = new System.Drawing.Size(137, 33);
             this.ResetfiltersButtonCustomers.TabIndex = 5;
@@ -206,12 +208,14 @@ namespace UI
             this.PrintCustomersButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.PrintCustomersButton.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.PrintCustomersButton.ForeColor = System.Drawing.Color.White;
-            this.PrintCustomersButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.PrintCustomersButton.Location = new System.Drawing.Point(1392, 73);
+            this.PrintCustomersButton.Image = ((System.Drawing.Image)(resources.GetObject("PrintCustomersButton.Image")));
+            this.PrintCustomersButton.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.PrintCustomersButton.Location = new System.Drawing.Point(1546, 912);
             this.PrintCustomersButton.Name = "PrintCustomersButton";
             this.PrintCustomersButton.Size = new System.Drawing.Size(137, 33);
             this.PrintCustomersButton.TabIndex = 12;
             this.PrintCustomersButton.Text = "Print Customers ";
+            this.PrintCustomersButton.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.PrintCustomersButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.PrintCustomersButton.UseVisualStyleBackColor = false;
             this.PrintCustomersButton.Click += new System.EventHandler(this.PrintCustomersButton_Click);
@@ -219,7 +223,7 @@ namespace UI
             // NameOnFile
             // 
             this.NameOnFile.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.NameOnFile.Location = new System.Drawing.Point(1253, 78);
+            this.NameOnFile.Location = new System.Drawing.Point(1407, 916);
             this.NameOnFile.Name = "NameOnFile";
             this.NameOnFile.Size = new System.Drawing.Size(133, 27);
             this.NameOnFile.TabIndex = 13;
@@ -228,7 +232,7 @@ namespace UI
             // 
             this.ToLabelCustomer.AutoSize = true;
             this.ToLabelCustomer.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ToLabelCustomer.Location = new System.Drawing.Point(574, 49);
+            this.ToLabelCustomer.Location = new System.Drawing.Point(717, 48);
             this.ToLabelCustomer.Name = "ToLabelCustomer";
             this.ToLabelCustomer.Size = new System.Drawing.Size(28, 21);
             this.ToLabelCustomer.TabIndex = 36;
@@ -238,7 +242,7 @@ namespace UI
             // 
             this.FromLabelCustomer.AutoSize = true;
             this.FromLabelCustomer.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.FromLabelCustomer.Location = new System.Drawing.Point(451, 49);
+            this.FromLabelCustomer.Location = new System.Drawing.Point(574, 48);
             this.FromLabelCustomer.Name = "FromLabelCustomer";
             this.FromLabelCustomer.Size = new System.Drawing.Size(52, 21);
             this.FromLabelCustomer.TabIndex = 35;
@@ -249,7 +253,7 @@ namespace UI
             this.ToDateCustomer.CalendarFont = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ToDateCustomer.Font = new System.Drawing.Font("Century Gothic", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ToDateCustomer.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.ToDateCustomer.Location = new System.Drawing.Point(578, 80);
+            this.ToDateCustomer.Location = new System.Drawing.Point(721, 72);
             this.ToDateCustomer.Name = "ToDateCustomer";
             this.ToDateCustomer.Size = new System.Drawing.Size(113, 29);
             this.ToDateCustomer.TabIndex = 34;
@@ -259,17 +263,28 @@ namespace UI
             this.FromDateCustomer.CalendarFont = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FromDateCustomer.Font = new System.Drawing.Font("Century Gothic", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FromDateCustomer.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.FromDateCustomer.Location = new System.Drawing.Point(455, 80);
+            this.FromDateCustomer.Location = new System.Drawing.Point(578, 72);
             this.FromDateCustomer.Name = "FromDateCustomer";
             this.FromDateCustomer.Size = new System.Drawing.Size(117, 29);
             this.FromDateCustomer.TabIndex = 33;
             this.FromDateCustomer.ValueChanged += new System.EventHandler(this.FromDateCustomer_ValueChanged);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(1403, 892);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(80, 21);
+            this.label1.TabIndex = 37;
+            this.label1.Text = "Filename";
             // 
             // CustomerUserControl
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.BackColor = System.Drawing.Color.White;
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.ToLabelCustomer);
             this.Controls.Add(this.FromLabelCustomer);
             this.Controls.Add(this.ToDateCustomer);
@@ -314,5 +329,6 @@ namespace UI
         private System.Windows.Forms.Label FromLabelCustomer;
         private System.Windows.Forms.DateTimePicker ToDateCustomer;
         private System.Windows.Forms.DateTimePicker FromDateCustomer;
+        private Label label1;
     }
 }

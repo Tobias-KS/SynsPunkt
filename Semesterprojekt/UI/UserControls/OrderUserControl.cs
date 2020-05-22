@@ -30,9 +30,6 @@ namespace UI
         {
             dataGridViewOrderUserControl.DataSource = Reader.GetOrdersDataTable();
         }
-
-
-
     }
 
 

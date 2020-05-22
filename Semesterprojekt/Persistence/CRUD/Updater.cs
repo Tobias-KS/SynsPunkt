@@ -41,9 +41,7 @@ namespace Persistence.CRUD
                 conn.Close();
 
                 return "Customer Created!";
-
             }
-
         }
 
         //Orders
@@ -64,9 +62,7 @@ namespace Persistence.CRUD
                 com.ExecuteScalar();
                 conn.Close();
                 return "Order Altered";
-
             }
-
         }
 
         //Products
