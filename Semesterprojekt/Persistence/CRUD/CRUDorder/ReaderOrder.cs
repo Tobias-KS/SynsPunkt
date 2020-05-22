@@ -29,5 +29,18 @@ namespace Persistence.CRUD.CRUDorder
             }
             return OrderTable;
         }
+        private static DataTable FormatOrdersDataTable()
+        {
+            DataTable orderDatatable = LoadOrderTable();
+            orderDatatable.Columns.Add("Price");
+            return orderDatatable;
+        }
+
+        public static DataTable GetOrderDataTable()
+        {
+            return FormatOrdersDataTable();
+        }
+
+
     }
 }

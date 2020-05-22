@@ -163,9 +163,5 @@ namespace UI
             dataGridViewCustomerUserControl.DataSource = Filter.FilterCustomers(FromDateCustomer.Text, ToDateCustomer.Text);
         }
 
-        private void button1_Click(object sender, EventArgs e)
-        {
-            MessageBox.Show("Dav");
-        }
     }
 }

@@ -29,6 +29,10 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(OrderUserControl));
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.ButtonShowAllOrders = new System.Windows.Forms.Button();
             this.DeleteOrderButton = new System.Windows.Forms.Button();
             this.AddOrderButton = new System.Windows.Forms.Button();
@@ -38,13 +42,14 @@
             this.ThenByLabelOrders = new System.Windows.Forms.Label();
             this.SortyByLabelOrders = new System.Windows.Forms.Label();
             this.SortByDropDownBoxOrders = new System.Windows.Forms.ComboBox();
-            this.OrderList = new System.Windows.Forms.ListBox();
             this.FromDateOrders = new System.Windows.Forms.DateTimePicker();
             this.ToDateOrders = new System.Windows.Forms.DateTimePicker();
             this.FromLabelOrders = new System.Windows.Forms.Label();
             this.ToLabelOrders = new System.Windows.Forms.Label();
             this.PrintButtonOrders = new System.Windows.Forms.Button();
             this.SearchButtonOrderUserControl = new System.Windows.Forms.TextBox();
+            this.dataGridViewOrderUserControl = new System.Windows.Forms.DataGridView();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewOrderUserControl)).BeginInit();
             this.SuspendLayout();
             // 
             // ButtonShowAllOrders
@@ -55,7 +60,7 @@
             this.ButtonShowAllOrders.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ButtonShowAllOrders.ForeColor = System.Drawing.Color.White;
             this.ButtonShowAllOrders.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.ButtonShowAllOrders.Location = new System.Drawing.Point(330, 15);
+            this.ButtonShowAllOrders.Location = new System.Drawing.Point(251, 15);
             this.ButtonShowAllOrders.Name = "ButtonShowAllOrders";
             this.ButtonShowAllOrders.Size = new System.Drawing.Size(210, 100);
             this.ButtonShowAllOrders.TabIndex = 7;
@@ -160,16 +165,6 @@
             this.SortByDropDownBoxOrders.Size = new System.Drawing.Size(206, 29);
             this.SortByDropDownBoxOrders.TabIndex = 12;
             // 
-            // OrderList
-            // 
-            this.OrderList.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.OrderList.FormattingEnabled = true;
-            this.OrderList.ItemHeight = 21;
-            this.OrderList.Location = new System.Drawing.Point(22, 202);
-            this.OrderList.Name = "OrderList";
-            this.OrderList.Size = new System.Drawing.Size(1635, 655);
-            this.OrderList.TabIndex = 11;
-            // 
             // FromDateOrders
             // 
             this.FromDateOrders.CalendarFont = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -235,10 +230,58 @@
             this.SearchButtonOrderUserControl.Size = new System.Drawing.Size(135, 27);
             this.SearchButtonOrderUserControl.TabIndex = 22;
             // 
+            // dataGridViewOrderUserControl
+            // 
+            this.dataGridViewOrderUserControl.AllowUserToAddRows = false;
+            this.dataGridViewOrderUserControl.AllowUserToDeleteRows = false;
+            this.dataGridViewOrderUserControl.AllowUserToResizeColumns = false;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.dataGridViewOrderUserControl.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            this.dataGridViewOrderUserControl.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
+            this.dataGridViewOrderUserControl.BackgroundColor = System.Drawing.Color.White;
+            this.dataGridViewOrderUserControl.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dataGridViewOrderUserControl.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.RaisedVertical;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Century Gothic", 15F, System.Drawing.FontStyle.Bold);
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridViewOrderUserControl.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            this.dataGridViewOrderUserControl.ColumnHeadersHeight = 40;
+            this.dataGridViewOrderUserControl.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridViewOrderUserControl.DefaultCellStyle = dataGridViewCellStyle3;
+            this.dataGridViewOrderUserControl.GridColor = System.Drawing.Color.Black;
+            this.dataGridViewOrderUserControl.Location = new System.Drawing.Point(22, 200);
+            this.dataGridViewOrderUserControl.Name = "dataGridViewOrderUserControl";
+            this.dataGridViewOrderUserControl.ReadOnly = true;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridViewOrderUserControl.RowHeadersDefaultCellStyle = dataGridViewCellStyle4;
+            this.dataGridViewOrderUserControl.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToDisplayedHeaders;
+            this.dataGridViewOrderUserControl.RowTemplate.DividerHeight = 3;
+            this.dataGridViewOrderUserControl.RowTemplate.Height = 40;
+            this.dataGridViewOrderUserControl.Size = new System.Drawing.Size(1613, 670);
+            this.dataGridViewOrderUserControl.TabIndex = 23;
+            // 
             // OrderUserControl
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackColor = System.Drawing.Color.White;
+            this.Controls.Add(this.dataGridViewOrderUserControl);
             this.Controls.Add(this.SearchButtonOrderUserControl);
             this.Controls.Add(this.ToLabelOrders);
             this.Controls.Add(this.FromLabelOrders);
@@ -249,7 +292,6 @@
             this.Controls.Add(this.ThenByLabelOrders);
             this.Controls.Add(this.SortyByLabelOrders);
             this.Controls.Add(this.SortByDropDownBoxOrders);
-            this.Controls.Add(this.OrderList);
             this.Controls.Add(this.ButtonShowAllOrders);
             this.Controls.Add(this.DeleteOrderButton);
             this.Controls.Add(this.AddOrderButton);
@@ -257,6 +299,7 @@
             this.Controls.Add(this.panel1);
             this.Name = "OrderUserControl";
             this.Size = new System.Drawing.Size(1700, 966);
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewOrderUserControl)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -273,12 +316,12 @@
         private System.Windows.Forms.Label ThenByLabelOrders;
         private System.Windows.Forms.Label SortyByLabelOrders;
         private System.Windows.Forms.ComboBox SortByDropDownBoxOrders;
-        private System.Windows.Forms.ListBox OrderList;
         private System.Windows.Forms.Button PrintButtonOrders;
         private System.Windows.Forms.DateTimePicker FromDateOrders;
         private System.Windows.Forms.DateTimePicker ToDateOrders;
         private System.Windows.Forms.Label FromLabelOrders;
         private System.Windows.Forms.Label ToLabelOrders;
         private System.Windows.Forms.TextBox SearchButtonOrderUserControl;
+        public System.Windows.Forms.DataGridView dataGridViewOrderUserControl;
     }
 }
