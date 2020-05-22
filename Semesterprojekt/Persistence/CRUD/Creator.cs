@@ -1,15 +1,12 @@
 ﻿using System;
 using System.Data;
-using System.Collections.Generic;
-using System.Text;
-using Persistence.Models;
 using System.Data.SqlClient;
 namespace Persistence.CRUD
 {
 
     public class Creator
     {
-        
+        //Customer
         public static string CreateCustomer(string Forename, string Lastname, string adress, int PhoneNumber, string Email, float StrengthRight, float StrengthLeft, DateTime SignupDate, string notes = "")
         {
             SqlConnection conn = new SqlConnection(SQLConnecter.Connect());
@@ -36,9 +33,55 @@ namespace Persistence.CRUD
                 conn.Close();
 
                 return "Customer Created!";
-
             }
-
         }
+
+        //Product
+        public static void AddProduct(int ProductID, string Productname, int price, string Colour, string Brand, string FrameType, string Glasstype, int RightLensID, int LeftLensID, string Productdescription)
+        {
+            SqlConnection conn = new SqlConnection(SQLConnecter.Connect());
+
+            using (SqlCommand com = new SqlCommand())
+            {
+                com.Connection = conn;
+                com.CommandText = "AddProduct";
+                com.Parameters.Add("@ProductID", SqlDbType.Int).Value = ProductID;
+                com.Parameters.Add("@Productname", SqlDbType.VarChar).Value = Productname;
+                com.Parameters.Add("@Price", SqlDbType.Real).Value = price;
+                com.Parameters.Add("@ Colour", SqlDbType.VarChar).Value = Colour;
+                com.Parameters.Add("@Brand", SqlDbType.VarChar).Value = Brand;
+                com.Parameters.Add("@FrameType", SqlDbType.VarChar).Value = FrameType;
+                com.Parameters.Add("@Glasstype", SqlDbType.VarChar).Value = Glasstype;
+                com.Parameters.Add("@RightLensID", SqlDbType.Int).Value = RightLensID;
+                com.Parameters.Add("@LeftLensID", SqlDbType.Int).Value = LeftLensID;
+                com.Parameters.Add("@Productdescription", SqlDbType.VarChar).Value = Productdescription;
+                com.CommandType = CommandType.StoredProcedure;
+
+                conn.Open();
+                com.ExecuteScalar();
+                conn.Close();
+            }
+        }
+
+        //Order
+        public static void AddOrder(int OrderID, int customerID, DateTime Date)
+        {
+            SqlConnection conn = new SqlConnection(SQLConnecter.Connect());
+
+            using (SqlCommand com = new SqlCommand())
+            {
+                com.Connection = conn;
+                com.CommandText = "AddOrder";
+                com.Parameters.Add("@OrderID", SqlDbType.Int).Value = OrderID;
+                com.Parameters.Add("@CustomerID", SqlDbType.Int).Value = customerID;
+                com.Parameters.Add("@Date", SqlDbType.Date).Value = Date;
+                com.CommandType = CommandType.StoredProcedure;
+
+                conn.Open();
+                com.ExecuteScalar();
+                conn.Close();
+            }
+        }
+
     }
 }

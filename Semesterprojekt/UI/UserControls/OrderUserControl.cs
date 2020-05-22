@@ -8,7 +8,7 @@ using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using Persistence.CRUD.CRUDorder;
+using Persistence.CRUD;
 
 namespace UI
 {
@@ -28,7 +28,7 @@ namespace UI
 
         public void SetUpDefaultDataTableCustomers()
         {
-            dataGridViewOrderUserControl.DataSource = ReaderOrder.GetOrderDataTable();
+            dataGridViewOrderUserControl.DataSource = Reader.GetOrdersDataTable();
         }
 
 

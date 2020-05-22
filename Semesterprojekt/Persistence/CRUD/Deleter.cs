@@ -1,13 +1,10 @@
-﻿using System;
-using System.Data;
-using System.Collections.Generic;
-using System.Text;
-using Persistence.Models;
+﻿using System.Data;
 using System.Data.SqlClient;
 namespace Persistence.CRUD
 {
     public class Deleter
     {
+        //Orders
         public class DeleterOrder
         {
             public static string DeleteOrder(int OrderID)
@@ -28,6 +25,8 @@ namespace Persistence.CRUD
                 }
             }
         }
+
+        //Customers
         public static string DeleteCustomer(int CustomerID)
         {
             SqlConnection conn = new SqlConnection(SQLConnecter.Connect());
@@ -38,7 +37,7 @@ namespace Persistence.CRUD
                 com.CommandText = "DeleteCustomer";
                 com.Parameters.Add("@CustomerID", SqlDbType.Int).Value = CustomerID;
                 com.CommandType = CommandType.StoredProcedure;
-                
+
                 conn.Open();
 
                 com.ExecuteScalar();
@@ -46,6 +45,23 @@ namespace Persistence.CRUD
                 conn.Close();
                 return "Customer deleted!";
 
+            }
+        }
+
+        //Products
+        public static void DeleteProduct(int ProductID)
+        {
+            SqlConnection conn = new SqlConnection(SQLConnecter.Connect());
+            using (SqlCommand com = new SqlCommand())
+            {
+                com.Connection = conn;
+                com.CommandText = "DeleteProduct";
+                com.Parameters.Add("@ProductID", SqlDbType.Int).Value = ProductID;
+                com.CommandType = CommandType.StoredProcedure;
+
+                conn.Open();
+                com.ExecuteScalar();
+                conn.Close();
             }
         }
     }
