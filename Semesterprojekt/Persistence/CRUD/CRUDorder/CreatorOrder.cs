@@ -14,10 +14,10 @@ namespace Persistence.CRUD.CRUDorder
 
             using (SqlCommand com = new SqlCommand())
             {
-                com.Connection=conn;
+                com.Connection = conn;
                 com.CommandText = "AddOrder";
-                com.Parameters.Add ("@OrderID", SqlDbType.Int).Value = OrderID;
-                com.Parameters.Add ("@CustomerID", SqlDbType.Int).Value = customerID;
+                com.Parameters.Add("@OrderID", SqlDbType.Int).Value = OrderID;
+                com.Parameters.Add("@CustomerID", SqlDbType.Int).Value = customerID;
                 com.Parameters.Add("@Date", SqlDbType.Date).Value = Date;
                 com.CommandType = CommandType.StoredProcedure;
 
