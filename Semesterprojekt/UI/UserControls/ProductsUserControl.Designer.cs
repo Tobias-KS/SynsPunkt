@@ -292,7 +292,6 @@
             this.NameOfFileProductsUserContolPrint.Name = "NameOfFileProductsUserContolPrint";
             this.NameOfFileProductsUserContolPrint.Size = new System.Drawing.Size(128, 27);
             this.NameOfFileProductsUserContolPrint.TabIndex = 34;
-            this.NameOfFileProductsUserContolPrint.TextChanged += new System.EventHandler(this.NameOfFileProductsUserContolPrint_TextChanged);
             // 
             // label1
             // 

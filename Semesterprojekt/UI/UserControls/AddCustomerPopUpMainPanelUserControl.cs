@@ -24,26 +24,5 @@ namespace UI
 
             //Reload datagridview..
         }
-
-
-        public void CheckForEmtyTextBox()
-        {
-
-        }
-        private void AddCustomerPopUpMainPanelUserControl_Load(object sender, EventArgs e)
-        {
-
-
-        }
-
-        private void ToolTipText_Popup(object sender, PopupEventArgs e)
-        {
-
-
-        }
-
-
-
-
     }
 }

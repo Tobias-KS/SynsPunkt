@@ -8,6 +8,7 @@ using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Persistence.CRUD.CRUDorder;
 
 namespace UI
 {
@@ -16,6 +17,7 @@ namespace UI
         public OrderUserControl()
         {
             InitializeComponent();
+            SetUpDefaultDataTableCustomers();
         }
 
         private void AddOrderButton_Click(object sender, EventArgs e)
@@ -24,9 +26,14 @@ namespace UI
             OrderAddPopUp.Show();
         }
 
-        private void ToDateOrders_ValueChanged(object sender, EventArgs e)
+        public void SetUpDefaultDataTableCustomers()
         {
-
+            dataGridViewOrderUserControl.DataSource = ReaderOrder.GetOrderDataTable();
         }
+
+
+
     }
+
+
 }

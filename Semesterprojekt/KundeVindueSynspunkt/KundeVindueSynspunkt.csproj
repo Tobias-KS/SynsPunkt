@@ -46,6 +46,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="SearchProductWindow.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="SearchProductWindow.Designer.cs">
+      <DependentUpon>SearchProductWindow.cs</DependentUpon>
+    </Compile>
     <Compile Include="WelcomeWindow.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -67,6 +73,9 @@
     <Compile Include="SearchGlasses.Designer.cs">
       <DependentUpon>SearchGlasses.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="SearchProductWindow.resx">
+      <DependentUpon>SearchProductWindow.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="WelcomeWindow.resx">
       <DependentUpon>WelcomeWindow.cs</DependentUpon>
     </EmbeddedResource>

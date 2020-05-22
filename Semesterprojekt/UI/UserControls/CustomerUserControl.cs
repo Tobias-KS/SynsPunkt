@@ -41,11 +41,6 @@ namespace UI
             SetUpDefaultDataTableCustomers();
         }
 
-        private void ButtonShowAllCustomers_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void AddButtonColumn(string buttomName)
         {
             DataGridViewButtonColumn tempButton = new DataGridViewButtonColumn();
@@ -156,7 +151,6 @@ namespace UI
         {
             SetUpDefaultDataTableCustomers();
             SeachTextBoxCustomerUserControl.Text = "";
-
         }
 
         private void SeachTextBoxCustomerUserControl_TextChanged(object sender, EventArgs e)
@@ -164,25 +158,10 @@ namespace UI
             dataGridViewCustomerUserControl.DataSource = Filter.SearchBar(Reader.GetCustomersDataTable(), SeachTextBoxCustomerUserControl.Text);
         }
 
-        private void dataGridViewCustomerUserControl_ColumnHeaderMouseClick(object sender, DataGridViewCellMouseEventArgs e)
-        {
-           
-        }
-
         private void FromDateCustomer_ValueChanged(object sender, EventArgs e)
         {
             dataGridViewCustomerUserControl.DataSource = Filter.FilterCustomers(FromDateCustomer.Text, ToDateCustomer.Text);
         }
 
-        private void button1_Click(object sender, EventArgs e)
-        {
-            MessageBox.Show("Dav");
-        }
-
-        private void listView1_SelectedIndexChanged(object sender, EventArgs e)
-        {
-          
-            
-        }
     }
 }

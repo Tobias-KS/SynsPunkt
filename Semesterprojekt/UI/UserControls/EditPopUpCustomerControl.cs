@@ -24,10 +24,5 @@ namespace UI.UserControls
             InitializeComponent();
 
         }
-
-        private void TextBoxAddressCustomerEditPopUp_TextChanged(object sender, EventArgs e)
-        {
-
-        }
     }
 }

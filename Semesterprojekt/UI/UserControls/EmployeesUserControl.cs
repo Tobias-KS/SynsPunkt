@@ -12,19 +12,5 @@ namespace UI
         {
             InitializeComponent();
         }
-
-        private void ComboBoxEmplyeesSelectStore_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void ButtonShowSelectedItems_Click(object sender, EventArgs e)
-        {
-
-        }
-        private void StoreInformationListBox_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
     }
 }

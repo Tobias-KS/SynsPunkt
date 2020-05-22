@@ -15,17 +15,33 @@ namespace KundeVindueSynspunkt
         public SearchGlasses()
         {
             InitializeComponent();
+            Testbackbtn.Hide();
+            searchProductWindow1.Hide();
         }
 
         private void NewCustomerButtonBack_Click(object sender, EventArgs e)
         {
             this.Hide();
+
         }
 
         private void GlassesSearchButton_Click(object sender, EventArgs e)
         {
+            ProductTable.Hide();
+            NewCustomerButtonBack.Hide();
+            searchProductWindow1.Show();
+            searchProductWindow1.BringToFront();
+            Testbackbtn.Show();
+            Testbackbtn.BringToFront();
 
         }
 
+        private void Testbackbtn_Click(object sender, EventArgs e)
+        {
+            ProductTable.Show();
+            NewCustomerButtonBack.Show();
+            Testbackbtn.Hide();
+            searchProductWindow1.Hide();
+           }
     }
 }

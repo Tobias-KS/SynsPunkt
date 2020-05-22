@@ -16,6 +16,7 @@ namespace KundeVindueSynspunkt
         {
             InitializeComponent();
             NewCustomerPage.Hide();
+            SearchGlasses.Hide();
             this.FormBorderStyle = 0;
 
         }
@@ -79,9 +80,9 @@ namespace KundeVindueSynspunkt
 
         private void aSearchProductsButton_Click_1(object sender, EventArgs e)
         {
-            aNewCustomerButton.Hide();
-            aSearchProductsButton.Hide();
+           
             TimeWelcomeToSynspunkt.BringToFront();
+            SearchGlasses.Show();
         }
     }
 

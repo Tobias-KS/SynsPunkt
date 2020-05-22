@@ -311,7 +311,6 @@
             this.customerUserControl2.Name = "customerUserControl2";
             this.customerUserControl2.Size = new System.Drawing.Size(1700, 966);
             this.customerUserControl2.TabIndex = 4;
-            this.customerUserControl2.Load += new System.EventHandler(this.customerUserControl2_Load);
             // 
             // orderUserControl1
             // 
