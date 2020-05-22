@@ -241,9 +241,8 @@
             this.label1.Text = "Note";
             this.ToolTipText.SetToolTip(this.label1, "More relevant information about the customer");
             // 
-            // ToolTipText
-            // 
-            this.ToolTipText.Popup += new System.Windows.Forms.PopupEventHandler(this.ToolTipText_Popup);
+           
+           
             // 
             // AddCustomerPopUpMainPanelUserControl
             // 
@@ -275,7 +274,6 @@
             this.Margin = new System.Windows.Forms.Padding(5);
             this.Name = "AddCustomerPopUpMainPanelUserControl";
             this.Size = new System.Drawing.Size(805, 363);
-            this.Load += new System.EventHandler(this.AddCustomerPopUpMainPanelUserControl_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

@@ -203,7 +203,6 @@
             this.TextBoxAddressCustomerEditPopUp.Name = "TextBoxAddressCustomerEditPopUp";
             this.TextBoxAddressCustomerEditPopUp.Size = new System.Drawing.Size(164, 27);
             this.TextBoxAddressCustomerEditPopUp.TabIndex = 26;
-            this.TextBoxAddressCustomerEditPopUp.TextChanged += new System.EventHandler(this.TextBoxAddressCustomerEditPopUp_TextChanged);
             // 
             // TextboxToSurnameCustomerEditPopUp
             // 

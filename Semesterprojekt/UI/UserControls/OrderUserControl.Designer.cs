@@ -189,7 +189,6 @@
             this.ToDateOrders.Name = "ToDateOrders";
             this.ToDateOrders.Size = new System.Drawing.Size(113, 29);
             this.ToDateOrders.TabIndex = 19;
-            this.ToDateOrders.ValueChanged += new System.EventHandler(this.ToDateOrders_ValueChanged);
             // 
             // FromLabelOrders
             // 

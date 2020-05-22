@@ -20,7 +20,6 @@ namespace UI
         {
             InitializeComponent();
         }
-
         private void CustomerSupportPageLinkLabel_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             PDFOpener.SupportPdf();

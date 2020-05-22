@@ -42,7 +42,6 @@
             this.SynsPunktFrontText.Size = new System.Drawing.Size(1411, 324);
             this.SynsPunktFrontText.TabIndex = 0;
             this.SynsPunktFrontText.Text = "SynsPunkt";
-            this.SynsPunktFrontText.Click += new System.EventHandler(this.SynsPunktFrontText_Click);
             // 
             // FrontPageUserControl
             // 
