@@ -41,6 +41,7 @@
             this.ButtonCloseWindow = new System.Windows.Forms.Button();
             this.LogoWelcomepage = new System.Windows.Forms.PictureBox();
             this.NewCustomerPage = new KundeVindueSynspunkt.NewCustomerPage();
+            this.SearchGlasses = new KundeVindueSynspunkt.SearchGlasses();
             ((System.ComponentModel.ISupportInitialize)(this.LogoWelcomepage)).BeginInit();
             this.SuspendLayout();
             // 
@@ -154,22 +155,33 @@
             this.LogoWelcomepage.TabIndex = 16;
             this.LogoWelcomepage.TabStop = false;
             // 
-            // newCustomerPage1
+            // NewCustomerPage
             // 
             this.NewCustomerPage.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.NewCustomerPage.BackColor = System.Drawing.SystemColors.Highlight;
             this.NewCustomerPage.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.NewCustomerPage.Location = new System.Drawing.Point(-1, -1);
-            this.NewCustomerPage.Name = "newCustomerPage";
+            this.NewCustomerPage.Name = "NewCustomerPage";
             this.NewCustomerPage.Size = new System.Drawing.Size(1602, 795);
             this.NewCustomerPage.TabIndex = 22;
+            // 
+            // SearchGlasses
+            // 
+            this.SearchGlasses.BackColor = System.Drawing.SystemColors.Highlight;
+            this.SearchGlasses.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.SearchGlasses.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.SearchGlasses.Location = new System.Drawing.Point(-1, -1);
+            this.SearchGlasses.Name = "SearchGlasses";
+            this.SearchGlasses.Size = new System.Drawing.Size(1602, 795);
+            this.SearchGlasses.TabIndex = 23;
             // 
             // Customergreet
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackColor = System.Drawing.SystemColors.Highlight;
-            this.ClientSize = new System.Drawing.Size(1598, 789);
+            this.ClientSize = new System.Drawing.Size(1586, 777);
             this.ControlBox = false;
+            this.Controls.Add(this.SearchGlasses);
             this.Controls.Add(this.NewCustomerPage);
             this.Controls.Add(this.Label1WelcomeToSynspunkt);
             this.Controls.Add(this.ButtonMinimize);
@@ -204,6 +216,7 @@
         private System.Windows.Forms.Button ButtonMinimize;
         private System.Windows.Forms.Timer Timer1;
         private NewCustomerPage NewCustomerPage;
+        private SearchGlasses SearchGlasses;
     }
 }
 

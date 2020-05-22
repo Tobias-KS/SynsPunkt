@@ -52,9 +52,14 @@
             this.checkedListBox4 = new System.Windows.Forms.CheckedListBox();
             this.checkedListBox5 = new System.Windows.Forms.CheckedListBox();
             this.checkedListBox6 = new System.Windows.Forms.CheckedListBox();
+            this.GlassesDataView = new System.Windows.Forms.DataGridView();
+            this.GlassesProductsClearBtn = new System.Windows.Forms.Button();
+            this.GlassesProductsSearchBtn = new System.Windows.Forms.Button();
+            this.button3 = new System.Windows.Forms.Button();
             this.tableLayoutPanel1.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.trackBar1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.GlassesDataView)).BeginInit();
             this.SuspendLayout();
             // 
             // tableLayoutPanel1
@@ -99,7 +104,7 @@
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle());
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle());
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(377, 710);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(377, 789);
             this.tableLayoutPanel1.TabIndex = 0;
             // 
             // label7
@@ -309,7 +314,7 @@
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(164, 0);
+            this.label9.Location = new System.Drawing.Point(131, 0);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(51, 13);
             this.label9.TabIndex = 1;
@@ -378,20 +383,68 @@
             this.checkedListBox6.Size = new System.Drawing.Size(183, 123);
             this.checkedListBox6.TabIndex = 19;
             // 
+            // GlassesDataView
+            // 
+            this.GlassesDataView.BackgroundColor = System.Drawing.SystemColors.Control;
+            this.GlassesDataView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.GlassesDataView.Location = new System.Drawing.Point(383, 117);
+            this.GlassesDataView.Name = "GlassesDataView";
+            this.GlassesDataView.Size = new System.Drawing.Size(1216, 675);
+            this.GlassesDataView.TabIndex = 1;
+            this.GlassesDataView.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
+            // 
+            // GlassesProductsClearBtn
+            // 
+            this.GlassesProductsClearBtn.BackColor = System.Drawing.SystemColors.Highlight;
+            this.GlassesProductsClearBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 24.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.GlassesProductsClearBtn.Location = new System.Drawing.Point(1232, 0);
+            this.GlassesProductsClearBtn.Name = "GlassesProductsClearBtn";
+            this.GlassesProductsClearBtn.Size = new System.Drawing.Size(361, 113);
+            this.GlassesProductsClearBtn.TabIndex = 2;
+            this.GlassesProductsClearBtn.Text = "Clear";
+            this.GlassesProductsClearBtn.UseVisualStyleBackColor = false;
+            // 
+            // GlassesProductsSearchBtn
+            // 
+            this.GlassesProductsSearchBtn.BackColor = System.Drawing.SystemColors.Highlight;
+            this.GlassesProductsSearchBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 24.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.GlassesProductsSearchBtn.Location = new System.Drawing.Point(386, 0);
+            this.GlassesProductsSearchBtn.Name = "GlassesProductsSearchBtn";
+            this.GlassesProductsSearchBtn.Size = new System.Drawing.Size(361, 113);
+            this.GlassesProductsSearchBtn.TabIndex = 3;
+            this.GlassesProductsSearchBtn.Text = "Search";
+            this.GlassesProductsSearchBtn.UseVisualStyleBackColor = false;
+            // 
+            // button3
+            // 
+            this.button3.BackColor = System.Drawing.SystemColors.Highlight;
+            this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 24.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button3.Location = new System.Drawing.Point(812, 0);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(361, 113);
+            this.button3.TabIndex = 4;
+            this.button3.Text = "button3";
+            this.button3.UseVisualStyleBackColor = false;
+            // 
             // SearchProductWindow
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Highlight;
+            this.Controls.Add(this.button3);
+            this.Controls.Add(this.GlassesProductsSearchBtn);
+            this.Controls.Add(this.GlassesProductsClearBtn);
+            this.Controls.Add(this.GlassesDataView);
             this.Controls.Add(this.tableLayoutPanel1);
             this.Name = "SearchProductWindow";
-            this.Size = new System.Drawing.Size(377, 716);
+            this.Size = new System.Drawing.Size(1602, 795);
             this.Load += new System.EventHandler(this.SearchProductWindow_Load);
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.trackBar1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.GlassesDataView)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -422,5 +475,9 @@
         private System.Windows.Forms.CheckedListBox checkedListBox4;
         private System.Windows.Forms.CheckedListBox checkedListBox5;
         private System.Windows.Forms.CheckedListBox checkedListBox6;
+        private System.Windows.Forms.DataGridView GlassesDataView;
+        private System.Windows.Forms.Button GlassesProductsClearBtn;
+        private System.Windows.Forms.Button GlassesProductsSearchBtn;
+        private System.Windows.Forms.Button button3;
     }
 }

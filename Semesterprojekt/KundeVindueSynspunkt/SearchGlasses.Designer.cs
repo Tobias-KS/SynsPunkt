@@ -32,13 +32,15 @@
             this.label5 = new System.Windows.Forms.Label();
             this.Logo = new System.Windows.Forms.PictureBox();
             this.NewCustomer = new System.Windows.Forms.Label();
-            this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
+            this.ProductTable = new System.Windows.Forms.TableLayoutPanel();
             this.BinocularsSearchButton = new System.Windows.Forms.Button();
             this.CointactLensesSearchButton = new System.Windows.Forms.Button();
             this.GlassesSearchButton = new System.Windows.Forms.Button();
             this.NewCustomerButtonBack = new System.Windows.Forms.Button();
+            this.Testbackbtn = new System.Windows.Forms.Button();
+            this.searchProductWindow1 = new KundeVindueSynspunkt.SearchProductWindow();
             ((System.ComponentModel.ISupportInitialize)(this.Logo)).BeginInit();
-            this.tableLayoutPanel1.SuspendLayout();
+            this.ProductTable.SuspendLayout();
             this.SuspendLayout();
             // 
             // label5
@@ -74,22 +76,22 @@
             this.NewCustomer.TabIndex = 17;
             this.NewCustomer.Text = "Search Products";
             // 
-            // tableLayoutPanel1
+            // ProductTable
             // 
-            this.tableLayoutPanel1.ColumnCount = 3;
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
-            this.tableLayoutPanel1.Controls.Add(this.BinocularsSearchButton, 2, 0);
-            this.tableLayoutPanel1.Controls.Add(this.CointactLensesSearchButton, 1, 0);
-            this.tableLayoutPanel1.Controls.Add(this.GlassesSearchButton, 0, 0);
-            this.tableLayoutPanel1.Location = new System.Drawing.Point(33, 146);
-            this.tableLayoutPanel1.Name = "tableLayoutPanel1";
-            this.tableLayoutPanel1.RowCount = 1;
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 481F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(1535, 481);
-            this.tableLayoutPanel1.TabIndex = 18;
+            this.ProductTable.ColumnCount = 3;
+            this.ProductTable.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
+            this.ProductTable.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
+            this.ProductTable.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
+            this.ProductTable.Controls.Add(this.BinocularsSearchButton, 2, 0);
+            this.ProductTable.Controls.Add(this.CointactLensesSearchButton, 1, 0);
+            this.ProductTable.Controls.Add(this.GlassesSearchButton, 0, 0);
+            this.ProductTable.Location = new System.Drawing.Point(33, 146);
+            this.ProductTable.Name = "ProductTable";
+            this.ProductTable.RowCount = 1;
+            this.ProductTable.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.ProductTable.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 481F));
+            this.ProductTable.Size = new System.Drawing.Size(1535, 481);
+            this.ProductTable.TabIndex = 18;
             // 
             // BinocularsSearchButton
             // 
@@ -144,14 +146,37 @@
             this.NewCustomerButtonBack.UseVisualStyleBackColor = true;
             this.NewCustomerButtonBack.Click += new System.EventHandler(this.NewCustomerButtonBack_Click);
             // 
+            // Testbackbtn
+            // 
+            this.Testbackbtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Testbackbtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 24.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Testbackbtn.ForeColor = System.Drawing.SystemColors.Control;
+            this.Testbackbtn.Location = new System.Drawing.Point(517, 744);
+            this.Testbackbtn.Name = "Testbackbtn";
+            this.Testbackbtn.Size = new System.Drawing.Size(251, 48);
+            this.Testbackbtn.TabIndex = 23;
+            this.Testbackbtn.Text = "Back";
+            this.Testbackbtn.UseVisualStyleBackColor = true;
+            this.Testbackbtn.Click += new System.EventHandler(this.Testbackbtn_Click);
+            // 
+            // searchProductWindow1
+            // 
+            this.searchProductWindow1.BackColor = System.Drawing.SystemColors.Highlight;
+            this.searchProductWindow1.Location = new System.Drawing.Point(-1, -1);
+            this.searchProductWindow1.Name = "searchProductWindow1";
+            this.searchProductWindow1.Size = new System.Drawing.Size(1602, 795);
+            this.searchProductWindow1.TabIndex = 24;
+            // 
             // SearchGlasses
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Highlight;
             this.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.Controls.Add(this.searchProductWindow1);
+            this.Controls.Add(this.Testbackbtn);
             this.Controls.Add(this.NewCustomerButtonBack);
-            this.Controls.Add(this.tableLayoutPanel1);
+            this.Controls.Add(this.ProductTable);
             this.Controls.Add(this.NewCustomer);
             this.Controls.Add(this.Logo);
             this.Controls.Add(this.label5);
@@ -159,7 +184,7 @@
             this.Name = "SearchGlasses";
             this.Size = new System.Drawing.Size(1602, 795);
             ((System.ComponentModel.ISupportInitialize)(this.Logo)).EndInit();
-            this.tableLayoutPanel1.ResumeLayout(false);
+            this.ProductTable.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -170,10 +195,12 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.PictureBox Logo;
         private System.Windows.Forms.Label NewCustomer;
-        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
+        private System.Windows.Forms.TableLayoutPanel ProductTable;
         private System.Windows.Forms.Button BinocularsSearchButton;
         private System.Windows.Forms.Button CointactLensesSearchButton;
         private System.Windows.Forms.Button GlassesSearchButton;
         private System.Windows.Forms.Button NewCustomerButtonBack;
+        private System.Windows.Forms.Button Testbackbtn;
+        private SearchProductWindow searchProductWindow1;
     }
 }
