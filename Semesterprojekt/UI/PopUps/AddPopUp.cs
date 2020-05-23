@@ -14,22 +14,22 @@ using Persistence.CRUD;
 
 namespace UI
 {
+    
+    
     public partial class AddPopUp : Form
     {
         public enum WindowState
         {
-            customer, 
-            order, 
-            product
+            Customer,
+            Order,
+            Product
         }
-
-
+        public WindowState currentWindowState { get; set; }
        
-
-        public AddPopUp(Enum windowState)
+        public AddPopUp(WindowState ws)
         {
             InitializeComponent();
-            WindowState = windowState;
+            this.currentWindowState = ws;
             CustomerOrOrder();
 
         }
@@ -63,13 +63,17 @@ namespace UI
 
         public void CustomerOrOrder()
         {
-            if (IsCustomer == true)
+            switch (currentWindowState)
             {
-                addCustomerPopUpMainPanelUserControl1.BringToFront();
-            }
-            else
-            {
-                addOrderPopUpMainPanelUserControl1.BringToFront();
+                case WindowState.Customer:
+                    addCustomerPopUpMainPanelUserControl1.BringToFront();
+                    break;
+                case WindowState.Order:
+                    addOrderPopUpMainPanelUserControl1.BringToFront();
+                    break;
+                case WindowState.Product:
+                    addProductUserControl1.BringToFront();
+                    break;
             }
         }
 

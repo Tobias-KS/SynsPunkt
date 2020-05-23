@@ -60,7 +60,8 @@ namespace UI
 
         private void AddProductButton_Click(object sender, EventArgs e)
         {
-
+            var productAddPopUp = new AddPopUp(AddPopUp.WindowState.Product);
+            productAddPopUp.Show();
         }
     }
 }

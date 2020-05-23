@@ -22,7 +22,7 @@ namespace UI
 
         private void AddOrderButton_Click(object sender, EventArgs e)
         {
-            var OrderAddPopUp = new AddPopUp(false);
+            var OrderAddPopUp = new AddPopUp(AddPopUp.WindowState.Order);
             OrderAddPopUp.Show();
         }
 

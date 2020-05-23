@@ -20,7 +20,7 @@ namespace UI
 
         private void AddCustomerButton_Click(object sender, EventArgs e)
         {
-            customerAddPopUp = new AddPopUp(true);
+            customerAddPopUp = new AddPopUp(AddPopUp.WindowState.Customer);
             customerAddPopUp.FormClosed += new FormClosedEventHandler(Add_Form_Closed);
             customerAddPopUp.Show();
         }
