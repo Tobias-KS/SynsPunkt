@@ -54,6 +54,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="UserControls\AddProductUserControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\AddProductUserControl.Designer.cs">
+      <DependentUpon>AddProductUserControl.cs</DependentUpon>
+    </Compile>
     <Compile Include="PopUps\PopUpDataGridViewChanges.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -139,6 +145,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="UserControls\AddProductUserControl.resx">
+      <DependentUpon>AddProductUserControl.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="PopUps\PopUpDataGridViewChanges.resx">
       <DependentUpon>PopUpDataGridViewChanges.cs</DependentUpon>
     </EmbeddedResource>

@@ -7,7 +7,7 @@ namespace Persistence.CRUD
     public class Creator
     {
         //Customer
-        public static string CreateCustomer(string Forename, string Lastname, string adress, int PhoneNumber, string Email, float StrengthRight, float StrengthLeft, DateTime SignupDate, string notes = "")
+        public static string AddCustomer(string Forename, string Lastname, string adress, int PhoneNumber, string Email, float StrengthRight, float StrengthLeft, DateTime SignupDate, string notes = "")
         {
             SqlConnection conn = new SqlConnection(SQLConnecter.Connect());
 
@@ -48,7 +48,7 @@ namespace Persistence.CRUD
                 com.Parameters.Add("@ProductID", SqlDbType.Int).Value = ProductID;
                 com.Parameters.Add("@Productname", SqlDbType.VarChar).Value = Productname;
                 com.Parameters.Add("@Price", SqlDbType.Real).Value = price;
-                com.Parameters.Add("@ Colour", SqlDbType.VarChar).Value = Colour;
+                com.Parameters.Add("@Colour", SqlDbType.VarChar).Value = Colour;
                 com.Parameters.Add("@Brand", SqlDbType.VarChar).Value = Brand;
                 com.Parameters.Add("@FrameType", SqlDbType.VarChar).Value = FrameType;
                 com.Parameters.Add("@Glasstype", SqlDbType.VarChar).Value = Glasstype;

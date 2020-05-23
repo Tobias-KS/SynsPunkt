@@ -16,12 +16,20 @@ namespace UI
 {
     public partial class AddPopUp : Form
     {
-        public bool IsCustomer { get; set; }
+        public enum WindowState
+        {
+            customer, 
+            order, 
+            product
+        }
 
-        public AddPopUp(bool isCustomer)
+
+       
+
+        public AddPopUp(Enum windowState)
         {
             InitializeComponent();
-            this.IsCustomer = isCustomer;
+            WindowState = windowState;
             CustomerOrOrder();
 
         }

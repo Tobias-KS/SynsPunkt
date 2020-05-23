@@ -50,12 +50,10 @@ namespace UI
             tempButton.UseColumnTextForButtonValue = true;
             dataGridViewCustomerUserControl.Columns.Add(tempButton);
         }
+
         private void CustomerUserControl_Load(object sender, EventArgs e)
         {
-            SetUpDefaultDataTableCustomers(); 
-            AddButtonColumn("Notes");
-            AddButtonColumn("Edit");
-            AddButtonColumn("Delete");
+            SetUpDefaultDataTableCustomers();
         }
 
         public void SetUpDefaultDataTableCustomers()
@@ -99,54 +97,6 @@ namespace UI
             }
         }
 
-
-
-        private void dataGridViewCustomerUserControl_CellClick(object sender, DataGridViewCellEventArgs e)
-        {
-            if (e.ColumnIndex == dataGridViewCustomerUserControl.Columns["Notes"].Index && e.RowIndex >= 0)
-            {
-                string clickedCellNotes = Reader.LoadCustomersDataTable().Rows[e.RowIndex].Field<string>("Notes") ;
-                var NotesPopUp = new PopUpDataGridViewChanges(true, clickedCellNotes);
-                NotesPopUp.FormClosed += new FormClosedEventHandler(Notes_Form_Closed);
-                NotesPopUp.Show();
-            }
-
-            else if (e.ColumnIndex == dataGridViewCustomerUserControl.Columns["Edit"].Index && e.RowIndex >= 0)
-            {
-                
-                var Customerstable = Reader.LoadCustomersDataTable();
-
-                int customerID = Customerstable.Rows[e.RowIndex].Field<int>("CustomerID");
-                string forename = Customerstable.Rows[e.RowIndex].Field<string>("Forename") ;
-                string surname = Customerstable.Rows[e.RowIndex].Field<string>("Lastname");
-                string address = Customerstable.Rows[e.RowIndex].Field<string>("Adress");
-                int phonenumber = Customerstable.Rows[e.RowIndex].Field<int>("PhoneNumber");
-                string email = Customerstable.Rows[e.RowIndex].Field<string>("Email");
-                float strenghtRight = Customerstable.Rows[e.RowIndex].Field<float>("StrengthRight");
-                float strenghtLeft = Customerstable.Rows[e.RowIndex].Field<float>("StrengthLeft");
-                string notes = Customerstable.Rows[e.RowIndex].Field<string>("Notes");
-                DateTime signupDate = Customerstable.Rows[e.RowIndex].Field<DateTime>("SignupDate");
-
-                
-                var EditPopUp = new PopUpDataGridViewChanges(false,customerID, forename,surname,address,phonenumber,email,strenghtLeft,strenghtRight,notes,signupDate);
-                EditPopUp.FormClosed += new FormClosedEventHandler(Edit_Form_Closed);
-                EditPopUp.Show();
-
-            }
-            else if (e.ColumnIndex == dataGridViewCustomerUserControl.Columns["Delete"].Index && e.RowIndex >= 0)
-            {
-                DialogResult dialogResult = MessageBox.Show("Delete customer?", "Customer deletion", MessageBoxButtons.YesNo);
-
-                if (dialogResult == DialogResult.Yes)
-                {
-                    SetUpDefaultDataTableCustomers();
-                    int clickedCellID = Reader.LoadCustomersDataTable().Rows[e.RowIndex].Field<int>("CustomerID");
-                    Deleter.DeleteCustomer(clickedCellID);
-                    MessageBox.Show("User deleted!");
-                    SetUpDefaultDataTableCustomers();
-                }
-            }
-        }
         private void ResetfiltersButtonCustomers_Click(object sender, EventArgs e)
         {
             SetUpDefaultDataTableCustomers();
@@ -171,6 +121,47 @@ namespace UI
             var NotesPopUp = new PopUpDataGridViewChanges(true, clickedCellNotes);
             NotesPopUp.FormClosed += new FormClosedEventHandler(Notes_Form_Closed);
             NotesPopUp.Show();
+        }
+
+        private void buttonEditCustomer_Click(object sender, EventArgs e)
+        {
+
+            var cell = this.dataGridViewCustomerUserControl.SelectedCells[0];
+
+            var Customerstable = Reader.LoadCustomersDataTable();
+
+            int customerID = Customerstable.Rows[cell.RowIndex].Field<int>("CustomerID");
+            string forename = Customerstable.Rows[cell.RowIndex].Field<string>("Forename");
+            string surname = Customerstable.Rows[cell.RowIndex].Field<string>("Lastname");
+            string address = Customerstable.Rows[cell.RowIndex].Field<string>("Adress");
+            int phonenumber = Customerstable.Rows[cell.RowIndex].Field<int>("PhoneNumber");
+            string email = Customerstable.Rows[cell.RowIndex].Field<string>("Email");
+            float strenghtRight = Customerstable.Rows[cell.RowIndex].Field<float>("StrengthRight");
+            float strenghtLeft = Customerstable.Rows[cell.RowIndex].Field<float>("StrengthLeft");
+            string notes = Customerstable.Rows[cell.RowIndex].Field<string>("Notes");
+            DateTime signupDate = Customerstable.Rows[cell.RowIndex].Field<DateTime>("SignupDate");
+
+            var EditPopUp = new PopUpDataGridViewChanges(false, customerID, forename, surname, address, phonenumber, email, strenghtLeft, strenghtRight, notes, signupDate);
+            EditPopUp.FormClosed += new FormClosedEventHandler(Edit_Form_Closed);
+            EditPopUp.Show();
+        }
+
+        private void buttonDeleteCustomer_Click(object sender, EventArgs e)
+        {
+
+            DialogResult dialogResult = MessageBox.Show("Delete customer?", "Customer deletion", MessageBoxButtons.YesNo);
+
+            if (dialogResult == DialogResult.Yes)
+            {
+                var cell = this.dataGridViewCustomerUserControl.SelectedCells[0];
+                var Customerstable = Reader.LoadCustomersDataTable();
+
+                int clickedCellID = Reader.LoadCustomersDataTable().Rows[cell.RowIndex].Field<int>("CustomerID");
+                Deleter.DeleteCustomer(clickedCellID);
+                MessageBox.Show("User deleted!");
+                SetUpDefaultDataTableCustomers();
+
+            }
         }
     }
 }

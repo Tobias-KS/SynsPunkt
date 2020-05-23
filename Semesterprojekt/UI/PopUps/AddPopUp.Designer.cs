@@ -35,8 +35,9 @@
             this.LeftPanelPopUp = new System.Windows.Forms.Panel();
             this.RightPanelPopUp = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.addOrderPopUpMainPanelUserControl1 = new UI.AddOrderPopUpMainPanelUserControl();
             this.addCustomerPopUpMainPanelUserControl1 = new UI.AddCustomerPopUpMainPanelUserControl();
+            this.addOrderPopUpMainPanelUserControl1 = new UI.AddOrderPopUpMainPanelUserControl();
+            this.addProductUserControl1 = new UI.AddProductUserControl();
             this.ButtonPanelPopUp.SuspendLayout();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -116,6 +117,7 @@
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.addProductUserControl1);
             this.panel1.Controls.Add(this.addCustomerPopUpMainPanelUserControl1);
             this.panel1.Controls.Add(this.addOrderPopUpMainPanelUserControl1);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -123,6 +125,16 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(805, 363);
             this.panel1.TabIndex = 5;
+            // 
+            // addCustomerPopUpMainPanelUserControl1
+            // 
+            this.addCustomerPopUpMainPanelUserControl1.BackColor = System.Drawing.Color.White;
+            this.addCustomerPopUpMainPanelUserControl1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.addCustomerPopUpMainPanelUserControl1.Location = new System.Drawing.Point(0, 0);
+            this.addCustomerPopUpMainPanelUserControl1.Margin = new System.Windows.Forms.Padding(5);
+            this.addCustomerPopUpMainPanelUserControl1.Name = "addCustomerPopUpMainPanelUserControl1";
+            this.addCustomerPopUpMainPanelUserControl1.Size = new System.Drawing.Size(805, 363);
+            this.addCustomerPopUpMainPanelUserControl1.TabIndex = 0;
             // 
             // addOrderPopUpMainPanelUserControl1
             // 
@@ -134,15 +146,15 @@
             this.addOrderPopUpMainPanelUserControl1.Size = new System.Drawing.Size(805, 363);
             this.addOrderPopUpMainPanelUserControl1.TabIndex = 1;
             // 
-            // addCustomerPopUpMainPanelUserControl1
+            // addProductUserControl1
             // 
-            this.addCustomerPopUpMainPanelUserControl1.BackColor = System.Drawing.Color.White;
-            this.addCustomerPopUpMainPanelUserControl1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.addCustomerPopUpMainPanelUserControl1.Location = new System.Drawing.Point(0, 0);
-            this.addCustomerPopUpMainPanelUserControl1.Margin = new System.Windows.Forms.Padding(5);
-            this.addCustomerPopUpMainPanelUserControl1.Name = "addCustomerPopUpMainPanelUserControl1";
-            this.addCustomerPopUpMainPanelUserControl1.Size = new System.Drawing.Size(805, 363);
-            this.addCustomerPopUpMainPanelUserControl1.TabIndex = 0;
+            this.addProductUserControl1.BackColor = System.Drawing.Color.White;
+            this.addProductUserControl1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.addProductUserControl1.Location = new System.Drawing.Point(0, 0);
+            this.addProductUserControl1.Margin = new System.Windows.Forms.Padding(5);
+            this.addProductUserControl1.Name = "addProductUserControl1";
+            this.addProductUserControl1.Size = new System.Drawing.Size(805, 363);
+            this.addProductUserControl1.TabIndex = 2;
             // 
             // AddPopUp
             // 
@@ -175,5 +187,6 @@
         private System.Windows.Forms.Panel panel1;
         private AddCustomerPopUpMainPanelUserControl addCustomerPopUpMainPanelUserControl1;
         private AddOrderPopUpMainPanelUserControl addOrderPopUpMainPanelUserControl1;
+        private AddProductUserControl addProductUserControl1;
     }
 }

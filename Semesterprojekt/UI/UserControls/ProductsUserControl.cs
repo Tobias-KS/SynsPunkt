@@ -57,5 +57,10 @@ namespace UI
             }
             return dt;
         }
+
+        private void AddProductButton_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

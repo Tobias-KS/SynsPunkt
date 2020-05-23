@@ -18,7 +18,7 @@ namespace UI
             float StrenghtRight = (float)Convert.ToDouble(TextBoxRightStrenghtlabelCustomerAddPopUp.Text);
             float StrenghtLeft = (float)Convert.ToDouble(TextBoxLeftStrenghtlabelCustomerAddPopUp.Text);
 
-            CreateCustomer(TextboxToForeNameCustomerAddPopUp.Text, TextboxToSurnameCustomerAddPopUp.Text,
+            AddCustomer(TextboxToForeNameCustomerAddPopUp.Text, TextboxToSurnameCustomerAddPopUp.Text,
             TextBoxAddressCustomerAddPopUp.Text, PhoneNumber, TextBoxEmailCustomerAddPopUp.Text,
             StrenghtRight, StrenghtLeft, DateTime.Now, RichTextBoxNotesCustomerAddPopUp.Text);
 

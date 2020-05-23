@@ -71,6 +71,7 @@ namespace Persistence.CRUD
             customersDataTable.Columns["CustomerID"].ColumnName = "ID";
             customersDataTable.Columns["StrengthRight"].ColumnName = "SR";
             customersDataTable.Columns["StrengthLeft"].ColumnName = "SL";
+            customersDataTable.Columns["Adress"].ColumnName = "Address";
 
             return customersDataTable;
         }

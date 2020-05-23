@@ -161,7 +161,7 @@
             this.dataGridViewOrderUserControl.AllowUserToResizeColumns = false;
             dataGridViewCellStyle1.BackColor = System.Drawing.Color.WhiteSmoke;
             this.dataGridViewOrderUserControl.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
-            this.dataGridViewOrderUserControl.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
+            this.dataGridViewOrderUserControl.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridViewOrderUserControl.BackgroundColor = System.Drawing.Color.White;
             this.dataGridViewOrderUserControl.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dataGridViewOrderUserControl.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.RaisedVertical;
@@ -185,6 +185,7 @@
             this.dataGridViewOrderUserControl.DefaultCellStyle = dataGridViewCellStyle3;
             this.dataGridViewOrderUserControl.GridColor = System.Drawing.Color.Black;
             this.dataGridViewOrderUserControl.Location = new System.Drawing.Point(24, 98);
+            this.dataGridViewOrderUserControl.MultiSelect = false;
             this.dataGridViewOrderUserControl.Name = "dataGridViewOrderUserControl";
             this.dataGridViewOrderUserControl.ReadOnly = true;
             dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;

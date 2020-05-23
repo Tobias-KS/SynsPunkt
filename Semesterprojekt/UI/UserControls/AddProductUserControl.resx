@@ -117,27 +117,4 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <metadata name="customersBindingSource1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>532, 17</value>
-  </metadata>
-  <metadata name="odensedbDataSet.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>17, 17</value>
-  </metadata>
-  <metadata name="customersBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>165, 17</value>
-  </metadata>
-  <metadata name="customersTableAdapter.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>351, 17</value>
-  </metadata>
-  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="PrintCustomersButton.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAYAAACNiR0NAAAABGdBTUEAALGPC/xhBQAAAOxJREFUOE/t
-        lDEKwkAQRXMABYtgGdBCxNLcQgs9gI2FlV5BsPQIsfMCXsJatPMINt7AJr7ZTCAJGYxRrPzwwk72z88Q
-        svGKiuM4gLAigbbZwhTBHrYvEE+kbbbEBKGWpsTzD0zEzSZc4FOdoSGBQ1d+R8N09Lo6QgfurpJXJZdk
-        XUs3WMPDVV8ILOp3gTP9CEyJJ7HmZAfCAk4GczAD+8k6JzG3QR6WZaADWhP20s0V7JQrjGEExT/MxjUg
-        1uIRb9q31K282HBHD6ZqLGMC4ql+lqEFXQPZeyvwAGWTZRFPpUAfyqYqw9c2lec9AWdI6PnE0MbzAAAA
-        AElFTkSuQmCC
-</value>
-  </data>
 </root>
