@@ -24,12 +24,12 @@ namespace UI
             Order,
             Product
         }
-        public WindowState currentWindowState { get; set; }
+        public WindowState CurrentWindowState { get; set; }
        
         public AddPopUp(WindowState ws)
         {
             InitializeComponent();
-            this.currentWindowState = ws;
+            this.CurrentWindowState = ws;
             CustomerOrOrder();
 
         }
@@ -63,7 +63,7 @@ namespace UI
 
         public void CustomerOrOrder()
         {
-            switch (currentWindowState)
+            switch (CurrentWindowState)
             {
                 case WindowState.Customer:
                     addCustomerPopUpMainPanelUserControl1.BringToFront();
