@@ -141,7 +141,7 @@ namespace UI
             string notes = Customerstable.Rows[cell.RowIndex].Field<string>("Notes");
             DateTime signupDate = Customerstable.Rows[cell.RowIndex].Field<DateTime>("SignupDate");
 
-            var EditPopUp = new PopUpDataGridViewChanges(false, customerID, forename, surname, address, phonenumber, email, strenghtLeft, strenghtRight, notes, signupDate);
+            var EditPopUp = new PopUpDataGridViewChanges(PopUpDataGridViewChanges.EditWindowState.CustumerEdit, customerID, forename, surname, address, phonenumber, email, strenghtLeft, strenghtRight, notes, signupDate);
             EditPopUp.FormClosed += new FormClosedEventHandler(Edit_Form_Closed);
             EditPopUp.Show();
         }

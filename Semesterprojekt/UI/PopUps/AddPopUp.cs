@@ -22,22 +22,11 @@ namespace UI
         {
             Customer,
             Order,
-            ProductAdd,
-            ProductEdit
+            Product
         }
         public WindowState CurrentWindowState { get; set; }
-        public AddPopUp(WindowState ws, string productName, int price, string colour, string brand, string framType, string glassType, int rightLensID, int leftLensID)
-        {
 
-            InitializeComponent();
-            this.CurrentWindowState = ws;
-            UserControllSelecter();
-
-         
-
-
-
-        }
+        
         public AddPopUp(WindowState ws)
         {
             InitializeComponent();
@@ -83,11 +72,8 @@ namespace UI
                 case WindowState.Order:
                     addOrderPopUpMainPanelUserControl1.BringToFront();
                     break;
-                case WindowState.ProductAdd:
+                case WindowState.Product:
                     addProductUserControl1.BringToFront();
-                    break;
-                case WindowState.ProductEdit:
-                    editProductUserControl1.BringToFront();
                     break;
             }
         }
@@ -105,7 +91,7 @@ namespace UI
                     case WindowState.Order:
                         addOrderPopUpMainPanelUserControl1.BringToFront();
                         break;
-                    case WindowState.ProductAdd:
+                    case WindowState.Product:
                         addProductUserControl1.CreateProduct();
                         break;
 

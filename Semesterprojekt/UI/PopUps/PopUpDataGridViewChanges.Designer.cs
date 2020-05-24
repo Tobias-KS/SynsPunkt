@@ -39,6 +39,7 @@
             this.MainPanelPopUpDataGridViewChanges = new System.Windows.Forms.Panel();
             this.editPopUpCustomerControl1 = new UI.UserControls.EditPopUpCustomerControl();
             this.richtextboxPopUpNotes = new System.Windows.Forms.RichTextBox();
+            this.editProductUserControl1 = new UI.EditProductUserControl();
             this.panel1.SuspendLayout();
             this.panel4.SuspendLayout();
             this.MainPanelPopUpDataGridViewChanges.SuspendLayout();
@@ -120,6 +121,7 @@
             // 
             // MainPanelPopUpDataGridViewChanges
             // 
+            this.MainPanelPopUpDataGridViewChanges.Controls.Add(this.editProductUserControl1);
             this.MainPanelPopUpDataGridViewChanges.Controls.Add(this.editPopUpCustomerControl1);
             this.MainPanelPopUpDataGridViewChanges.Controls.Add(this.richtextboxPopUpNotes);
             this.MainPanelPopUpDataGridViewChanges.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -146,6 +148,16 @@
             this.richtextboxPopUpNotes.Size = new System.Drawing.Size(749, 337);
             this.richtextboxPopUpNotes.TabIndex = 0;
             this.richtextboxPopUpNotes.Text = "";
+            // 
+            // editProductUserControl1
+            // 
+            this.editProductUserControl1.BackColor = System.Drawing.Color.White;
+            this.editProductUserControl1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.editProductUserControl1.Location = new System.Drawing.Point(0, 0);
+            this.editProductUserControl1.Margin = new System.Windows.Forms.Padding(5);
+            this.editProductUserControl1.Name = "editProductUserControl1";
+            this.editProductUserControl1.Size = new System.Drawing.Size(749, 337);
+            this.editProductUserControl1.TabIndex = 2;
             // 
             // PopUpDataGridViewChanges
             // 
@@ -183,5 +195,6 @@
         private System.Windows.Forms.Button MiddelPanelPopUpDataGridViewChangesSaveButton;
         private System.Windows.Forms.RichTextBox richtextboxPopUpNotes;
         private UserControls.EditPopUpCustomerControl editPopUpCustomerControl1;
+        private EditProductUserControl editProductUserControl1;
     }
 }

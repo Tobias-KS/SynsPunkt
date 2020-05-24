@@ -38,7 +38,6 @@
             this.addProductUserControl1 = new UI.AddProductUserControl();
             this.addCustomerPopUpMainPanelUserControl1 = new UI.AddCustomerPopUpMainPanelUserControl();
             this.addOrderPopUpMainPanelUserControl1 = new UI.AddOrderPopUpMainPanelUserControl();
-            this.editProductUserControl1 = new UI.EditProductUserControl();
             this.ButtonPanelPopUp.SuspendLayout();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -118,7 +117,6 @@
             // 
             // panel1
             // 
-            this.panel1.Controls.Add(this.editProductUserControl1);
             this.panel1.Controls.Add(this.addProductUserControl1);
             this.panel1.Controls.Add(this.addCustomerPopUpMainPanelUserControl1);
             this.panel1.Controls.Add(this.addOrderPopUpMainPanelUserControl1);
@@ -158,16 +156,6 @@
             this.addOrderPopUpMainPanelUserControl1.Size = new System.Drawing.Size(805, 363);
             this.addOrderPopUpMainPanelUserControl1.TabIndex = 1;
             // 
-            // editProductUserControl1
-            // 
-            this.editProductUserControl1.BackColor = System.Drawing.Color.White;
-            this.editProductUserControl1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.editProductUserControl1.Location = new System.Drawing.Point(0, 0);
-            this.editProductUserControl1.Margin = new System.Windows.Forms.Padding(5);
-            this.editProductUserControl1.Name = "editProductUserControl1";
-            this.editProductUserControl1.Size = new System.Drawing.Size(805, 363);
-            this.editProductUserControl1.TabIndex = 3;
-            // 
             // AddPopUp
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -200,6 +188,5 @@
         private AddCustomerPopUpMainPanelUserControl addCustomerPopUpMainPanelUserControl1;
         private AddOrderPopUpMainPanelUserControl addOrderPopUpMainPanelUserControl1;
         private AddProductUserControl addProductUserControl1;
-        private EditProductUserControl editProductUserControl1;
     }
 }

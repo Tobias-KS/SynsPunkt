@@ -60,7 +60,7 @@ namespace UI
 
         private void AddProductButton_Click(object sender, EventArgs e)
         {
-            var productAddPopUp = new AddPopUp(AddPopUp.WindowState.ProductAdd);
+            var productAddPopUp = new AddPopUp(AddPopUp.WindowState.Product);
             productAddPopUp.Show();
         }
 
@@ -89,10 +89,33 @@ namespace UI
             }
 
         }
+
+        void Edit_Form_Closed(object sender, FormClosedEventArgs e)
+        {
+            PopUpDataGridViewChanges editChanges = (PopUpDataGridViewChanges)sender;
+            SetUpDefaultDataTableProducts();
+        }
         private void buttonEditProduct_Click(object sender, EventArgs e)
         {
 
+            var cell = this.dataGridViewProductUserControl.SelectedCells[0];
 
+            var productTable = Reader.LoadProductTable();
+
+            int productID = productTable.Rows[cell.RowIndex].Field<int>("ProductID");
+            string productName = productTable.Rows[cell.RowIndex].Field<string>("Productname");
+            var price = productTable.Rows[cell.RowIndex].Field<float>("Price");
+            string colour = productTable.Rows[cell.RowIndex].Field<string>("Colour");
+            string brand = productTable.Rows[cell.RowIndex].Field<string>("Brand");
+            string frameType = productTable.Rows[cell.RowIndex].Field<string>("FrameType");
+            string glassType = productTable.Rows[cell.RowIndex].Field<string>("Glasstype");
+            int? rightLensID = productTable.Rows[cell.RowIndex].Field<int?>("RightLensID");
+            int? leftLensID = productTable.Rows[cell.RowIndex].Field<int?>("LeftLensID");
+            string productDescription = productTable.Rows[cell.RowIndex].Field<string>("Productdescription");
+
+            var EditPopUp = new PopUpDataGridViewChanges(PopUpDataGridViewChanges.EditWindowState.ProductEdit, productID, productName, price, colour, brand, frameType, glassType, productDescription, rightLensID, leftLensID);
+            EditPopUp.FormClosed += new FormClosedEventHandler(Edit_Form_Closed);
+            EditPopUp.Show();
         }
     }
 }

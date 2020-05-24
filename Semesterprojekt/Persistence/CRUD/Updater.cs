@@ -66,7 +66,7 @@ namespace Persistence.CRUD
         }
 
         //Products
-        public static void AlterProduct(int ProductID, string Productname, int price, string Colour, string Brand, string FrameType, string Glasstype, int RightLensID, int LeftLensID, string Productdescription)
+        public static void AlterProduct(int ProductID, string Productname, float price, string Colour, string Brand, string FrameType, string Glasstype, int? RightLensID, int? LeftLensID, string Productdescription = "")
         {
             SqlConnection conn = new SqlConnection(SQLConnecter.Connect());
 
@@ -77,7 +77,7 @@ namespace Persistence.CRUD
                 com.Parameters.Add("@ProductID", SqlDbType.Int).Value = ProductID;
                 com.Parameters.Add("@Productname", SqlDbType.VarChar).Value = Productname;
                 com.Parameters.Add("@Price", SqlDbType.Real).Value = price;
-                com.Parameters.Add("@ Colour", SqlDbType.VarChar).Value = Colour;
+                com.Parameters.Add("@Colour", SqlDbType.VarChar).Value = Colour;
                 com.Parameters.Add("@Brand", SqlDbType.VarChar).Value = Brand;
                 com.Parameters.Add("@FrameType", SqlDbType.VarChar).Value = FrameType;
                 com.Parameters.Add("@Glasstype", SqlDbType.VarChar).Value = Glasstype;

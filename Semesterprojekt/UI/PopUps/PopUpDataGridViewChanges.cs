@@ -13,28 +13,55 @@ namespace UI
 {
     public partial class PopUpDataGridViewChanges : Form
     {
+        public enum EditWindowState
+        {
+            CustumerNotes,
+            CustumerEdit,
+            ProductEdit
+        }
 
-        public bool NotesOrEdit { get; set; }
+        public EditWindowState CurrentWindowState { get; set; }
         public string Notes { get; set; }
         public DateTime SignupDate { get; set; }
         public int CustomerID { get; set; }
-        public PopUpDataGridViewChanges(bool notesOrEdit, int customerID, string forename, string surname, string address, int phonenumber,
+
+        public int ProductID { get; set; }
+
+        public PopUpDataGridViewChanges(EditWindowState windowState, int productID, string productName, float price, string colour, 
+            string brand, string frameType, string glassType ,  string productDescription = "", int? rightLensID = null, int? leftLensID = null)
+        {
+            InitializeComponent();
+            this.CurrentWindowState = windowState;
+            editProductUserControl1.BringToFront();
+            editProductUserControl1.textBoxProductName.Text = productName;
+            editProductUserControl1.textBoxPrice.Text = Convert.ToString(price);
+            editProductUserControl1.textBoxColour.Text = colour;
+            editProductUserControl1.textBoxBrand.Text = brand;
+            editProductUserControl1.textBoxFrametype.Text = frameType;
+            editProductUserControl1.textBoxGLasstype.Text = glassType;
+            editProductUserControl1.textboxRightlensID.Text = Convert.ToString(rightLensID);
+            editProductUserControl1.textBoxLeftLensID.Text = Convert.ToString(leftLensID);
+            editProductUserControl1.richTextBoxProductDescription.Text = productDescription;
+
+            this.ProductID = productID;
+
+        }
+        public PopUpDataGridViewChanges(EditWindowState windowState, int customerID, string forename, string surname, string address, int phonenumber,
         string email, float strenghtleft, float strenghtright, string notes, DateTime signupdate)
         {
 
             InitializeComponent();
             
-            this.NotesOrEdit = notesOrEdit;
+            this.CurrentWindowState = windowState;
             this.Notes = notes;
             
-            if (NotesOrEdit == true)
+            if (CurrentWindowState == EditWindowState.CustumerNotes)
             {
                 richtextboxPopUpNotes.BringToFront();
                 richtextboxPopUpNotes.Text = notes;
             }
-            else
+            else if(CurrentWindowState == EditWindowState.CustumerEdit)
             {
-                
                 editPopUpCustomerControl1.BringToFront();
                 editPopUpCustomerControl1.TextboxToNameCustomerEditPopUp.Text = forename;
                 editPopUpCustomerControl1.TextboxToSurnameCustomerEditPopUp.Text = surname;
@@ -44,7 +71,6 @@ namespace UI
                 editPopUpCustomerControl1.TextBoxLeftStrenghtlabelCustomerEditPopUp.Text = strenghtleft.ToString();
                 editPopUpCustomerControl1.TextBoxRightStrenghtlabelCustomerEditPopUp.Text = strenghtright.ToString();
                 editPopUpCustomerControl1.RichTextBoxNotesCustomerEditPopUp.Text = notes;
-
             }
 
             this.CustomerID = customerID;
@@ -57,10 +83,10 @@ namespace UI
 
             InitializeComponent();
 
-            this.NotesOrEdit = notesOrEdit;
+            this.CurrentWindowState = EditWindowState.CustumerNotes;
             this.Notes = notes;
 
-            if (NotesOrEdit == true)
+            if (this.CurrentWindowState == EditWindowState.CustumerNotes)
             {
                 richtextboxPopUpNotes.BringToFront();
                 richtextboxPopUpNotes.Text = notes;
@@ -91,13 +117,14 @@ namespace UI
         private void MiddelPanelPopUpDataGridViewChangesSaveButton_Click(object sender, EventArgs e)
         {
 
-            if (NotesOrEdit == true)
+            if (this.CurrentWindowState == EditWindowState.CustumerNotes)
             {
                 //Update notes...
 
                 this.Close();
             }
-            else
+            else if (this.CurrentWindowState == EditWindowState.CustumerEdit)
+            
             {
                 var forename = editPopUpCustomerControl1.TextboxToNameCustomerEditPopUp.Text;
                 var lastname = editPopUpCustomerControl1.TextboxToSurnameCustomerEditPopUp.Text;
@@ -113,6 +140,37 @@ namespace UI
                 Updater.AlterCustomer(CustomerID: customerID, forename: forename, lastname: lastname, adress: address, phoneNumber: phoneNumber,
                     email: email, strengthRight: leftStrength, strengthLeft: rightStrength, notes: notes,
                     signupDate: signupDate);
+
+                this.Close();
+
+            }
+            else if (this.CurrentWindowState == EditWindowState.ProductEdit)
+
+            {
+
+                var productName = editProductUserControl1.textBoxProductName.Text;
+                var price = (float)Convert.ToDouble(editProductUserControl1.textBoxPrice.Text);
+                var colour = editProductUserControl1.textBoxColour.Text;
+                var brand = editProductUserControl1.textBoxBrand.Text;
+                var frameType = editProductUserControl1.textBoxFrametype.Text;
+                var glassType = editProductUserControl1.textBoxGLasstype.Text;
+
+                var rightLensID = 2;
+                var leftLensID = 1;
+                if (editProductUserControl1.textboxRightlensID.Text != "")
+                {
+                    rightLensID = Convert.ToInt32(editProductUserControl1.textboxRightlensID.Text);
+                }
+                if (editProductUserControl1.textBoxLeftLensID.Text != "")
+                {
+                    leftLensID = Convert.ToInt32(editProductUserControl1.textBoxLeftLensID.Text);
+                }
+                
+                var productDescription = editProductUserControl1.richTextBoxProductDescription.Text;
+                var productID = this.ProductID;
+
+                Updater.AlterProduct(ProductID: productID, Productname: productName, price: price, Colour: colour, Brand: brand, FrameType: frameType, 
+                    Glasstype: glassType,  RightLensID: rightLensID,  LeftLensID: leftLensID,  Productdescription: productDescription);
 
                 this.Close();
 
