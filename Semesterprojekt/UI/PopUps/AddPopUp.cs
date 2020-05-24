@@ -22,15 +22,25 @@ namespace UI
         {
             Customer,
             Order,
-            Product
+            ProductAdd,
+            ProductEdit
         }
         public WindowState CurrentWindowState { get; set; }
-       
+        public AddPopUp(WindowState ws, string productName, int price, string colour, string brand, string framType, string glassType, int rightLensID, int leftLensID)
+        {
+
+            InitializeComponent();
+            this.CurrentWindowState = ws;
+            UserControllSelecter();
+
+           
+
+        }
         public AddPopUp(WindowState ws)
         {
             InitializeComponent();
             this.CurrentWindowState = ws;
-            CustomerOrOrder();
+            UserControllSelecter();
 
         }
         //Metode til at man kan flytte PopUp rundt
@@ -61,7 +71,7 @@ namespace UI
             }
         }
 
-        public void CustomerOrOrder()
+        public void UserControllSelecter()
         {
             switch (CurrentWindowState)
             {
@@ -71,9 +81,12 @@ namespace UI
                 case WindowState.Order:
                     addOrderPopUpMainPanelUserControl1.BringToFront();
                     break;
-                case WindowState.Product:
+                case WindowState.ProductAdd:
                     addProductUserControl1.BringToFront();
+                    addProductUserControl1.
                     break;
+                case WindowState.ProductEdit:
+                    addCustomerPopUpMainPanelUserControl1.
             }
         }
 
@@ -81,8 +94,20 @@ namespace UI
         {
             try
             {
-                addCustomerPopUpMainPanelUserControl1.CreateCustomerFromPopUp();
-                MessageBox.Show("Customer created");
+                switch (CurrentWindowState)
+                {
+                    case WindowState.Customer:
+                        addCustomerPopUpMainPanelUserControl1.CreateCustomerFromPopUp();
+                        MessageBox.Show("Customer created");
+                        break;
+                    case WindowState.Order:
+                        addOrderPopUpMainPanelUserControl1.BringToFront();
+                        break;
+                    case WindowState.ProductAdd:
+                        addProductUserControl1.CreateProduct();
+                        break;
+
+                }
                 this.Close();
             }
             catch (Exception exception)
@@ -90,8 +115,8 @@ namespace UI
                 MessageBox.Show("All fields with * are requied");
 
             }
-            
-            
         }
+
+        
     }
 }

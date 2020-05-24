@@ -60,8 +60,39 @@ namespace UI
 
         private void AddProductButton_Click(object sender, EventArgs e)
         {
-            var productAddPopUp = new AddPopUp(AddPopUp.WindowState.Product);
+            var productAddPopUp = new AddPopUp(AddPopUp.WindowState.ProductAdd);
             productAddPopUp.Show();
+        }
+
+        private void buttonDeleteProduct_Click(object sender, EventArgs e)
+        {
+
+            DialogResult dialogResult = MessageBox.Show("Delete Product?", "Checkbox", MessageBoxButtons.YesNo);
+            
+
+            if (dialogResult == DialogResult.Yes)
+            {
+                try
+                {
+                    var cell = this.dataGridViewProductUserControl.SelectedCells[0];
+
+                    int clickedCellID = Reader.LoadProductTable().Rows[cell.RowIndex].Field<int>("ProductID");
+                    Deleter.DeleteProduct(clickedCellID);
+                    MessageBox.Show("Product deleted!");
+                    SetUpDefaultDataTableProducts();
+                }
+                catch (Exception exception)
+                {
+                    MessageBox.Show("This product is part of an existing order and cannot be deleted");
+                }
+                
+            }
+
+        }
+        private void buttonEditProduct_Click(object sender, EventArgs e)
+        {
+
+
         }
     }
 }

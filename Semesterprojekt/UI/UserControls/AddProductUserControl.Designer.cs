@@ -28,15 +28,13 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.textBoxProductID = new System.Windows.Forms.TextBox();
             this.textBoxProductName = new System.Windows.Forms.TextBox();
             this.textBoxPrice = new System.Windows.Forms.TextBox();
             this.textBoxColour = new System.Windows.Forms.TextBox();
             this.textBoxBrand = new System.Windows.Forms.TextBox();
-            this.RightlensID = new System.Windows.Forms.TextBox();
+            this.textboxRightlensID = new System.Windows.Forms.TextBox();
             this.textBoxGLasstype = new System.Windows.Forms.TextBox();
             this.textBoxFrametype = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
@@ -50,47 +48,40 @@
             this.richTextBoxProductDescription = new System.Windows.Forms.RichTextBox();
             this.SuspendLayout();
             // 
-            // textBoxProductID
-            // 
-            this.textBoxProductID.Location = new System.Drawing.Point(83, 54);
-            this.textBoxProductID.Name = "textBoxProductID";
-            this.textBoxProductID.Size = new System.Drawing.Size(212, 27);
-            this.textBoxProductID.TabIndex = 0;
-            // 
             // textBoxProductName
             // 
-            this.textBoxProductName.Location = new System.Drawing.Point(83, 110);
+            this.textBoxProductName.Location = new System.Drawing.Point(83, 54);
             this.textBoxProductName.Name = "textBoxProductName";
             this.textBoxProductName.Size = new System.Drawing.Size(212, 27);
             this.textBoxProductName.TabIndex = 1;
             // 
             // textBoxPrice
             // 
-            this.textBoxPrice.Location = new System.Drawing.Point(83, 169);
+            this.textBoxPrice.Location = new System.Drawing.Point(83, 113);
             this.textBoxPrice.Name = "textBoxPrice";
             this.textBoxPrice.Size = new System.Drawing.Size(212, 27);
             this.textBoxPrice.TabIndex = 3;
             // 
             // textBoxColour
             // 
-            this.textBoxColour.Location = new System.Drawing.Point(83, 231);
+            this.textBoxColour.Location = new System.Drawing.Point(83, 179);
             this.textBoxColour.Name = "textBoxColour";
             this.textBoxColour.Size = new System.Drawing.Size(212, 27);
             this.textBoxColour.TabIndex = 4;
             // 
             // textBoxBrand
             // 
-            this.textBoxBrand.Location = new System.Drawing.Point(83, 289);
+            this.textBoxBrand.Location = new System.Drawing.Point(83, 235);
             this.textBoxBrand.Name = "textBoxBrand";
             this.textBoxBrand.Size = new System.Drawing.Size(212, 27);
             this.textBoxBrand.TabIndex = 5;
             // 
-            // RightlensID
+            // textboxRightlensID
             // 
-            this.RightlensID.Location = new System.Drawing.Point(480, 169);
-            this.RightlensID.Name = "RightlensID";
-            this.RightlensID.Size = new System.Drawing.Size(212, 27);
-            this.RightlensID.TabIndex = 8;
+            this.textboxRightlensID.Location = new System.Drawing.Point(480, 169);
+            this.textboxRightlensID.Name = "textboxRightlensID";
+            this.textboxRightlensID.Size = new System.Drawing.Size(212, 27);
+            this.textboxRightlensID.TabIndex = 8;
             // 
             // textBoxGLasstype
             // 
@@ -106,19 +97,10 @@
             this.textBoxFrametype.Size = new System.Drawing.Size(212, 27);
             this.textBoxFrametype.TabIndex = 6;
             // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(79, 30);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(89, 21);
-            this.label1.TabIndex = 11;
-            this.label1.Text = "ProductID";
-            // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(79, 86);
+            this.label2.Location = new System.Drawing.Point(79, 30);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(118, 21);
             this.label2.TabIndex = 12;
@@ -127,7 +109,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(79, 145);
+            this.label3.Location = new System.Drawing.Point(88, 89);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(47, 21);
             this.label3.TabIndex = 13;
@@ -136,7 +118,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(79, 207);
+            this.label4.Location = new System.Drawing.Point(79, 145);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(61, 21);
             this.label4.TabIndex = 14;
@@ -145,7 +127,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(79, 265);
+            this.label5.Location = new System.Drawing.Point(79, 209);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(56, 21);
             this.label5.TabIndex = 15;
@@ -226,18 +208,16 @@
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
             this.Controls.Add(this.textBoxLeftLensID);
-            this.Controls.Add(this.RightlensID);
+            this.Controls.Add(this.textboxRightlensID);
             this.Controls.Add(this.textBoxGLasstype);
             this.Controls.Add(this.textBoxFrametype);
             this.Controls.Add(this.textBoxBrand);
             this.Controls.Add(this.textBoxColour);
             this.Controls.Add(this.textBoxPrice);
             this.Controls.Add(this.textBoxProductName);
-            this.Controls.Add(this.textBoxProductID);
             this.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.Margin = new System.Windows.Forms.Padding(5);
             this.Name = "AddProductUserControl";
             this.Size = new System.Drawing.Size(805, 363);
             this.ResumeLayout(false);
@@ -246,16 +226,13 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.TextBox textBoxProductID;
         private System.Windows.Forms.TextBox textBoxProductName;
         private System.Windows.Forms.TextBox textBoxPrice;
         private System.Windows.Forms.TextBox textBoxColour;
         private System.Windows.Forms.TextBox textBoxBrand;
-        private System.Windows.Forms.TextBox RightlensID;
+        private System.Windows.Forms.TextBox textboxRightlensID;
         private System.Windows.Forms.TextBox textBoxGLasstype;
         private System.Windows.Forms.TextBox textBoxFrametype;
-        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;

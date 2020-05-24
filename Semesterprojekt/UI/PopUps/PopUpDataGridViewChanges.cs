@@ -13,6 +13,7 @@ namespace UI
 {
     public partial class PopUpDataGridViewChanges : Form
     {
+
         public bool NotesOrEdit { get; set; }
         public string Notes { get; set; }
         public DateTime SignupDate { get; set; }
@@ -43,6 +44,7 @@ namespace UI
                 editPopUpCustomerControl1.TextBoxLeftStrenghtlabelCustomerEditPopUp.Text = strenghtleft.ToString();
                 editPopUpCustomerControl1.TextBoxRightStrenghtlabelCustomerEditPopUp.Text = strenghtright.ToString();
                 editPopUpCustomerControl1.RichTextBoxNotesCustomerEditPopUp.Text = notes;
+
             }
 
             this.CustomerID = customerID;

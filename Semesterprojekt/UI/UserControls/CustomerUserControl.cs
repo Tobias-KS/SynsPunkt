@@ -149,18 +149,24 @@ namespace UI
         private void buttonDeleteCustomer_Click(object sender, EventArgs e)
         {
 
-            DialogResult dialogResult = MessageBox.Show("Delete customer?", "Customer deletion", MessageBoxButtons.YesNo);
-
+            DialogResult dialogResult = MessageBox.Show("Delete customer?", "Checkbox", MessageBoxButtons.YesNo);
+          
             if (dialogResult == DialogResult.Yes)
             {
-                var cell = this.dataGridViewCustomerUserControl.SelectedCells[0];
-                var Customerstable = Reader.LoadCustomersDataTable();
+                try
+                {
+                    var cell = this.dataGridViewCustomerUserControl.SelectedCells[0];
 
-                int clickedCellID = Reader.LoadCustomersDataTable().Rows[cell.RowIndex].Field<int>("CustomerID");
-                Deleter.DeleteCustomer(clickedCellID);
-                MessageBox.Show("User deleted!");
-                SetUpDefaultDataTableCustomers();
+                    int clickedCellID = Reader.LoadCustomersDataTable().Rows[cell.RowIndex].Field<int>("CustomerID");
+                    Deleter.DeleteCustomer(clickedCellID);
+                    MessageBox.Show("Customer deleted!");
+                    SetUpDefaultDataTableCustomers();
 
+                }
+                catch (Exception exception)
+                {
+                    MessageBox.Show("This customer have an existing order, and cannot be deleted");
+                }
             }
         }
     }

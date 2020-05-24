@@ -29,24 +29,19 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ProductsUserControl));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.AddProductButton = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.ToLabelProducts = new System.Windows.Forms.Label();
-            this.FromLabelProducts = new System.Windows.Forms.Label();
-            this.ToDateProducts = new System.Windows.Forms.DateTimePicker();
-            this.FromDateProducts = new System.Windows.Forms.DateTimePicker();
             this.PrintButtonProducts = new System.Windows.Forms.Button();
-            this.ThenByDropDownBoxProducts = new System.Windows.Forms.ComboBox();
-            this.ThenByLabelProducts = new System.Windows.Forms.Label();
-            this.SortyByLabelProducts = new System.Windows.Forms.Label();
-            this.SortByDropDownBoxProducts = new System.Windows.Forms.ComboBox();
             this.dataGridViewProductUserControl = new System.Windows.Forms.DataGridView();
             this.NameOfFileProductsUserContolPrint = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
+            this.buttonResetFilter = new System.Windows.Forms.Button();
+            this.buttonDeleteProduct = new System.Windows.Forms.Button();
+            this.buttonEditProduct = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewProductUserControl)).BeginInit();
             this.SuspendLayout();
             // 
@@ -76,46 +71,6 @@
             this.panel2.Size = new System.Drawing.Size(1700, 26);
             this.panel2.TabIndex = 2;
             // 
-            // ToLabelProducts
-            // 
-            this.ToLabelProducts.AutoSize = true;
-            this.ToLabelProducts.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ToLabelProducts.Location = new System.Drawing.Point(1353, 45);
-            this.ToLabelProducts.Name = "ToLabelProducts";
-            this.ToLabelProducts.Size = new System.Drawing.Size(28, 21);
-            this.ToLabelProducts.TabIndex = 32;
-            this.ToLabelProducts.Text = "To";
-            // 
-            // FromLabelProducts
-            // 
-            this.FromLabelProducts.AutoSize = true;
-            this.FromLabelProducts.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.FromLabelProducts.Location = new System.Drawing.Point(1230, 45);
-            this.FromLabelProducts.Name = "FromLabelProducts";
-            this.FromLabelProducts.Size = new System.Drawing.Size(52, 21);
-            this.FromLabelProducts.TabIndex = 31;
-            this.FromLabelProducts.Text = "From ";
-            // 
-            // ToDateProducts
-            // 
-            this.ToDateProducts.CalendarFont = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ToDateProducts.Font = new System.Drawing.Font("Century Gothic", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ToDateProducts.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.ToDateProducts.Location = new System.Drawing.Point(1357, 76);
-            this.ToDateProducts.Name = "ToDateProducts";
-            this.ToDateProducts.Size = new System.Drawing.Size(113, 29);
-            this.ToDateProducts.TabIndex = 30;
-            // 
-            // FromDateProducts
-            // 
-            this.FromDateProducts.CalendarFont = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.FromDateProducts.Font = new System.Drawing.Font("Century Gothic", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.FromDateProducts.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.FromDateProducts.Location = new System.Drawing.Point(1234, 76);
-            this.FromDateProducts.Name = "FromDateProducts";
-            this.FromDateProducts.Size = new System.Drawing.Size(117, 29);
-            this.FromDateProducts.TabIndex = 29;
-            // 
             // PrintButtonProducts
             // 
             this.PrintButtonProducts.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(118)))), ((int)(((byte)(211)))));
@@ -133,88 +88,48 @@
             this.PrintButtonProducts.UseVisualStyleBackColor = false;
             this.PrintButtonProducts.Click += new System.EventHandler(this.PrintButtonProducts_Click);
             // 
-            // ThenByDropDownBoxProducts
-            // 
-            this.ThenByDropDownBoxProducts.BackColor = System.Drawing.Color.White;
-            this.ThenByDropDownBoxProducts.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ThenByDropDownBoxProducts.FormattingEnabled = true;
-            this.ThenByDropDownBoxProducts.Location = new System.Drawing.Point(944, 76);
-            this.ThenByDropDownBoxProducts.Name = "ThenByDropDownBoxProducts";
-            this.ThenByDropDownBoxProducts.Size = new System.Drawing.Size(206, 29);
-            this.ThenByDropDownBoxProducts.TabIndex = 27;
-            // 
-            // ThenByLabelProducts
-            // 
-            this.ThenByLabelProducts.AutoSize = true;
-            this.ThenByLabelProducts.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ThenByLabelProducts.Location = new System.Drawing.Point(940, 45);
-            this.ThenByLabelProducts.Name = "ThenByLabelProducts";
-            this.ThenByLabelProducts.Size = new System.Drawing.Size(140, 21);
-            this.ThenByLabelProducts.TabIndex = 26;
-            this.ThenByLabelProducts.Text = "And then sort by";
-            // 
-            // SortyByLabelProducts
-            // 
-            this.SortyByLabelProducts.AutoSize = true;
-            this.SortyByLabelProducts.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.SortyByLabelProducts.Location = new System.Drawing.Point(728, 45);
-            this.SortyByLabelProducts.Name = "SortyByLabelProducts";
-            this.SortyByLabelProducts.Size = new System.Drawing.Size(63, 21);
-            this.SortyByLabelProducts.TabIndex = 25;
-            this.SortyByLabelProducts.Text = "Sort by";
-            // 
-            // SortByDropDownBoxProducts
-            // 
-            this.SortByDropDownBoxProducts.BackColor = System.Drawing.Color.White;
-            this.SortByDropDownBoxProducts.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.SortByDropDownBoxProducts.FormattingEnabled = true;
-            this.SortByDropDownBoxProducts.Location = new System.Drawing.Point(732, 76);
-            this.SortByDropDownBoxProducts.Name = "SortByDropDownBoxProducts";
-            this.SortByDropDownBoxProducts.Size = new System.Drawing.Size(206, 29);
-            this.SortByDropDownBoxProducts.TabIndex = 23;
-            // 
             // dataGridViewProductUserControl
             // 
             this.dataGridViewProductUserControl.AllowUserToAddRows = false;
             this.dataGridViewProductUserControl.AllowUserToDeleteRows = false;
             this.dataGridViewProductUserControl.AllowUserToResizeColumns = false;
-            dataGridViewCellStyle5.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.dataGridViewProductUserControl.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.dataGridViewProductUserControl.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.dataGridViewProductUserControl.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridViewProductUserControl.BackgroundColor = System.Drawing.Color.White;
             this.dataGridViewProductUserControl.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dataGridViewProductUserControl.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.RaisedVertical;
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle6.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Century Gothic", 15F, System.Drawing.FontStyle.Bold);
-            dataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridViewProductUserControl.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Century Gothic", 15F, System.Drawing.FontStyle.Bold);
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridViewProductUserControl.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.dataGridViewProductUserControl.ColumnHeadersHeight = 40;
             this.dataGridViewProductUserControl.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
-            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle7.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle7.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle7.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridViewProductUserControl.DefaultCellStyle = dataGridViewCellStyle7;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridViewProductUserControl.DefaultCellStyle = dataGridViewCellStyle3;
             this.dataGridViewProductUserControl.GridColor = System.Drawing.Color.Black;
             this.dataGridViewProductUserControl.Location = new System.Drawing.Point(19, 111);
             this.dataGridViewProductUserControl.MultiSelect = false;
             this.dataGridViewProductUserControl.Name = "dataGridViewProductUserControl";
             this.dataGridViewProductUserControl.ReadOnly = true;
-            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle8.BackColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle8.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle8.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridViewProductUserControl.RowHeadersDefaultCellStyle = dataGridViewCellStyle8;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridViewProductUserControl.RowHeadersDefaultCellStyle = dataGridViewCellStyle4;
             this.dataGridViewProductUserControl.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToDisplayedHeaders;
             this.dataGridViewProductUserControl.RowTemplate.DividerHeight = 3;
             this.dataGridViewProductUserControl.RowTemplate.Height = 40;
@@ -239,23 +154,68 @@
             this.label1.TabIndex = 35;
             this.label1.Text = "Filename";
             // 
+            // buttonResetFilter
+            // 
+            this.buttonResetFilter.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(118)))), ((int)(((byte)(211)))));
+            this.buttonResetFilter.FlatAppearance.BorderSize = 0;
+            this.buttonResetFilter.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonResetFilter.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonResetFilter.ForeColor = System.Drawing.Color.White;
+            this.buttonResetFilter.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.buttonResetFilter.Location = new System.Drawing.Point(1203, 57);
+            this.buttonResetFilter.Name = "buttonResetFilter";
+            this.buttonResetFilter.Size = new System.Drawing.Size(150, 36);
+            this.buttonResetFilter.TabIndex = 36;
+            this.buttonResetFilter.Text = "Reset filter";
+            this.buttonResetFilter.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.buttonResetFilter.UseVisualStyleBackColor = false;
+            // 
+            // buttonDeleteProduct
+            // 
+            this.buttonDeleteProduct.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(118)))), ((int)(((byte)(211)))));
+            this.buttonDeleteProduct.FlatAppearance.BorderSize = 0;
+            this.buttonDeleteProduct.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonDeleteProduct.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonDeleteProduct.ForeColor = System.Drawing.Color.White;
+            this.buttonDeleteProduct.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.buttonDeleteProduct.Location = new System.Drawing.Point(1515, 57);
+            this.buttonDeleteProduct.Name = "buttonDeleteProduct";
+            this.buttonDeleteProduct.Size = new System.Drawing.Size(150, 36);
+            this.buttonDeleteProduct.TabIndex = 37;
+            this.buttonDeleteProduct.Text = "Delete";
+            this.buttonDeleteProduct.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.buttonDeleteProduct.UseVisualStyleBackColor = false;
+            this.buttonDeleteProduct.Click += new System.EventHandler(this.buttonDeleteProduct_Click);
+            // 
+            // buttonEditProduct
+            // 
+            this.buttonEditProduct.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(118)))), ((int)(((byte)(211)))));
+            this.buttonEditProduct.FlatAppearance.BorderSize = 0;
+            this.buttonEditProduct.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonEditProduct.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonEditProduct.ForeColor = System.Drawing.Color.White;
+            this.buttonEditProduct.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.buttonEditProduct.Location = new System.Drawing.Point(1359, 57);
+            this.buttonEditProduct.Name = "buttonEditProduct";
+            this.buttonEditProduct.Size = new System.Drawing.Size(150, 36);
+            this.buttonEditProduct.TabIndex = 38;
+            this.buttonEditProduct.Text = "Edit";
+            this.buttonEditProduct.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.buttonEditProduct.UseVisualStyleBackColor = false;
+            this.buttonEditProduct.Click += new System.EventHandler(this.buttonEditProduct_Click);
+            // 
             // ProductsUserControl
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackColor = System.Drawing.Color.White;
+            this.Controls.Add(this.buttonEditProduct);
+            this.Controls.Add(this.buttonDeleteProduct);
+            this.Controls.Add(this.buttonResetFilter);
             this.Controls.Add(this.AddProductButton);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.NameOfFileProductsUserContolPrint);
             this.Controls.Add(this.dataGridViewProductUserControl);
-            this.Controls.Add(this.ToLabelProducts);
-            this.Controls.Add(this.FromLabelProducts);
-            this.Controls.Add(this.ToDateProducts);
-            this.Controls.Add(this.FromDateProducts);
             this.Controls.Add(this.PrintButtonProducts);
-            this.Controls.Add(this.ThenByDropDownBoxProducts);
-            this.Controls.Add(this.ThenByLabelProducts);
-            this.Controls.Add(this.SortyByLabelProducts);
-            this.Controls.Add(this.SortByDropDownBoxProducts);
             this.Controls.Add(this.panel2);
             this.Name = "ProductsUserControl";
             this.Size = new System.Drawing.Size(1700, 966);
@@ -268,17 +228,12 @@
         #endregion
         private System.Windows.Forms.Button AddProductButton;
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.Label ToLabelProducts;
-        private System.Windows.Forms.Label FromLabelProducts;
-        private System.Windows.Forms.DateTimePicker ToDateProducts;
-        private System.Windows.Forms.DateTimePicker FromDateProducts;
         private System.Windows.Forms.Button PrintButtonProducts;
-        private System.Windows.Forms.ComboBox ThenByDropDownBoxProducts;
-        private System.Windows.Forms.Label ThenByLabelProducts;
-        private System.Windows.Forms.Label SortyByLabelProducts;
-        private System.Windows.Forms.ComboBox SortByDropDownBoxProducts;
         private System.Windows.Forms.DataGridView dataGridViewProductUserControl;
         private System.Windows.Forms.TextBox NameOfFileProductsUserContolPrint;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button buttonResetFilter;
+        private System.Windows.Forms.Button buttonDeleteProduct;
+        private System.Windows.Forms.Button buttonEditProduct;
     }
 }
