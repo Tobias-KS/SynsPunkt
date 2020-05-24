@@ -54,6 +54,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="UserControls\EditProductUserControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\EditProductUserControl.Designer.cs">
+      <DependentUpon>EditProductUserControl.cs</DependentUpon>
+    </Compile>
     <Compile Include="UserControls\AddProductUserControl.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -145,6 +151,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="UserControls\EditProductUserControl.resx">
+      <DependentUpon>EditProductUserControl.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UserControls\AddProductUserControl.resx">
       <DependentUpon>AddProductUserControl.cs</DependentUpon>
     </EmbeddedResource>

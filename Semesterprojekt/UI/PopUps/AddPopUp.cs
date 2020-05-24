@@ -33,7 +33,9 @@ namespace UI
             this.CurrentWindowState = ws;
             UserControllSelecter();
 
-           
+         
+
+
 
         }
         public AddPopUp(WindowState ws)
@@ -83,10 +85,10 @@ namespace UI
                     break;
                 case WindowState.ProductAdd:
                     addProductUserControl1.BringToFront();
-                    addProductUserControl1.
                     break;
                 case WindowState.ProductEdit:
-                    addCustomerPopUpMainPanelUserControl1.
+                    editProductUserControl1.BringToFront();
+                    break;
             }
         }
 
