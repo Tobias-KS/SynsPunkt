@@ -19,6 +19,17 @@ namespace BusinessLogic
             return result.CopyToDataTable<DataRow>();
         }
 
+
+        public static DataTable FilterOrdersByFromDateToDate(string fromDate, string toDate)
+        {
+        var result = Reader.GetOrdersDataTable().Rows.Cast<DataRow>()
+                .Where(dataRow =>
+                    dataRow.Field<DateTime>("Date") >= Convert.ToDateTime(fromDate) && dataRow.Field<DateTime>("Date") <= Convert.ToDateTime(toDate));
+
+            return result.CopyToDataTable<DataRow>();
+
+        }
+
         public static DataTable SearchBar(DataTable inputTable, string inputText)
         {
            

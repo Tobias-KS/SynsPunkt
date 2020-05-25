@@ -33,87 +33,48 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            this.ThenByDropDownBoxOrders = new System.Windows.Forms.ComboBox();
-            this.ThenByLabelOrders = new System.Windows.Forms.Label();
-            this.SortyByLabelOrders = new System.Windows.Forms.Label();
-            this.SortByDropDownBoxOrders = new System.Windows.Forms.ComboBox();
             this.FromDateOrders = new System.Windows.Forms.DateTimePicker();
             this.ToDateOrders = new System.Windows.Forms.DateTimePicker();
             this.FromLabelOrders = new System.Windows.Forms.Label();
             this.ToLabelOrders = new System.Windows.Forms.Label();
             this.PrintButtonOrders = new System.Windows.Forms.Button();
-            this.SearchButtonOrderUserControl = new System.Windows.Forms.TextBox();
+            this.textboxOrderSearch = new System.Windows.Forms.TextBox();
             this.dataGridViewOrderUserControl = new System.Windows.Forms.DataGridView();
             this.AddOrderButton = new System.Windows.Forms.Button();
             this.Search = new System.Windows.Forms.Label();
+            this.buttonResetFiltersOrders = new System.Windows.Forms.Button();
+            this.textBoxNameOnPrintFileOrders = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewOrderUserControl)).BeginInit();
             this.SuspendLayout();
-            // 
-            // ThenByDropDownBoxOrders
-            // 
-            this.ThenByDropDownBoxOrders.BackColor = System.Drawing.Color.White;
-            this.ThenByDropDownBoxOrders.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ThenByDropDownBoxOrders.FormattingEnabled = true;
-            this.ThenByDropDownBoxOrders.Location = new System.Drawing.Point(964, 60);
-            this.ThenByDropDownBoxOrders.Name = "ThenByDropDownBoxOrders";
-            this.ThenByDropDownBoxOrders.Size = new System.Drawing.Size(206, 29);
-            this.ThenByDropDownBoxOrders.TabIndex = 16;
-            // 
-            // ThenByLabelOrders
-            // 
-            this.ThenByLabelOrders.AutoSize = true;
-            this.ThenByLabelOrders.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ThenByLabelOrders.Location = new System.Drawing.Point(960, 29);
-            this.ThenByLabelOrders.Name = "ThenByLabelOrders";
-            this.ThenByLabelOrders.Size = new System.Drawing.Size(140, 21);
-            this.ThenByLabelOrders.TabIndex = 15;
-            this.ThenByLabelOrders.Text = "And then sort by";
-            // 
-            // SortyByLabelOrders
-            // 
-            this.SortyByLabelOrders.AutoSize = true;
-            this.SortyByLabelOrders.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.SortyByLabelOrders.Location = new System.Drawing.Point(748, 29);
-            this.SortyByLabelOrders.Name = "SortyByLabelOrders";
-            this.SortyByLabelOrders.Size = new System.Drawing.Size(63, 21);
-            this.SortyByLabelOrders.TabIndex = 14;
-            this.SortyByLabelOrders.Text = "Sort by";
-            // 
-            // SortByDropDownBoxOrders
-            // 
-            this.SortByDropDownBoxOrders.BackColor = System.Drawing.Color.White;
-            this.SortByDropDownBoxOrders.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.SortByDropDownBoxOrders.FormattingEnabled = true;
-            this.SortByDropDownBoxOrders.Location = new System.Drawing.Point(752, 60);
-            this.SortByDropDownBoxOrders.Name = "SortByDropDownBoxOrders";
-            this.SortByDropDownBoxOrders.Size = new System.Drawing.Size(206, 29);
-            this.SortByDropDownBoxOrders.TabIndex = 12;
             // 
             // FromDateOrders
             // 
             this.FromDateOrders.CalendarFont = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FromDateOrders.Font = new System.Drawing.Font("Century Gothic", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FromDateOrders.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.FromDateOrders.Location = new System.Drawing.Point(1254, 60);
+            this.FromDateOrders.Location = new System.Drawing.Point(392, 59);
             this.FromDateOrders.Name = "FromDateOrders";
             this.FromDateOrders.Size = new System.Drawing.Size(117, 29);
             this.FromDateOrders.TabIndex = 18;
+            this.FromDateOrders.ValueChanged += new System.EventHandler(this.FromDateOrders_ValueChanged);
             // 
             // ToDateOrders
             // 
             this.ToDateOrders.CalendarFont = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ToDateOrders.Font = new System.Drawing.Font("Century Gothic", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ToDateOrders.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.ToDateOrders.Location = new System.Drawing.Point(1377, 60);
+            this.ToDateOrders.Location = new System.Drawing.Point(515, 59);
             this.ToDateOrders.Name = "ToDateOrders";
             this.ToDateOrders.Size = new System.Drawing.Size(113, 29);
             this.ToDateOrders.TabIndex = 19;
+            this.ToDateOrders.ValueChanged += new System.EventHandler(this.ToDateOrders_ValueChanged);
             // 
             // FromLabelOrders
             // 
             this.FromLabelOrders.AutoSize = true;
             this.FromLabelOrders.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.FromLabelOrders.Location = new System.Drawing.Point(1250, 29);
+            this.FromLabelOrders.Location = new System.Drawing.Point(388, 28);
             this.FromLabelOrders.Name = "FromLabelOrders";
             this.FromLabelOrders.Size = new System.Drawing.Size(52, 21);
             this.FromLabelOrders.TabIndex = 20;
@@ -123,7 +84,7 @@
             // 
             this.ToLabelOrders.AutoSize = true;
             this.ToLabelOrders.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ToLabelOrders.Location = new System.Drawing.Point(1373, 29);
+            this.ToLabelOrders.Location = new System.Drawing.Point(511, 28);
             this.ToLabelOrders.Name = "ToLabelOrders";
             this.ToLabelOrders.Size = new System.Drawing.Size(28, 21);
             this.ToLabelOrders.TabIndex = 21;
@@ -145,14 +106,16 @@
             this.PrintButtonOrders.Text = "Print";
             this.PrintButtonOrders.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.PrintButtonOrders.UseVisualStyleBackColor = false;
+            this.PrintButtonOrders.Click += new System.EventHandler(this.PrintButtonOrders_Click);
             // 
-            // SearchButtonOrderUserControl
+            // textboxOrderSearch
             // 
-            this.SearchButtonOrderUserControl.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.SearchButtonOrderUserControl.Location = new System.Drawing.Point(210, 59);
-            this.SearchButtonOrderUserControl.Name = "SearchButtonOrderUserControl";
-            this.SearchButtonOrderUserControl.Size = new System.Drawing.Size(135, 27);
-            this.SearchButtonOrderUserControl.TabIndex = 22;
+            this.textboxOrderSearch.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textboxOrderSearch.Location = new System.Drawing.Point(210, 59);
+            this.textboxOrderSearch.Name = "textboxOrderSearch";
+            this.textboxOrderSearch.Size = new System.Drawing.Size(135, 27);
+            this.textboxOrderSearch.TabIndex = 22;
+            this.textboxOrderSearch.TextChanged += new System.EventHandler(this.SearchButtonOrderUserControl_TextChanged);
             // 
             // dataGridViewOrderUserControl
             // 
@@ -229,22 +192,56 @@
             this.Search.TabIndex = 24;
             this.Search.Text = "Search";
             // 
+            // buttonResetFiltersOrders
+            // 
+            this.buttonResetFiltersOrders.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(118)))), ((int)(((byte)(211)))));
+            this.buttonResetFiltersOrders.FlatAppearance.BorderSize = 0;
+            this.buttonResetFiltersOrders.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonResetFiltersOrders.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonResetFiltersOrders.ForeColor = System.Drawing.Color.White;
+            this.buttonResetFiltersOrders.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.buttonResetFiltersOrders.Location = new System.Drawing.Point(646, 54);
+            this.buttonResetFiltersOrders.Name = "buttonResetFiltersOrders";
+            this.buttonResetFiltersOrders.Size = new System.Drawing.Size(135, 35);
+            this.buttonResetFiltersOrders.TabIndex = 25;
+            this.buttonResetFiltersOrders.Text = "Reset filter";
+            this.buttonResetFiltersOrders.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.buttonResetFiltersOrders.UseVisualStyleBackColor = false;
+            this.buttonResetFiltersOrders.Click += new System.EventHandler(this.buttonResetFiltersOrders_Click);
+            // 
+            // textBoxNameOnPrintFileOrders
+            // 
+            this.textBoxNameOnPrintFileOrders.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBoxNameOnPrintFileOrders.Location = new System.Drawing.Point(1407, 920);
+            this.textBoxNameOnPrintFileOrders.Name = "textBoxNameOnPrintFileOrders";
+            this.textBoxNameOnPrintFileOrders.Size = new System.Drawing.Size(159, 27);
+            this.textBoxNameOnPrintFileOrders.TabIndex = 26;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(1403, 894);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(163, 21);
+            this.label1.TabIndex = 27;
+            this.label1.Text = "Name of printed file";
+            // 
             // OrderUserControl
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackColor = System.Drawing.Color.White;
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.textBoxNameOnPrintFileOrders);
+            this.Controls.Add(this.buttonResetFiltersOrders);
             this.Controls.Add(this.Search);
             this.Controls.Add(this.dataGridViewOrderUserControl);
-            this.Controls.Add(this.SearchButtonOrderUserControl);
+            this.Controls.Add(this.textboxOrderSearch);
             this.Controls.Add(this.ToLabelOrders);
             this.Controls.Add(this.FromLabelOrders);
             this.Controls.Add(this.ToDateOrders);
             this.Controls.Add(this.FromDateOrders);
             this.Controls.Add(this.PrintButtonOrders);
-            this.Controls.Add(this.ThenByDropDownBoxOrders);
-            this.Controls.Add(this.ThenByLabelOrders);
-            this.Controls.Add(this.SortyByLabelOrders);
-            this.Controls.Add(this.SortByDropDownBoxOrders);
             this.Controls.Add(this.AddOrderButton);
             this.Name = "OrderUserControl";
             this.Size = new System.Drawing.Size(1700, 966);
@@ -255,18 +252,17 @@
         }
 
         #endregion
-        private System.Windows.Forms.ComboBox ThenByDropDownBoxOrders;
-        private System.Windows.Forms.Label ThenByLabelOrders;
-        private System.Windows.Forms.Label SortyByLabelOrders;
-        private System.Windows.Forms.ComboBox SortByDropDownBoxOrders;
         private System.Windows.Forms.Button PrintButtonOrders;
         private System.Windows.Forms.DateTimePicker FromDateOrders;
         private System.Windows.Forms.DateTimePicker ToDateOrders;
         private System.Windows.Forms.Label FromLabelOrders;
         private System.Windows.Forms.Label ToLabelOrders;
-        private System.Windows.Forms.TextBox SearchButtonOrderUserControl;
+        private System.Windows.Forms.TextBox textboxOrderSearch;
         public System.Windows.Forms.DataGridView dataGridViewOrderUserControl;
         private System.Windows.Forms.Button AddOrderButton;
         private System.Windows.Forms.Label Search;
+        private System.Windows.Forms.Button buttonResetFiltersOrders;
+        private System.Windows.Forms.TextBox textBoxNameOnPrintFileOrders;
+        private System.Windows.Forms.Label label1;
     }
 }

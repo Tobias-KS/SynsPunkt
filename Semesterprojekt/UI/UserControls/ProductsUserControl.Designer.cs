@@ -29,10 +29,10 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ProductsUserControl));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
             this.AddProductButton = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
             this.PrintButtonProducts = new System.Windows.Forms.Button();
@@ -42,6 +42,8 @@
             this.buttonResetFilter = new System.Windows.Forms.Button();
             this.buttonDeleteProduct = new System.Windows.Forms.Button();
             this.buttonEditProduct = new System.Windows.Forms.Button();
+            this.textBoxSearchProducts = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewProductUserControl)).BeginInit();
             this.SuspendLayout();
             // 
@@ -93,43 +95,43 @@
             this.dataGridViewProductUserControl.AllowUserToAddRows = false;
             this.dataGridViewProductUserControl.AllowUserToDeleteRows = false;
             this.dataGridViewProductUserControl.AllowUserToResizeColumns = false;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.dataGridViewProductUserControl.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle9.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.dataGridViewProductUserControl.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle9;
             this.dataGridViewProductUserControl.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridViewProductUserControl.BackgroundColor = System.Drawing.Color.White;
             this.dataGridViewProductUserControl.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dataGridViewProductUserControl.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.RaisedVertical;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Century Gothic", 15F, System.Drawing.FontStyle.Bold);
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridViewProductUserControl.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle10.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle10.Font = new System.Drawing.Font("Century Gothic", 15F, System.Drawing.FontStyle.Bold);
+            dataGridViewCellStyle10.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle10.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle10.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle10.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridViewProductUserControl.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle10;
             this.dataGridViewProductUserControl.ColumnHeadersHeight = 40;
             this.dataGridViewProductUserControl.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridViewProductUserControl.DefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle11.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle11.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle11.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle11.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle11.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle11.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridViewProductUserControl.DefaultCellStyle = dataGridViewCellStyle11;
             this.dataGridViewProductUserControl.GridColor = System.Drawing.Color.Black;
             this.dataGridViewProductUserControl.Location = new System.Drawing.Point(19, 111);
             this.dataGridViewProductUserControl.MultiSelect = false;
             this.dataGridViewProductUserControl.Name = "dataGridViewProductUserControl";
             this.dataGridViewProductUserControl.ReadOnly = true;
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle4.BackColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridViewProductUserControl.RowHeadersDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle12.BackColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle12.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle12.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle12.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle12.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle12.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridViewProductUserControl.RowHeadersDefaultCellStyle = dataGridViewCellStyle12;
             this.dataGridViewProductUserControl.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToDisplayedHeaders;
             this.dataGridViewProductUserControl.RowTemplate.DividerHeight = 3;
             this.dataGridViewProductUserControl.RowTemplate.Height = 40;
@@ -169,6 +171,7 @@
             this.buttonResetFilter.Text = "Reset filter";
             this.buttonResetFilter.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.buttonResetFilter.UseVisualStyleBackColor = false;
+            this.buttonResetFilter.Click += new System.EventHandler(this.buttonResetFilter_Click);
             // 
             // buttonDeleteProduct
             // 
@@ -204,10 +207,31 @@
             this.buttonEditProduct.UseVisualStyleBackColor = false;
             this.buttonEditProduct.Click += new System.EventHandler(this.buttonEditProduct_Click);
             // 
+            // textBoxSearchProducts
+            // 
+            this.textBoxSearchProducts.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBoxSearchProducts.Location = new System.Drawing.Point(198, 66);
+            this.textBoxSearchProducts.Name = "textBoxSearchProducts";
+            this.textBoxSearchProducts.Size = new System.Drawing.Size(135, 27);
+            this.textBoxSearchProducts.TabIndex = 39;
+            this.textBoxSearchProducts.TextChanged += new System.EventHandler(this.textBoxSearchProducts_TextChanged);
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(194, 42);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(64, 21);
+            this.label2.TabIndex = 40;
+            this.label2.Text = "Search";
+            // 
             // ProductsUserControl
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackColor = System.Drawing.Color.White;
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.textBoxSearchProducts);
             this.Controls.Add(this.buttonEditProduct);
             this.Controls.Add(this.buttonDeleteProduct);
             this.Controls.Add(this.buttonResetFilter);
@@ -235,5 +259,7 @@
         private System.Windows.Forms.Button buttonResetFilter;
         private System.Windows.Forms.Button buttonDeleteProduct;
         private System.Windows.Forms.Button buttonEditProduct;
+        private System.Windows.Forms.TextBox textBoxSearchProducts;
+        private System.Windows.Forms.Label label2;
     }
 }

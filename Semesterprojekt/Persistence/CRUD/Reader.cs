@@ -83,7 +83,7 @@ namespace Persistence.CRUD
 
         //Products
 
-        public static DataTable LoadProductTable()
+        public static DataTable GetProductsDataTable()
         {
             var ProductTable = new DataTable();
 

@@ -22,7 +22,7 @@ namespace UI
         }
         public void SetUpDefaultDataTableProducts()
         {
-            dataGridViewProductUserControl.DataSource = Reader.LoadProductTable();
+            dataGridViewProductUserControl.DataSource = Reader.GetProductsDataTable();
         }
 
         private void PrintButtonProducts_Click(object sender, EventArgs e)
@@ -76,7 +76,7 @@ namespace UI
                 {
                     var cell = this.dataGridViewProductUserControl.SelectedCells[0];
 
-                    int clickedCellID = Reader.LoadProductTable().Rows[cell.RowIndex].Field<int>("ProductID");
+                    int clickedCellID = Reader.GetProductsDataTable().Rows[cell.RowIndex].Field<int>("ProductID");
                     Deleter.DeleteProduct(clickedCellID);
                     MessageBox.Show("Product deleted!");
                     SetUpDefaultDataTableProducts();
@@ -85,9 +85,7 @@ namespace UI
                 {
                     MessageBox.Show("This product is part of an existing order and cannot be deleted");
                 }
-                
             }
-
         }
 
         void Edit_Form_Closed(object sender, FormClosedEventArgs e)
@@ -100,7 +98,7 @@ namespace UI
 
             var cell = this.dataGridViewProductUserControl.SelectedCells[0];
 
-            var productTable = Reader.LoadProductTable();
+            var productTable = Reader.GetProductsDataTable();
 
             int productID = productTable.Rows[cell.RowIndex].Field<int>("ProductID");
             string productName = productTable.Rows[cell.RowIndex].Field<string>("Productname");
@@ -116,6 +114,20 @@ namespace UI
             var EditPopUp = new PopUpDataGridViewChanges(PopUpDataGridViewChanges.EditWindowState.ProductEdit, productID, productName, price, colour, brand, frameType, glassType, productDescription, rightLensID, leftLensID);
             EditPopUp.FormClosed += new FormClosedEventHandler(Edit_Form_Closed);
             EditPopUp.Show();
+        }
+
+        private void textBoxSearchProducts_TextChanged(object sender, EventArgs e)
+        {
+
+            dataGridViewProductUserControl.DataSource =
+                Filter.SearchBar(Reader.GetProductsDataTable(), textBoxSearchProducts.Text);
+            //Search funktion here
+        }
+
+        private void buttonResetFilter_Click(object sender, EventArgs e)
+        {
+            SetUpDefaultDataTableProducts();
+            textBoxSearchProducts.Text = "";
         }
     }
 }
