@@ -37,7 +37,15 @@ namespace KundeVindueSynspunkt
 
         public void NewCustomerButtonNext_Click(object sender, EventArgs e)
         {
+            
+
             CreateCustomerCustomerProgram();
+
+            NewCustomerName.Text = "";
+            NewCustomerSurname.Text = "";
+            NewCustomerAddress.Text = "";
+            NewCustomerPhonenumber.Text = "";
+            NewCustomerEmail.Text = "";
             this.Hide();
         }
     }

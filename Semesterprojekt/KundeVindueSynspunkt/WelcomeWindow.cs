@@ -12,6 +12,7 @@ namespace KundeVindueSynspunkt
 {
     public partial class Customergreet : Form
     {
+
         public Customergreet()
         {
             InitializeComponent();

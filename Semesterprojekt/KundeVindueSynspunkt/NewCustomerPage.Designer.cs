@@ -140,7 +140,7 @@
             this.NewCustomer.AutoSize = true;
             this.NewCustomer.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Millimeter, ((byte)(0)));
             this.NewCustomer.ForeColor = System.Drawing.SystemColors.Control;
-            this.NewCustomer.Location = new System.Drawing.Point(543, 27);
+            this.NewCustomer.Location = new System.Drawing.Point(541, 42);
             this.NewCustomer.Name = "NewCustomer";
             this.NewCustomer.Size = new System.Drawing.Size(537, 86);
             this.NewCustomer.TabIndex = 12;
@@ -197,6 +197,7 @@
             // 
             // NewCustomerButtonNext
             // 
+            this.NewCustomerButtonNext.Cursor = System.Windows.Forms.Cursors.No;
             this.NewCustomerButtonNext.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.NewCustomerButtonNext.Font = new System.Drawing.Font("Microsoft Sans Serif", 24.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.NewCustomerButtonNext.ForeColor = System.Drawing.SystemColors.Control;
@@ -226,7 +227,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Highlight;
-            this.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.Controls.Add(this.NewCustomerButtonBack);
             this.Controls.Add(this.NewCustomerButtonNext);
             this.Controls.Add(this.label6);
@@ -246,7 +247,7 @@
             this.Controls.Add(this.NewCustomerAddress);
             this.Controls.Add(this.NewCustomerName);
             this.Name = "NewCustomerPage";
-            this.Size = new System.Drawing.Size(1602, 795);
+            this.Size = new System.Drawing.Size(1600, 793);
             ((System.ComponentModel.ISupportInitialize)(this.Logo)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

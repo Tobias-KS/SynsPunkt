@@ -60,7 +60,7 @@
             this.NewCustomer.AutoSize = true;
             this.NewCustomer.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Millimeter, ((byte)(0)));
             this.NewCustomer.ForeColor = System.Drawing.SystemColors.Control;
-            this.NewCustomer.Location = new System.Drawing.Point(502, 12);
+            this.NewCustomer.Location = new System.Drawing.Point(478, 41);
             this.NewCustomer.Name = "NewCustomer";
             this.NewCustomer.Size = new System.Drawing.Size(596, 86);
             this.NewCustomer.TabIndex = 17;
@@ -87,6 +87,7 @@
             // 
             this.BinocularsSearchButton.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.BinocularsSearchButton.BackColor = System.Drawing.SystemColors.Highlight;
+            this.BinocularsSearchButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BinocularsSearchButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 24.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BinocularsSearchButton.ForeColor = System.Drawing.SystemColors.Control;
             this.BinocularsSearchButton.Location = new System.Drawing.Point(1173, 169);
@@ -94,13 +95,14 @@
             this.BinocularsSearchButton.Size = new System.Drawing.Size(210, 143);
             this.BinocularsSearchButton.TabIndex = 2;
             this.BinocularsSearchButton.Text = "Binoculars";
-            this.BinocularsSearchButton.UseVisualStyleBackColor = false;
+            this.BinocularsSearchButton.UseVisualStyleBackColor = true;
             this.BinocularsSearchButton.Click += new System.EventHandler(this.BinocularsSearchButton_Click);
             // 
             // CointactLensesSearchButton
             // 
             this.CointactLensesSearchButton.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.CointactLensesSearchButton.BackColor = System.Drawing.SystemColors.Highlight;
+            this.CointactLensesSearchButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.CointactLensesSearchButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 24.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.CointactLensesSearchButton.ForeColor = System.Drawing.SystemColors.Control;
             this.CointactLensesSearchButton.Location = new System.Drawing.Point(661, 169);
@@ -108,13 +110,14 @@
             this.CointactLensesSearchButton.Size = new System.Drawing.Size(210, 143);
             this.CointactLensesSearchButton.TabIndex = 1;
             this.CointactLensesSearchButton.Text = "Contact Lenses";
-            this.CointactLensesSearchButton.UseVisualStyleBackColor = false;
+            this.CointactLensesSearchButton.UseVisualStyleBackColor = true;
             this.CointactLensesSearchButton.Click += new System.EventHandler(this.CointactLensesSearchButton_Click);
             // 
             // GlassesSearchButton
             // 
             this.GlassesSearchButton.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.GlassesSearchButton.BackColor = System.Drawing.SystemColors.Highlight;
+            this.GlassesSearchButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.GlassesSearchButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 24.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.GlassesSearchButton.ForeColor = System.Drawing.SystemColors.Control;
             this.GlassesSearchButton.Location = new System.Drawing.Point(150, 169);
@@ -122,7 +125,7 @@
             this.GlassesSearchButton.Size = new System.Drawing.Size(210, 143);
             this.GlassesSearchButton.TabIndex = 0;
             this.GlassesSearchButton.Text = "Glasses";
-            this.GlassesSearchButton.UseVisualStyleBackColor = false;
+            this.GlassesSearchButton.UseVisualStyleBackColor = true;
             this.GlassesSearchButton.Click += new System.EventHandler(this.GlassesSearchButton_Click);
             // 
             // NewCustomerButtonBack

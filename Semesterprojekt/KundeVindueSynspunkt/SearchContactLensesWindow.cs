@@ -24,7 +24,7 @@ namespace KundeVindueSynspunkt
 
         private void trackBar1_Scroll(object sender, EventArgs e)
         {
-            textBox4.Text = "" + trackBar1.Value;
+            LensePrice.Text = "" + LensPriceBar.Value;
         }
     }
 }

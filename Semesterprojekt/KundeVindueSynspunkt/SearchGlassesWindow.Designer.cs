@@ -28,86 +28,80 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
+            this.SearchGlassesPanel = new System.Windows.Forms.TableLayoutPanel();
             this.label7 = new System.Windows.Forms.Label();
             this.labelBrand = new System.Windows.Forms.Label();
-            this.checkedListBox1 = new System.Windows.Forms.CheckedListBox();
+            this.GlassesBrandCheckbox1 = new System.Windows.Forms.CheckedListBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.checkedListBox2 = new System.Windows.Forms.CheckedListBox();
+            this.GlassColourCheckbox1 = new System.Windows.Forms.CheckedListBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.checkedListBox3 = new System.Windows.Forms.CheckedListBox();
+            this.GlassFrameTypeCheckbox1 = new System.Windows.Forms.CheckedListBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.radioButton1 = new System.Windows.Forms.RadioButton();
-            this.radioButton2 = new System.Windows.Forms.RadioButton();
-            this.radioButton3 = new System.Windows.Forms.RadioButton();
+            this.RegularGlassBtn = new System.Windows.Forms.RadioButton();
+            this.SunGlassBtn = new System.Windows.Forms.RadioButton();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.GlassLeftStrengthText = new System.Windows.Forms.TextBox();
+            this.GlassRightStrengthText = new System.Windows.Forms.TextBox();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.trackBar1 = new System.Windows.Forms.TrackBar();
+            this.GlassesPriceBar = new System.Windows.Forms.TrackBar();
             this.label9 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.checkedListBox4 = new System.Windows.Forms.CheckedListBox();
-            this.checkedListBox5 = new System.Windows.Forms.CheckedListBox();
-            this.checkedListBox6 = new System.Windows.Forms.CheckedListBox();
+            this.GlassesPrice = new System.Windows.Forms.TextBox();
+            this.GlassesBrandCheckbox2 = new System.Windows.Forms.CheckedListBox();
             this.GlassesDataView = new System.Windows.Forms.DataGridView();
             this.GlassesProductsClearBtn = new System.Windows.Forms.Button();
             this.GlassesProductsBackBtn = new System.Windows.Forms.Button();
             this.GlassesProductsSearchBtn = new System.Windows.Forms.Button();
-            this.tableLayoutPanel1.SuspendLayout();
+            this.SearchGlassesPanel.SuspendLayout();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.trackBar1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.GlassesPriceBar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.GlassesDataView)).BeginInit();
             this.SuspendLayout();
             // 
-            // tableLayoutPanel1
+            // SearchGlassesPanel
             // 
-            this.tableLayoutPanel1.ColumnCount = 2;
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel1.Controls.Add(this.label7, 0, 12);
-            this.tableLayoutPanel1.Controls.Add(this.labelBrand, 0, 0);
-            this.tableLayoutPanel1.Controls.Add(this.checkedListBox1, 0, 1);
-            this.tableLayoutPanel1.Controls.Add(this.label1, 0, 2);
-            this.tableLayoutPanel1.Controls.Add(this.checkedListBox2, 0, 3);
-            this.tableLayoutPanel1.Controls.Add(this.label2, 0, 4);
-            this.tableLayoutPanel1.Controls.Add(this.checkedListBox3, 0, 5);
-            this.tableLayoutPanel1.Controls.Add(this.label3, 0, 6);
-            this.tableLayoutPanel1.Controls.Add(this.radioButton1, 0, 7);
-            this.tableLayoutPanel1.Controls.Add(this.radioButton2, 1, 7);
-            this.tableLayoutPanel1.Controls.Add(this.radioButton3, 0, 8);
-            this.tableLayoutPanel1.Controls.Add(this.label4, 0, 9);
-            this.tableLayoutPanel1.Controls.Add(this.label5, 0, 10);
-            this.tableLayoutPanel1.Controls.Add(this.label6, 1, 10);
-            this.tableLayoutPanel1.Controls.Add(this.textBox1, 0, 11);
-            this.tableLayoutPanel1.Controls.Add(this.textBox2, 1, 11);
-            this.tableLayoutPanel1.Controls.Add(this.panel1, 0, 13);
-            this.tableLayoutPanel1.Controls.Add(this.checkedListBox4, 1, 1);
-            this.tableLayoutPanel1.Controls.Add(this.checkedListBox5, 1, 3);
-            this.tableLayoutPanel1.Controls.Add(this.checkedListBox6, 1, 5);
-            this.tableLayoutPanel1.Location = new System.Drawing.Point(3, 3);
-            this.tableLayoutPanel1.Name = "tableLayoutPanel1";
-            this.tableLayoutPanel1.RowCount = 15;
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(377, 789);
-            this.tableLayoutPanel1.TabIndex = 0;
+            this.SearchGlassesPanel.ColumnCount = 2;
+            this.SearchGlassesPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.SearchGlassesPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.SearchGlassesPanel.Controls.Add(this.label7, 0, 12);
+            this.SearchGlassesPanel.Controls.Add(this.labelBrand, 0, 0);
+            this.SearchGlassesPanel.Controls.Add(this.GlassesBrandCheckbox1, 0, 1);
+            this.SearchGlassesPanel.Controls.Add(this.label1, 0, 2);
+            this.SearchGlassesPanel.Controls.Add(this.GlassColourCheckbox1, 0, 3);
+            this.SearchGlassesPanel.Controls.Add(this.label2, 0, 4);
+            this.SearchGlassesPanel.Controls.Add(this.GlassFrameTypeCheckbox1, 0, 5);
+            this.SearchGlassesPanel.Controls.Add(this.label3, 0, 6);
+            this.SearchGlassesPanel.Controls.Add(this.RegularGlassBtn, 0, 7);
+            this.SearchGlassesPanel.Controls.Add(this.SunGlassBtn, 0, 8);
+            this.SearchGlassesPanel.Controls.Add(this.label4, 0, 9);
+            this.SearchGlassesPanel.Controls.Add(this.label5, 0, 10);
+            this.SearchGlassesPanel.Controls.Add(this.label6, 1, 10);
+            this.SearchGlassesPanel.Controls.Add(this.GlassLeftStrengthText, 0, 11);
+            this.SearchGlassesPanel.Controls.Add(this.GlassRightStrengthText, 1, 11);
+            this.SearchGlassesPanel.Controls.Add(this.panel1, 0, 13);
+            this.SearchGlassesPanel.Controls.Add(this.GlassesBrandCheckbox2, 1, 1);
+            this.SearchGlassesPanel.Location = new System.Drawing.Point(3, 3);
+            this.SearchGlassesPanel.Name = "SearchGlassesPanel";
+            this.SearchGlassesPanel.RowCount = 15;
+            this.SearchGlassesPanel.RowStyles.Add(new System.Windows.Forms.RowStyle());
+            this.SearchGlassesPanel.RowStyles.Add(new System.Windows.Forms.RowStyle());
+            this.SearchGlassesPanel.RowStyles.Add(new System.Windows.Forms.RowStyle());
+            this.SearchGlassesPanel.RowStyles.Add(new System.Windows.Forms.RowStyle());
+            this.SearchGlassesPanel.RowStyles.Add(new System.Windows.Forms.RowStyle());
+            this.SearchGlassesPanel.RowStyles.Add(new System.Windows.Forms.RowStyle());
+            this.SearchGlassesPanel.RowStyles.Add(new System.Windows.Forms.RowStyle());
+            this.SearchGlassesPanel.RowStyles.Add(new System.Windows.Forms.RowStyle());
+            this.SearchGlassesPanel.RowStyles.Add(new System.Windows.Forms.RowStyle());
+            this.SearchGlassesPanel.RowStyles.Add(new System.Windows.Forms.RowStyle());
+            this.SearchGlassesPanel.RowStyles.Add(new System.Windows.Forms.RowStyle());
+            this.SearchGlassesPanel.RowStyles.Add(new System.Windows.Forms.RowStyle());
+            this.SearchGlassesPanel.RowStyles.Add(new System.Windows.Forms.RowStyle());
+            this.SearchGlassesPanel.RowStyles.Add(new System.Windows.Forms.RowStyle());
+            this.SearchGlassesPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.SearchGlassesPanel.Size = new System.Drawing.Size(377, 789);
+            this.SearchGlassesPanel.TabIndex = 0;
             // 
             // label7
             // 
@@ -129,24 +123,24 @@
             this.labelBrand.TabIndex = 0;
             this.labelBrand.Text = "Brand";
             // 
-            // checkedListBox1
+            // GlassesBrandCheckbox1
             // 
-            this.checkedListBox1.BackColor = System.Drawing.SystemColors.Highlight;
-            this.checkedListBox1.CheckOnClick = true;
-            this.checkedListBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkedListBox1.FormattingEnabled = true;
-            this.checkedListBox1.Items.AddRange(new object[] {
-            "1",
-            "2",
-            "3",
-            "4",
-            "5",
-            "6",
-            "7"});
-            this.checkedListBox1.Location = new System.Drawing.Point(3, 28);
-            this.checkedListBox1.Name = "checkedListBox1";
-            this.checkedListBox1.Size = new System.Drawing.Size(182, 123);
-            this.checkedListBox1.TabIndex = 1;
+            this.GlassesBrandCheckbox1.BackColor = System.Drawing.SystemColors.Highlight;
+            this.GlassesBrandCheckbox1.CheckOnClick = true;
+            this.GlassesBrandCheckbox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.GlassesBrandCheckbox1.FormattingEnabled = true;
+            this.GlassesBrandCheckbox1.Items.AddRange(new object[] {
+            "Henri Lioyd",
+            "Diesel",
+            "Lye and Scott",
+            "Ivana Helsinki",
+            "Marc Jacobs",
+            "Ultralight",
+            "HUGO boss"});
+            this.GlassesBrandCheckbox1.Location = new System.Drawing.Point(3, 28);
+            this.GlassesBrandCheckbox1.Name = "GlassesBrandCheckbox1";
+            this.GlassesBrandCheckbox1.Size = new System.Drawing.Size(182, 123);
+            this.GlassesBrandCheckbox1.TabIndex = 1;
             // 
             // label1
             // 
@@ -158,24 +152,24 @@
             this.label1.TabIndex = 2;
             this.label1.Text = "Colour";
             // 
-            // checkedListBox2
+            // GlassColourCheckbox1
             // 
-            this.checkedListBox2.BackColor = System.Drawing.SystemColors.Highlight;
-            this.checkedListBox2.CheckOnClick = true;
-            this.checkedListBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkedListBox2.FormattingEnabled = true;
-            this.checkedListBox2.Items.AddRange(new object[] {
-            "1",
-            "2",
-            "3",
-            "4",
-            "5",
-            "6",
-            "7"});
-            this.checkedListBox2.Location = new System.Drawing.Point(3, 182);
-            this.checkedListBox2.Name = "checkedListBox2";
-            this.checkedListBox2.Size = new System.Drawing.Size(182, 123);
-            this.checkedListBox2.TabIndex = 3;
+            this.GlassColourCheckbox1.BackColor = System.Drawing.SystemColors.Highlight;
+            this.GlassColourCheckbox1.CheckOnClick = true;
+            this.GlassColourCheckbox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.GlassColourCheckbox1.FormattingEnabled = true;
+            this.GlassColourCheckbox1.Items.AddRange(new object[] {
+            "Blue",
+            "Green",
+            "Indigo",
+            "Orange",
+            "Red",
+            "Violet",
+            "Yellow"});
+            this.GlassColourCheckbox1.Location = new System.Drawing.Point(3, 182);
+            this.GlassColourCheckbox1.Name = "GlassColourCheckbox1";
+            this.GlassColourCheckbox1.Size = new System.Drawing.Size(182, 123);
+            this.GlassColourCheckbox1.TabIndex = 3;
             // 
             // label2
             // 
@@ -187,24 +181,20 @@
             this.label2.TabIndex = 4;
             this.label2.Text = "Frametype";
             // 
-            // checkedListBox3
+            // GlassFrameTypeCheckbox1
             // 
-            this.checkedListBox3.BackColor = System.Drawing.SystemColors.Highlight;
-            this.checkedListBox3.CheckOnClick = true;
-            this.checkedListBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkedListBox3.FormattingEnabled = true;
-            this.checkedListBox3.Items.AddRange(new object[] {
-            "1",
-            "2",
-            "3",
-            "4",
-            "5",
-            "6",
-            "7"});
-            this.checkedListBox3.Location = new System.Drawing.Point(3, 336);
-            this.checkedListBox3.Name = "checkedListBox3";
-            this.checkedListBox3.Size = new System.Drawing.Size(182, 123);
-            this.checkedListBox3.TabIndex = 5;
+            this.GlassFrameTypeCheckbox1.BackColor = System.Drawing.SystemColors.Highlight;
+            this.GlassFrameTypeCheckbox1.CheckOnClick = true;
+            this.GlassFrameTypeCheckbox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.GlassFrameTypeCheckbox1.FormattingEnabled = true;
+            this.GlassFrameTypeCheckbox1.Items.AddRange(new object[] {
+            "Rounded glasses",
+            "Square glass",
+            "Titanium glass"});
+            this.GlassFrameTypeCheckbox1.Location = new System.Drawing.Point(3, 336);
+            this.GlassFrameTypeCheckbox1.Name = "GlassFrameTypeCheckbox1";
+            this.GlassFrameTypeCheckbox1.Size = new System.Drawing.Size(182, 123);
+            this.GlassFrameTypeCheckbox1.TabIndex = 5;
             // 
             // label3
             // 
@@ -216,41 +206,29 @@
             this.label3.TabIndex = 6;
             this.label3.Text = "Glasstype";
             // 
-            // radioButton1
+            // RegularGlassBtn
             // 
-            this.radioButton1.AutoSize = true;
-            this.radioButton1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radioButton1.Location = new System.Drawing.Point(3, 490);
-            this.radioButton1.Name = "radioButton1";
-            this.radioButton1.Size = new System.Drawing.Size(114, 24);
-            this.radioButton1.TabIndex = 7;
-            this.radioButton1.TabStop = true;
-            this.radioButton1.Text = "Enkeltstyrke";
-            this.radioButton1.UseVisualStyleBackColor = true;
+            this.RegularGlassBtn.AutoSize = true;
+            this.RegularGlassBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.RegularGlassBtn.Location = new System.Drawing.Point(3, 490);
+            this.RegularGlassBtn.Name = "RegularGlassBtn";
+            this.RegularGlassBtn.Size = new System.Drawing.Size(124, 24);
+            this.RegularGlassBtn.TabIndex = 7;
+            this.RegularGlassBtn.TabStop = true;
+            this.RegularGlassBtn.Text = "Regular glass";
+            this.RegularGlassBtn.UseVisualStyleBackColor = true;
             // 
-            // radioButton2
+            // SunGlassBtn
             // 
-            this.radioButton2.AutoSize = true;
-            this.radioButton2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radioButton2.Location = new System.Drawing.Point(191, 490);
-            this.radioButton2.Name = "radioButton2";
-            this.radioButton2.Size = new System.Drawing.Size(105, 24);
-            this.radioButton2.TabIndex = 8;
-            this.radioButton2.TabStop = true;
-            this.radioButton2.Text = "Flerestyrke";
-            this.radioButton2.UseVisualStyleBackColor = true;
-            // 
-            // radioButton3
-            // 
-            this.radioButton3.AutoSize = true;
-            this.radioButton3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radioButton3.Location = new System.Drawing.Point(3, 520);
-            this.radioButton3.Name = "radioButton3";
-            this.radioButton3.Size = new System.Drawing.Size(75, 24);
-            this.radioButton3.TabIndex = 9;
-            this.radioButton3.TabStop = true;
-            this.radioButton3.Text = "Bifokal";
-            this.radioButton3.UseVisualStyleBackColor = true;
+            this.SunGlassBtn.AutoSize = true;
+            this.SunGlassBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.SunGlassBtn.Location = new System.Drawing.Point(3, 520);
+            this.SunGlassBtn.Name = "SunGlassBtn";
+            this.SunGlassBtn.Size = new System.Drawing.Size(101, 24);
+            this.SunGlassBtn.TabIndex = 9;
+            this.SunGlassBtn.TabStop = true;
+            this.SunGlassBtn.Text = "Sun Glass";
+            this.SunGlassBtn.UseVisualStyleBackColor = true;
             // 
             // label4
             // 
@@ -280,44 +258,44 @@
             this.label6.TabIndex = 12;
             this.label6.Text = "Right";
             // 
-            // textBox1
+            // GlassLeftStrengthText
             // 
-            this.textBox1.Location = new System.Drawing.Point(3, 588);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(182, 20);
-            this.textBox1.TabIndex = 13;
+            this.GlassLeftStrengthText.Location = new System.Drawing.Point(3, 588);
+            this.GlassLeftStrengthText.Name = "GlassLeftStrengthText";
+            this.GlassLeftStrengthText.Size = new System.Drawing.Size(182, 20);
+            this.GlassLeftStrengthText.TabIndex = 13;
             // 
-            // textBox2
+            // GlassRightStrengthText
             // 
-            this.textBox2.Location = new System.Drawing.Point(191, 588);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(183, 20);
-            this.textBox2.TabIndex = 14;
+            this.GlassRightStrengthText.Location = new System.Drawing.Point(191, 588);
+            this.GlassRightStrengthText.Name = "GlassRightStrengthText";
+            this.GlassRightStrengthText.Size = new System.Drawing.Size(183, 20);
+            this.GlassRightStrengthText.TabIndex = 14;
             // 
             // panel1
             // 
-            this.panel1.Controls.Add(this.trackBar1);
+            this.panel1.Controls.Add(this.GlassesPriceBar);
             this.panel1.Controls.Add(this.label9);
             this.panel1.Controls.Add(this.label8);
-            this.panel1.Controls.Add(this.textBox3);
+            this.panel1.Controls.Add(this.GlassesPrice);
             this.panel1.Location = new System.Drawing.Point(3, 639);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(182, 94);
             this.panel1.TabIndex = 16;
             // 
-            // trackBar1
+            // GlassesPriceBar
             // 
-            this.trackBar1.BackColor = System.Drawing.SystemColors.Window;
-            this.trackBar1.LargeChange = 500;
-            this.trackBar1.Location = new System.Drawing.Point(3, 16);
-            this.trackBar1.Maximum = 5000;
-            this.trackBar1.Name = "trackBar1";
-            this.trackBar1.Size = new System.Drawing.Size(182, 45);
-            this.trackBar1.SmallChange = 100;
-            this.trackBar1.TabIndex = 2;
-            this.trackBar1.TickFrequency = 500;
-            this.trackBar1.Value = 1000;
-            this.trackBar1.Scroll += new System.EventHandler(this.trackBar1_Scroll);
+            this.GlassesPriceBar.BackColor = System.Drawing.SystemColors.Window;
+            this.GlassesPriceBar.LargeChange = 500;
+            this.GlassesPriceBar.Location = new System.Drawing.Point(3, 16);
+            this.GlassesPriceBar.Maximum = 5000;
+            this.GlassesPriceBar.Name = "GlassesPriceBar";
+            this.GlassesPriceBar.Size = new System.Drawing.Size(182, 45);
+            this.GlassesPriceBar.SmallChange = 100;
+            this.GlassesPriceBar.TabIndex = 2;
+            this.GlassesPriceBar.TickFrequency = 500;
+            this.GlassesPriceBar.Value = 1000;
+            this.GlassesPriceBar.Scroll += new System.EventHandler(this.trackBar1_Scroll);
             // 
             // label9
             // 
@@ -337,74 +315,34 @@
             this.label8.TabIndex = 0;
             this.label8.Text = "Minimum";
             // 
-            // textBox3
+            // GlassesPrice
             // 
-            this.textBox3.BackColor = System.Drawing.SystemColors.Highlight;
-            this.textBox3.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox3.Location = new System.Drawing.Point(3, 67);
-            this.textBox3.MaxLength = 4;
-            this.textBox3.Name = "textBox3";
-            this.textBox3.ReadOnly = true;
-            this.textBox3.Size = new System.Drawing.Size(176, 19);
-            this.textBox3.TabIndex = 20;
+            this.GlassesPrice.BackColor = System.Drawing.SystemColors.Highlight;
+            this.GlassesPrice.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.GlassesPrice.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.GlassesPrice.Location = new System.Drawing.Point(3, 67);
+            this.GlassesPrice.MaxLength = 4;
+            this.GlassesPrice.Name = "GlassesPrice";
+            this.GlassesPrice.ReadOnly = true;
+            this.GlassesPrice.Size = new System.Drawing.Size(176, 19);
+            this.GlassesPrice.TabIndex = 20;
             // 
-            // checkedListBox4
+            // GlassesBrandCheckbox2
             // 
-            this.checkedListBox4.BackColor = System.Drawing.SystemColors.Highlight;
-            this.checkedListBox4.CheckOnClick = true;
-            this.checkedListBox4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkedListBox4.FormattingEnabled = true;
-            this.checkedListBox4.Items.AddRange(new object[] {
-            "1",
-            "2",
-            "3",
-            "4",
-            "5",
-            "6",
-            "7"});
-            this.checkedListBox4.Location = new System.Drawing.Point(191, 28);
-            this.checkedListBox4.Name = "checkedListBox4";
-            this.checkedListBox4.Size = new System.Drawing.Size(183, 123);
-            this.checkedListBox4.TabIndex = 17;
-            // 
-            // checkedListBox5
-            // 
-            this.checkedListBox5.BackColor = System.Drawing.SystemColors.Highlight;
-            this.checkedListBox5.CheckOnClick = true;
-            this.checkedListBox5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkedListBox5.FormattingEnabled = true;
-            this.checkedListBox5.Items.AddRange(new object[] {
-            "1",
-            "2",
-            "3",
-            "4",
-            "5",
-            "6",
-            "7"});
-            this.checkedListBox5.Location = new System.Drawing.Point(191, 182);
-            this.checkedListBox5.Name = "checkedListBox5";
-            this.checkedListBox5.Size = new System.Drawing.Size(183, 123);
-            this.checkedListBox5.TabIndex = 18;
-            // 
-            // checkedListBox6
-            // 
-            this.checkedListBox6.BackColor = System.Drawing.SystemColors.Highlight;
-            this.checkedListBox6.CheckOnClick = true;
-            this.checkedListBox6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkedListBox6.FormattingEnabled = true;
-            this.checkedListBox6.Items.AddRange(new object[] {
-            "1",
-            "2",
-            "3",
-            "4",
-            "5",
-            "6",
-            "7"});
-            this.checkedListBox6.Location = new System.Drawing.Point(191, 336);
-            this.checkedListBox6.Name = "checkedListBox6";
-            this.checkedListBox6.Size = new System.Drawing.Size(183, 123);
-            this.checkedListBox6.TabIndex = 19;
+            this.GlassesBrandCheckbox2.BackColor = System.Drawing.SystemColors.Highlight;
+            this.GlassesBrandCheckbox2.CheckOnClick = true;
+            this.GlassesBrandCheckbox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.GlassesBrandCheckbox2.FormattingEnabled = true;
+            this.GlassesBrandCheckbox2.Items.AddRange(new object[] {
+            "Gant",
+            "Tiger of Sweden",
+            "Viktor-Rolf",
+            "Kenzo",
+            "Lacoste"});
+            this.GlassesBrandCheckbox2.Location = new System.Drawing.Point(191, 28);
+            this.GlassesBrandCheckbox2.Name = "GlassesBrandCheckbox2";
+            this.GlassesBrandCheckbox2.Size = new System.Drawing.Size(183, 123);
+            this.GlassesBrandCheckbox2.TabIndex = 17;
             // 
             // GlassesDataView
             // 
@@ -419,36 +357,43 @@
             // GlassesProductsClearBtn
             // 
             this.GlassesProductsClearBtn.BackColor = System.Drawing.SystemColors.Highlight;
+            this.GlassesProductsClearBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.GlassesProductsClearBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 24.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.GlassesProductsClearBtn.ForeColor = System.Drawing.SystemColors.Control;
             this.GlassesProductsClearBtn.Location = new System.Drawing.Point(1232, 0);
             this.GlassesProductsClearBtn.Name = "GlassesProductsClearBtn";
             this.GlassesProductsClearBtn.Size = new System.Drawing.Size(361, 113);
             this.GlassesProductsClearBtn.TabIndex = 2;
             this.GlassesProductsClearBtn.Text = "Clear";
-            this.GlassesProductsClearBtn.UseVisualStyleBackColor = false;
+            this.GlassesProductsClearBtn.UseVisualStyleBackColor = true;
+            this.GlassesProductsClearBtn.Click += new System.EventHandler(this.GlassesProductsClearBtn_Click);
             // 
             // GlassesProductsBackBtn
             // 
             this.GlassesProductsBackBtn.BackColor = System.Drawing.SystemColors.Highlight;
+            this.GlassesProductsBackBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.GlassesProductsBackBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 24.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.GlassesProductsBackBtn.ForeColor = System.Drawing.SystemColors.Control;
             this.GlassesProductsBackBtn.Location = new System.Drawing.Point(386, 0);
             this.GlassesProductsBackBtn.Name = "GlassesProductsBackBtn";
             this.GlassesProductsBackBtn.Size = new System.Drawing.Size(361, 113);
             this.GlassesProductsBackBtn.TabIndex = 3;
             this.GlassesProductsBackBtn.Text = "Back";
-            this.GlassesProductsBackBtn.UseVisualStyleBackColor = false;
+            this.GlassesProductsBackBtn.UseVisualStyleBackColor = true;
             this.GlassesProductsBackBtn.Click += new System.EventHandler(this.GlassesProductsBackBtn_Click);
             // 
             // GlassesProductsSearchBtn
             // 
             this.GlassesProductsSearchBtn.BackColor = System.Drawing.SystemColors.Highlight;
+            this.GlassesProductsSearchBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.GlassesProductsSearchBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 24.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.GlassesProductsSearchBtn.ForeColor = System.Drawing.SystemColors.Control;
             this.GlassesProductsSearchBtn.Location = new System.Drawing.Point(812, 0);
             this.GlassesProductsSearchBtn.Name = "GlassesProductsSearchBtn";
             this.GlassesProductsSearchBtn.Size = new System.Drawing.Size(361, 113);
             this.GlassesProductsSearchBtn.TabIndex = 4;
             this.GlassesProductsSearchBtn.Text = "Search";
-            this.GlassesProductsSearchBtn.UseVisualStyleBackColor = false;
+            this.GlassesProductsSearchBtn.UseVisualStyleBackColor = true;
             // 
             // SearchGlassesWindow
             // 
@@ -459,15 +404,15 @@
             this.Controls.Add(this.GlassesProductsBackBtn);
             this.Controls.Add(this.GlassesProductsClearBtn);
             this.Controls.Add(this.GlassesDataView);
-            this.Controls.Add(this.tableLayoutPanel1);
+            this.Controls.Add(this.SearchGlassesPanel);
             this.Name = "SearchGlassesWindow";
             this.Size = new System.Drawing.Size(1602, 795);
             this.Load += new System.EventHandler(this.SearchGlassesWindow_Load);
-            this.tableLayoutPanel1.ResumeLayout(false);
-            this.tableLayoutPanel1.PerformLayout();
+            this.SearchGlassesPanel.ResumeLayout(false);
+            this.SearchGlassesPanel.PerformLayout();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.trackBar1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.GlassesPriceBar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.GlassesDataView)).EndInit();
             this.ResumeLayout(false);
 
@@ -475,34 +420,31 @@
 
         #endregion
 
-        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
+        private System.Windows.Forms.TableLayoutPanel SearchGlassesPanel;
         private System.Windows.Forms.Label labelBrand;
-        private System.Windows.Forms.CheckedListBox checkedListBox1;
+        private System.Windows.Forms.CheckedListBox GlassesBrandCheckbox1;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.CheckedListBox checkedListBox2;
+        private System.Windows.Forms.CheckedListBox GlassColourCheckbox1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.CheckedListBox checkedListBox3;
+        private System.Windows.Forms.CheckedListBox GlassFrameTypeCheckbox1;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.RadioButton radioButton1;
-        private System.Windows.Forms.RadioButton radioButton2;
-        private System.Windows.Forms.RadioButton radioButton3;
+        private System.Windows.Forms.RadioButton RegularGlassBtn;
+        private System.Windows.Forms.RadioButton SunGlassBtn;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox GlassLeftStrengthText;
+        private System.Windows.Forms.TextBox GlassRightStrengthText;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.TrackBar trackBar1;
+        private System.Windows.Forms.TrackBar GlassesPriceBar;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.CheckedListBox checkedListBox4;
-        private System.Windows.Forms.CheckedListBox checkedListBox5;
-        private System.Windows.Forms.CheckedListBox checkedListBox6;
+        private System.Windows.Forms.CheckedListBox GlassesBrandCheckbox2;
         private System.Windows.Forms.DataGridView GlassesDataView;
         private System.Windows.Forms.Button GlassesProductsClearBtn;
         private System.Windows.Forms.Button GlassesProductsBackBtn;
         private System.Windows.Forms.Button GlassesProductsSearchBtn;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox GlassesPrice;
     }
 }

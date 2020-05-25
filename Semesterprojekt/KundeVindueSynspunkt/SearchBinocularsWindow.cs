@@ -17,14 +17,14 @@ namespace KundeVindueSynspunkt
             InitializeComponent();
         }
 
-        private void LensesProductsBackBtn_Click(object sender, EventArgs e)
+        private void BinocularsProductsBackBtn_Click(object sender, EventArgs e)
         {
             this.Hide();
         }
 
         private void trackBar1_Scroll(object sender, EventArgs e)
         {
-            textBox3.Text = "" + trackBar1.Value;
+            BinocularsPrice.Text = "" + BinocularsPriceBar.Value;
         }
     }
 }
