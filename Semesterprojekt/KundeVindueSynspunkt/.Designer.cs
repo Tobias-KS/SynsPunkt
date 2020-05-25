@@ -40,8 +40,8 @@
             this.BottunMaximize = new System.Windows.Forms.Button();
             this.ButtonCloseWindow = new System.Windows.Forms.Button();
             this.LogoWelcomepage = new System.Windows.Forms.PictureBox();
+            this.SearchGlasses = new KundeVindueSynspunkt.SearchProducts();
             this.NewCustomerPage = new KundeVindueSynspunkt.NewCustomerPage();
-            this.SearchGlasses = new KundeVindueSynspunkt.SearchGlasses();
             ((System.ComponentModel.ISupportInitialize)(this.LogoWelcomepage)).BeginInit();
             this.SuspendLayout();
             // 
@@ -155,16 +155,6 @@
             this.LogoWelcomepage.TabIndex = 16;
             this.LogoWelcomepage.TabStop = false;
             // 
-            // NewCustomerPage
-            // 
-            this.NewCustomerPage.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.NewCustomerPage.BackColor = System.Drawing.SystemColors.Highlight;
-            this.NewCustomerPage.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.NewCustomerPage.Location = new System.Drawing.Point(-1, -1);
-            this.NewCustomerPage.Name = "NewCustomerPage";
-            this.NewCustomerPage.Size = new System.Drawing.Size(1602, 795);
-            this.NewCustomerPage.TabIndex = 22;
-            // 
             // SearchGlasses
             // 
             this.SearchGlasses.BackColor = System.Drawing.SystemColors.Highlight;
@@ -175,11 +165,21 @@
             this.SearchGlasses.Size = new System.Drawing.Size(1602, 795);
             this.SearchGlasses.TabIndex = 23;
             // 
+            // NewCustomerPage
+            // 
+            this.NewCustomerPage.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.NewCustomerPage.BackColor = System.Drawing.SystemColors.Highlight;
+            this.NewCustomerPage.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.NewCustomerPage.Location = new System.Drawing.Point(6, 7);
+            this.NewCustomerPage.Name = "NewCustomerPage";
+            this.NewCustomerPage.Size = new System.Drawing.Size(1602, 795);
+            this.NewCustomerPage.TabIndex = 22;
+            // 
             // Customergreet
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackColor = System.Drawing.SystemColors.Highlight;
-            this.ClientSize = new System.Drawing.Size(1586, 777);
+            this.ClientSize = new System.Drawing.Size(1596, 789);
             this.ControlBox = false;
             this.Controls.Add(this.SearchGlasses);
             this.Controls.Add(this.NewCustomerPage);
@@ -193,6 +193,7 @@
             this.Controls.Add(this.aSearchProductsButton);
             this.Controls.Add(this.aNewCustomerButton);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Location = new System.Drawing.Point(-1, -1);
             this.Name = "Customergreet";
             this.ShowIcon = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -216,7 +217,7 @@
         private System.Windows.Forms.Button ButtonMinimize;
         private System.Windows.Forms.Timer Timer1;
         private NewCustomerPage NewCustomerPage;
-        private SearchGlasses SearchGlasses;
+        private SearchProducts SearchGlasses;
     }
 }
 

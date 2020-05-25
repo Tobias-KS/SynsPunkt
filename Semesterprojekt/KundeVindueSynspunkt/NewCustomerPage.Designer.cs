@@ -206,6 +206,7 @@
             this.NewCustomerButtonNext.TabIndex = 19;
             this.NewCustomerButtonNext.Text = "Next";
             this.NewCustomerButtonNext.UseVisualStyleBackColor = true;
+            this.NewCustomerButtonNext.Click += new System.EventHandler(this.NewCustomerButtonNext_Click);
             // 
             // NewCustomerButtonBack
             // 

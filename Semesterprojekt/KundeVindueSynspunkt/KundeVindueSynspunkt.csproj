@@ -46,11 +46,23 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="SearchProductWindow.cs">
+    <Compile Include="SearchBinocularsWindow.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="SearchProductWindow.Designer.cs">
-      <DependentUpon>SearchProductWindow.cs</DependentUpon>
+    <Compile Include="SearchBinocularsWindow.Designer.cs">
+      <DependentUpon>SearchBinocularsWindow.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SearchContactLensesWindow.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="SearchContactLensesWindow.Designer.cs">
+      <DependentUpon>SearchContactLensesWindow.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SearchGlassesWindow.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="SearchGlassesWindow.Designer.cs">
+      <DependentUpon>SearchGlassesWindow.cs</DependentUpon>
     </Compile>
     <Compile Include="WelcomeWindow.cs">
       <SubType>Form</SubType>
@@ -67,14 +79,20 @@
     <Compile Include="NewCustomerPage.Designer.cs">
       <DependentUpon>NewCustomerPage.cs</DependentUpon>
     </Compile>
-    <Compile Include="SearchGlasses.cs">
+    <Compile Include="SearchProducts.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="SearchGlasses.Designer.cs">
-      <DependentUpon>SearchGlasses.cs</DependentUpon>
+    <Compile Include="SearchProducts.Designer.cs">
+      <DependentUpon>SearchProducts.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="SearchProductWindow.resx">
-      <DependentUpon>SearchProductWindow.cs</DependentUpon>
+    <EmbeddedResource Include="SearchBinocularsWindow.resx">
+      <DependentUpon>SearchBinocularsWindow.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SearchContactLensesWindow.resx">
+      <DependentUpon>SearchContactLensesWindow.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SearchGlassesWindow.resx">
+      <DependentUpon>SearchGlassesWindow.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="WelcomeWindow.resx">
       <DependentUpon>WelcomeWindow.cs</DependentUpon>
@@ -92,8 +110,8 @@
     <EmbeddedResource Include="NewCustomerPage.resx">
       <DependentUpon>NewCustomerPage.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="SearchGlasses.resx">
-      <DependentUpon>SearchGlasses.cs</DependentUpon>
+    <EmbeddedResource Include="SearchProducts.resx">
+      <DependentUpon>SearchProducts.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -122,6 +140,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\arrows %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Persistence\Persistence.csproj">
+      <Project>{74a8b65c-7afd-4452-9547-ecf5c035e09e}</Project>
+      <Name>Persistence</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
