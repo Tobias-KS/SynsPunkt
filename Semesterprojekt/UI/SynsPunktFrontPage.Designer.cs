@@ -431,7 +431,7 @@
         private System.Windows.Forms.Button MinimizeApp;
         private System.Windows.Forms.Button CloseApp;
         private System.Windows.Forms.PictureBox Logo;
-        private System.Windows.Forms.Label CompanyName;
+        private new System.Windows.Forms.Label CompanyName;
         private System.Windows.Forms.Button SupportButton;
         private System.Windows.Forms.Button OrdersButton;
         private System.Windows.Forms.Button ProductsButton;
@@ -439,7 +439,6 @@
         private System.Windows.Forms.Panel MainPanel;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel panel2;
-        private ProductsUserControl customerPage1;
         private System.Windows.Forms.Button HomeButton;
         private System.IO.FileSystemWatcher fileSystemWatcher1;
         private ProductsUserControl customerUserControl1;

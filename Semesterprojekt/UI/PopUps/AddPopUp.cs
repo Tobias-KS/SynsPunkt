@@ -18,7 +18,7 @@ namespace UI
     
     public partial class AddPopUp : Form
     {
-        public enum WindowState
+        public new enum WindowState
         {
             Customer,
             Order,
@@ -98,7 +98,7 @@ namespace UI
                 }
                 this.Close();
             }
-            catch (Exception exception)
+            catch (Exception)
             {
                 MessageBox.Show("All fields with * are requied");
 

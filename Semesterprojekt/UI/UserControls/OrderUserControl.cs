@@ -66,7 +66,7 @@ namespace UI
                      Filter.FilterOrdersByFromDateToDate(FromDateOrders.Text, ToDateOrders.Text);
             }
 
-            catch (Exception exception)
+            catch (Exception)
             {
                 MessageBox.Show("There are no orders within the selected dates");
             }
@@ -80,13 +80,16 @@ namespace UI
                 dataGridViewOrderUserControl.DataSource =
                     Filter.FilterOrdersByFromDateToDate(FromDateOrders.Text, ToDateOrders.Text);
             }
-            catch (Exception exception)
+            catch (Exception)
             {
                 MessageBox.Show("There are no orders within the selected dates");
             }
         }
         private void PrintButtonOrders_Click(object sender, EventArgs e)
         {
+
+            string fromdate = FromDateOrders.Text;
+            string todate = ToDateOrders.Text;
             if (string.IsNullOrEmpty(textBoxNameOnPrintFileOrders.Text))
             {
                 MessageBox.Show("Enter a filename before you print");
@@ -94,7 +97,7 @@ namespace UI
             else
             {
                 string fileName = textBoxNameOnPrintFileOrders.Text;
-                TxtPrinter.Write($"{fileName}", SetUpCurrentDataTable(), true);
+                TxtPrinter.Write($"{fileName}", SetUpCurrentDataTable(), true, fromdate, todate);
                 MessageBox.Show("Data exported");
             }
         }
