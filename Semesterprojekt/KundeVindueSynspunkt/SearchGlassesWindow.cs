@@ -7,6 +7,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Data.SqlClient;
+using System.Runtime.InteropServices;
+using Persistence;
+using System.Net.NetworkInformation;
 
 namespace KundeVindueSynspunkt
 {
@@ -19,10 +23,6 @@ namespace KundeVindueSynspunkt
 
         
 
-        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
 
         private void GlassesProductsBackBtn_Click(object sender, EventArgs e)
         {
@@ -43,6 +43,23 @@ namespace KundeVindueSynspunkt
         {
             GlassesPrice.Text = "";
 
+        }
+
+        private void GlassesBrandCheckbox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void GlassesProductsSearchBtn_Click(object sender, EventArgs e)
+        {
+
+            SqlConnection conn = new SqlConnection();
+            
+            SqlDataAdapter adapter = new SqlDataAdapter("SELECT * from products", conn);
+            DataTable GlassesDataView = new DataTable();
+
+            adapter.Fill(GlassesDataView);
+                       
         }
     }
 }

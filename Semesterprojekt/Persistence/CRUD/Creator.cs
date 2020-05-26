@@ -7,7 +7,7 @@ namespace Persistence.CRUD
     public class Creator
     {
         //Customer
-        public static string AddCustomer(string Forename, string Lastname, string adress, int PhoneNumber, string Email, float StrengthRight, float StrengthLeft, DateTime SignupDate, string notes = "")
+        public static string AddCustomer(string Forename, string Lastname, string adress, int PhoneNumber, string Email, double StrengthRight, double StrengthLeft, DateTime SignupDate, string notes = "")
         {
             SqlConnection conn = new SqlConnection(SQLConnecter.Connect());
 
