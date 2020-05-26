@@ -10,22 +10,21 @@ using System.Windows.Forms;
 
 namespace KundeVindueSynspunkt
 {
-    public partial class SearchProductWindow : UserControl
+    public partial class SearchContactLensesWindow : UserControl
     {
-        public SearchProductWindow()
+        public SearchContactLensesWindow()
         {
             InitializeComponent();
         }
 
-        private void SearchProductWindow_Load(object sender, EventArgs e)
+        private void LensesProductsBackBtn_Click(object sender, EventArgs e)
         {
-
+            this.Hide();
         }
 
-        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        private void trackBar1_Scroll(object sender, EventArgs e)
         {
-
+            LensePrice.Text = "" + LensPriceBar.Value;
         }
-
     }
 }

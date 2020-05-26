@@ -40,14 +40,14 @@
             this.BottunMaximize = new System.Windows.Forms.Button();
             this.ButtonCloseWindow = new System.Windows.Forms.Button();
             this.LogoWelcomepage = new System.Windows.Forms.PictureBox();
+            this.SearchGlasses = new KundeVindueSynspunkt.SearchProducts();
             this.NewCustomerPage = new KundeVindueSynspunkt.NewCustomerPage();
-            this.SearchGlasses = new KundeVindueSynspunkt.SearchGlasses();
             ((System.ComponentModel.ISupportInitialize)(this.LogoWelcomepage)).BeginInit();
             this.SuspendLayout();
             // 
             // aNewCustomerButton
             // 
-            this.aNewCustomerButton.BackColor = System.Drawing.SystemColors.MenuHighlight;
+            this.aNewCustomerButton.BackColor = System.Drawing.SystemColors.Highlight;
             this.aNewCustomerButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.aNewCustomerButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.aNewCustomerButton.ForeColor = System.Drawing.SystemColors.Control;
@@ -56,7 +56,7 @@
             this.aNewCustomerButton.Size = new System.Drawing.Size(377, 127);
             this.aNewCustomerButton.TabIndex = 0;
             this.aNewCustomerButton.Text = "New customer";
-            this.aNewCustomerButton.UseVisualStyleBackColor = false;
+            this.aNewCustomerButton.UseVisualStyleBackColor = true;
             this.aNewCustomerButton.Click += new System.EventHandler(this.aNewCustomerButton_Click);
             // 
             // aSearchProductsButton
@@ -114,7 +114,7 @@
             this.ButtonMinimize.BackColor = System.Drawing.SystemColors.Highlight;
             this.ButtonMinimize.FlatAppearance.BorderSize = 0;
             this.ButtonMinimize.Image = global::KundeVindueSynspunkt.Properties.Resources.arrows__1_;
-            this.ButtonMinimize.Location = new System.Drawing.Point(1499, 3);
+            this.ButtonMinimize.Location = new System.Drawing.Point(1480, 3);
             this.ButtonMinimize.Name = "ButtonMinimize";
             this.ButtonMinimize.Size = new System.Drawing.Size(30, 30);
             this.ButtonMinimize.TabIndex = 21;
@@ -125,7 +125,7 @@
             // 
             this.BottunMaximize.BackColor = System.Drawing.SystemColors.Highlight;
             this.BottunMaximize.Image = global::KundeVindueSynspunkt.Properties.Resources.interface__1_;
-            this.BottunMaximize.Location = new System.Drawing.Point(1535, 3);
+            this.BottunMaximize.Location = new System.Drawing.Point(1515, 3);
             this.BottunMaximize.Name = "BottunMaximize";
             this.BottunMaximize.Size = new System.Drawing.Size(30, 30);
             this.BottunMaximize.TabIndex = 20;
@@ -137,7 +137,7 @@
             this.ButtonCloseWindow.BackColor = System.Drawing.SystemColors.Highlight;
             this.ButtonCloseWindow.FlatAppearance.BorderSize = 0;
             this.ButtonCloseWindow.Image = global::KundeVindueSynspunkt.Properties.Resources._interface;
-            this.ButtonCloseWindow.Location = new System.Drawing.Point(1571, 3);
+            this.ButtonCloseWindow.Location = new System.Drawing.Point(1550, 3);
             this.ButtonCloseWindow.Name = "ButtonCloseWindow";
             this.ButtonCloseWindow.Size = new System.Drawing.Size(30, 30);
             this.ButtonCloseWindow.TabIndex = 19;
@@ -155,16 +155,6 @@
             this.LogoWelcomepage.TabIndex = 16;
             this.LogoWelcomepage.TabStop = false;
             // 
-            // NewCustomerPage
-            // 
-            this.NewCustomerPage.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.NewCustomerPage.BackColor = System.Drawing.SystemColors.Highlight;
-            this.NewCustomerPage.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.NewCustomerPage.Location = new System.Drawing.Point(-1, -1);
-            this.NewCustomerPage.Name = "NewCustomerPage";
-            this.NewCustomerPage.Size = new System.Drawing.Size(1602, 795);
-            this.NewCustomerPage.TabIndex = 22;
-            // 
             // SearchGlasses
             // 
             this.SearchGlasses.BackColor = System.Drawing.SystemColors.Highlight;
@@ -175,11 +165,21 @@
             this.SearchGlasses.Size = new System.Drawing.Size(1602, 795);
             this.SearchGlasses.TabIndex = 23;
             // 
+            // NewCustomerPage
+            // 
+            this.NewCustomerPage.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.NewCustomerPage.BackColor = System.Drawing.SystemColors.Highlight;
+            this.NewCustomerPage.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.NewCustomerPage.Location = new System.Drawing.Point(-1, -1);
+            this.NewCustomerPage.Name = "NewCustomerPage";
+            this.NewCustomerPage.Size = new System.Drawing.Size(1602, 795);
+            this.NewCustomerPage.TabIndex = 22;
+            // 
             // Customergreet
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackColor = System.Drawing.SystemColors.Highlight;
-            this.ClientSize = new System.Drawing.Size(1586, 777);
+            this.ClientSize = new System.Drawing.Size(1592, 785);
             this.ControlBox = false;
             this.Controls.Add(this.SearchGlasses);
             this.Controls.Add(this.NewCustomerPage);
@@ -193,8 +193,9 @@
             this.Controls.Add(this.aSearchProductsButton);
             this.Controls.Add(this.aNewCustomerButton);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Location = new System.Drawing.Point(-1, -1);
             this.Name = "Customergreet";
-            this.ShowIcon = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Load += new System.EventHandler(this.Customergreet_Load);
             ((System.ComponentModel.ISupportInitialize)(this.LogoWelcomepage)).EndInit();
@@ -216,7 +217,7 @@
         private System.Windows.Forms.Button ButtonMinimize;
         private System.Windows.Forms.Timer Timer1;
         private NewCustomerPage NewCustomerPage;
-        private SearchGlasses SearchGlasses;
+        private SearchProducts SearchGlasses;
     }
 }
 
