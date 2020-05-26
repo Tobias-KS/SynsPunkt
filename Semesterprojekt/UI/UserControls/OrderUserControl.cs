@@ -94,7 +94,7 @@ namespace UI
             else
             {
                 string fileName = textBoxNameOnPrintFileOrders.Text;
-                TxtPrinter.WriteToTxt($"{fileName}", SetUpCurrentDataTable());
+                TxtPrinter.Write($"{fileName}", SetUpCurrentDataTable(), true);
                 MessageBox.Show("Data exported");
             }
         }

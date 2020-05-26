@@ -1,4 +1,5 @@
-﻿using System.Data;
+﻿using System;
+using System.Data;
 using System.Data.SqlClient;
 
 namespace Persistence.CRUD
@@ -31,7 +32,14 @@ namespace Persistence.CRUD
         private static DataTable FormatOrdersDataTable()
         {
             DataTable ordersdatatable = LoadOrderTable();
-            ordersdatatable.Columns.Add("Price");
+
+            Random r = new Random();
+            ordersdatatable.Columns.Add("Price" );
+
+            foreach (DataRow row in ordersdatatable.Rows)
+            {
+                row["Price"] = r.Next(1000, 10000);
+            }
             return ordersdatatable;
         }
 

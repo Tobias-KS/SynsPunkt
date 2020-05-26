@@ -1,32 +1,72 @@
 ﻿using System;
 using System.Data;
 using System.IO;
+using System.Linq;
 
 namespace BusinessLogic
 {
     public class TxtPrinter
     {
-        public static void WriteToTxt(string fileName, DataTable dataTable)
+        public static void Write(string fileName, DataTable dt, bool isOrder)
         {
-            using (StreamWriter sw =
-                File.CreateText(Environment.GetFolderPath(Environment.SpecialFolder.Desktop) +
-                                $"/{fileName}.txt"))
+            var outputFilePath = Environment.GetFolderPath(Environment.SpecialFolder.Desktop) +
+                             $"/{fileName}.txt";
+
+            int[] maxLengths = new int[dt.Columns.Count];
+
+            for (int i = 0; i < dt.Columns.Count; i++)
             {
-                foreach (DataRow row in dataTable.Rows)
+                maxLengths[i] = dt.Columns[i].ColumnName.Length;
+
+                foreach (DataRow row in dt.Rows)
                 {
-                    object[] array = row.ItemArray;
-
-                    for (int i = 0; i < array.Length - 1; i++)
+                    if (!row.IsNull(i))
                     {
-                        sw.Write(array[i] + " -- ");
+                        int length = row[i].ToString().Length;
 
+                        if (length > maxLengths[i])
+                        {
+                            maxLengths[i] = length;
+                        }
                     }
-
-                    sw.WriteLine(array[array.Length - 1].ToString());
                 }
             }
 
+            using (StreamWriter sw = File.CreateText(outputFilePath))
+            {
+                for (int i = 0; i < dt.Columns.Count; i++)
+                {
+                    sw.Write(dt.Columns[i].ColumnName.PadRight(maxLengths[i] + 2));
+                }
 
+                sw.WriteLine();
+
+                foreach (DataRow row in dt.Rows)
+                {
+                    for (int i = 0; i < dt.Columns.Count; i++)
+                    {
+                        if (!row.IsNull(i))
+                        {
+                            sw.Write(row[i].ToString().PadRight(maxLengths[i] + 2));
+                        }
+                        else
+                        {
+                            sw.Write(new string(' ', maxLengths[i] + 2));
+                        }
+                    }
+
+                    sw.WriteLine();
+                }
+                if (isOrder)
+                {
+                    var sum = dt.AsEnumerable().Sum(row => Convert.ToInt32(row.Field<string>("Price")));
+
+                    var outputString = ($"\nSum of order prices = {sum:C}");
+                    sw.WriteLine(outputString);
+                }
+
+                sw.Close();
+            }
         }
     }
 }

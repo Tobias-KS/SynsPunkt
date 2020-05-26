@@ -92,7 +92,7 @@ namespace UI
             else
             {
                 string fileName = NameOnFile.Text;
-                TxtPrinter.WriteToTxt($"{fileName}", SetupCurrentAsDataTable());
+                TxtPrinter.Write($"{fileName}", SetupCurrentAsDataTable(), false);
                 MessageBox.Show("Data exported");
             }
         }

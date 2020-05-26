@@ -34,7 +34,7 @@ namespace UI
             else
             {
                 string fileName = NameOfFileProductsUserContolPrint.Text;
-                TxtPrinter.WriteToTxt($"{fileName}", SetupCurrentAsDataTable());
+                TxtPrinter.Write($"{fileName}", SetupCurrentAsDataTable(), false);
                 MessageBox.Show("Data exported");
             }
         }
