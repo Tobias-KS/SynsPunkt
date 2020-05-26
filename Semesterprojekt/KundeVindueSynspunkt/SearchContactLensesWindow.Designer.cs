@@ -34,7 +34,7 @@
             this.LensBrandCheckbox1 = new System.Windows.Forms.CheckedListBox();
             this.label8 = new System.Windows.Forms.Label();
             this.LensProductsClearBtn = new System.Windows.Forms.Button();
-            this.GlassesDataView = new System.Windows.Forms.DataGridView();
+            this.LensesDataView = new System.Windows.Forms.DataGridView();
             this.label4 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.LensProductsSearchBtn = new System.Windows.Forms.Button();
@@ -50,7 +50,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.LensQuantityText = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.LensPriceBar)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.GlassesDataView)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.LensesDataView)).BeginInit();
             this.panel1.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
             this.SuspendLayout();
@@ -60,7 +60,7 @@
             this.LensPriceBar.BackColor = System.Drawing.SystemColors.Window;
             this.LensPriceBar.LargeChange = 500;
             this.LensPriceBar.Location = new System.Drawing.Point(0, 16);
-            this.LensPriceBar.Maximum = 5000;
+            this.LensPriceBar.Maximum = 10000;
             this.LensPriceBar.Name = "LensPriceBar";
             this.LensPriceBar.Size = new System.Drawing.Size(182, 45);
             this.LensPriceBar.SmallChange = 100;
@@ -130,14 +130,20 @@
             this.LensProductsClearBtn.Text = "Clear";
             this.LensProductsClearBtn.UseVisualStyleBackColor = true;
             // 
-            // GlassesDataView
+            // LensesDataView
             // 
-            this.GlassesDataView.BackgroundColor = System.Drawing.SystemColors.Control;
-            this.GlassesDataView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.GlassesDataView.Location = new System.Drawing.Point(383, 118);
-            this.GlassesDataView.Name = "GlassesDataView";
-            this.GlassesDataView.Size = new System.Drawing.Size(1216, 675);
-            this.GlassesDataView.TabIndex = 6;
+            this.LensesDataView.AllowUserToAddRows = false;
+            this.LensesDataView.AllowUserToDeleteRows = false;
+            this.LensesDataView.AllowUserToResizeColumns = false;
+            this.LensesDataView.AllowUserToResizeRows = false;
+            this.LensesDataView.BackgroundColor = System.Drawing.SystemColors.Control;
+            this.LensesDataView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.LensesDataView.Location = new System.Drawing.Point(383, 118);
+            this.LensesDataView.MultiSelect = false;
+            this.LensesDataView.Name = "LensesDataView";
+            this.LensesDataView.ReadOnly = true;
+            this.LensesDataView.Size = new System.Drawing.Size(1210, 636);
+            this.LensesDataView.TabIndex = 6;
             // 
             // label4
             // 
@@ -251,7 +257,7 @@
             this.LensePrice.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.LensePrice.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LensePrice.Location = new System.Drawing.Point(3, 66);
-            this.LensePrice.MaxLength = 4;
+            this.LensePrice.MaxLength = 5;
             this.LensePrice.Name = "LensePrice";
             this.LensePrice.ReadOnly = true;
             this.LensePrice.Size = new System.Drawing.Size(176, 19);
@@ -317,14 +323,14 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Highlight;
             this.Controls.Add(this.LensProductsClearBtn);
-            this.Controls.Add(this.GlassesDataView);
+            this.Controls.Add(this.LensesDataView);
             this.Controls.Add(this.LensProductsSearchBtn);
             this.Controls.Add(this.LensesProductsBackBtn);
             this.Controls.Add(this.tableLayoutPanel1);
             this.Name = "SearchContactLensesWindow";
             this.Size = new System.Drawing.Size(1602, 795);
             ((System.ComponentModel.ISupportInitialize)(this.LensPriceBar)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.GlassesDataView)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.LensesDataView)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.tableLayoutPanel1.ResumeLayout(false);
@@ -341,7 +347,7 @@
         private System.Windows.Forms.CheckedListBox LensBrandCheckbox1;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Button LensProductsClearBtn;
-        private System.Windows.Forms.DataGridView GlassesDataView;
+        private System.Windows.Forms.DataGridView LensesDataView;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Button LensProductsSearchBtn;

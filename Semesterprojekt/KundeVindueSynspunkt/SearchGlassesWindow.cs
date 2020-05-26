@@ -11,6 +11,7 @@ using System.Data.SqlClient;
 using System.Runtime.InteropServices;
 using Persistence;
 using System.Net.NetworkInformation;
+using Persistence.CRUD;
 
 namespace KundeVindueSynspunkt
 {
@@ -19,19 +20,16 @@ namespace KundeVindueSynspunkt
         public SearchGlassesWindow()
         {
             InitializeComponent();
+            SetUpDefaultDataTableProducts();
         }
-
-        
-
+        public void SetUpDefaultDataTableProducts()
+        {
+            GlassesDataView.DataSource = Reader.GetProductsDataTable();
+        }
 
         private void GlassesProductsBackBtn_Click(object sender, EventArgs e)
         {
             this.Hide();
-        }
-
-        private void SearchGlassesWindow_Load(object sender, EventArgs e)
-        {
-
         }
 
         private void trackBar1_Scroll(object sender, EventArgs e)

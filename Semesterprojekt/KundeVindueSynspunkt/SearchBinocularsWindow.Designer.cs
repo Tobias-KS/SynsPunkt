@@ -36,7 +36,7 @@
             this.BinocularsBrandCheckbox2 = new System.Windows.Forms.CheckedListBox();
             this.BinocularsStrenghtText = new System.Windows.Forms.TextBox();
             this.BinocularsProductsClearBtn = new System.Windows.Forms.Button();
-            this.GlassesDataView = new System.Windows.Forms.DataGridView();
+            this.BinocularsDataView = new System.Windows.Forms.DataGridView();
             this.BinocularsProductsSearchBtn = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
             this.labelBrand = new System.Windows.Forms.Label();
@@ -50,7 +50,7 @@
             this.label2 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.BinocularsPriceBar)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.GlassesDataView)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.BinocularsDataView)).BeginInit();
             this.SearchBinocularsPanel.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -71,7 +71,7 @@
             this.BinocularsPrice.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.BinocularsPrice.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BinocularsPrice.Location = new System.Drawing.Point(0, 65);
-            this.BinocularsPrice.MaxLength = 4;
+            this.BinocularsPrice.MaxLength = 5;
             this.BinocularsPrice.Name = "BinocularsPrice";
             this.BinocularsPrice.ReadOnly = true;
             this.BinocularsPrice.Size = new System.Drawing.Size(176, 19);
@@ -82,7 +82,7 @@
             this.BinocularsPriceBar.BackColor = System.Drawing.SystemColors.Window;
             this.BinocularsPriceBar.LargeChange = 500;
             this.BinocularsPriceBar.Location = new System.Drawing.Point(0, 16);
-            this.BinocularsPriceBar.Maximum = 5000;
+            this.BinocularsPriceBar.Maximum = 10000;
             this.BinocularsPriceBar.Name = "BinocularsPriceBar";
             this.BinocularsPriceBar.Size = new System.Drawing.Size(182, 45);
             this.BinocularsPriceBar.SmallChange = 100;
@@ -146,14 +146,19 @@
             this.BinocularsProductsClearBtn.Text = "Clear";
             this.BinocularsProductsClearBtn.UseVisualStyleBackColor = true;
             // 
-            // GlassesDataView
+            // BinocularsDataView
             // 
-            this.GlassesDataView.BackgroundColor = System.Drawing.SystemColors.Control;
-            this.GlassesDataView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.GlassesDataView.Location = new System.Drawing.Point(383, 118);
-            this.GlassesDataView.Name = "GlassesDataView";
-            this.GlassesDataView.Size = new System.Drawing.Size(1216, 675);
-            this.GlassesDataView.TabIndex = 11;
+            this.BinocularsDataView.AllowUserToAddRows = false;
+            this.BinocularsDataView.AllowUserToDeleteRows = false;
+            this.BinocularsDataView.AllowUserToResizeColumns = false;
+            this.BinocularsDataView.BackgroundColor = System.Drawing.SystemColors.Control;
+            this.BinocularsDataView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.BinocularsDataView.Location = new System.Drawing.Point(383, 118);
+            this.BinocularsDataView.MultiSelect = false;
+            this.BinocularsDataView.Name = "BinocularsDataView";
+            this.BinocularsDataView.ReadOnly = true;
+            this.BinocularsDataView.Size = new System.Drawing.Size(1210, 636);
+            this.BinocularsDataView.TabIndex = 11;
             // 
             // BinocularsProductsSearchBtn
             // 
@@ -326,7 +331,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Highlight;
             this.Controls.Add(this.BinocularsProductsClearBtn);
-            this.Controls.Add(this.GlassesDataView);
+            this.Controls.Add(this.BinocularsDataView);
             this.Controls.Add(this.BinocularsProductsSearchBtn);
             this.Controls.Add(this.BinocularsProductsBackBtn);
             this.Controls.Add(this.SearchBinocularsPanel);
@@ -335,7 +340,7 @@
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.BinocularsPriceBar)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.GlassesDataView)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.BinocularsDataView)).EndInit();
             this.SearchBinocularsPanel.ResumeLayout(false);
             this.SearchBinocularsPanel.PerformLayout();
             this.ResumeLayout(false);
@@ -351,7 +356,7 @@
         private System.Windows.Forms.CheckedListBox BinocularsBrandCheckbox2;
         private System.Windows.Forms.TextBox BinocularsStrenghtText;
         private System.Windows.Forms.Button BinocularsProductsClearBtn;
-        private System.Windows.Forms.DataGridView GlassesDataView;
+        private System.Windows.Forms.DataGridView BinocularsDataView;
         private System.Windows.Forms.Button BinocularsProductsSearchBtn;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label labelBrand;

@@ -2,12 +2,13 @@
 using System.Data;
 using System.IO;
 using System.Linq;
+using System.Transactions;
 
 namespace BusinessLogic
 {
     public class TxtPrinter
     {
-        public static void Write(string fileName, DataTable dt, bool isOrder)
+        public static void Write(string fileName, DataTable dt, bool isOrder = false, string fromdate = "", string todate = "")
         {
             var outputFilePath = Environment.GetFolderPath(Environment.SpecialFolder.Desktop) +
                              $"/{fileName}.txt";
@@ -34,6 +35,13 @@ namespace BusinessLogic
 
             using (StreamWriter sw = File.CreateText(outputFilePath))
             {
+                sw.WriteLine($"*** Table printed at: {DateTime.Now} *** \n");
+
+                if (fromdate != "" && todate != "")
+                {
+                    sw.WriteLine($"*** Table sorted from {fromdate} to date {todate} *** \n");
+                }
+
                 for (int i = 0; i < dt.Columns.Count; i++)
                 {
                     sw.Write(dt.Columns[i].ColumnName.PadRight(maxLengths[i] + 2));
@@ -59,9 +67,9 @@ namespace BusinessLogic
                 }
                 if (isOrder)
                 {
-                    var sum = dt.AsEnumerable().Sum(row => Convert.ToInt32(row.Field<string>("Price")));
 
-                    var outputString = ($"\nSum of order prices = {sum:C}");
+                    var sum = dt.AsEnumerable().Sum(row => Convert.ToInt32(row.Field<string>("Price")));
+                    var outputString = ($"\n*** Sum of order prices = {sum:C} *** ");
                     sw.WriteLine(outputString);
                 }
 

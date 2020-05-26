@@ -29,12 +29,11 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ProductsUserControl));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle13 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle14 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle15 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle16 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle25 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle26 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle27 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle28 = new System.Windows.Forms.DataGridViewCellStyle();
             this.AddProductButton = new System.Windows.Forms.Button();
-            this.panel2 = new System.Windows.Forms.Panel();
             this.PrintButtonProducts = new System.Windows.Forms.Button();
             this.dataGridViewProductUserControl = new System.Windows.Forms.DataGridView();
             this.NameOfFileProductsUserContolPrint = new System.Windows.Forms.TextBox();
@@ -57,21 +56,12 @@
             this.AddProductButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.AddProductButton.Location = new System.Drawing.Point(24, 54);
             this.AddProductButton.Name = "AddProductButton";
-            this.AddProductButton.Size = new System.Drawing.Size(150, 35);
+            this.AddProductButton.Size = new System.Drawing.Size(164, 35);
             this.AddProductButton.TabIndex = 1;
             this.AddProductButton.Text = "Add product";
             this.AddProductButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.AddProductButton.UseVisualStyleBackColor = false;
             this.AddProductButton.Click += new System.EventHandler(this.AddProductButton_Click);
-            // 
-            // panel2
-            // 
-            this.panel2.BackColor = System.Drawing.Color.White;
-            this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel2.Location = new System.Drawing.Point(0, 0);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1700, 26);
-            this.panel2.TabIndex = 2;
             // 
             // PrintButtonProducts
             // 
@@ -81,11 +71,13 @@
             this.PrintButtonProducts.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.PrintButtonProducts.ForeColor = System.Drawing.Color.White;
             this.PrintButtonProducts.Image = ((System.Drawing.Image)(resources.GetObject("PrintButtonProducts.Image")));
-            this.PrintButtonProducts.Location = new System.Drawing.Point(1528, 908);
+            this.PrintButtonProducts.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.PrintButtonProducts.Location = new System.Drawing.Point(1591, 918);
             this.PrintButtonProducts.Name = "PrintButtonProducts";
-            this.PrintButtonProducts.Size = new System.Drawing.Size(137, 33);
+            this.PrintButtonProducts.Size = new System.Drawing.Size(87, 29);
             this.PrintButtonProducts.TabIndex = 28;
             this.PrintButtonProducts.Text = "Print";
+            this.PrintButtonProducts.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.PrintButtonProducts.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.PrintButtonProducts.UseVisualStyleBackColor = false;
             this.PrintButtonProducts.Click += new System.EventHandler(this.PrintButtonProducts_Click);
@@ -95,43 +87,43 @@
             this.dataGridViewProductUserControl.AllowUserToAddRows = false;
             this.dataGridViewProductUserControl.AllowUserToDeleteRows = false;
             this.dataGridViewProductUserControl.AllowUserToResizeColumns = false;
-            dataGridViewCellStyle13.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.dataGridViewProductUserControl.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle13;
+            dataGridViewCellStyle25.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.dataGridViewProductUserControl.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle25;
             this.dataGridViewProductUserControl.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridViewProductUserControl.BackgroundColor = System.Drawing.Color.White;
             this.dataGridViewProductUserControl.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dataGridViewProductUserControl.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.RaisedVertical;
-            dataGridViewCellStyle14.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle14.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle14.Font = new System.Drawing.Font("Century Gothic", 15F, System.Drawing.FontStyle.Bold);
-            dataGridViewCellStyle14.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle14.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle14.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle14.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridViewProductUserControl.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle14;
+            dataGridViewCellStyle26.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle26.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle26.Font = new System.Drawing.Font("Century Gothic", 15F, System.Drawing.FontStyle.Bold);
+            dataGridViewCellStyle26.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle26.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle26.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle26.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridViewProductUserControl.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle26;
             this.dataGridViewProductUserControl.ColumnHeadersHeight = 40;
             this.dataGridViewProductUserControl.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
-            dataGridViewCellStyle15.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle15.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle15.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle15.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle15.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle15.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle15.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridViewProductUserControl.DefaultCellStyle = dataGridViewCellStyle15;
+            dataGridViewCellStyle27.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle27.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle27.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle27.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle27.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle27.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle27.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridViewProductUserControl.DefaultCellStyle = dataGridViewCellStyle27;
             this.dataGridViewProductUserControl.GridColor = System.Drawing.Color.Black;
-            this.dataGridViewProductUserControl.Location = new System.Drawing.Point(19, 111);
+            this.dataGridViewProductUserControl.Location = new System.Drawing.Point(22, 115);
             this.dataGridViewProductUserControl.MultiSelect = false;
             this.dataGridViewProductUserControl.Name = "dataGridViewProductUserControl";
             this.dataGridViewProductUserControl.ReadOnly = true;
-            dataGridViewCellStyle16.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle16.BackColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle16.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle16.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle16.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle16.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle16.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridViewProductUserControl.RowHeadersDefaultCellStyle = dataGridViewCellStyle16;
+            dataGridViewCellStyle28.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle28.BackColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle28.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle28.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle28.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle28.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle28.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridViewProductUserControl.RowHeadersDefaultCellStyle = dataGridViewCellStyle28;
             this.dataGridViewProductUserControl.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToDisplayedHeaders;
             this.dataGridViewProductUserControl.RowTemplate.DividerHeight = 3;
             this.dataGridViewProductUserControl.RowTemplate.Height = 40;
@@ -141,20 +133,20 @@
             // NameOfFileProductsUserContolPrint
             // 
             this.NameOfFileProductsUserContolPrint.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.NameOfFileProductsUserContolPrint.Location = new System.Drawing.Point(1394, 912);
+            this.NameOfFileProductsUserContolPrint.Location = new System.Drawing.Point(1407, 920);
             this.NameOfFileProductsUserContolPrint.Name = "NameOfFileProductsUserContolPrint";
-            this.NameOfFileProductsUserContolPrint.Size = new System.Drawing.Size(128, 27);
+            this.NameOfFileProductsUserContolPrint.Size = new System.Drawing.Size(159, 27);
             this.NameOfFileProductsUserContolPrint.TabIndex = 34;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(1390, 888);
+            this.label1.Location = new System.Drawing.Point(1403, 896);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(80, 21);
+            this.label1.Size = new System.Drawing.Size(163, 21);
             this.label1.TabIndex = 35;
-            this.label1.Text = "Filename";
+            this.label1.Text = "Name of printed file";
             // 
             // buttonResetFilter
             // 
@@ -164,11 +156,11 @@
             this.buttonResetFilter.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonResetFilter.ForeColor = System.Drawing.Color.White;
             this.buttonResetFilter.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.buttonResetFilter.Location = new System.Drawing.Point(1216, 57);
+            this.buttonResetFilter.Location = new System.Drawing.Point(194, 54);
             this.buttonResetFilter.Name = "buttonResetFilter";
-            this.buttonResetFilter.Size = new System.Drawing.Size(150, 36);
+            this.buttonResetFilter.Size = new System.Drawing.Size(164, 35);
             this.buttonResetFilter.TabIndex = 36;
-            this.buttonResetFilter.Text = "Reset filter";
+            this.buttonResetFilter.Text = "Reset filters";
             this.buttonResetFilter.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.buttonResetFilter.UseVisualStyleBackColor = false;
             this.buttonResetFilter.Click += new System.EventHandler(this.buttonResetFilter_Click);
@@ -210,9 +202,9 @@
             // textBoxSearchProducts
             // 
             this.textBoxSearchProducts.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxSearchProducts.Location = new System.Drawing.Point(198, 66);
+            this.textBoxSearchProducts.Location = new System.Drawing.Point(383, 58);
             this.textBoxSearchProducts.Name = "textBoxSearchProducts";
-            this.textBoxSearchProducts.Size = new System.Drawing.Size(135, 27);
+            this.textBoxSearchProducts.Size = new System.Drawing.Size(158, 27);
             this.textBoxSearchProducts.TabIndex = 39;
             this.textBoxSearchProducts.TextChanged += new System.EventHandler(this.textBoxSearchProducts_TextChanged);
             // 
@@ -220,7 +212,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(194, 42);
+            this.label2.Location = new System.Drawing.Point(379, 34);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(64, 21);
             this.label2.TabIndex = 40;
@@ -240,7 +232,6 @@
             this.Controls.Add(this.NameOfFileProductsUserContolPrint);
             this.Controls.Add(this.dataGridViewProductUserControl);
             this.Controls.Add(this.PrintButtonProducts);
-            this.Controls.Add(this.panel2);
             this.Name = "ProductsUserControl";
             this.Size = new System.Drawing.Size(1700, 966);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewProductUserControl)).EndInit();
@@ -251,7 +242,6 @@
 
         #endregion
         private System.Windows.Forms.Button AddProductButton;
-        private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Button PrintButtonProducts;
         private System.Windows.Forms.DataGridView dataGridViewProductUserControl;
         private System.Windows.Forms.TextBox NameOfFileProductsUserContolPrint;

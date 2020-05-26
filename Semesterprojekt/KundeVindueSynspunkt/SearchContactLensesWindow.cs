@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Persistence.CRUD;
 
 namespace KundeVindueSynspunkt
 {
@@ -15,6 +16,11 @@ namespace KundeVindueSynspunkt
         public SearchContactLensesWindow()
         {
             InitializeComponent();
+            SetUpDefaultDataTableProducts();
+        }
+        public void SetUpDefaultDataTableProducts()
+        {
+            LensesDataView.DataSource = Reader.GetProductsDataTable();
         }
 
         private void LensesProductsBackBtn_Click(object sender, EventArgs e)

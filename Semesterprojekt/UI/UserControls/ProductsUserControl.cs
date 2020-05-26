@@ -34,7 +34,7 @@ namespace UI
             else
             {
                 string fileName = NameOfFileProductsUserContolPrint.Text;
-                TxtPrinter.Write($"{fileName}", SetupCurrentAsDataTable(), false);
+                TxtPrinter.Write($"{fileName}", SetupCurrentAsDataTable());
                 MessageBox.Show("Data exported");
             }
         }
@@ -81,7 +81,7 @@ namespace UI
                     MessageBox.Show("Product deleted!");
                     SetUpDefaultDataTableProducts();
                 }
-                catch (Exception exception)
+                catch (Exception)
                 {
                     MessageBox.Show("This product is part of an existing order and cannot be deleted");
                 }

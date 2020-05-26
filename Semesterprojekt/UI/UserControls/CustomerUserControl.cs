@@ -84,6 +84,10 @@ namespace UI
         }
         private void PrintCustomersButton_Click(object sender, EventArgs e)
         {
+
+            string fromdate = FromDateCustomer.Text;
+            string todate = ToDateCustomer.Text;
+
             if (string.IsNullOrEmpty(NameOnFile.Text))
             {
                 MessageBox.Show("Enter a filename before you print");
@@ -92,7 +96,7 @@ namespace UI
             else
             {
                 string fileName = NameOnFile.Text;
-                TxtPrinter.Write($"{fileName}", SetupCurrentAsDataTable(), false);
+                TxtPrinter.Write($"{fileName}", SetupCurrentAsDataTable(), fromdate:fromdate, todate:todate);
                 MessageBox.Show("Data exported");
             }
         }
@@ -163,7 +167,7 @@ namespace UI
                     SetUpDefaultDataTableCustomers();
 
                 }
-                catch (Exception exception)
+                catch (Exception)
                 {
                     MessageBox.Show("This customer have an existing order, and cannot be deleted");
                 }

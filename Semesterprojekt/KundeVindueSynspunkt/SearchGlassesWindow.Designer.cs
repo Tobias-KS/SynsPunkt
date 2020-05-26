@@ -289,7 +289,7 @@
             this.GlassesPriceBar.BackColor = System.Drawing.SystemColors.Window;
             this.GlassesPriceBar.LargeChange = 500;
             this.GlassesPriceBar.Location = new System.Drawing.Point(3, 16);
-            this.GlassesPriceBar.Maximum = 5000;
+            this.GlassesPriceBar.Maximum = 10000;
             this.GlassesPriceBar.Name = "GlassesPriceBar";
             this.GlassesPriceBar.Size = new System.Drawing.Size(182, 45);
             this.GlassesPriceBar.SmallChange = 100;
@@ -322,7 +322,7 @@
             this.GlassesPrice.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.GlassesPrice.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.GlassesPrice.Location = new System.Drawing.Point(3, 67);
-            this.GlassesPrice.MaxLength = 4;
+            this.GlassesPrice.MaxLength = 5;
             this.GlassesPrice.Name = "GlassesPrice";
             this.GlassesPrice.ReadOnly = true;
             this.GlassesPrice.Size = new System.Drawing.Size(176, 19);
@@ -347,12 +347,18 @@
             // 
             // GlassesDataView
             // 
+            this.GlassesDataView.AllowUserToAddRows = false;
+            this.GlassesDataView.AllowUserToDeleteRows = false;
+            this.GlassesDataView.AllowUserToResizeColumns = false;
             this.GlassesDataView.BackgroundColor = System.Drawing.SystemColors.Control;
-            this.GlassesDataView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.GlassesDataView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             this.GlassesDataView.Location = new System.Drawing.Point(383, 117);
+            this.GlassesDataView.MultiSelect = false;
             this.GlassesDataView.Name = "GlassesDataView";
-            this.GlassesDataView.Size = new System.Drawing.Size(1216, 675);
+            this.GlassesDataView.ReadOnly = true;
+            this.GlassesDataView.Size = new System.Drawing.Size(1210, 636);
             this.GlassesDataView.TabIndex = 1;
+
             // 
             // GlassesProductsClearBtn
             // 
@@ -408,7 +414,7 @@
             this.Controls.Add(this.SearchGlassesPanel);
             this.Name = "SearchGlassesWindow";
             this.Size = new System.Drawing.Size(1602, 795);
-            this.Load += new System.EventHandler(this.SearchGlassesWindow_Load);
+
             this.SearchGlassesPanel.ResumeLayout(false);
             this.SearchGlassesPanel.PerformLayout();
             this.panel1.ResumeLayout(false);
