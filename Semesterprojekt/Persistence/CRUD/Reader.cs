@@ -34,7 +34,7 @@ namespace Persistence.CRUD
             DataTable ordersdatatable = LoadOrderTable();
 
             Random r = new Random();
-            ordersdatatable.Columns.Add("Price" );
+            ordersdatatable.Columns.Add("Price");
 
             foreach (DataRow row in ordersdatatable.Rows)
             {
@@ -114,5 +114,38 @@ namespace Persistence.CRUD
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+        public static DataTable GetSpecificProductDataTable()
+        {
+            var SpecificProductTable = new DataTable();
+
+            using (SqlConnection conn = new SqlConnection(SQLConnecter.Connect()))
+            {
+                using (SqlCommand com = new SqlCommand())
+                {
+                    com.Connection = conn;
+                    com.CommandText = "SelectProductSpecifik";
+                    com.CommandType = CommandType.StoredProcedure;
+
+                    conn.Open();
+                    SqlDataReader reader = com.ExecuteReader();
+
+                    SpecificProductTable.Load(reader);
+                }
+            }
+            return SpecificProductTable;
+
+
+        }
     }
 }

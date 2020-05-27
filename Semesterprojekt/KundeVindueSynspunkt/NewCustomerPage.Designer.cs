@@ -197,7 +197,7 @@
             // 
             // NewCustomerButtonNext
             // 
-            this.NewCustomerButtonNext.Cursor = System.Windows.Forms.Cursors.No;
+            this.NewCustomerButtonNext.Cursor = System.Windows.Forms.Cursors.Arrow;
             this.NewCustomerButtonNext.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.NewCustomerButtonNext.Font = new System.Drawing.Font("Microsoft Sans Serif", 24.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.NewCustomerButtonNext.ForeColor = System.Drawing.SystemColors.Control;

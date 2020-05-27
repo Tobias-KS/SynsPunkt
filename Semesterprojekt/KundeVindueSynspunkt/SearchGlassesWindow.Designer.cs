@@ -358,7 +358,6 @@
             this.GlassesDataView.ReadOnly = true;
             this.GlassesDataView.Size = new System.Drawing.Size(1210, 636);
             this.GlassesDataView.TabIndex = 1;
-
             // 
             // GlassesProductsClearBtn
             // 
@@ -414,7 +413,6 @@
             this.Controls.Add(this.SearchGlassesPanel);
             this.Name = "SearchGlassesWindow";
             this.Size = new System.Drawing.Size(1602, 795);
-
             this.SearchGlassesPanel.ResumeLayout(false);
             this.SearchGlassesPanel.PerformLayout();
             this.panel1.ResumeLayout(false);
