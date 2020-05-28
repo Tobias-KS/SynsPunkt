@@ -50,6 +50,7 @@
             this.label8 = new System.Windows.Forms.Label();
             this.GlassesPrice = new System.Windows.Forms.TextBox();
             this.GlassesBrandCheckbox2 = new System.Windows.Forms.CheckedListBox();
+            this.listBoxColour = new System.Windows.Forms.ListBox();
             this.GlassesDataView = new System.Windows.Forms.DataGridView();
             this.GlassesProductsClearBtn = new System.Windows.Forms.Button();
             this.GlassesProductsBackBtn = new System.Windows.Forms.Button();
@@ -82,6 +83,7 @@
             this.SearchGlassesPanel.Controls.Add(this.GlassRightStrengthText, 1, 11);
             this.SearchGlassesPanel.Controls.Add(this.panel1, 0, 13);
             this.SearchGlassesPanel.Controls.Add(this.GlassesBrandCheckbox2, 1, 1);
+            this.SearchGlassesPanel.Controls.Add(this.listBoxColour, 1, 3);
             this.SearchGlassesPanel.Location = new System.Drawing.Point(3, 3);
             this.SearchGlassesPanel.Name = "SearchGlassesPanel";
             this.SearchGlassesPanel.RowCount = 15;
@@ -138,6 +140,7 @@
             "Ultralight",
             "HUGO boss"});
             this.GlassesBrandCheckbox1.Location = new System.Drawing.Point(3, 28);
+            this.GlassesBrandCheckbox1.MultiColumn = true;
             this.GlassesBrandCheckbox1.Name = "GlassesBrandCheckbox1";
             this.GlassesBrandCheckbox1.Size = new System.Drawing.Size(182, 123);
             this.GlassesBrandCheckbox1.TabIndex = 1;
@@ -264,6 +267,7 @@
             this.GlassLeftStrengthText.Name = "GlassLeftStrengthText";
             this.GlassLeftStrengthText.Size = new System.Drawing.Size(182, 20);
             this.GlassLeftStrengthText.TabIndex = 13;
+
             // 
             // GlassRightStrengthText
             // 
@@ -294,7 +298,7 @@
             this.GlassesPriceBar.SmallChange = 100;
             this.GlassesPriceBar.TabIndex = 2;
             this.GlassesPriceBar.TickFrequency = 500;
-            this.GlassesPriceBar.Value = 1000;
+            this.GlassesPriceBar.Value = 5000;
             this.GlassesPriceBar.Scroll += new System.EventHandler(this.trackBar1_Scroll);
             // 
             // label9
@@ -344,6 +348,22 @@
             this.GlassesBrandCheckbox2.Size = new System.Drawing.Size(183, 123);
             this.GlassesBrandCheckbox2.TabIndex = 17;
             // 
+            // listBoxColour
+            // 
+            this.listBoxColour.FormattingEnabled = true;
+            this.listBoxColour.Items.AddRange(new object[] {
+            "Blue",
+            "Green",
+            "Indigo",
+            "Orange",
+            "Red",
+            "Violet",
+            "Yellow"});
+            this.listBoxColour.Location = new System.Drawing.Point(191, 182);
+            this.listBoxColour.Name = "listBoxColour";
+            this.listBoxColour.Size = new System.Drawing.Size(120, 95);
+            this.listBoxColour.TabIndex = 18;
+            // 
             // GlassesDataView
             // 
             this.GlassesDataView.AllowUserToAddRows = false;
@@ -357,7 +377,6 @@
             this.GlassesDataView.ReadOnly = true;
             this.GlassesDataView.Size = new System.Drawing.Size(1210, 636);
             this.GlassesDataView.TabIndex = 1;
-
             // 
             // GlassesProductsClearBtn
             // 
@@ -399,6 +418,7 @@
             this.GlassesProductsSearchBtn.TabIndex = 4;
             this.GlassesProductsSearchBtn.Text = "Search";
             this.GlassesProductsSearchBtn.UseVisualStyleBackColor = true;
+            this.GlassesProductsSearchBtn.Click += new System.EventHandler(this.GlassesProductsSearchBtn_Click);
             // 
             // SearchGlassesWindow
             // 
@@ -412,7 +432,6 @@
             this.Controls.Add(this.SearchGlassesPanel);
             this.Name = "SearchGlassesWindow";
             this.Size = new System.Drawing.Size(1602, 795);
-
             this.SearchGlassesPanel.ResumeLayout(false);
             this.SearchGlassesPanel.PerformLayout();
             this.panel1.ResumeLayout(false);
@@ -451,5 +470,6 @@
         private System.Windows.Forms.Button GlassesProductsBackBtn;
         private System.Windows.Forms.Button GlassesProductsSearchBtn;
         private System.Windows.Forms.TextBox GlassesPrice;
+        private System.Windows.Forms.ListBox listBoxColour;
     }
 }

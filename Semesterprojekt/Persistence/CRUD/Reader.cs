@@ -112,7 +112,30 @@ namespace Persistence.CRUD
             return ProductTable;
         }
 
+        public static DataTable GetProductsSpecificDataTable(string Brand, string Colour, string FrameType, string Glasstype, int Price)
+        {
+            var ProductSpeceficTable = new DataTable();
 
+            using (SqlConnection conn = new SqlConnection(SQLConnecter.Connect()))
+            {
+                using (SqlCommand com = new SqlCommand())
+                {
+                    com.Connection = conn;
+                    com.CommandText = "SelectSpecificProducts";
+                    com.Parameters.Add("@Brand", SqlDbType.VarChar).Value = Brand;
+                    com.Parameters.Add("@Colour", SqlDbType.VarChar).Value = Colour;
+                    com.Parameters.Add("@FrameType", SqlDbType.VarChar).Value = FrameType;
+                    com.Parameters.Add("@Glasstype", SqlDbType.VarChar).Value = Glasstype;
+                    com.Parameters.Add("@Price", SqlDbType.Real).Value = Price;
+                    com.CommandType = CommandType.StoredProcedure;
 
+                    conn.Open();
+                    SqlDataReader reader = com.ExecuteReader();
+
+                    ProductSpeceficTable.Load(reader);
+                }
+            }
+            return ProductSpeceficTable;
+        }
     }
 }
