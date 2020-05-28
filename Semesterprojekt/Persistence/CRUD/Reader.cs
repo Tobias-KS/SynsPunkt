@@ -34,7 +34,7 @@ namespace Persistence.CRUD
             DataTable ordersdatatable = LoadOrderTable();
 
             Random r = new Random();
-            ordersdatatable.Columns.Add("Price" );
+            ordersdatatable.Columns.Add("Price");
 
             foreach (DataRow row in ordersdatatable.Rows)
             {

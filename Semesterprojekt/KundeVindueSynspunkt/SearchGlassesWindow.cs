@@ -7,6 +7,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Data.SqlClient;
+using System.Runtime.InteropServices;
+using Persistence;
+using System.Net.NetworkInformation;
 using Persistence.CRUD;
 
 
@@ -14,6 +18,7 @@ namespace KundeVindueSynspunkt
 {
     public partial class SearchGlassesWindow : UserControl
     {
+
         public SearchGlassesWindow()
         {
             InitializeComponent();
@@ -22,11 +27,12 @@ namespace KundeVindueSynspunkt
             GlassLeftStrengthText.Text = "";
             GlassRightStrengthText.Text = "";
         }
+        
         public void SetUpDefaultDataTableProducts()
         {
             GlassesDataView.DataSource = Reader.GetProductsDataTable();
         }
-
+        
         private void GlassesProductsBackBtn_Click(object sender, EventArgs e)
         {
             this.Hide();

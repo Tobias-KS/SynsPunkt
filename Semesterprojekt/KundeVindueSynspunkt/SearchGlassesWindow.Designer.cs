@@ -144,6 +144,7 @@
             this.GlassesBrandCheckbox1.Name = "GlassesBrandCheckbox1";
             this.GlassesBrandCheckbox1.Size = new System.Drawing.Size(182, 123);
             this.GlassesBrandCheckbox1.TabIndex = 1;
+            this.GlassesBrandCheckbox1.SelectedIndexChanged += new System.EventHandler(this.GlassesBrandCheckbox1_SelectedIndexChanged);
             // 
             // label1
             // 
@@ -384,7 +385,7 @@
             this.GlassesProductsClearBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.GlassesProductsClearBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 24.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.GlassesProductsClearBtn.ForeColor = System.Drawing.SystemColors.Control;
-            this.GlassesProductsClearBtn.Location = new System.Drawing.Point(1232, 0);
+            this.GlassesProductsClearBtn.Location = new System.Drawing.Point(1232, 2);
             this.GlassesProductsClearBtn.Name = "GlassesProductsClearBtn";
             this.GlassesProductsClearBtn.Size = new System.Drawing.Size(361, 113);
             this.GlassesProductsClearBtn.TabIndex = 2;
@@ -398,7 +399,7 @@
             this.GlassesProductsBackBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.GlassesProductsBackBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 24.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.GlassesProductsBackBtn.ForeColor = System.Drawing.SystemColors.Control;
-            this.GlassesProductsBackBtn.Location = new System.Drawing.Point(386, 0);
+            this.GlassesProductsBackBtn.Location = new System.Drawing.Point(386, 2);
             this.GlassesProductsBackBtn.Name = "GlassesProductsBackBtn";
             this.GlassesProductsBackBtn.Size = new System.Drawing.Size(361, 113);
             this.GlassesProductsBackBtn.TabIndex = 3;
@@ -412,7 +413,7 @@
             this.GlassesProductsSearchBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.GlassesProductsSearchBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 24.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.GlassesProductsSearchBtn.ForeColor = System.Drawing.SystemColors.Control;
-            this.GlassesProductsSearchBtn.Location = new System.Drawing.Point(812, 0);
+            this.GlassesProductsSearchBtn.Location = new System.Drawing.Point(812, 2);
             this.GlassesProductsSearchBtn.Name = "GlassesProductsSearchBtn";
             this.GlassesProductsSearchBtn.Size = new System.Drawing.Size(361, 113);
             this.GlassesProductsSearchBtn.TabIndex = 4;
