@@ -17,6 +17,9 @@ namespace KundeVindueSynspunkt
         {
             InitializeComponent();
             SetUpDefaultDataTableProducts();
+            LensePrice.Text = "5000";
+            LensStrengthLeftText.Text = "";
+            LensStrengthRightText.Text = "";
         }
         public void SetUpDefaultDataTableProducts()
         {
@@ -31,6 +34,33 @@ namespace KundeVindueSynspunkt
         private void trackBar1_Scroll(object sender, EventArgs e)
         {
             LensePrice.Text = "" + LensPriceBar.Value;
+        }
+
+        private void LensProductsSearchBtn_Click(object sender, EventArgs e)
+        {
+            string colour = "";
+            string frametype = "";
+            string glasstype = "";  
+
+            int Price = Convert.ToInt32(LensePrice.Text);
+
+
+           //Her mangler der lidt kode til at skulle afslutte den med quantity men det er et større projekt.
+            LensesDataView.DataSource = Reader.GetProductsSpecificDataTable(BrandLensListBox.Text, colour, frametype, glasstype, Price);
+        }
+
+        private void LensProductsClearBtn_Click(object sender, EventArgs e)
+        {
+            LensePrice.Text = "5000";
+            LensPriceBar.Value = 5000;
+            LensStrengthLeftText.Text = "";
+            LensStrengthRightText.Text = "";
+            LensesDataView.DataSource = Reader.GetProductsDataTable();
+        }
+
+        private void LensBrandCheckbox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

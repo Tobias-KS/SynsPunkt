@@ -49,8 +49,6 @@ namespace KundeVindueSynspunkt
             GlassesPriceBar.Value = 5000;
             GlassLeftStrengthText.Text = "";
             GlassRightStrengthText.Text = "";
-            for (int i = 0; i < GlassesBrandCheckbox1.Items.Count; i++)
-                GlassesBrandCheckbox1.SetItemCheckState(i, (false ? CheckState.Checked : CheckState.Unchecked));
             GlassesDataView.DataSource = Reader.GetProductsDataTable();
 
         }
@@ -62,15 +60,15 @@ namespace KundeVindueSynspunkt
 
             GlassesDataView.DataSource = Reader.SelectProductTest(Brand, listBoxColour.Text, Price);
             */
-            string Brand = "";
-            string FrameType = "";
-            string Glasstype = "";
             int Price = Convert.ToInt32(GlassesPrice.Text);
 
-            GlassesDataView.DataSource = Reader.GetProductsSpecificDataTable(Brand, listBoxColour.Text, FrameType, Glasstype, Price);
+
+            //Denne måde at søge ting frem på bliver ret trels jo flere du putter på! kan være vi skal se efter en anden måde! men det er OBV LIR! :)
+
+            //Strength er ligegyldigt da vi ikke har nogle parametre at søge efter, og gør det ret trels.
+            GlassesDataView.DataSource = Reader.GetProductsSpecificDataTable(BrandListBox.Text, GlasseslistBoxColour.Text, FrameTypeListBox.Text, GlassTypeListBox.Text, Price);
             
         }
 
-        
     }
 }
