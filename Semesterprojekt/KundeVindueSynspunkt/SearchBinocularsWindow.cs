@@ -27,6 +27,10 @@ namespace KundeVindueSynspunkt
 
         private void BinocularsProductsBackBtn_Click(object sender, EventArgs e)
         {
+            BinocularsListBoxColour.ClearSelected();
+            BinocularBrandList.ClearSelected();
+            BinocularTypeList.ClearSelected();
+
             this.Hide();
         }
 

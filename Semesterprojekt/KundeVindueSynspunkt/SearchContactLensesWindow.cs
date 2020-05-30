@@ -28,6 +28,8 @@ namespace KundeVindueSynspunkt
 
         private void LensesProductsBackBtn_Click(object sender, EventArgs e)
         {
+            BrandLensListBox.ClearSelected();
+
             this.Hide();
         }
 

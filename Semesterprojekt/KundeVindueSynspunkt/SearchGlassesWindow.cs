@@ -35,6 +35,11 @@ namespace KundeVindueSynspunkt
         
         private void GlassesProductsBackBtn_Click(object sender, EventArgs e)
         {
+            BrandListBox.ClearSelected();
+            GlassTypeListBox.ClearSelected();
+            FrameTypeListBox.ClearSelected();
+            GlasseslistBoxColour.ClearSelected();
+
             this.Hide();
         }
 
