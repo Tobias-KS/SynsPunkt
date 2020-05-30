@@ -44,7 +44,7 @@
             this.SearchBinocularsPanel = new System.Windows.Forms.TableLayoutPanel();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.Bina = new System.Windows.Forms.ListBox();
+            this.BinocularTypeList = new System.Windows.Forms.ListBox();
             this.BinocularsListBoxColour = new System.Windows.Forms.ListBox();
             this.BinocularBrandList = new System.Windows.Forms.ListBox();
             this.panel1.SuspendLayout();
@@ -59,7 +59,7 @@
             this.panel1.Controls.Add(this.BinocularsPriceBar);
             this.panel1.Controls.Add(this.label9);
             this.panel1.Controls.Add(this.label8);
-            this.panel1.Location = new System.Drawing.Point(3, 458);
+            this.panel1.Location = new System.Drawing.Point(3, 457);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(371, 87);
             this.panel1.TabIndex = 16;
@@ -87,7 +87,7 @@
             this.BinocularsPriceBar.SmallChange = 100;
             this.BinocularsPriceBar.TabIndex = 2;
             this.BinocularsPriceBar.TickFrequency = 500;
-            this.BinocularsPriceBar.Value = 1000;
+            this.BinocularsPriceBar.Value = 5000;
             this.BinocularsPriceBar.Scroll += new System.EventHandler(this.trackBar1_Scroll);
             // 
             // label9
@@ -195,7 +195,7 @@
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(3, 430);
+            this.label7.Location = new System.Drawing.Point(3, 429);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(61, 25);
             this.label7.TabIndex = 15;
@@ -212,7 +212,7 @@
             this.SearchBinocularsPanel.Controls.Add(this.label4, 0, 4);
             this.SearchBinocularsPanel.Controls.Add(this.label1, 0, 2);
             this.SearchBinocularsPanel.Controls.Add(this.label2, 0, 6);
-            this.SearchBinocularsPanel.Controls.Add(this.Bina, 0, 3);
+            this.SearchBinocularsPanel.Controls.Add(this.BinocularTypeList, 0, 3);
             this.SearchBinocularsPanel.Controls.Add(this.BinocularsListBoxColour, 0, 7);
             this.SearchBinocularsPanel.Controls.Add(this.BinocularBrandList, 0, 1);
             this.SearchBinocularsPanel.Location = new System.Drawing.Point(3, 4);
@@ -255,19 +255,19 @@
             this.label2.TabIndex = 21;
             this.label2.Text = "Colour";
             // 
-            // Bina
+            // BinocularTypeList
             // 
-            this.Bina.BackColor = System.Drawing.SystemColors.Highlight;
-            this.Bina.FormattingEnabled = true;
-            this.Bina.Items.AddRange(new object[] {
+            this.BinocularTypeList.BackColor = System.Drawing.SystemColors.Highlight;
+            this.BinocularTypeList.FormattingEnabled = true;
+            this.BinocularTypeList.Items.AddRange(new object[] {
             "Regular",
             "Hunting",
             "Double",
             "Single"});
-            this.Bina.Location = new System.Drawing.Point(3, 154);
-            this.Bina.Name = "Bina";
-            this.Bina.Size = new System.Drawing.Size(371, 95);
-            this.Bina.TabIndex = 22;
+            this.BinocularTypeList.Location = new System.Drawing.Point(3, 154);
+            this.BinocularTypeList.Name = "BinocularTypeList";
+            this.BinocularTypeList.Size = new System.Drawing.Size(371, 95);
+            this.BinocularTypeList.TabIndex = 22;
             // 
             // BinocularsListBoxColour
             // 
@@ -346,7 +346,7 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox BinocularsPrice;
-        private System.Windows.Forms.ListBox Bina;
+        private System.Windows.Forms.ListBox BinocularTypeList;
         private System.Windows.Forms.ListBox BinocularsListBoxColour;
         private System.Windows.Forms.ListBox BinocularBrandList;
     }

@@ -49,6 +49,11 @@ namespace KundeVindueSynspunkt
             GlassesPriceBar.Value = 5000;
             GlassLeftStrengthText.Text = "";
             GlassRightStrengthText.Text = "";
+
+            BrandListBox.ClearSelected();
+            GlassTypeListBox.ClearSelected();
+            FrameTypeListBox.ClearSelected();
+            GlasseslistBoxColour.ClearSelected();
             GlassesDataView.DataSource = Reader.GetProductsDataTable();
 
         }

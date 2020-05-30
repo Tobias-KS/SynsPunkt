@@ -45,9 +45,9 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.LensePrice = new System.Windows.Forms.TextBox();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
+            this.BrandLensListBox = new System.Windows.Forms.ListBox();
             this.label1 = new System.Windows.Forms.Label();
             this.LensQuantityText = new System.Windows.Forms.TextBox();
-            this.BrandLensListBox = new System.Windows.Forms.ListBox();
             ((System.ComponentModel.ISupportInitialize)(this.LensPriceBar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.LensesDataView)).BeginInit();
             this.panel1.SuspendLayout();
@@ -65,7 +65,7 @@
             this.LensPriceBar.SmallChange = 100;
             this.LensPriceBar.TabIndex = 2;
             this.LensPriceBar.TickFrequency = 500;
-            this.LensPriceBar.Value = 1000;
+            this.LensPriceBar.Value = 5000;
             this.LensPriceBar.Scroll += new System.EventHandler(this.trackBar1_Scroll);
             // 
             // label7
@@ -265,23 +265,6 @@
             this.tableLayoutPanel1.Size = new System.Drawing.Size(377, 789);
             this.tableLayoutPanel1.TabIndex = 5;
             // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(3, 229);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(92, 25);
-            this.label1.TabIndex = 18;
-            this.label1.Text = "Quantity";
-            // 
-            // LensQuantityText
-            // 
-            this.LensQuantityText.Location = new System.Drawing.Point(3, 257);
-            this.LensQuantityText.Name = "LensQuantityText";
-            this.LensQuantityText.Size = new System.Drawing.Size(371, 20);
-            this.LensQuantityText.TabIndex = 19;
-            // 
             // BrandLensListBox
             // 
             this.BrandLensListBox.BackColor = System.Drawing.SystemColors.Highlight;
@@ -304,6 +287,23 @@
             this.BrandLensListBox.Name = "BrandLensListBox";
             this.BrandLensListBox.Size = new System.Drawing.Size(371, 95);
             this.BrandLensListBox.TabIndex = 10;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(3, 229);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(92, 25);
+            this.label1.TabIndex = 18;
+            this.label1.Text = "Quantity";
+            // 
+            // LensQuantityText
+            // 
+            this.LensQuantityText.Location = new System.Drawing.Point(3, 257);
+            this.LensQuantityText.Name = "LensQuantityText";
+            this.LensQuantityText.Size = new System.Drawing.Size(371, 20);
+            this.LensQuantityText.TabIndex = 19;
             // 
             // SearchContactLensesWindow
             // 

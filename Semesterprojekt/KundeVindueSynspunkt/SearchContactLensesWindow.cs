@@ -55,6 +55,9 @@ namespace KundeVindueSynspunkt
             LensPriceBar.Value = 5000;
             LensStrengthLeftText.Text = "";
             LensStrengthRightText.Text = "";
+
+            BrandLensListBox.ClearSelected();
+
             LensesDataView.DataSource = Reader.GetProductsDataTable();
         }
 

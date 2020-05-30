@@ -52,6 +52,11 @@ namespace KundeVindueSynspunkt
             BinocularsPrice.Text = "5000";
             BinocularsPriceBar.Value = 5000;
             BinocularsStrenghtText.Text = "";
+
+            BinocularsListBoxColour.ClearSelected();
+            BinocularBrandList.ClearSelected();
+            BinocularTypeList.ClearSelected();
+
             BinocularsDataView.DataSource = Reader.GetProductsDataTable();
         }
     }
