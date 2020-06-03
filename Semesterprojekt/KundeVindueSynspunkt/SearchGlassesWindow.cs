@@ -65,17 +65,8 @@ namespace KundeVindueSynspunkt
 
         private void GlassesProductsSearchBtn_Click(object sender, EventArgs e)
         {
-            /*string Brand = "Gant";
             int Price = Convert.ToInt32(GlassesPrice.Text);
 
-            GlassesDataView.DataSource = Reader.SelectProductTest(Brand, listBoxColour.Text, Price);
-            */
-            int Price = Convert.ToInt32(GlassesPrice.Text);
-
-
-            //Denne måde at søge ting frem på bliver ret trels jo flere du putter på! kan være vi skal se efter en anden måde! men det er OBV LIR! :)
-
-            //Strength er ligegyldigt da vi ikke har nogle parametre at søge efter, og gør det ret trels.
             GlassesDataView.DataSource = Reader.GetProductsSpecificDataTable(BrandListBox.Text, GlasseslistBoxColour.Text, FrameTypeListBox.Text, GlassTypeListBox.Text, Price);
             
         }
